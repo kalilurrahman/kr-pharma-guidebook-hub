@@ -60,6 +60,61 @@
     --shadow-glow: 0 0 20px rgba(13, 148, 136, 0.3);
     --header-bg: rgba(10, 22, 40, 0.95);
   }
+
+  /* Light theme */
+  :root.light {
+    --background: 210 40% 96%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 172 83% 32%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 263 70% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 6%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 215 20% 40%;
+    --destructive: 350 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 84%;
+    --input: 214 20% 84%;
+    --ring: 172 83% 32%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 172 83% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 94%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 20% 84%;
+    --sidebar-ring: 172 83% 32%;
+
+    --navy: 218 62% 11%;
+    --navy-mid: 216 53% 16%;
+    --navy-light: 215 44% 22%;
+    --indigo: 244 58% 42%;
+    --indigo-light: 243 55% 50%;
+    --violet: 263 70% 58%;
+    --violet-light: 262 83% 68%;
+    --teal: 172 83% 32%;
+    --teal-light: 171 77% 40%;
+    --teal-pale: 166 76% 90%;
+    --gold: 38 90% 43%;
+    --gold-light: 43 96% 56%;
+    --coral: 346 84% 50%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(218 62% 11%), hsl(244 50% 20%), hsl(244 58% 30%));
+    --gradient-primary: linear-gradient(135deg, hsl(172 83% 32%), hsl(263 70% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(172 83% 32%), hsl(38 92% 50%));
+    --gradient-stat: linear-gradient(135deg, rgba(13, 148, 136, 0.08), rgba(124, 58, 237, 0.08));
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+    --shadow-card-hover: 0 8px 24px rgba(13, 148, 136, 0.12);
+    --shadow-glow: 0 0 15px rgba(13, 148, 136, 0.15);
+    --header-bg: rgba(255, 255, 255, 0.92);
+  }
 }
 
 @layer base {
