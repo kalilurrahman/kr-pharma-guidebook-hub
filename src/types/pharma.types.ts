@@ -33,6 +33,17 @@ export interface TableData {
   rows: string[][];
 }
 
+export interface DiagramData {
+  title: string;
+  svgContent: string;
+}
+
+export interface CalloutBox {
+  type: "executive" | "case-study" | "spotlight" | "kpi";
+  label: string;
+  content: string;
+}
+
 export interface ChapterSection {
   title: string;
   content: string[];
@@ -41,6 +52,9 @@ export interface ChapterSection {
   steps?: ProcessStep[];
   insightBox?: InsightBox;
   pullQuote?: PullQuote;
+  diagram?: DiagramData;
+  callout?: CalloutBox;
+  bulletPoints?: string[];
 }
 
 export interface Chapter {
@@ -59,4 +73,12 @@ export interface HandbookStats {
   words: string;
   pillars: number;
   phases: number;
+}
+
+export interface ResourceFile {
+  name: string;
+  filename: string;
+  type: "pdf" | "docx" | "xlsx" | "pptx";
+  size: string;
+  description: string;
 }
