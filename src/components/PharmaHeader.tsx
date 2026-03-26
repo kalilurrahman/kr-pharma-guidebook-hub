@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Search, Menu, X, BookOpen } from "lucide-react";
+import { Search, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import pharmaLogo from "@/assets/pharma-logo.png";
 
 interface PharmaHeaderProps {
@@ -16,6 +17,7 @@ const navItems = [
   { id: "value-chain", label: "Value Chain" },
   { id: "commercial", label: "Commercial" },
   { id: "enablers", label: "Enablers" },
+  { id: "resources", label: "📥 Resources" },
 ];
 
 export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSectionChange }: PharmaHeaderProps) {
@@ -56,6 +58,7 @@ export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSec
                 className="search-input-pharma pl-10 w-48 lg:w-64"
               />
             </div>
+            <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"

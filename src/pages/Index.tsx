@@ -4,6 +4,7 @@ import { PharmaHeader } from "@/components/PharmaHeader";
 import { CoverSection } from "@/components/CoverSection";
 import { OverviewSection } from "@/components/OverviewSection";
 import { ChapterViewer } from "@/components/ChapterViewer";
+import { ResourcesSection } from "@/components/ResourcesSection";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import { InstallPrompt } from "@/components/InstallPrompt";
 import { chapters } from "@/data/pharma-data";
@@ -52,6 +53,7 @@ const Index = () => {
 
   const isSearching = searchQuery.trim().length > 0;
   const showOverview = !isSearching && activeSection === "overview" && !selectedChapter;
+  const showResources = !isSearching && activeSection === "resources" && !selectedChapter;
   const showFilteredGrid = filteredChapters !== null && !selectedChapter;
 
   const currentChapter = selectedChapter ? chapters.find((c) => c.id === selectedChapter) : null;
@@ -80,6 +82,10 @@ const Index = () => {
               hasPrev={currentChapterIndex > 0}
               hasNext={currentChapterIndex < chapters.length - 1}
             />
+          ) : showResources ? (
+            <motion.div key="resources" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              <ResourcesSection />
+            </motion.div>
           ) : showOverview ? (
             <motion.div key="overview" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               <OverviewSection onChapterSelect={handleChapterSelect} />
@@ -94,7 +100,7 @@ const Index = () => {
                     </p>
                   )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {filteredChapters.map((ch, i) => (
+                    {filteredChapters.map((ch) => (
                       <div key={ch.id}>
                         <div
                           onClick={() => handleChapterSelect(ch.id)}
