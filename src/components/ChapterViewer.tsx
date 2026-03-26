@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { Chapter } from "@/types/pharma.types";
-import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface ChapterViewerProps {
   chapter: Chapter;
@@ -25,6 +25,13 @@ const pillarTextMap: Record<string, string> = {
   gold: "text-gold",
   coral: "text-coral",
   indigo: "text-indigo",
+};
+
+const calloutStyles: Record<string, string> = {
+  executive: "bg-gradient-to-br from-gold/10 to-gold/5 border-l-4 border-l-gold",
+  "case-study": "bg-muted/50 border-l-4 border-l-indigo",
+  spotlight: "bg-muted/50 border-l-4 border-l-primary",
+  kpi: "bg-navy text-foreground border-none",
 };
 
 export function ChapterViewer({ chapter, onBack, onPrev, onNext, hasPrev, hasNext }: ChapterViewerProps) {
@@ -69,8 +76,45 @@ export function ChapterViewer({ chapter, onBack, onPrev, onNext, hasPrev, hasNex
             {section.title && <h2>{section.title}</h2>}
 
             {section.content.map((text, ti) => (
-              <p key={ti}>{text}</p>
+              <p key={ti} dangerouslySetInnerHTML={{ __html: text }} />
             ))}
+
+            {/* Callout box */}
+            {section.callout && (
+              <div className={`rounded-xl p-6 my-7 ${calloutStyles[section.callout.type]}`}>
+                <div className="font-mono text-[10px] uppercase tracking-wider mb-3 text-primary font-bold">
+                  {section.callout.label}
+                </div>
+                <p className="font-body text-sm leading-relaxed text-muted-foreground italic" dangerouslySetInnerHTML={{ __html: section.callout.content }} />
+              </div>
+            )}
+
+            {/* Bullet points */}
+            {section.bulletPoints && (
+              <ul className="space-y-2 my-4">
+                {section.bulletPoints.map((bp, bi) => (
+                  <li key={bi} dangerouslySetInnerHTML={{ __html: bp }} />
+                ))}
+              </ul>
+            )}
+
+            {/* SVG Diagram */}
+            {section.diagram && (
+              <div className="my-8 rounded-xl overflow-hidden border border-border">
+                <div className="bg-navy-mid px-4 py-2.5 flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-coral" />
+                  <div className="w-2 h-2 rounded-full bg-gold" />
+                  <div className="w-2 h-2 rounded-full bg-primary" />
+                  <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider ml-2">
+                    {section.diagram.title}
+                  </span>
+                </div>
+                <div
+                  className="p-6 bg-card overflow-x-auto"
+                  dangerouslySetInnerHTML={{ __html: section.diagram.svgContent }}
+                />
+              </div>
+            )}
 
             {/* Pull quote */}
             {section.pullQuote && (
