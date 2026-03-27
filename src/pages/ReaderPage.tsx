@@ -71,13 +71,10 @@ const ReaderPage = () => {
           ref={iframeRef}
           src="/handbook-reader.html"
           title="Pharma Digital Transformation Handbook — Online Reader"
-          className={`w-full border-0 ${
-            isFullscreen
-              ? "h-full"
-              : "min-h-[calc(100vh-8rem)]"
-          }`}
+          className="w-full border-0"
           style={{
             height: isFullscreen ? "100vh" : "calc(100vh - 3.5rem)",
+            minHeight: isFullscreen ? "100vh" : "calc(100dvh - 3.5rem)",
             colorScheme: "light",
           }}
         />
