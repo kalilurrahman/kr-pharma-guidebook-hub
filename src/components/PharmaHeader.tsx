@@ -101,6 +101,14 @@ export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSec
                 {item.label}
               </button>
             ))}
+            <Link
+              to={READER_PATH}
+              className="nav-pill w-full text-left flex items-center gap-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              Online Reader
+            </Link>
           </div>
         )}
       </div>
