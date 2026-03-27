@@ -241,10 +241,50 @@ tr:hover td{background:#eef4ff;transition:background .1s}
   h1{margin-left:0;margin-right:0;padding:24px}.part-divider{padding:24px}
   .cover{min-height:auto;padding:40px 60px}
 }
+/* ── MOBILE HAMBURGER ── */
+#mob-toggle{display:none;position:fixed;top:10px;left:10px;z-index:300;width:40px;height:40px;
+  background:var(--navy);border:1px solid rgba(201,168,76,.5);border-radius:8px;
+  cursor:pointer;align-items:center;justify-content:center}
+#mob-toggle svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round}
+#sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:190}
+
 @media(max-width:900px){
-  :root{--sidebar:0px}#sidebar{transform:translateX(-100%)}
-  h1,.toc-section,.content-wrap{padding-left:20px;padding-right:20px}
-  h1{margin-left:-20px;margin-right:-20px}.part-divider{padding:24px 20px}
+  :root{--sidebar:0px}
+  #sidebar{transform:translateX(-280px);transition:transform .3s ease;width:280px}
+  #sidebar.open{transform:translateX(0)}
+  #mob-toggle{display:flex}
+  #sidebar-overlay.open{display:block}
+  h1,.toc-section,.content-wrap{padding-left:16px;padding-right:16px}
+  h1{margin-left:-16px;margin-right:-16px;padding:20px 16px;font-size:clamp(18px,5vw,26px)}
+  .part-divider{padding:20px 16px}
+  .cover{padding:40px 20px;min-height:auto}
+  .cover h1{font-size:clamp(22px,7vw,36px)}
+  .cover-sub{font-size:14px}
+  .cover-stats{gap:16px}
+  .stat-num{font-size:20px}
+  .cover-author{flex-direction:column;text-align:center;gap:10px}
+  .author-info{text-align:center}
+  .author-links{justify-content:center}
+  .content-wrap{padding:24px 16px}
+  .metric-band{grid-template-columns:repeat(2,1fr)}
+  .metric-num{font-size:18px}
+  .stat-row{grid-template-columns:1fr}
+  .img-grid{grid-template-columns:1fr}
+  .toc-section{padding:32px 16px}
+  .toc-heading{font-size:22px}
+  .callout{padding:14px 16px;margin:18px 0}
+  .diagram-body{padding:12px}
+  .diagram-body svg{min-width:500px}
+  table{font-size:12px}
+  th{padding:8px 10px;font-size:10px}
+  td{padding:8px 10px}
+  p{font-size:14px;text-align:left}
+  li{font-size:14px}
+  h2{font-size:17px}
+  h3{font-size:15px}
+  #btt{bottom:16px;right:16px;width:34px;height:34px}
+  .ch-nav{flex-direction:column;gap:8px}
+  .ch-nav a{font-size:12px;padding:8px 14px}
 }
 
 /* ── SEARCH ── */
