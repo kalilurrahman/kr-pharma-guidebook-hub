@@ -1,0 +1,16 @@
+🚀 Excited to share a new project I've been working on: The Pharma GCC Transformation Handbook! 💊
+
+As the pharmaceutical industry continues to evolve, understanding the intricacies of Global Capability Centers (GCCs) in the AI era is more crucial than ever. That's why I built this comprehensive, interactive web platform to serve as a centralized hub for all things Pharma GCC.
+
+🌐 Live Application: https://kr-pharma-guidebook-hub.lovable.app
+💻 GitHub Repository: https://github.com/kalilurrahman/kr-pharma-guidebook-hub
+
+Key features of the platform include:
+✅ Detailed insights into the Value Chain, Commercial strategies, Enterprise Enablers, and Foundations.
+✅ A modern, fully responsive UI built with React, TypeScript, and Tailwind CSS.
+✅ Dynamic Light/Dark modes for an optimal reading experience.
+✅ Seamless search functionality to quickly find chapters and resources.
+
+I'd love for you to check it out and share your feedback! What aspects of Pharma GCCs do you find most interesting or challenging right now?
+
+#Pharma #GCC #Transformation #AI #ReactJS #TypeScript #TailwindCSS #WebDevelopment #OpenSource #TechForGood
