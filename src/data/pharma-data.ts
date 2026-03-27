@@ -1,45 +1,72 @@
 import type { Chapter, HandbookStats } from "@/types/pharma.types";
 
 export const handbookStats: HandbookStats = {
-  chapters: 14,
+  chapters: 15,
   words: "30K+",
   pillars: 7,
   phases: 3,
 };
 
 export const coverStats = [
-  { value: "14", label: "Chapters" },
+  { value: "15", label: "Chapters + Appendix" },
   { value: "30K+", label: "Words" },
-  { value: "7", label: "ACUITAS Pillars" },
-  { value: "3", label: "Transformation Phases" },
+  { value: "4", label: "Parts" },
+  { value: "20+", label: "Diagrams & Tables" },
 ];
 
-// SVG Diagram Constants
-const SVG_FIVE_FORCES = `<svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:760px;display:block;margin:0 auto">
-  <defs><marker id="ma" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8Z" fill="hsl(172,83%,32%)"/></marker></defs>
-  <rect x="280" y="82" width="200" height="68" rx="12" fill="hsl(222,47%,9%)" stroke="hsl(172,83%,32%)" stroke-width="2"/>
-  <text x="380" y="108" text-anchor="middle" fill="hsl(172,83%,32%)" font-size="14" font-weight="bold">🏭 Pharma Enterprise</text>
-  <text x="380" y="130" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">$1.48T Market · 6.1% CAGR</text>
-  <rect x="10" y="10" width="170" height="62" rx="8" fill="hsl(222,47%,9%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
-  <text x="95" y="34" text-anchor="middle" fill="hsl(172,83%,32%)" font-size="11" font-weight="700">🧬 AI &amp; GenAI Revolution</text>
-  <text x="95" y="51" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">AlphaFold · LLMs · Agentic AI</text>
-  <line x1="180" y1="41" x2="281" y2="105" stroke="hsl(172,83%,32%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
-  <rect x="580" y="10" width="170" height="62" rx="8" fill="hsl(222,47%,9%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
-  <text x="665" y="34" text-anchor="middle" fill="hsl(172,83%,32%)" font-size="11" font-weight="700">⚖️ Regulatory Evolution</text>
+// ── SVG Diagram Constants ──
+
+const SVG_FIVE_FORCES = `<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" style="font-family:'Segoe UI',Arial,sans-serif">
+  <defs><marker id="ma" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="hsl(38,72%,53%)" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+  <rect x="285" y="80" width="190" height="70" rx="10" fill="hsl(222,47%,9%)" stroke="hsl(38,72%,53%)" stroke-width="2"/>
+  <text x="380" y="108" text-anchor="middle" fill="hsl(38,72%,53%)" font-size="13" font-weight="700">PHARMA</text>
+  <text x="380" y="126" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="11">Enterprise 2025–2030</text>
+  <text x="380" y="142" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">$1.6T → $2.3T by 2030</text>
+  <rect x="10" y="10" width="170" height="62" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
+  <text x="95" y="34" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">🤖 AI &amp; Generative Tech</text>
+  <text x="95" y="51" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">AlphaFold · GenAI · LLMs</text>
+  <text x="95" y="65" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">Drug discovery 10× faster</text>
+  <line x1="180" y1="41" x2="281" y2="105" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
+  <rect x="580" y="10" width="170" height="62" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
+  <text x="665" y="34" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">⚖️ Regulatory Evolution</text>
   <text x="665" y="51" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">FDA · EMA · ICH E6(R3)</text>
-  <line x1="580" y1="41" x2="477" y2="105" stroke="hsl(172,83%,32%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
-  <rect x="10" y="158" width="170" height="62" rx="8" fill="hsl(222,47%,9%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
-  <text x="95" y="182" text-anchor="middle" fill="hsl(172,83%,32%)" font-size="11" font-weight="700">👥 Patient Centricity</text>
+  <text x="665" y="65" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">Digital evidence mandated</text>
+  <line x1="580" y1="41" x2="477" y2="105" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
+  <rect x="10" y="158" width="170" height="62" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
+  <text x="95" y="182" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">👥 Patient Centricity</text>
   <text x="95" y="199" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">DCT · RWE · ePRO · DTx</text>
-  <line x1="180" y1="189" x2="281" y2="132" stroke="hsl(172,83%,32%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
-  <rect x="580" y="158" width="170" height="62" rx="8" fill="hsl(222,47%,9%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
-  <text x="665" y="182" text-anchor="middle" fill="hsl(172,83%,32%)" font-size="11" font-weight="700">🔗 Supply Resilience</text>
+  <text x="95" y="213" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">Continuous patient data</text>
+  <line x1="180" y1="189" x2="281" y2="132" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
+  <rect x="580" y="158" width="170" height="62" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
+  <text x="665" y="182" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">🔗 Supply Resilience</text>
   <text x="665" y="199" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">Serialisation · IoT · AI SCM</text>
-  <line x1="580" y1="189" x2="477" y2="132" stroke="hsl(172,83%,32%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
-  <rect x="305" y="182" width="150" height="44" rx="8" fill="hsl(222,47%,9%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
-  <text x="380" y="200" text-anchor="middle" fill="hsl(172,83%,32%)" font-size="11" font-weight="700">🎓 GCC Talent &amp; India</text>
-  <text x="380" y="217" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="9">1,600+ GCCs · Digital-native</text>
-  <line x1="380" y1="182" x2="380" y2="150" stroke="hsl(172,83%,32%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
+  <text x="665" y="213" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">Post-COVID reshoring</text>
+  <line x1="580" y1="189" x2="477" y2="132" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
+  <rect x="305" y="182" width="150" height="44" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
+  <text x="380" y="200" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">🎓 GCC Talent &amp; India</text>
+  <text x="380" y="217" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">1,600+ GCCs · Digital-native</text>
+  <line x1="380" y1="182" x2="380" y2="150" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
+</svg>`;
+
+const SVG_EROOMS_LAW = `<svg viewBox="0 0 600 330" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:600px;display:block;margin:0 auto">
+  <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="hsl(172,83%,32%)">Cost per New Drug Approval (Capitalized R&amp;D)</text>
+  <text x="300" y="52" text-anchor="middle" font-size="12" fill="hsl(215,20%,65%)">Eroom's Law: cost doubles every ~9 years despite rising investment</text>
+  <line x1="60" y1="20" x2="60" y2="280" stroke="hsl(220,16%,30%)" stroke-width="1"/>
+  <line x1="60" y1="280" x2="580" y2="280" stroke="hsl(220,16%,30%)" stroke-width="1"/>
+  <rect x="80" y="220" width="80" height="60" fill="hsl(172,83%,32%)" rx="4"/>
+  <text x="120" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="hsl(172,83%,32%)">~$300M</text>
+  <text x="120" y="300" text-anchor="middle" font-size="12" fill="hsl(215,20%,65%)">1990s</text>
+  <rect x="200" y="180" width="80" height="100" fill="hsl(215,20%,65%)" rx="4"/>
+  <text x="240" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="hsl(215,20%,65%)">~$800M</text>
+  <text x="240" y="300" text-anchor="middle" font-size="12" fill="hsl(215,20%,65%)">2000s</text>
+  <rect x="320" y="120" width="80" height="160" fill="hsl(38,90%,43%)" rx="4"/>
+  <text x="360" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="hsl(38,90%,43%)">~$1.4B</text>
+  <text x="360" y="300" text-anchor="middle" font-size="12" fill="hsl(215,20%,65%)">2010s</text>
+  <rect x="440" y="60" width="80" height="220" fill="hsl(222,47%,15%)" rx="4" stroke="hsl(38,72%,53%)" stroke-width="1"/>
+  <text x="480" y="50" text-anchor="middle" font-size="13" font-weight="bold" fill="hsl(38,72%,53%)">~$2.6B</text>
+  <text x="480" y="300" text-anchor="middle" font-size="12" fill="hsl(215,20%,65%)">2020s</text>
+  <path d="M 120,220 Q 280,160 440,120 T 600,60" stroke="hsl(346,84%,50%)" stroke-width="3" fill="none" stroke-dasharray="6,3"/>
+  <text x="575" y="50" font-size="11" fill="hsl(346,84%,50%)">↗ AI inflection</text>
 </svg>`;
 
 const SVG_VALUE_CHAIN = `<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:600px;display:block;margin:0 auto">
@@ -70,31 +97,141 @@ const SVG_VALUE_CHAIN = `<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/200
   <text x="300" y="158" text-anchor="middle" font-size="10" fill="hsl(172,83%,32%)" font-weight="bold">UNIFIED DIGITAL THREAD · DATA FLOWS ACROSS ALL FUNCTIONS</text>
 </svg>`;
 
-const SVG_DRUG_PIPELINE = `<svg viewBox="0 0 720 110" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:720px;display:block;margin:0 auto">
-  <text x="360" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="hsl(172,83%,32%)">Drug Discovery &amp; Development Pipeline</text>
-  <rect x="10" y="35" width="100" height="40" rx="6" fill="hsl(263,70%,58%)" opacity="0.9"/>
-  <text x="60" y="58" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFF">Target ID</text>
-  <text x="115" y="58" fill="hsl(215,20%,65%)" font-size="14">→</text>
-  <rect x="125" y="35" width="100" height="40" rx="6" fill="hsl(172,83%,32%)" opacity="0.9"/>
-  <text x="175" y="58" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFF">Hit Finding</text>
-  <text x="230" y="58" fill="hsl(215,20%,65%)" font-size="14">→</text>
-  <rect x="240" y="35" width="100" height="40" rx="6" fill="hsl(244,58%,42%)" opacity="0.9"/>
-  <text x="290" y="58" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFF">Lead Opt.</text>
-  <text x="345" y="58" fill="hsl(215,20%,65%)" font-size="14">→</text>
-  <rect x="355" y="35" width="100" height="40" rx="6" fill="hsl(38,90%,43%)" opacity="0.9"/>
-  <text x="405" y="58" text-anchor="middle" font-size="10" font-weight="bold" fill="hsl(222,47%,6%)">Preclinical</text>
-  <text x="460" y="58" fill="hsl(215,20%,65%)" font-size="14">→</text>
-  <rect x="470" y="35" width="100" height="40" rx="6" fill="hsl(346,84%,50%)" opacity="0.9"/>
-  <text x="520" y="58" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFF">Clinical I-III</text>
-  <text x="575" y="58" fill="hsl(215,20%,65%)" font-size="14">→</text>
-  <rect x="585" y="35" width="120" height="40" rx="6" fill="hsl(172,83%,32%)" opacity="0.9"/>
-  <text x="645" y="58" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFF">Approval &amp; Launch</text>
-  <text x="60" y="90" text-anchor="middle" font-size="8" fill="hsl(215,20%,65%)">AI/Knowledge Graphs</text>
-  <text x="175" y="90" text-anchor="middle" font-size="8" fill="hsl(215,20%,65%)">Virtual Screening</text>
-  <text x="290" y="90" text-anchor="middle" font-size="8" fill="hsl(215,20%,65%)">ADMET ML</text>
-  <text x="405" y="90" text-anchor="middle" font-size="8" fill="hsl(215,20%,65%)">Comp. Tox</text>
-  <text x="520" y="90" text-anchor="middle" font-size="8" fill="hsl(215,20%,65%)">DCT/AI Analytics</text>
-  <text x="645" y="90" text-anchor="middle" font-size="8" fill="hsl(215,20%,65%)">eCTD/RIM</text>
+const SVG_DRUG_PIPELINE = `<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:600px;display:block;margin:0 auto">
+  <text x="295" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="hsl(172,83%,32%)">AI-Augmented Drug Discovery Pipeline</text>
+  <text x="295" y="50" text-anchor="middle" font-size="11" fill="hsl(215,20%,65%)">From target identification to preclinical candidate</text>
+  <rect x="20" y="60" width="82" height="70" fill="hsl(172,83%,32%)" rx="6"/>
+  <text x="61" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Target ID</text>
+  <text x="61" y="116" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">AI/ML</text>
+  <text x="61" y="129" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">Knowledge Graph</text>
+  <rect x="115" y="60" width="82" height="70" fill="hsl(263,70%,58%)" rx="6"/>
+  <text x="156" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Structure</text>
+  <text x="156" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Prediction</text>
+  <text x="156" y="116" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">AlphaFold</text>
+  <rect x="210" y="60" width="82" height="70" fill="hsl(222,47%,15%)" rx="6" stroke="hsl(38,72%,53%)" stroke-width="1"/>
+  <text x="251" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Molecular</text>
+  <text x="251" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Design</text>
+  <text x="251" y="116" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">Generative AI</text>
+  <rect x="305" y="60" width="82" height="70" fill="hsl(215,20%,50%)" rx="6"/>
+  <text x="346" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Screening</text>
+  <text x="346" y="116" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">Robotic HTS</text>
+  <rect x="400" y="60" width="82" height="70" fill="hsl(38,90%,43%)" rx="6"/>
+  <text x="441" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Lead Opt.</text>
+  <text x="441" y="116" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">MPLO AI</text>
+  <rect x="495" y="60" width="82" height="70" fill="hsl(145,50%,35%)" rx="6"/>
+  <text x="536" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Preclinical</text>
+  <text x="536" y="116" text-anchor="middle" font-size="9.5" fill="white" opacity="0.88">ADMET AI</text>
+  <line x1="103" y1="95" x2="114" y2="95" stroke="hsl(38,72%,53%)" stroke-width="2"/>
+  <line x1="198" y1="95" x2="209" y2="95" stroke="hsl(38,72%,53%)" stroke-width="2"/>
+  <line x1="293" y1="95" x2="304" y2="95" stroke="hsl(38,72%,53%)" stroke-width="2"/>
+  <line x1="388" y1="95" x2="399" y2="95" stroke="hsl(38,72%,53%)" stroke-width="2"/>
+  <line x1="483" y1="95" x2="494" y2="95" stroke="hsl(38,72%,53%)" stroke-width="2"/>
+  <rect x="20" y="160" width="557" height="22" fill="hsl(222,47%,12%)" rx="3" stroke="hsl(220,16%,25%)" stroke-width="1"/>
+  <text x="298" y="176" text-anchor="middle" font-size="11" fill="hsl(215,20%,65%)">Traditional: 4–6 years · AI-enabled: 12–24 months (target)</text>
+</svg>`;
+
+const SVG_ECTD_MODULES = `<svg viewBox="0 0 760 168" xmlns="http://www.w3.org/2000/svg" style="font-family:'Segoe UI',Arial,sans-serif">
+  <rect x="10" y="10" width="138" height="148" rx="8" fill="hsl(222,47%,15%)" stroke="hsl(38,72%,53%)" stroke-width="1.8"/>
+  <text x="79" y="32" text-anchor="middle" fill="hsl(38,72%,53%)" font-size="10.5" font-weight="700">Module 1</text>
+  <text x="79" y="48" text-anchor="middle" fill="hsl(215,20%,80%)" font-size="9.5">Regional Admin</text>
+  <text x="79" y="66" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Cover letter &amp; forms</text>
+  <text x="79" y="80" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Approved labelling</text>
+  <text x="79" y="94" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Patent / exclusivity</text>
+  <text x="79" y="108" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Environmental assess.</text>
+  <rect x="20" y="142" width="118" height="12" rx="4" fill="hsl(38,72%,53%,.2)"/>
+  <text x="79" y="152" text-anchor="middle" fill="hsl(38,72%,53%)" font-size="8">Region-specific</text>
+  <rect x="158" y="10" width="138" height="148" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,25%)" stroke-width="1"/>
+  <text x="227" y="32" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="10.5" font-weight="700">Module 2</text>
+  <text x="227" y="48" text-anchor="middle" fill="hsl(215,20%,80%)" font-size="9.5">CTD Summaries</text>
+  <text x="227" y="66" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">2.3 Quality overall</text>
+  <text x="227" y="80" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">2.4 Nonclinical overview</text>
+  <text x="227" y="94" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">2.5 Clinical overview</text>
+  <text x="227" y="108" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">2.7 Clinical summaries</text>
+  <rect x="306" y="10" width="138" height="148" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,25%)" stroke-width="1"/>
+  <text x="375" y="32" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="10.5" font-weight="700">Module 3</text>
+  <text x="375" y="48" text-anchor="middle" fill="hsl(215,20%,80%)" font-size="9.5">Quality (CMC)</text>
+  <text x="375" y="66" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">3.2.S Drug substance</text>
+  <text x="375" y="80" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">3.2.P Drug product</text>
+  <text x="375" y="94" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Mfg process &amp; controls</text>
+  <text x="375" y="108" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Stability data</text>
+  <rect x="454" y="10" width="138" height="148" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,25%)" stroke-width="1"/>
+  <text x="523" y="32" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="10.5" font-weight="700">Module 4</text>
+  <text x="523" y="48" text-anchor="middle" fill="hsl(215,20%,80%)" font-size="9.5">Nonclinical Reports</text>
+  <text x="523" y="66" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Pharmacology studies</text>
+  <text x="523" y="80" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">PK / ADME studies</text>
+  <text x="523" y="94" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Toxicology &amp; geno</text>
+  <rect x="602" y="10" width="148" height="148" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,25%)" stroke-width="1"/>
+  <text x="676" y="32" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="10.5" font-weight="700">Module 5</text>
+  <text x="676" y="48" text-anchor="middle" fill="hsl(215,20%,80%)" font-size="9.5">Clinical Study Reports</text>
+  <text x="676" y="66" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Phase I–III CSRs</text>
+  <text x="676" y="80" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">Efficacy &amp; safety data</text>
+  <text x="676" y="94" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="8.5">5.3.7 PV reports</text>
+</svg>`;
+
+const SVG_PV_SIGNAL_FLOW = `<svg viewBox="0 0 600 270" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:600px;display:block;margin:0 auto">
+  <text x="300" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="hsl(172,83%,32%)">Digital Pharmacovigilance Signal Detection Flow</text>
+  <rect x="40" y="50" width="80" height="55" fill="hsl(222,47%,12%)" rx="5" stroke="hsl(215,20%,50%)" stroke-width="1"/>
+  <text x="80" y="80" text-anchor="middle" font-size="18">📋</text>
+  <text x="80" y="97" text-anchor="middle" font-size="9" fill="hsl(172,83%,32%)" font-weight="bold">Spontaneous</text>
+  <rect x="140" y="50" width="80" height="55" fill="hsl(222,47%,12%)" rx="5" stroke="hsl(215,20%,50%)" stroke-width="1"/>
+  <text x="180" y="80" text-anchor="middle" font-size="18">🏥</text>
+  <text x="180" y="97" text-anchor="middle" font-size="9" fill="hsl(172,83%,32%)" font-weight="bold">EHR / Claims</text>
+  <rect x="240" y="50" width="80" height="55" fill="hsl(222,47%,12%)" rx="5" stroke="hsl(215,20%,50%)" stroke-width="1"/>
+  <text x="280" y="80" text-anchor="middle" font-size="18">📖</text>
+  <text x="280" y="97" text-anchor="middle" font-size="9" fill="hsl(172,83%,32%)" font-weight="bold">Literature</text>
+  <rect x="340" y="50" width="80" height="55" fill="hsl(222,47%,12%)" rx="5" stroke="hsl(215,20%,50%)" stroke-width="1"/>
+  <text x="380" y="80" text-anchor="middle" font-size="18">💬</text>
+  <text x="380" y="97" text-anchor="middle" font-size="9" fill="hsl(172,83%,32%)" font-weight="bold">Social Media</text>
+  <rect x="440" y="50" width="80" height="55" fill="hsl(222,47%,12%)" rx="5" stroke="hsl(215,20%,50%)" stroke-width="1"/>
+  <text x="480" y="80" text-anchor="middle" font-size="18">🔬</text>
+  <text x="480" y="97" text-anchor="middle" font-size="9" fill="hsl(172,83%,32%)" font-weight="bold">Clinical Trials</text>
+  <rect x="60" y="140" width="480" height="44" fill="hsl(222,47%,15%)" rx="5" stroke="hsl(38,72%,53%)" stroke-width="1"/>
+  <text x="300" y="159" text-anchor="middle" font-size="12" font-weight="bold" fill="hsl(38,72%,60%)">AI-Powered Case Intake &amp; NLP Processing</text>
+  <text x="300" y="176" text-anchor="middle" font-size="10" fill="hsl(215,20%,65%)">Automated triage · MedDRA coding · Duplicate detection · Narrative generation</text>
+  <rect x="120" y="215" width="360" height="36" fill="hsl(172,83%,32%)" rx="4"/>
+  <text x="300" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Automated Signal Detection &amp; Disproportionality Analysis</text>
+  <text x="300" y="245" text-anchor="middle" font-size="9.5" fill="white" opacity="0.85">Multi-source EBGM / PRR · Continuous monitoring dashboard</text>
+</svg>`;
+
+const SVG_36_MONTH_ROADMAP = `<svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" style="font-family:'Segoe UI',Arial,sans-serif">
+  <line x1="30" y1="185" x2="740" y2="185" stroke="hsl(215,20%,30%)" stroke-width="1"/>
+  <text x="30" y="198" fill="hsl(215,20%,50%)" font-size="9">Month 0</text>
+  <text x="260" y="198" fill="hsl(215,20%,50%)" font-size="9" text-anchor="middle">Month 12</text>
+  <text x="490" y="198" fill="hsl(215,20%,50%)" font-size="9" text-anchor="middle">Month 24</text>
+  <text x="720" y="198" fill="hsl(215,20%,50%)" font-size="9" text-anchor="end">Month 36</text>
+  <rect x="30" y="14" width="218" height="162" rx="8" fill="hsl(222,47%,15%)" stroke="hsl(38,72%,53%)" stroke-width="1.5"/>
+  <rect x="30" y="14" width="218" height="4" rx="2" fill="hsl(38,72%,53%)"/>
+  <text x="139" y="36" text-anchor="middle" fill="hsl(38,72%,53%)" font-size="10" font-weight="700">WAVE 1 · STABILISE &amp; CONNECT</text>
+  <text x="139" y="52" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="9">Months 1–12</text>
+  <text x="46" y="72" fill="hsl(215,20%,70%)" font-size="9">▸ CDO role established; governance live</text>
+  <text x="46" y="88" fill="hsl(215,20%,70%)" font-size="9">▸ Cloud data lake foundation deployed</text>
+  <text x="46" y="104" fill="hsl(215,20%,70%)" font-size="9">▸ eQMS &amp; EBR pilot at lead site</text>
+  <text x="46" y="120" fill="hsl(215,20%,70%)" font-size="9">▸ eCTD submission automation live</text>
+  <text x="46" y="136" fill="hsl(215,20%,70%)" font-size="9">▸ PV NLP intake automation deployed</text>
+  <text x="46" y="152" fill="hsl(215,20%,70%)" font-size="9">▸ PDMF baseline assessment complete</text>
+  <text x="46" y="168" fill="hsl(38,72%,53%)" font-size="8">Target: PDMF Level 2→3</text>
+  <rect x="270" y="14" width="218" height="162" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(215,20%,50%)" stroke-width="1"/>
+  <rect x="270" y="14" width="218" height="4" rx="2" fill="hsl(215,20%,50%)"/>
+  <text x="379" y="36" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="10" font-weight="700">WAVE 2 · DIFFERENTIATE &amp; SCALE</text>
+  <text x="379" y="52" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="9">Months 13–24</text>
+  <text x="286" y="72" fill="hsl(215,20%,70%)" font-size="9">▸ AI drug discovery platform operational</text>
+  <text x="286" y="88" fill="hsl(215,20%,70%)" font-size="9">▸ DCT capability in 3+ active trials</text>
+  <text x="286" y="104" fill="hsl(215,20%,70%)" font-size="9">▸ NBA commercial engine deployed</text>
+  <text x="286" y="120" fill="hsl(215,20%,70%)" font-size="9">▸ PAT + digital twin at mfg sites</text>
+  <text x="286" y="136" fill="hsl(215,20%,70%)" font-size="9">▸ eQMS rolled out to all sites</text>
+  <text x="286" y="152" fill="hsl(215,20%,70%)" font-size="9">▸ RWE programme generating evidence</text>
+  <text x="286" y="168" fill="hsl(38,72%,60%)" font-size="8">Target: PDMF Level 3→4</text>
+  <rect x="510" y="14" width="226" height="162" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(145,50%,35%)" stroke-width="1.2"/>
+  <rect x="510" y="14" width="226" height="4" rx="2" fill="hsl(145,50%,35%)"/>
+  <text x="623" y="36" text-anchor="middle" fill="hsl(145,60%,60%)" font-size="10" font-weight="700">WAVE 3 · LEAD &amp; INNOVATE</text>
+  <text x="623" y="52" text-anchor="middle" fill="hsl(215,20%,55%)" font-size="9">Months 25–36</text>
+  <text x="526" y="72" fill="hsl(215,20%,70%)" font-size="9">▸ Clinical candidate from AI discovery</text>
+  <text x="526" y="88" fill="hsl(215,20%,70%)" font-size="9">▸ Real-time release testing approved</text>
+  <text x="526" y="104" fill="hsl(215,20%,70%)" font-size="9">▸ Autonomous PV signal monitoring</text>
+  <text x="526" y="120" fill="hsl(215,20%,70%)" font-size="9">▸ Outcome-based contracts with payers</text>
+  <text x="526" y="136" fill="hsl(215,20%,70%)" font-size="9">▸ GCC established as digital CoE</text>
+  <text x="526" y="152" fill="hsl(215,20%,70%)" font-size="9">▸ PDMF Level 4–5; industry recognition</text>
+  <text x="526" y="168" fill="hsl(145,60%,50%)" font-size="8">Target: PDMF Level 4→5</text>
 </svg>`;
 
 const SVG_INDIA_ECOSYSTEM = `<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:600px;display:block;margin:0 auto">
@@ -133,26 +270,28 @@ const SVG_INDIA_ECOSYSTEM = `<svg viewBox="0 0 600 360" xmlns="http://www.w3.org
   <text x="400" y="319" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">Policy</text>
 </svg>`;
 
+// ── CHAPTERS ──
+
 export const chapters: Chapter[] = [
   {
     id: "ch1",
     num: "01",
     partLabel: "Part I · Foundations",
-    title: "The Global Pharma Landscape & the Digital Imperative",
-    lead: "Understanding the forces reshaping global pharma — and why Global Capability Centres are no longer optional.",
+    title: "The Global Pharma Landscape & Digital Imperative",
+    lead: "Understanding the forces reshaping global pharma — and why digital transformation is a survival imperative.",
     metrics: [
-      { value: "$1.48T", label: "Global Pharma Market 2025" },
-      { value: "6.1%", label: "CAGR Through 2030" },
-      { value: "12–15", label: "Years Drug-to-Market" },
-      { value: "$2.6B", label: "Avg. Drug Dev. Cost" },
+      { value: "$1.6T", label: "Global Pharma Revenue 2024" },
+      { value: "$2.6B", label: "Avg. Cost per NME" },
+      { value: "<10%", label: "Phase I → Approval Rate" },
+      { value: "12–15 yr", label: "Avg. Drug-to-Market" },
     ],
     tags: ["Market Analysis", "GCC Strategy", "Pharma Landscape", "Digital Imperative"],
     sections: [
       {
         title: "Executive Summary",
         content: [
-          "The pharmaceutical industry stands at an inflection point unlike any in its history. The convergence of artificial intelligence, cloud computing, real-world data, and advanced manufacturing technologies is compressing drug development timelines, personalising treatment at scale, and fundamentally reshaping the competitive landscape.",
-          "Companies that navigate this transformation successfully will discover medicines faster, run trials more efficiently, manufacture with greater precision, and engage patients more meaningfully. Those that do not will find themselves outpaced — not just by other large pharma companies, but by a new class of AI-native biotech firms and technology platforms entering the value chain.",
+          "The pharmaceutical industry stands at an inflection point unlike any in its history. A confluence of forces — accelerating scientific complexity, relentless cost pressure, post-pandemic urgency, and the maturation of artificial intelligence — is reshaping every dimension of how drugs are discovered, developed, manufactured, and delivered.",
+          "Organizations that treat digitalization as an IT project will fall behind; those that embed it into their operating model and culture will define the next era of global health.",
         ],
         callout: {
           type: "executive",
@@ -161,29 +300,51 @@ export const chapters: Chapter[] = [
         },
       },
       {
-        title: "Why Now: Industry Forces Driving Transformation",
+        title: "The Pharma Industry at a Crossroads",
         content: [
-          "The global pharmaceutical industry is experiencing its most consequential transformation since the biotechnology revolution of the 1980s. Converging forces — artificial intelligence, post-pandemic supply chain disruptions, unprecedented regulatory complexity, and a fundamental rethinking of the drug discovery paradigm — are rewriting every assumption.",
-          "The emergence of GLP-1 therapeutics has demonstrated that a single breakthrough molecule can reshape trillion-dollar disease categories overnight. mRNA platform technologies have unlocked programmable medicine at speed never before imagined.",
-          "<strong>The productivity crisis in drug discovery.</strong> The industry has been aware of Eroom's Law — the number of new drug approvals per billion dollars of R&D spending has roughly halved every nine years since the 1950s. Despite rising R&D investment (global total exceeded $250 billion in 2023), attrition rates remain stubbornly high: approximately 90% of compounds that enter Phase I trials fail to reach approval.",
-          "<strong>The explosion of biomedical data.</strong> Genomic sequencing costs have fallen by a factor of more than a million since the Human Genome Project — from approximately $3 billion in 2001 to under $300 today. Machine learning systems can operate at this scale; human scientists cannot.",
-          "<strong>The COVID-19 forcing function.</strong> The pandemic compressed a decade of digital adoption into eighteen months. Clinical trials adopted remote monitoring and decentralised designs out of necessity and discovered that they worked better in many respects.",
-          "<strong>The platform economy entering life sciences.</strong> Amazon, Microsoft, Google, and specialised life sciences platform providers are moving into the pharmaceutical value chain with capabilities in cloud infrastructure, AI, consumer data, and logistics.",
+          "The global pharmaceutical market crossed USD 1.6 trillion in revenues in 2024 and is projected to exceed USD 2.3 trillion by 2030. This growth masks profound structural stress. The cost of bringing a new molecular entity to market now exceeds USD 2.6 billion and takes an average of 12 to 15 years. The probability that a molecule entering Phase I clinical trials will reach approval remains below 10 percent.",
+          "The industry is simultaneously being pulled in two directions. On one side, biological complexity is expanding the frontier of what is scientifically possible — personalised medicines, cell and gene therapies, RNA-based interventions, and AI-designed proteins. On the other, the commercial and economic systems that supported the old blockbuster model are fragmenting under payer pressure, real-world evidence requirements, and accelerating generic competition.",
         ],
         diagram: {
-          title: "Five Forces Reshaping Pharma",
+          title: "Cost per New Drug Approval — Eroom's Law",
+          svgContent: SVG_EROOMS_LAW,
+        },
+      },
+      {
+        title: "Forces Driving Digital Transformation",
+        content: [
+          "<strong>The Data Explosion.</strong> A single genomic sequencing run produces terabytes of raw data. A Phase III clinical trial with 10,000 patients can generate billions of data points across EHRs, wearable sensors, imaging archives, and patient-reported outcomes. Machine learning systems can operate at this scale; human scientists cannot.",
+          "<strong>The AI Maturity Moment.</strong> AlphaFold's prediction of protein structures — a problem that took structural biologists decades — was solved in hours. Large language models are summarising scientific literature in minutes. Generative AI is proposing novel molecular scaffolds. The question is no longer whether AI works in pharma; it is how fast organisations can deploy it systematically.",
+          "<strong>Regulatory Evolution.</strong> The US FDA's Digital Health Center of Excellence, the EMA's data analytics strategy, and India's CDSCO modernisation initiative all reflect the same reality: regulators expect digital-native evidence generation, electronic submissions, and real-world data integration.",
+          "<strong>The Pandemic Accelerant.</strong> COVID-19 compressed a decade of digital adoption into eighteen months. Pfizer enrolled 43,000 participants in its COVID-19 vaccine trial in under four months using digital recruitment.",
+          "<strong>Talent and Workforce Shift.</strong> The workforce entering pharma today is digital-native. They expect AI-assisted workflows, modern user interfaces, and real-time data-driven decisions. Organisations running on legacy ERP platforms and paper-based quality systems struggle to attract and retain this talent.",
+        ],
+        diagram: {
+          title: "Five Forces Reshaping Pharma — Digital Disruption Map",
           svgContent: SVG_FIVE_FORCES,
         },
-        pullQuote: {
-          text: "The pharmaceutical organisations that will lead the next decade are not those with the largest R&D budgets, but those with the most intelligent, interconnected, and adaptive operating models.",
-          cite: "KR · Pharma GCC Transformation Handbook",
+      },
+      {
+        title: "The Digital Transformation Landscape: Where Pharma Stands Today",
+        content: [
+          "Despite the urgency, the industry's digital maturity is highly uneven. Roughly 20% of organisations have advanced cloud-native data platforms, enterprise AI programs, and digitally integrated supply chains. The remaining 80% are at various stages of foundational work.",
+        ],
+        table: {
+          headers: ["Region", "Market Size 2024", "Key Digital Driver", "Avg. PDMF Level", "Priority Domains"],
+          rows: [
+            ["🇺🇸 United States", "$680B", "FDA Digital Health CoE; IRA pricing pressure", "Level 3–4", "AI drug discovery, DCT, RWE, omnichannel"],
+            ["🇪🇺 European Union", "$290B", "EHDS; EMA digital evidence; GDPR governance", "Level 2–3", "Regulatory digital, federated data, manufacturing"],
+            ["🇮🇳 India", "$55B + 20% global generics", "ABDM; SUGAM; PLI scheme; GCC boom", "Level 2–3", "Manufacturing QMS, PV analytics, clinical data"],
+            ["🇨🇳 China", "$170B", "NMPA modernisation; national AI strategy", "Level 2–3", "Clinical trial digital, biotech AI, manufacturing"],
+            ["🇯🇵 Japan", "$90B", "SAKIGAKE; PMDA digital reform", "Level 2–3", "Regulatory submissions, digital biomarkers"],
+          ],
         },
       },
       {
         title: "The $2 Trillion Opportunity",
         content: [
-          "McKinsey Global Institute has estimated that advanced analytics and AI could create $100 billion in value annually for the US healthcare system alone. Across the global pharmaceutical value chain, the opportunity is larger still.",
-          "If AI could cut average development timelines by 20–30% and improve Phase II success rates by even 10 percentage points, the value creation at a large pharmaceutical company would be measured in tens of billions of dollars of net present value.",
+          "McKinsey Global Institute has estimated that advanced analytics and AI could create $100 billion in value annually for the US healthcare system. Across the global pharmaceutical value chain, the opportunity is larger still.",
+          "If AI could cut average development timelines by 20–30% and improve Phase II success rates by even 10 percentage points, the value creation at a large pharmaceutical company would be measured in tens of billions of dollars. Insilico Medicine's INS018_055 reached Phase II clinical trials in 18 months, compared to an industry average of 4–6 years.",
         ],
         diagram: {
           title: "Pharmaceutical Digital Value Chain",
@@ -191,52 +352,79 @@ export const chapters: Chapter[] = [
         },
       },
       {
-        title: "Why GCCs Are Now Central to Pharma Strategy",
+        title: "The Cost of Inaction — Quantified",
         content: [
-          "Global Capability Centres have evolved dramatically from their origins as cost-arbitrage back-offices. A modern GCC is a strategic nerve centre: a co-located hub of deep scientific, digital, and operational expertise.",
-          "India alone hosts over 1,600 GCCs employing 1.7 million professionals, and pharma GCCs represent one of the fastest-growing segments.",
+          "The business case for pharmaceutical digital transformation is often framed in terms of opportunity cost. An equally important lens is the cost of inaction.",
         ],
+        table: {
+          headers: ["Dimension", "Digital Laggard", "Digital Leader", "Annual Gap ($5B Revenue Co.)", "Source"],
+          rows: [
+            ["R&D Discovery Cycle", "Target-to-IND: 4–5 years", "Target-to-IND: 12–18 months", "$200–400M pipeline acceleration", "Insilico Medicine benchmarks"],
+            ["Clinical Recruitment", "80%+ miss enrollment timelines", "On-schedule; 30–50% faster", "$150–300M per Phase III", "Tufts CSDD; IQVIA"],
+            ["Manufacturing Release", "2–4 weeks; 8–12% batch failure", "2–4 days RTRT; 3–5% failure", "$80–150M/year", "ISPE Pharma 4.0"],
+            ["Regulatory Submission", "18–24 months NDA prep", "12–15 months; 50% fewer queries", "$100–200M launch timing", "Veeva Regulatory benchmarks"],
+            ["Commercial Effectiveness", "1.2 calls/day; 15% NtB rate", "2.4 calls/day; 22% NtB rate", "$50–120M per launch", "IQVIA SFE 2024"],
+          ],
+        },
+      },
+      {
+        title: "India's GCC Ecosystem — The Pharma Digital Nerve Centre",
+        content: [
+          "India has emerged as the world's pre-eminent hub for pharmaceutical Global Capability Centres (GCCs), combining an unmatched reservoir of scientific, digital, and regulatory talent with a rapidly maturing innovation ecosystem. Over 30 multinational pharma companies now operate dedicated GCCs in India — in Hyderabad, Bengaluru, Mumbai, and Pune.",
+        ],
+        table: {
+          headers: ["GCC Capability", "Leading Companies", "Value Delivered", "India Advantage"],
+          rows: [
+            ["Computational Drug Discovery", "Novartis, AstraZeneca, Sanofi, GSK", "Target ID, CADD, generative AI molecule design", "IISc/IIT pipeline; 60% lower cost vs US/EU"],
+            ["Clinical Data Science", "Pfizer, Roche, J&J, Merck", "Phase I–IV data management, statistical programming", "World's largest CDM talent pool"],
+            ["Regulatory Intelligence", "AbbVie, Eli Lilly, BMS, Takeda", "eCTD compilation, agency responses, PSUR", "24/7 coverage; multilingual team"],
+            ["Real-World Evidence & HEOR", "Amgen, Biogen, Boehringer", "RWE studies, HEOR models, market access", "ABDM infrastructure; large patient pop."],
+            ["Pharmacovigilance Analytics", "Novartis, GSK, Roche, Pfizer", "ICSR processing, signal detection, PSUR/PBRER", "30–40% lower cost; AI-augmented 24/7 ops"],
+            ["Manufacturing Intelligence", "Sun Pharma, Dr. Reddy's, Cipla", "Digital twin, predictive quality, supply chain analytics", "Proximity to Indian manufacturing base"],
+          ],
+        },
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: India's Digital Pharma Moment",
-          content: "India's pharmaceutical industry is undergoing a digital transformation that is structurally different from Western multinationals. India accounts for ~20% of global generic medicine exports by volume and over 60% of US FDA-approved manufacturing facilities outside the US. The ABDM (Ayushman Bharat Digital Mission) is creating the world's largest unified health ID system with 600M+ accounts. Companies like Sun Pharma and Dr. Reddy's are demonstrating that Indian generics companies can be fast followers — and in some cases leaders — in pharma digital transformation.",
+          content: "India accounts for ~20% of global generic medicine exports by volume and over 60% of US FDA-approved manufacturing facilities outside the US. The ABDM has created 600M+ digital health IDs. The PLI scheme is investing $2B+ in manufacturing modernisation. Companies like Sun Pharma and Dr. Reddy's are demonstrating that Indian generics companies can be fast followers — and in some cases leaders — in pharma digital transformation.",
         },
-      },
-      {
-        title: "The Seven Macro Forces Reshaping Pharma",
-        content: [],
-        pillars: [
-          { num: "Force 01", title: "AI & Generative Intelligence", description: "AlphaFold 3, multi-modal foundation models, and agentic AI are collapsing discovery timelines from years to months.", colorVariant: "teal" },
-          { num: "Force 02", title: "Regulatory Evolution", description: "FDA's Omnibus legislation, EMA PRIME, and ICH E6(R3) are demanding faster, more transparent, data-rich submissions.", colorVariant: "teal" },
-          { num: "Force 03", title: "Precision Medicine", description: "Biomarker-stratified trials, companion diagnostics, and cell & gene therapies require entirely new GCC capability architectures.", colorVariant: "teal" },
-          { num: "Force 04", title: "Supply Chain Resilience", description: "Post-COVID reshoring pressures, API concentration risk, and cold-chain complexity for biologics demand sophisticated GCC-led intelligence.", colorVariant: "teal" },
-          { num: "Force 05", title: "Pricing Pressure", description: "IRA drug pricing negotiations, EU Pharmaceutical Strategy, and payer consolidation are compressing revenue windows.", colorVariant: "teal" },
-          { num: "Force 06", title: "Talent Paradigm Shift", description: "The convergence of biology, data science, and software engineering creates a new class of talent most abundant in GCC hubs.", colorVariant: "teal" },
-        ],
-        insightBox: {
-          icon: "🔬",
-          label: "KR Insight",
-          title: "The GCC is now the R&D engine, not the support function",
-          description: "The strategic shift is irreversible: pharma GCCs that continue to operate as passive service providers will be disrupted by AI automation. The window for this transition is 2025–2027.",
-        },
-      },
-      {
-        title: "The Cost of Inaction",
-        content: [
-          "A pharma company without a unified clinical data platform will take 18–24 months longer to compile a regulatory submission package. A manufacturer without real-time process analytics has deviation detection latency 4–6× higher than a PAT-enabled facility. A commercial organization without AI-driven targeting generates field force efficiency scores 30–40% below best-in-class.",
-          "These capability gaps translate directly into slower time-to-market, higher cost of goods, weaker payer negotiations, and ultimately, lower shareholder value. In a post-patent-cliff environment where every margin percentage matters, the cost of digital inaction is existential for mid-tier pharma.",
-        ],
       },
       {
         title: "What 'Digital Transformation' Actually Means in Pharma",
         content: [
-          "Digital transformation in pharma is not primarily about technology — it is about fundamentally redesigning business processes, decision-making architectures, and operating models enabled by technology. Organizations that deploy technology onto broken processes do not transform; they automate dysfunction.",
+          "Digital transformation in pharma is not primarily about technology — it is about fundamentally redesigning business processes, decision-making architectures, and operating models enabled by technology. Organisations that deploy technology onto broken processes do not transform; they automate dysfunction.",
         ],
         bulletPoints: [
-          "<strong>Data as a Strategic Asset</strong> — Building infrastructure, governance, and culture to treat data as a company-wide resource",
-          "<strong>AI-Powered Intelligence</strong> — Embedding ML and advanced analytics into decisions at every level",
-          "<strong>Connected Operations</strong> — Integrating previously siloed functions into real-time decision loops",
+          "<strong>Data as a Strategic Asset</strong> — Building infrastructure, governance, and culture to treat data as a company-wide resource rather than a departmental byproduct",
+          "<strong>AI-Powered Intelligence</strong> — Embedding ML and advanced analytics into decisions at every level, from molecule selection to sales force deployment",
+          "<strong>Connected Operations</strong> — Integrating previously siloed functions into real-time decision loops that eliminate latency",
           "<strong>Digital Patient & Customer Centricity</strong> — Redesigning interactions using digital channels, RWD, and personalised engagement",
+        ],
+        pullQuote: {
+          text: "The pharmaceutical organisations that will lead the next decade are not those with the largest R&D budgets, but those with the most intelligent, interconnected, and adaptive operating models.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+      {
+        title: "The Platform Economy Entering Life Sciences",
+        content: [
+          "Technology companies — Amazon (AWS Health), Microsoft (Cloud for Healthcare), Google (Cloud Life Sciences), and specialised platforms like Veeva Systems, Medidata, and IQVIA — are moving into the pharmaceutical value chain with capabilities pharma cannot easily replicate internally.",
+        ],
+        table: {
+          headers: ["Platform Category", "Leading Platforms", "Pharma Capability", "Strategic Implication"],
+          rows: [
+            ["Clinical Cloud", "Medidata, Veeva Vault Clinical, Oracle Health Sciences", "End-to-end trial management — EDC, CTMS, eTMF", "Vendor consolidation reduces integration debt"],
+            ["AI Drug Discovery", "Schrödinger, Recursion OS2, Exscientia, Insilico Chemistry42", "Target ID, molecular design, ADMET prediction", "Platform business models emerging"],
+            ["Manufacturing Intelligence", "Siemens Xcelerator, Rockwell Plex, AspenTech, AVEVA PI", "Digital twin, OEE, PAT integration, predictive quality", "Factory-as-a-service emerging"],
+            ["Commercial & Patient", "Veeva CRM/Engage, Salesforce Health Cloud, Aktana NBA", "HCP engagement, patient support, NBA orchestration", "HCP journey platform as primary commercial asset"],
+            ["Regulatory Intelligence", "Veeva Vault RIM, Certara D360, Aris Global", "Global submission management, agency intelligence, IDMP", "30–50% reduction in submission cycle time"],
+          ],
+        },
+      },
+      {
+        title: "Questions for the Board",
+        content: [
+          "Does your organisation have a single, authoritative source of truth for R&D, clinical, manufacturing, and commercial data — and does leadership have real-time visibility into it? What percentage of key operational decisions are made with AI-assisted analytics versus human intuition and spreadsheets? How long does it take your organisation to go from a regulatory inquiry to a complete, accurate data response? What is your current digital maturity score versus your top three competitors? Who in your leadership team owns the digital transformation agenda — and do they have the budget, authority, and talent to execute it?",
         ],
       },
     ],
@@ -250,7 +438,7 @@ export const chapters: Chapter[] = [
     metrics: [
       { value: "3×", label: "Value Multiplier of Strategic GCCs" },
       { value: "18 Mo", label: "Avg. Transformation Runway" },
-      { value: "5-Star", label: "NASSCOM GCC Maturity Scale" },
+      { value: "5-Level", label: "PDMF Maturity Scale" },
       { value: "70%", label: "Transformation Initiatives Fail" },
     ],
     tags: ["Strategy", "Blueprint", "Three-Horizon", "PDMF"],
@@ -258,8 +446,8 @@ export const chapters: Chapter[] = [
       {
         title: "Defining True North for a Pharma GCC",
         content: [
-          "Every successful GCC transformation begins with a clearly articulated True North — a statement of strategic ambition that goes beyond cost-efficiency. For pharma GCCs, True North typically takes one of three forms: the Deep Science Hub, the Digital Acceleration Engine, or the Regulatory Intelligence Factory.",
-          "A clearly articulated digital transformation vision statement, endorsed by the global CEO and board, is the single most important predictor of transformation success. Without it, digital transformation becomes a technology project rather than a business transformation — and technology projects that lack strategic sponsorship have a failure rate that approaches certainty.",
+          "Every successful GCC transformation begins with a clearly articulated True North. A clearly articulated digital transformation vision statement, endorsed by the global CEO and board, is the single most important predictor of transformation success.",
+          "Without it, digital transformation becomes a technology project rather than a business transformation — and technology projects that lack strategic sponsorship have a failure rate that approaches certainty.",
         ],
         callout: {
           type: "executive",
@@ -271,9 +459,9 @@ export const chapters: Chapter[] = [
         title: "The Three-Horizon Pharma GCC Framework",
         content: [],
         steps: [
-          { num: "H1", title: "Horizon 1 · Stabilise & Standardise (0–12 months)", description: "Audit existing capabilities. Standardise core processes using LEAN and Six Sigma principles. Establish baseline quality metrics and SLA frameworks. Cloud migration, data lake foundation." },
-          { num: "H2", title: "Horizon 2 · Differentiate & Digitise (12–36 months)", description: "Deploy AI-assisted tools across clinical operations, regulatory intelligence, and pharmacovigilance. Build CoE structures for high-value domains. Enterprise AI/ML platform, GenAI pilots." },
-          { num: "H3", title: "Horizon 3 · Lead & Innovate (36+ months)", description: "Operate as a co-equal innovation partner to global HQ. Own full drug discovery pipelines. Lead global regulatory strategy for emerging markets. Publish peer-reviewed research." },
+          { num: "H1", title: "Horizon 1 · Stabilise & Standardise (0–12 months)", description: "Audit existing capabilities. Standardise core processes. Cloud migration, data lake foundation." },
+          { num: "H2", title: "Horizon 2 · Differentiate & Digitise (12–36 months)", description: "Deploy AI-assisted tools across clinical, regulatory, and PV. Build CoE structures. Enterprise AI/ML platform." },
+          { num: "H3", title: "Horizon 3 · Lead & Innovate (36+ months)", description: "Operate as co-equal innovation partner. Own drug discovery pipelines. Lead regulatory strategy." },
         ],
       },
       {
@@ -311,6 +499,18 @@ export const chapters: Chapter[] = [
           ],
         },
       },
+      {
+        title: "Board-Level Digital Oversight & Change Management",
+        content: [
+          "Boards of pharmaceutical companies are increasingly being asked to oversee digital transformation. The evidence from companies that have navigated this well points to three practices: dedicated board-level reporting on the digital portfolio, board composition with deep digital expertise, and cyber and data privacy oversight.",
+          "<strong>Investment frameworks:</strong> Pharma digital transformation programmes typically involve annual investment in the range of 1–3% of revenue for companies in scaling mode, rising to 4–5% for companies in accelerated transformation.",
+        ],
+        callout: {
+          type: "case-study",
+          label: "📋 Case Study: Novartis — Becoming a Data-Driven Medicine Company",
+          content: "Novartis's transformation under CEO Vas Narasimhan invested several hundred million dollars annually in digital and data capabilities. Key lessons: CEO ownership, investment at scale, foundational data work before AI deployment, and a culture programme reaching every level. Outcomes include measurable reduction in clinical trial cycle times and $200M annual commercial efficiency gains.",
+        },
+      },
     ],
   },
   {
@@ -330,8 +530,7 @@ export const chapters: Chapter[] = [
       {
         title: "The Four-Layer Governance Architecture",
         content: [
-          "A mature pharma GCC governance model operates across four layers. The most effective structures are those that provide clear decision rights with minimal approval layers — typically no more than two approvals for any operational decision.",
-          "Digital transformation governance in pharma has a fundamental characteristic that distinguishes it from digital governance in other industries: the regulatory environment. Every digital system that touches a GxP process — manufacturing, quality, clinical data, regulatory submissions, pharmacovigilance — must be validated to regulatory standards.",
+          "A mature pharma GCC governance model operates across four layers. Digital transformation governance in pharma has a fundamental characteristic that distinguishes it from other industries: the regulatory environment. Every digital system that touches a GxP process must be validated to regulatory standards.",
         ],
         pillars: [
           { num: "Layer 01", title: "Strategic Board", description: "Quarterly direction-setting, investment decisions, and global-local alignment chaired by CXO-level sponsors.", colorVariant: "teal" },
@@ -343,13 +542,13 @@ export const chapters: Chapter[] = [
           icon: "🏛️",
           label: "Governance Insight",
           title: "The best governance model is the lightest one that works",
-          description: "Over-governance kills agility. Under-governance kills accountability. The optimal model is one that provides clear decision rights with minimal approval layers — typically no more than two approvals for any operational decision.",
+          description: "Over-governance kills agility. Under-governance kills accountability. The optimal model provides clear decision rights with minimal approval layers — no more than two approvals for any operational decision.",
         },
       },
       {
         title: "Centre of Excellence (CoE) Model",
         content: [
-          "The CoE model has emerged as the dominant organisational pattern for building and scaling digital capabilities in pharmaceutical GCCs. A well-designed CoE provides three things: deep domain expertise concentrated in a dedicated team, standardised methods and platforms that enable reuse, and a career pathway for specialists.",
+          "The CoE model has emerged as the dominant organisational pattern for building and scaling digital capabilities in pharmaceutical GCCs.",
         ],
         bulletPoints: [
           "<strong>AI/ML CoE</strong> — Model development, MLOps, AI governance, and ethical AI review",
@@ -366,7 +565,7 @@ export const chapters: Chapter[] = [
     num: "04",
     partLabel: "Part II · Value Chain",
     title: "R&D & Drug Discovery",
-    lead: "How pharma GCCs are shifting from support roles to driving computational drug discovery, target identification, and lead optimisation.",
+    lead: "How AI is transforming computational drug discovery, target identification, and lead optimisation — from molecule to IND.",
     metrics: [
       { value: "AlphaFold", label: "Protein Structure AI" },
       { value: "CADD", label: "Computer-Aided Drug Design" },
@@ -381,66 +580,70 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "Drug discovery is the function where AI is having its most transformative impact — and it is a domain where pharma GCCs can deliver outsized value. The combination of computational biology expertise, data engineering capability, and lower-cost PhD talent creates a structural advantage for GCC-based R&D intelligence teams.",
+          content: "Drug discovery is the function where AI is having its most transformative impact. The combination of computational biology expertise, data engineering capability, and lower-cost PhD talent creates a structural advantage for GCC-based R&D intelligence teams.",
         },
       },
       {
-        title: "The Drug Discovery Pipeline — GCC-Powered Transformation",
+        title: "The AI-Augmented Drug Discovery Pipeline",
         content: [
-          "Modern pharma GCCs are no longer peripheral to drug discovery — they are increasingly the computational and analytical engine that powers it.",
-          "The traditional process of target identification has historically relied on hypothesis-driven research conducted over years. AI is restructuring this process by using ML models trained on large repositories of genomic data, protein structure databases, published clinical outcomes, and EHRs to identify associations that are not apparent to human researchers.",
+          "AI is attacking the pharmaceutical R&D productivity crisis at multiple points simultaneously. AI-driven target identification finds better biological targets. Generative AI for molecular design explores chemical space orders of magnitude more efficiently. Digital laboratory automation reduces experimental cycle time. Integrated data platforms eliminate information silos.",
         ],
         diagram: {
-          title: "Drug Discovery & Development Pipeline",
+          title: "AI-Augmented Drug Discovery Pipeline",
           svgContent: SVG_DRUG_PIPELINE,
         },
         steps: [
-          { num: "01", title: "Target Identification & Validation", description: "Multi-omics analysis, knowledge graph mining, AI-powered literature synthesis. AlphaFold's database covers 200M+ protein structures for structure-based drug design at unprecedented scale." },
-          { num: "02", title: "Hit Identification & High-Throughput Screening", description: "Virtual screening of billion-compound libraries using molecular docking, pharmacophore modelling, and generative AI. DNA-encoded chemical libraries (DELs) can screen billions of compounds simultaneously." },
-          { num: "03", title: "Lead Optimisation", description: "ADMET prediction using ML models. Multi-parameter lead optimisation (MPLO) simultaneously targeting potency, selectivity, and ADMET properties from the outset." },
-          { num: "04", title: "Preclinical Development & IND Package", description: "Computational toxicology, PBPK modelling, and regulatory-ready preclinical dossier preparation. AI models predict hERG cardiac toxicity liability, CYP enzyme inhibition." },
+          { num: "01", title: "Target Identification & Validation", description: "Multi-omics analysis, knowledge graph mining, AI-powered literature synthesis. AlphaFold's database covers 200M+ protein structures for structure-based drug design." },
+          { num: "02", title: "Hit Identification & Virtual Screening", description: "Virtual screening of billion-compound libraries using molecular docking, pharmacophore modelling, and generative AI. DNA-encoded chemical libraries (DELs) can screen billions simultaneously." },
+          { num: "03", title: "Lead Optimisation", description: "ADMET prediction using ML models. Multi-parameter lead optimisation (MPLO) simultaneously targeting potency, selectivity, and ADMET properties." },
+          { num: "04", title: "Preclinical Development & IND Package", description: "Computational toxicology, PBPK modelling, and regulatory-ready preclinical dossier preparation. AI predicts hERG cardiac toxicity and CYP enzyme inhibition." },
         ],
-        pullQuote: {
-          text: "GCC computational biology teams that master AlphaFold 3, molecular dynamics simulation, and generative chemistry are not supporting drug discovery — they are doing drug discovery.",
-          cite: "KR · Chapter 4 · R&D & Drug Discovery",
+      },
+      {
+        title: "AI Platforms Powering Drug Discovery",
+        content: [],
+        table: {
+          headers: ["AI Platform / Tool", "Primary Application", "Key Technology", "Notable Deployment"],
+          rows: [
+            ["AlphaFold 3 (DeepMind)", "Protein structure prediction; structure-based drug design", "Evoformer transformer + diffusion", "200M+ structures; broadly adopted"],
+            ["PandaOmics (Insilico)", "AI-powered target identification using multi-omics", "Graph neural networks; knowledge graphs", "TNIK / IPF — INS018-055 in Phase II"],
+            ["Chemistry42 (Insilico)", "Generative molecular design", "GAN + RL + diffusion models", "Multiple clinical candidates generated"],
+            ["Schrödinger FEP+", "Free energy perturbation; lead optimisation", "Physics-based + ML", "BMS, Pfizer partnerships"],
+            ["Exscientia Centaur", "AI-designed drug candidates", "Automated design-make-test-analyse", "DSP-1181 — first AI drug in Phase I"],
+            ["Recursion OS2", "Cellular imaging → target discovery", "Computer vision + biological foundation models", "NVIDIA partnership; multi-billion compound library"],
+            ["BenevolentAI", "Literature-based target hypotheses", "Knowledge graph + LLM traversal", "Baricitinib → COVID-19 EUA in <2 months"],
+          ],
         },
       },
       {
         title: "Generative AI for Molecular Design",
         content: [
-          "Generative models learn statistical patterns in large datasets of known molecules — chemical structure, properties, binding affinities, assay and clinical outcomes — then generate novel molecular structures with desired properties. Unlike traditional HTS, generative models can propose entirely new chemical entities designed de novo.",
-          "The milestone that attracted widespread attention was Insilico Medicine's disclosure in 2023 that it advanced an AI-designed TNIK inhibitor from target identification to Phase II clinical trial in approximately four years and at a fraction of the cost of conventional programmes.",
+          "Generative models learn statistical patterns in large datasets of known molecules and generate novel molecular structures with desired properties. Unlike traditional HTS, generative models can propose entirely new chemical entities designed de novo.",
+          "The leading systems combine deep generative models — variational autoencoders, diffusion models, and transformer architectures — with reinforcement learning that rewards molecules scoring well against multi-parameter objectives.",
         ],
         callout: {
           type: "case-study",
           label: "📋 Case Study: Insilico Medicine — First AI-Discovered Clinical Candidate",
-          content: "Insilico Medicine progressed INS018_055, a novel TNIK inhibitor for idiopathic pulmonary fibrosis, into Phase II trials. The drug was identified entirely through AI-driven processes — from target ID through generative molecular design — in ~18 months, vs. an industry average of 4–5 years. This demonstrates AI-driven discovery pipelines can produce viable clinical candidates.",
+          content: "Insilico Medicine progressed INS018_055, a novel TNIK inhibitor for idiopathic pulmonary fibrosis, into Phase II trials. The drug was identified entirely through AI-driven processes in ~18 months, vs. an industry average of 4–5 years. This demonstrates AI-driven discovery pipelines can produce viable clinical candidates.",
         },
       },
       {
-        title: "Key Technology Platforms for GCC Drug Discovery",
+        title: "Key Technology Platforms & Regional Spotlight",
         content: [],
         pillars: [
           { num: "Structural Biology", title: "AlphaFold 3 / RoseTTAFold", description: "Protein structure prediction enabling structure-based drug design at unprecedented scale.", colorVariant: "violet" },
           { num: "Generative Chemistry", title: "Insilico / Schrödinger", description: "De novo molecular generation using reinforcement learning and diffusion models.", colorVariant: "violet" },
           { num: "Multi-Omics Platform", title: "GATK / DESeq2 / STAR", description: "Genomics variant calling, RNA-seq differential expression, and integrated pathway analysis.", colorVariant: "violet" },
-          { num: "ADMET Prediction", title: "QikProp / StarDrop", description: "In silico prediction of pharmacokinetic and safety properties for early compound elimination.", colorVariant: "violet" },
           { num: "Self-Driving Labs", title: "Emerald Cloud / Ada", description: "Closed-loop AI-robot systems that design, execute, and learn from experiments autonomously.", colorVariant: "violet" },
         ],
-        insightBox: {
-          icon: "🧬",
-          label: "Strategic Insight",
-          title: "Building the Computational Biology CoE",
-          description: "The single highest-ROI investment a pharma GCC can make: 20–25 PhD/MSc bioinformaticians, 10 ML engineers, 5 medicinal chemistry data scientists in Year 1.",
-        },
-      },
-      {
-        title: "Regional Spotlight: R&D Digital Transformation",
-        content: [],
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: R&D by Geography",
-          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals (Pfizer, Merck, AstraZeneca) investing hundreds of millions, and AI-first biotechs (Recursion, Insilico, Exscientia, Schrödinger). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability in the world. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms and ELN systems.",
+          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion, Insilico, Exscientia). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; Novartis has invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
+        },
+        pullQuote: {
+          text: "GCC computational biology teams that master AlphaFold 3, molecular dynamics simulation, and generative chemistry are not supporting drug discovery — they are doing drug discovery.",
+          cite: "KR · Chapter 4 · R&D & Drug Discovery",
         },
       },
     ],
@@ -471,7 +674,7 @@ export const chapters: Chapter[] = [
       {
         title: "GCC Clinical Operations Capability Map",
         content: [
-          "Clinical trials remain the most expensive, time-consuming, and operationally complex component of drug development. A large Phase III trial can span 200+ sites across 40 countries. Over 60% of new US trial starts incorporate at least one decentralised element as of 2024.",
+          "Over 60% of new US trial starts incorporate at least one decentralised element as of 2024. Clinical trials remain the most expensive component of drug development.",
         ],
         pillars: [
           { num: "Domain 01", title: "Clinical Data Management", description: "EDC system design, data cleaning, query management, SAE reconciliation, and database lock.", colorVariant: "teal" },
@@ -486,7 +689,7 @@ export const chapters: Chapter[] = [
         title: "Decentralised Clinical Trials (DCT)",
         content: [
           "DCTs represent one of the most significant structural shifts in clinical trial methodology. By moving trial activities from investigator sites to the patient's home or community, DCTs reduce patient burden, expand the eligible patient population, improve retention, and generate continuous digital health data.",
-          "The technology infrastructure for DCTs encompasses five interconnected layers: ePRO/eCOA platforms for patient-reported outcomes, connected wearable devices for continuous physiological monitoring, eConsent platforms for remote informed consent, central lab kits and home nursing services, and telemedicine/virtual visit platforms.",
+          "The technology infrastructure for DCTs encompasses five interconnected layers: ePRO/eCOA platforms for patient-reported outcomes, connected wearable devices for continuous physiological monitoring, eConsent platforms, central lab kits and home nursing services, and telemedicine/virtual visit platforms.",
         ],
       },
     ],
@@ -496,7 +699,7 @@ export const chapters: Chapter[] = [
     num: "06",
     partLabel: "Part II · Value Chain",
     title: "Manufacturing Excellence & Smart Supply Chain",
-    lead: "How pharma GCCs drive manufacturing intelligence, Industry 4.0 capabilities, and end-to-end supply chain orchestration.",
+    lead: "Industry 4.0, digital twins, PAT-enabled real-time release testing, and AI-powered supply chain orchestration.",
     metrics: [
       { value: "GMP", label: "Good Manufacturing Practice" },
       { value: "PAT", label: "Process Analytical Technology" },
@@ -508,7 +711,7 @@ export const chapters: Chapter[] = [
       {
         title: "Digital Manufacturing & Industry 4.0",
         content: [
-          "The fourth industrial revolution is reshaping pharmaceutical manufacturing — and GCCs are positioned to be the digital intelligence layer. Companies with mature digital manufacturing platforms demonstrate up to 35% faster batch release cycles and 25% lower deviation rates.",
+          "The fourth industrial revolution is reshaping pharmaceutical manufacturing. Companies with mature digital manufacturing platforms demonstrate up to 35% faster batch release cycles and 25% lower deviation rates.",
           "Pharmaceutical supply chains are among the most complex in any industry — governed by stringent regulatory requirements, temperature sensitivity, serialisation mandates, and the critical imperative of patient safety.",
         ],
         pillars: [
@@ -516,7 +719,7 @@ export const chapters: Chapter[] = [
           { num: "Technology 02", title: "Process Analytical Technology", description: "Real-time in-line analytical measurements linked to control systems for continuous verification.", colorVariant: "gold" },
           { num: "Technology 03", title: "AI-Powered Quality Systems", description: "NLP-based deviation management, ML-powered batch disposition, predictive CAPA scoring.", colorVariant: "gold" },
           { num: "Technology 04", title: "Serialisation & Track & Trace", description: "Global serialisation ensuring DSCSA, FMD, and emerging market compliance.", colorVariant: "gold" },
-          { num: "Technology 05", title: "Cold Chain AI Monitoring", description: "AI platforms continuously monitor temperature, humidity, transit conditions across global cold chain networks, predicting excursions before they occur.", colorVariant: "gold" },
+          { num: "Technology 05", title: "Cold Chain AI Monitoring", description: "AI platforms continuously monitor temperature, humidity, and transit conditions, predicting excursions before they occur.", colorVariant: "gold" },
         ],
         insightBox: {
           icon: "🏭",
@@ -532,7 +735,7 @@ export const chapters: Chapter[] = [
     num: "07",
     partLabel: "Part II · Value Chain",
     title: "Quality Management & Compliance",
-    lead: "Building AI-augmented quality management systems that ensure GxP compliance while reducing manual overhead and accelerating batch release.",
+    lead: "AI-augmented quality management systems ensuring GxP compliance while reducing manual overhead and accelerating batch release.",
     metrics: [
       { value: "eQMS", label: "Electronic Quality Mgmt" },
       { value: "GAMP 5", label: "Validation Framework" },
@@ -544,15 +747,27 @@ export const chapters: Chapter[] = [
       {
         title: "Digital Quality Management",
         content: [
-          "Quality management in pharmaceutical manufacturing is undergoing a fundamental shift from reactive, paper-based compliance systems to proactive, AI-augmented digital quality platforms. The eQMS (electronic Quality Management System) is the backbone of this transformation.",
-          "An effective digital QMS provides automated deviation management, real-time quality metrics dashboards, AI-powered CAPA root cause analysis, and predictive quality scoring that identifies potential issues before they result in batch failures or regulatory observations.",
+          "Quality management in pharmaceutical manufacturing is undergoing a fundamental shift from reactive, paper-based compliance systems to proactive, AI-augmented digital quality platforms.",
+          "AI-powered quality risk analytics can continuously monitor process parameter trends, deviation history, environmental monitoring results, raw material variability, and equipment performance — identifying emerging risk signals before they manifest as quality events.",
         ],
         pillars: [
-          { num: "QMS 01", title: "Deviation Management", description: "AI-powered deviation triage, automated classification, root cause analysis using NLP on historical deviation data.", colorVariant: "coral" },
+          { num: "QMS 01", title: "Deviation Management", description: "AI-powered deviation triage, automated classification, root cause analysis using NLP on historical data.", colorVariant: "coral" },
           { num: "QMS 02", title: "CAPA Management", description: "Predictive CAPA scoring, automated effectiveness check scheduling, trend analysis across global sites.", colorVariant: "coral" },
           { num: "QMS 03", title: "Change Control", description: "Digital change control with impact assessment automation, cross-site change harmonisation.", colorVariant: "coral" },
           { num: "QMS 04", title: "Document Management", description: "SOP lifecycle management, AI-powered document review, version control with regulatory audit trail.", colorVariant: "coral" },
         ],
+      },
+      {
+        title: "Inspection Readiness & Data Integrity",
+        content: [
+          "Digital quality management systems improve inspection outcomes. The availability of complete, accurate, and instantly retrievable electronic records — compared to days of paper record retrieval — is itself an indicator of quality culture that regulators evaluate.",
+          "The ALCOA+ data integrity principles — Attributable, Legible, Contemporaneous, Original, Accurate, plus Complete, Consistent, Enduring, and Available — are the foundation of digital quality compliance.",
+        ],
+        callout: {
+          type: "spotlight",
+          label: "🌍 Regional Spotlight: Quality Digital Transformation",
+          content: "In the <strong>US</strong>, FDA's data integrity expectations have created powerful regulatory motivation for quality digitalisation. In the <strong>EU</strong>, GMP Annex 11 sets prescriptive expectations for computerised systems. In <strong>India</strong>, quality management digitalisation is the single most impactful lever for manufacturers seeking to improve standing with FDA, EMA, and other stringent regulatory authorities.",
+        },
       },
     ],
   },
@@ -561,35 +776,71 @@ export const chapters: Chapter[] = [
     num: "08",
     partLabel: "Part II · Value Chain",
     title: "Regulatory Affairs & Compliance",
-    lead: "Building GCC regulatory intelligence capabilities that transform submissions from reactive documentation to proactive competitive strategy.",
+    lead: "Building regulatory intelligence capabilities that transform submissions from reactive documentation to proactive competitive strategy.",
     metrics: [
       { value: "180+", label: "Global Regulatory Agencies" },
       { value: "eCTD", label: "Universal Submission Format" },
       { value: "ICH", label: "International Harmonisation" },
       { value: "CDSCO", label: "India Central Drugs Authority" },
     ],
-    tags: ["Regulatory", "FDA", "EMA", "Submissions", "eCTD"],
+    tags: ["Regulatory", "FDA", "EMA", "Submissions", "eCTD", "PV"],
     sections: [
       {
-        title: "Major Regulatory Pathway Comparison",
+        title: "Executive Summary",
+        content: [],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "Regulatory affairs sits at the intersection of science, law, and operations — and it is being profoundly reshaped by digitalisation. Digital tools are making the regulatory function faster, more accurate, and more strategically powerful — from submission automation through pharmacovigilance to real-world evidence integration.",
+        },
+      },
+      {
+        title: "Global Regulatory Agency Comparison",
         content: [
-          "Regulatory affairs is a domain where GCC value creation is immediate, measurable, and strategically significant. The complexity of managing submissions across 180+ global regulatory agencies creates enormous demand for skilled regulatory professionals — and India's regulatory affairs talent pool is among the deepest globally.",
+          "In a company with a 50-product global portfolio across 100 markets, regulatory affairs manages approximately 5,000 individual product registrations, each with its own lifecycle of updates, renewals, and pharmacovigilance obligations.",
         ],
         table: {
-          headers: ["Agency", "Key Pathway", "Priority Programme", "Typical Review", "GCC Opportunity"],
+          headers: ["Agency", "Region", "Key Submission", "Priority Programme", "Review Timeline", "Digital Platform"],
           rows: [
-            ["FDA (US)", "NDA / BLA", "Breakthrough Therapy, Fast Track", "10–12 months", "eCTD assembly, MedWatch"],
-            ["EMA (EU)", "MAA Centralised", "PRIME, Conditional MA", "210 active days", "CHMP interactions, PSUR"],
-            ["CDSCO (India)", "New Drug Approval", "Accelerated Approval", "12–18 months", "Full submission ownership"],
-            ["PMDA (Japan)", "JNDA", "SAKIGAKE Designation", "9–12 months", "eCTD localisation"],
-            ["NMPA (China)", "NDA", "Priority Review, Breakthrough", "130 working days", "Dossier preparation"],
+            ["FDA", "🇺🇸 US", "NDA / BLA", "Breakthrough Therapy; Fast Track; RMAT", "10–12 mo / 6 mo priority", "ESG Gateway · FDA CDER Portal"],
+            ["EMA", "🇪🇺 EU", "MAA Centralised", "PRIME; Conditional MA; Accelerated", "210 active days", "IRIS · eSubmission · CTIS"],
+            ["CDSCO", "🇮🇳 India", "New Drug Application (Form 44)", "Accelerated Approval (Rule 101)", "12–18 months", "SUGAM portal"],
+            ["PMDA", "🇯🇵 Japan", "JNDA / JBLA", "SAKIGAKE; Conditional Early Approval", "9–12 months", "eCTD-J; PMDA Gateway"],
+            ["NMPA", "🇨🇳 China", "NDA via CDE", "Priority Review; Special Approval", "12–24 months", "CDE portal"],
           ],
         },
-        insightBox: {
-          icon: "⚖️",
-          label: "Regulatory Strategy",
-          title: "The 'Regulatory-by-Design' Principle",
-          description: "The most sophisticated pharma GCC teams shift from submission preparation to regulatory strategy co-creation — engaging from the earliest clinical design stages. This approach can accelerate approval timelines by 6–12 months.",
+      },
+      {
+        title: "eCTD Common Technical Document Architecture",
+        content: [
+          "The eCTD is the globally mandated format for regulatory submissions. Modern submission automation platforms treat the submission as a structured data object where individual scientific claims are linked to their source data systems.",
+        ],
+        diagram: {
+          title: "eCTD Common Technical Document — Module Architecture",
+          svgContent: SVG_ECTD_MODULES,
+        },
+      },
+      {
+        title: "Digital Pharmacovigilance & Signal Detection",
+        content: [
+          "Pharmacovigilance — the ongoing monitoring of drug safety — is both a legal obligation and a scientific discipline. AI-assisted processing tools can intake cases from structured and unstructured sources, perform automated triage, pre-populate case narratives using NLG, and generate submission-ready ICSRs. These tools are reducing PV case processing costs by 40–60%.",
+          "Multi-source signal detection — combining spontaneous reporting data with claims data, EHRs, social media, and published literature — identifies emerging safety issues faster than any single data source alone.",
+        ],
+        diagram: {
+          title: "Digital Pharmacovigilance Signal Detection Flow",
+          svgContent: SVG_PV_SIGNAL_FLOW,
+        },
+      },
+      {
+        title: "Real-World Evidence in Regulatory Decision-Making",
+        content: [
+          "Real-world evidence (RWE) is playing an increasingly significant role in regulatory decision-making globally. The FDA's RWE Programme, the EMA's DARWIN EU platform, and the UK MHRA's RWE Framework are all expanding the contexts in which RWE is accepted.",
+          "RWE can support label expansions without additional randomised trials, satisfy post-approval commitments more rapidly, provide comparative effectiveness data that payers require, and enable rare disease regulatory pathways.",
+        ],
+        callout: {
+          type: "spotlight",
+          label: "🌍 Regional Spotlight: Regulatory Digitalisation",
+          content: "In the <strong>US</strong>, FDA's DSCSA implementation, Digital Health Centre of Excellence, AI/ML SaMD action plan, and RWE Framework collectively define a regulatory environment that rewards digital capabilities. In the <strong>EU</strong>, EMA's DARWIN EU real-world evidence infrastructure and IDMP structured data standards are major investments. In <strong>India</strong>, CDSCO's SUGAM portal has digitalised the submission process, significantly reducing processing times.",
         },
       },
     ],
@@ -599,7 +850,7 @@ export const chapters: Chapter[] = [
     num: "09",
     partLabel: "Part III · Commercial",
     title: "Commercial Excellence, Sales & Marketing",
-    lead: "Leveraging GCC analytics, AI, and omnichannel capabilities to drive launch excellence, market access, and commercial performance.",
+    lead: "Leveraging AI, omnichannel capabilities, and advanced analytics to drive launch excellence and commercial performance.",
     metrics: [
       { value: "HCP", label: "Healthcare Professional Engagement" },
       { value: "NBA", label: "Next-Best-Action AI" },
@@ -614,19 +865,17 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. Organizations deploying next-generation customer engagement platforms are generating 2–3× the sales force effectiveness of laggards, measured in prescriber access and message recall.",
+          content: "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. Organisations deploying next-generation customer engagement platforms are generating 2–3× the sales force effectiveness of laggards. Novartis publicly disclosed $200M annual commercial efficiency gains from its AI-driven commercial transformation.",
         },
       },
       {
         title: "GCC Commercial Capabilities",
-        content: [
-          "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. GCCs are at the centre of this transformation.",
-        ],
+        content: [],
         pillars: [
           { num: "Capability 01", title: "Launch Analytics & Excellence", description: "Pre-launch forecasting, competitive intelligence, KOL mapping, and real-time launch performance tracking.", colorVariant: "teal" },
           { num: "Capability 02", title: "Next-Best-Action AI", description: "ML-powered HCP engagement optimisation across channels — email, rep visits, medical affairs, digital.", colorVariant: "teal" },
           { num: "Capability 03", title: "HEOR & Market Access", description: "Health economics modelling, payer analytics, value dossier development, and reimbursement strategy.", colorVariant: "teal" },
-          { num: "Capability 04", title: "Omnichannel Orchestration", description: "Integrated digital marketing, medical education platforms, patient support portals, and CRM analytics.", colorVariant: "teal" },
+          { num: "Capability 04", title: "Omnichannel Orchestration", description: "Integrated digital marketing, medical education, patient support portals, and CRM analytics.", colorVariant: "teal" },
         ],
       },
     ],
@@ -636,7 +885,7 @@ export const chapters: Chapter[] = [
     num: "10",
     partLabel: "Part III · Commercial",
     title: "Patient Engagement & Digital Therapeutics",
-    lead: "Embedding the patient voice into every decision — from clinical design through market access — powered by digital health, DTx, and real-world evidence.",
+    lead: "Embedding the patient voice into every decision — from clinical design through market access — powered by digital health, DTx, and RWE.",
     metrics: [
       { value: "RWE", label: "Real-World Evidence" },
       { value: "PRO", label: "Patient-Reported Outcomes" },
@@ -651,21 +900,20 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "The patient has moved from the periphery to the center of pharmaceutical strategy. Companies that still treat patient engagement as a post-approval support program bolt-on will find themselves disadvantaged compared to organizations that have built patient centricity into their operating model from target identification through therapy lifecycle management.",
+          content: "The patient has moved from the periphery to the centre of pharmaceutical strategy. Companies that still treat patient engagement as a post-approval support program bolt-on will be disadvantaged compared to organisations that have built patient centricity into their operating model from target identification through therapy lifecycle management.",
         },
       },
       {
         title: "The Empowered Patient & Digital PSPs",
         content: [
-          "The patient experience of illness has been transformed by digital technology irreversibly. A newly diagnosed patient today researches online, joins digital communities, tracks symptoms through apps, and arrives at specialist appointments with formed views on therapies and clinical trials.",
-          "Digital PSPs use mobile apps as the primary patient interface, providing personalized disease information, injection training via video, symptom tracking, adherence monitoring, and direct nurse educator access. Studies consistently show 15–25% higher six-month therapy persistence rates vs. standard pharmacy dispensing.",
+          "Digital PSPs use mobile apps as the primary patient interface, providing personalised disease information, injection training via video, symptom tracking, adherence monitoring, and direct nurse educator access. Studies consistently show 15–25% higher six-month therapy persistence rates vs. standard pharmacy dispensing.",
         ],
       },
       {
         title: "Digital Therapeutics (DTx)",
         content: [
-          "Regulated digital therapeutics are software validated in clinical trials to demonstrate safety and efficacy for specific conditions, and can be prescribed and reimbursed like pharmaceutical products. Approved DTx exist for depression, anxiety, insomnia, ADHD, diabetes management, and chronic pain.",
-          "For pharma companies, DTx represent both a threat (displacement of pharmaceutical approaches) and an opportunity (complementing the pharmaceutical portfolio). A depression drug sold in combination with a validated digital CBT therapeutic has a differentiated value proposition.",
+          "Regulated digital therapeutics are software validated in clinical trials to demonstrate safety and efficacy for specific conditions. Approved DTx exist for depression, anxiety, insomnia, ADHD, diabetes management, and chronic pain.",
+          "For pharma companies, DTx represent both a threat (displacement of pharmaceutical approaches) and an opportunity (complementing the pharmaceutical portfolio).",
         ],
       },
       {
@@ -674,7 +922,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: Patient Engagement",
-          content: "In the <strong>US</strong>, patient engagement is most advanced in specialty therapeutic areas — oncology, rare disease, immunology. In the <strong>EU</strong>, GDPR and EHDS shape patient data programmes with federated pan-European health data infrastructure. In <strong>India</strong>, ABDM's health ID infrastructure and 1.4 billion population create vast opportunity for digital patient engagement, especially given the growing burden of non-communicable disease.",
+          content: "In the <strong>US</strong>, patient engagement is most advanced in specialty therapeutic areas — oncology, rare disease, immunology. In the <strong>EU</strong>, GDPR and EHDS shape patient data programmes with federated pan-European health data infrastructure. In <strong>India</strong>, ABDM's health ID infrastructure and 1.4 billion population create vast opportunity for digital patient engagement.",
         },
         diagram: {
           title: "India Pharma Digital Ecosystem",
@@ -686,28 +934,65 @@ export const chapters: Chapter[] = [
   {
     id: "ch11",
     num: "11",
-    partLabel: "Part III · Commercial",
-    title: "Pharmacovigilance & Patient Safety",
-    lead: "Building AI-augmented pharmacovigilance operations that protect patient safety while managing the exponential growth of safety data.",
+    partLabel: "Part IV · Enterprise Enablers",
+    title: "Enterprise Systems & Architecture",
+    lead: "The technology backbone — ERP modernisation, data platforms, MLOps, integration architecture, and cybersecurity for pharma.",
     metrics: [
-      { value: "ICSR", label: "Individual Case Safety Reports" },
-      { value: "PSUR", label: "Periodic Safety Update Reports" },
-      { value: "60%", label: "Case Processing Automation" },
-      { value: "REMS", label: "Risk Evaluation Strategies" },
+      { value: "S/4HANA", label: "ERP Modernisation" },
+      { value: "Lakehouse", label: "Data Platform Architecture" },
+      { value: "MLOps", label: "AI Model Lifecycle" },
+      { value: "Zero Trust", label: "Cybersecurity Model" },
     ],
-    tags: ["Pharmacovigilance", "Safety", "Signal Detection"],
+    tags: ["Enterprise Architecture", "ERP", "Data Platform", "MLOps", "Cybersecurity"],
     sections: [
       {
-        title: "GCC Pharmacovigilance Operations",
+        title: "Enterprise Architecture Overview",
         content: [
-          "Pharmacovigilance — the science of detecting, assessing, and preventing adverse drug reactions — is one of the most critical and high-volume functions in pharma GCCs. The exponential growth in safety data sources — social media, patient apps, wearables, digital health platforms — is overwhelming traditional case processing workflows.",
+          "Enterprise architecture in pharma must integrate a complex landscape of GxP-validated systems (ERP, MES, LIMS, eQMS), clinical platforms (EDC, CTMS, eTMF), commercial systems (CRM, NBA engines), and data platforms — while maintaining regulatory compliance, data integrity, and cybersecurity.",
         ],
-        pillars: [
-          { num: "PV 01", title: "Case Processing & Triage", description: "AI-powered ICSR intake, duplicate detection, medical coding (MedDRA), and narrative generation.", colorVariant: "coral" },
-          { num: "PV 02", title: "Aggregate Reports", description: "PSUR/PBRER authoring with AI-assisted benefit-risk assessment and trend analysis.", colorVariant: "coral" },
-          { num: "PV 03", title: "Signal Detection", description: "Quantitative signal detection using WHO VigiBase, FAERS, and EudraVigilance with ML-powered pattern recognition.", colorVariant: "coral" },
-          { num: "PV 04", title: "Literature Monitoring", description: "AI-powered screening of medical literature for safety signals, automated relevance scoring and full-text review.", colorVariant: "coral" },
+        table: {
+          headers: ["Platform Layer", "Leading Platforms", "Pharma Capability", "Strategic Decision"],
+          rows: [
+            ["Enterprise ERP", "SAP S/4HANA, Oracle Cloud ERP, Workday", "Finance, supply chain, procurement, HR", "S/4HANA migration: $100M–$500M, 3–7 years"],
+            ["Life Sciences Cloud", "Veeva Vault (RIM, QMS, Clinical), IQVIA", "CRM, quality, regulatory, clinical ops", "Platform consolidation vs. best-of-breed"],
+            ["Data Platform", "Databricks, Snowflake, AWS/Azure/GCP", "Data lake, warehouse, lakehouse, analytics", "Cloud-native architecture; data mesh adoption"],
+            ["AI/ML Platform", "AWS SageMaker, Azure ML, Vertex AI, Palantir", "MLOps, model training, feature store, monitoring", "GxP validation of AI models and pipelines"],
+            ["Integration", "MuleSoft, SAP Integration Suite, Apache Kafka", "API management, iPaaS, event streaming", "Integration bus vs. event-driven architecture"],
+          ],
+        },
+      },
+      {
+        title: "MLOps Maturity for GxP-Regulated Pharma AI",
+        content: [
+          "Deploying AI models in a GxP-regulated environment requires a specialised MLOps framework integrating DevOps with 21 CFR Part 11, GAMP 5, and FDA/EMA AI/ML guidance.",
         ],
+        table: {
+          headers: ["MLOps Level", "Characteristics", "GxP Validation Posture", "Pharma Readiness"],
+          rows: [
+            ["Level 0 — Manual", "Models in notebooks; no versioning or monitoring", "No validation; audit trail absent", "Not acceptable for any GxP deployment"],
+            ["Level 1 — Reproducible", "Version control; documented model cards; manual deployment", "Partial validation evidence", "Acceptable only for research/exploratory"],
+            ["Level 2 — Automated Training", "CI/CD for training; feature store; model registry", "Automated validation evidence; IQ/OQ", "Minimum for GxP-adjacent analytics"],
+            ["Level 3 — Automated Deployment", "Full CI/CD; drift detection; retraining triggers", "Validated deployment pipeline; CAPA workflow", "Required for GxP-impacting AI"],
+            ["Level 4 — Autonomous", "Self-improving; continuous learning; human-in-the-loop", "Full audit trail; explainability layer", "Gold standard for AI drug discovery"],
+          ],
+        },
+        insightBox: {
+          icon: "🔐",
+          label: "Cybersecurity",
+          title: "Pharma is a high-value cyber target",
+          description: "The Merck NotPetya attack (2017) cost an estimated $870M. OT security for manufacturing, IP protection, and clinical data integrity are critical. Cybersecurity maturity must target NIST CSF Level 3 across all five functions.",
+        },
+      },
+      {
+        title: "The Pharmaceutical Data Platform",
+        content: [
+          "Modern pharmaceutical data platforms adopt a layered architecture: the <strong>data lake</strong> for raw/unstructured data, the <strong>data warehouse</strong> for curated analytical data, and the <strong>lakehouse</strong> merging both with governance. The <strong>data mesh</strong> concept — decentralised domain ownership with shared governance — is gaining adoption among the most mature organisations.",
+        ],
+        callout: {
+          type: "spotlight",
+          label: "🌍 Regional Spotlight: Technology Architecture",
+          content: "In the <strong>US</strong>, FDA's cloud computing guidance (2023) has removed primary regulatory uncertainty for cloud adoption. In the <strong>EU</strong>, GDPR data residency and the EU AI Act create specific compliance dimensions for architecture decisions. In <strong>India</strong>, the GCC ecosystem provides the world's deepest pool of enterprise software engineering talent — increasingly the actual builders of pharmaceutical enterprise technology platforms for global companies.",
+        },
       },
     ],
   },
@@ -715,52 +1000,51 @@ export const chapters: Chapter[] = [
     id: "ch12",
     num: "12",
     partLabel: "Part IV · Enterprise Enablers",
-    title: "Enterprise Systems, AI & Digital Transformation",
-    lead: "The comprehensive roadmap for deploying AI across the pharma value chain — responsibly, at scale, with measurable ROI — supported by enterprise architecture.",
+    title: "Finance, Procurement & Cybersecurity",
+    lead: "Digital transformation of horizontal functions — the operational infrastructure on which the entire enterprise runs.",
     metrics: [
-      { value: "GenAI", label: "Generative AI Revolution" },
-      { value: "$45B", label: "Pharma AI Market by 2030" },
-      { value: "CLARITY", label: "KR AI Product Mgmt Framework" },
-      { value: "Agentic", label: "AI Next Frontier" },
+      { value: "40–60%", label: "Finance Close Time Reduction" },
+      { value: "3–5%", label: "Procurement Savings" },
+      { value: "$870M", label: "Merck Cyber Attack Cost" },
+      { value: "NIST CSF", label: "Cybersecurity Framework" },
     ],
-    tags: ["AI", "Digital Transformation", "CLARITY Framework", "Enterprise Architecture"],
+    tags: ["Finance", "Procurement", "Cybersecurity", "NIST"],
     sections: [
       {
-        title: "AI Applications Across the Pharma Value Chain",
+        title: "Executive Summary",
+        content: [],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "The horizontal functions — finance, procurement, and cybersecurity — are not glamorous transformation subjects. But they are the operational infrastructure on which the entire enterprise runs, and their digital maturity directly determines whether the transformation investments in earlier chapters deliver their promised returns.",
+        },
+      },
+      {
+        title: "Pharmaceutical Cybersecurity Risk Landscape",
         content: [],
         table: {
-          headers: ["Domain", "AI Application", "Technology", "Value Created"],
+          headers: ["Cybersecurity Domain", "Pharma-Specific Risk", "Regulatory Obligation", "Key Controls"],
           rows: [
-            ["Drug Discovery", "Target identification, molecule generation", "GNN, AlphaFold, Generative Chemistry", "10× faster hit identification"],
-            ["Clinical Trials", "Site selection, patient matching", "ML, NLP, AI trial platforms", "30–40% enrolment acceleration"],
-            ["Regulatory Affairs", "eCTD assembly, query prediction", "LLM, Veeva AI, regulatory NLP", "50% preparation time reduction"],
-            ["Manufacturing", "Predictive quality, batch failure", "Time series ML, Computer Vision", "15–25% OEE improvement"],
-            ["Pharmacovigilance", "Case processing, signal detection", "NLP, ML, Argus AI", "60% case processing automation"],
-            ["Commercial", "HCP targeting, next-best-action", "ML, GenAI content, CRM AI", "20–35% sales effectiveness gain"],
+            ["OT / ICS Security", "Manufacturing disruption; quality compromise via MES/DCS attack", "FDA 2023 cybersecurity guidance; EU NIS2", "Air-gapping; network segmentation; OT monitoring"],
+            ["Clinical Data & EDC", "Trial data manipulation; patient data breach", "21 CFR Pt 11; ICH E6(R3); GDPR Art. 9", "E2E encryption; role-based access; audit trails"],
+            ["Intellectual Property", "Theft of drug formulations, molecular data, protocols", "Trade Secrets Act; GDPR; local IP laws", "DLP; CASB; privileged access management"],
+            ["Third-Party / Supply Chain", "CRO/CMO/API supplier compromise", "DSCSA; EU FMD; GDPR DPA requirements", "Vendor security assessments; zero-trust integration"],
+            ["Ransomware & BCP", "Manufacturing halt; clinical data loss; PV deadline failure", "GMP continuity obligations; GDPR 72hr notification", "Immutable backups; SOC 24/7; IR playbooks"],
+            ["Submission Integrity", "Unauthorised modification of eCTD post-lock", "21 CFR Pt 11; EU Annex 11; eIDAS", "Cryptographic signing; Vault audit logs"],
           ],
         },
       },
       {
-        title: "The CLARITY Framework for AI Product Management",
+        title: "Finance & Procurement Transformation",
         content: [
-          "Managing AI products in a GxP-regulated pharma environment requires a specialised framework that integrates product management discipline with regulatory compliance and ethical governance.",
+          "<strong>Intelligent Finance:</strong> Cloud-based finance platforms (SAP S/4HANA Finance, Oracle Cloud, Workday) automate transactional operations — AP/AR processing, GL reconciliation, financial consolidation — through RPA and AI exception handling. Organisations report 40–60% reduction in time-to-close and 30–50% reduction in transactional headcount.",
+          "<strong>Digital Procurement:</strong> Source-to-Pay platforms (SAP Ariba, Coupa, Ivalua) combined with AI-powered spend analytics and should-cost modelling. For a $10–20B annual spend, 3–5% improvement represents $300M–$1B in direct bottom-line impact.",
         ],
-        pillars: [
-          { num: "C", title: "Customer & Clinical Alignment", description: "Ensure every AI product is anchored in a clinically validated user need.", colorVariant: "indigo" },
-          { num: "L", title: "Lifecycle Governance", description: "End-to-end model governance aligned with FDA AI/ML SaMD guidance.", colorVariant: "indigo" },
-          { num: "A", title: "Accuracy & Validation", description: "Rigorous model performance validation with drift detection in production.", colorVariant: "indigo" },
-          { num: "R", title: "Regulatory Readiness", description: "21 CFR Part 11 compliance and CSV protocols built into architecture.", colorVariant: "indigo" },
-          { num: "I", title: "Intelligence & Iteration", description: "Structured feedback loops ensuring continuous improvement with version control.", colorVariant: "indigo" },
-          { num: "T", title: "Trust & Transparency", description: "Explainability frameworks enabling stakeholders to trust AI recommendations.", colorVariant: "indigo" },
-          { num: "Y", title: "Yield & Value Attribution", description: "Rigorous benefit measurement attributing value to AI investments.", colorVariant: "indigo" },
-        ],
-      },
-      {
-        title: "Enterprise Architecture & Cybersecurity",
-        content: [
-          "Enterprise architecture in pharma must integrate a complex landscape of GxP-validated systems (ERP, MES, LIMS, eQMS), clinical platforms (EDC, CTMS, eTMF), commercial systems (CRM, NBA engines), and data platforms — while maintaining regulatory compliance, data integrity, and cybersecurity.",
-          "Cybersecurity is a critical enabler. Pharmaceutical companies hold some of the world's most valuable intellectual property (drug formulations, clinical data, regulatory submissions) and personally identifiable health information. A comprehensive pharma cybersecurity strategy must address OT (operational technology) security for manufacturing, IT security for enterprise systems, and data privacy compliance across jurisdictions.",
-        ],
+        callout: {
+          type: "spotlight",
+          label: "🌍 Regional Spotlight: Finance & Cyber by Geography",
+          content: "In the <strong>US</strong>, SEC reporting requirements and Inflation Reduction Act pricing provisions are driving sophisticated FP&A platform investment. In the <strong>EU</strong>, GDPR, the EU AI Act, and diverse VAT digitisation mandates add compliance complexity. In <strong>India</strong>, e-invoicing mandates, GST network reconciliation, and India's deep finance talent make GCCs natural locations for global pharmaceutical finance shared service centres.",
+        },
       },
     ],
   },
@@ -768,16 +1052,85 @@ export const chapters: Chapter[] = [
     id: "ch13",
     num: "13",
     partLabel: "Part IV · Enterprise Enablers",
-    title: "Quality Engineering & the ACUITAS Framework",
-    lead: "Embedding a culture of quality engineering across every function, guided by the seven-pillar ACUITAS framework.",
+    title: "Implementation Roadmap & Change Management",
+    lead: "The 36-month execution blueprint — sequencing capability development, technology investment, talent evolution, and measurable value.",
+    metrics: [
+      { value: "36 Mo", label: "Full Transformation" },
+      { value: "3-Wave", label: "Execution Architecture" },
+      { value: "OKR", label: "Quarterly Accountability" },
+      { value: "CDO", label: "Chief Digital Officer" },
+    ],
+    tags: ["Roadmap", "Execution", "Change Management", "36-Month Plan"],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "This chapter answers the harder question: how do you actually get there? The implementation roadmap translates aspiration into a sequenced, resourced, and governed programme of work — and the change management framework ensures technology investments deliver the behavioural and operational changes that create actual value.",
+        },
+      },
+      {
+        title: "The 36-Month Pharma Digital Transformation Roadmap",
+        content: [],
+        diagram: {
+          title: "36-Month Pharma Digital Transformation Roadmap — Three Waves",
+          svgContent: SVG_36_MONTH_ROADMAP,
+        },
+        steps: [
+          { num: "W1", title: "Wave 1 · Stabilise & Connect (Months 1–12)", description: "CDO role established. Cloud data lake foundation deployed. eQMS & EBR pilot at lead site. eCTD submission automation live. PV NLP intake deployed. PDMF baseline assessment. Target: Level 2→3." },
+          { num: "W2", title: "Wave 2 · Differentiate & Scale (Months 13–24)", description: "AI drug discovery platform operational. DCT capability in 3+ active trials. NBA commercial engine deployed. PAT + digital twin at mfg sites. eQMS rolled out globally. RWE programme generating evidence. Target: Level 3→4." },
+          { num: "W3", title: "Wave 3 · Lead & Innovate (Months 25–36)", description: "Clinical candidate from AI discovery. Real-time release testing approved. Autonomous PV signal monitoring. Outcome-based contracts with payers. GCC established as digital CoE. Target: Level 4→5." },
+        ],
+      },
+      {
+        title: "Change Management: The Human Side of Transformation",
+        content: [
+          "Technology deployment is the visible part of digital transformation. Change management is the invisible part that determines whether technology is actually used. The pharmaceutical industry has a particularly challenging change management environment.",
+        ],
+        table: {
+          headers: ["Dimension", "Common Failure Mode", "Proven Mitigation", "Success Signal"],
+          rows: [
+            ["Executive Sponsorship", "CEO delegates to IT; business leaders disengage", "DLC chaired by CEO/COO; C-suite digital KPIs", "C-suite attendance at DLC ≥85%"],
+            ["Digital Talent", "Hiring not started until Wave 2; skills gap kills delivery", "CDO hired Month 1; talent strategy funded early", "Digital roles filled on schedule; attrition <12%"],
+            ["Change Fatigue", "Multiple concurrent deployments overwhelm teams", "Change sequencing; protected capacity; early wins", "User adoption ≥80% within 90 days of go-live"],
+            ["GxP Validation Drag", "Validation added as afterthought; 3–6 month delays", "GxP Digital Validation team from Day 1; risk-based CSA", "Validation cycle ≤8 weeks for non-critical systems"],
+            ["Data Quality", "AI built on dirty data; wrong decisions; credibility lost", "Data quality sprint in Wave 1; MDM in place first", "Data completeness KPIs published monthly"],
+          ],
+        },
+      },
+    ],
+  },
+  {
+    id: "ch14",
+    num: "14",
+    partLabel: "Part IV · Enterprise Enablers",
+    title: "ROI, Emerging Technology & Quality Engineering",
+    lead: "Measuring transformation ROI, the ACUITAS quality framework, and the emerging technologies that will define pharma's next decade.",
     metrics: [
       { value: "7", label: "ACUITAS Pillars" },
-      { value: "GxP", label: "Quality & Compliance" },
-      { value: "CAPA", label: "Corrective Action System" },
-      { value: "QbD", label: "Quality by Design (ICH Q8)" },
+      { value: "ROI", label: "Value Realisation" },
+      { value: "Quantum", label: "Computing Frontier" },
+      { value: "Agentic AI", label: "Next Frontier" },
     ],
-    tags: ["Quality Engineering", "ACUITAS", "GxP"],
+    tags: ["ROI", "ACUITAS", "Quality Engineering", "Emerging Tech"],
     sections: [
+      {
+        title: "ROI & Value Realisation",
+        content: [
+          "Measuring the return on digital transformation investment requires a framework that captures both quantitative financial returns and qualitative strategic benefits.",
+        ],
+        table: {
+          headers: ["Value Category", "Metric Examples", "Typical Range", "Measurement Method"],
+          rows: [
+            ["Cost Efficiency", "Labour cost reduction, process automation savings", "20–40% reduction", "Before/after cost comparison"],
+            ["Speed to Market", "Submission timeline, trial enrolment speed", "30–50% faster", "Milestone tracking"],
+            ["Quality Improvement", "Defect rates, deviation reduction, right-first-time", "40–60% improvement", "Quality KPI dashboards"],
+            ["Innovation Value", "Patents, new capabilities, revenue enablement", "Strategic multiplier", "Innovation portfolio tracking"],
+          ],
+        },
+      },
       {
         title: "The ACUITAS Framework — Seven Pillars",
         content: [
@@ -796,71 +1149,143 @@ export const chapters: Chapter[] = [
           icon: "🏆",
           label: "ACUITAS in Practice",
           title: "The Quality Engineering Competitive Advantage",
-          description: "40–60% reduction in post-production defects, 30–50% improvement in submission quality, 25–35% reduction in CSV effort. Quality engineering is the foundation of sustainable competitive advantage.",
-        },
-      },
-    ],
-  },
-  {
-    id: "ch14",
-    num: "14",
-    partLabel: "Part IV · Enterprise Enablers",
-    title: "Implementation Roadmap & ROI",
-    lead: "The integrated 36-month execution blueprint — sequencing capability development, technology investment, talent evolution, and measurable ROI.",
-    metrics: [
-      { value: "36 Mo", label: "Full Transformation" },
-      { value: "3-Phase", label: "Execution Architecture" },
-      { value: "OKR", label: "Quarterly Accountability" },
-      { value: "ROI", label: "Value Realisation" },
-    ],
-    tags: ["Roadmap", "Execution", "36-Month Plan", "ROI"],
-    sections: [
-      {
-        title: "The 36-Month Execution Roadmap",
-        content: [],
-        steps: [
-          { num: "P1", title: "Phase 1 · Foundation (Months 1–12)", description: "Stabilise, standardise & build credibility. Cloud migration, data lake foundation, 2 CoEs operational. SLA attainment ≥98%, talent attrition ≤8%." },
-          { num: "P2", title: "Phase 2 · Differentiation (Months 13–24)", description: "AI, CoEs & domain ownership. Enterprise AI/ML platform, GenAI pilots, first GCC-originated patent, 5 CoEs operational." },
-          { num: "P3", title: "Phase 3 · Leadership (Months 25–36)", description: "Global innovation hub. Own drug discovery pipeline, lead regulatory strategy for Asia-Pacific, publish peer-reviewed research." },
-        ],
-        pullQuote: {
-          text: "The pharma GCC that executes this roadmap with discipline will not just have transformed itself — it will have transformed the competitive position of its global parent organisation.",
-          cite: "KR · Chapter 14",
-        },
-      },
-      {
-        title: "ROI & Value Realisation",
-        content: [
-          "Measuring the return on digital transformation investment requires a framework that captures both quantitative financial returns and qualitative strategic benefits. The most effective approach is a balanced scorecard that tracks four categories of value.",
-        ],
-        table: {
-          headers: ["Value Category", "Metric Examples", "Typical Range", "Measurement Method"],
-          rows: [
-            ["Cost Efficiency", "Labour cost reduction, process automation savings", "20–40% reduction", "Before/after cost comparison"],
-            ["Speed to Market", "Submission timeline, trial enrolment speed", "30–50% faster", "Milestone tracking"],
-            ["Quality Improvement", "Defect rates, deviation reduction, right-first-time", "40–60% improvement", "Quality KPI dashboards"],
-            ["Innovation Value", "Patents, new capabilities, revenue enablement", "Strategic multiplier", "Innovation portfolio tracking"],
-          ],
-        },
-        insightBox: {
-          icon: "🚀",
-          label: "The Call to Action",
-          title: "Begin the Transformation Today",
-          description: "The organisations that begin this transformation journey today — with clarity of vision, rigour of execution, and commitment to quality — will define the pharma GCC leadership table for the next decade.",
+          description: "40–60% reduction in post-production defects, 30–50% improvement in submission quality, 25–35% reduction in CSV effort.",
         },
       },
       {
         title: "Emerging Technology Outlook",
         content: [
-          "The next wave of pharma digital transformation will be shaped by several technologies that are currently in early deployment or late-stage development.",
+          "The next wave of pharma digital transformation will be shaped by several technologies currently in early deployment or late-stage development.",
         ],
         bulletPoints: [
           "<strong>Quantum Computing</strong> — Molecular simulation at quantum scale, enabling drug design breakthroughs currently impossible with classical computing",
           "<strong>Federated Learning</strong> — Training AI models across hospital networks without sharing patient data, unlocking real-world evidence at scale",
           "<strong>Digital Twins (Patient)</strong> — Computational models of individual patients predicting treatment response before therapy begins",
-          "<strong>Agentic AI</strong> — Autonomous AI agents that can plan, execute, and iterate on complex multi-step workflows with minimal human supervision",
+          "<strong>Agentic AI</strong> — Autonomous AI agents that plan, execute, and iterate on complex multi-step workflows with minimal human supervision",
           "<strong>Brain-Computer Interfaces</strong> — CNS drug development supported by direct neural measurement, enabling precision neuroscience",
         ],
+        pullQuote: {
+          text: "The pharma enterprise that executes this roadmap with discipline will not just have transformed itself — it will have transformed the competitive position of its global parent organisation.",
+          cite: "KR · Chapter 14",
+        },
+      },
+    ],
+  },
+  {
+    id: "ch15",
+    num: "A",
+    partLabel: "Appendix",
+    title: "Glossary, Vendor Landscape & KPI Framework",
+    lead: "Comprehensive reference materials — glossary of digital pharma terms, technology vendor landscape, PDMF self-assessment, KPI framework, and references.",
+    metrics: [
+      { value: "60+", label: "Glossary Terms" },
+      { value: "40+", label: "Vendors Mapped" },
+      { value: "20", label: "PDMF Diagnostic Questions" },
+      { value: "20+", label: "KPIs Defined" },
+    ],
+    tags: ["Glossary", "Vendors", "KPI", "PDMF Diagnostic", "Reference"],
+    sections: [
+      {
+        title: "Glossary of Digital Pharma Terms (Selected)",
+        content: [
+          "This glossary consolidates key terminology used across the handbook. For the full 60+ term glossary, download the PDF resource.",
+        ],
+        table: {
+          headers: ["Acronym", "Full Name", "Definition"],
+          rows: [
+            ["ABDM", "Ayushman Bharat Digital Mission", "India's national digital health infrastructure — 600M+ health IDs registered by 2024"],
+            ["ALCOA+", "Data Integrity Principles", "Attributable, Legible, Contemporaneous, Original, Accurate + Complete, Consistent, Enduring, Available"],
+            ["CSA", "Computer Software Assurance", "FDA's 2022 risk-based framework replacing traditional CSV — reduces documentation burden"],
+            ["CTIS", "Clinical Trials Information System", "EU-wide digital portal for clinical trial applications across all member states"],
+            ["DCT", "Decentralised Clinical Trial", "Trial design bringing activities to participants through digital tools and home health services"],
+            ["DTx", "Digital Therapeutic", "Software-based medical intervention requiring clinical evidence and regulatory oversight"],
+            ["eCTD", "Electronic Common Technical Document", "Globally mandated electronic format for regulatory submissions"],
+            ["FAIR", "Findable Accessible Interoperable Reusable", "Framework for organising and managing scientific data for both humans and machines"],
+            ["GCC", "Global Capability Centre", "Dedicated offshore facility providing high-value functions — India hosts 1,600+ with 1.9M employees"],
+            ["MLOps", "Machine Learning Operations", "Practices and tools for deploying, monitoring, and maintaining ML models in production"],
+            ["NBA", "Next Best Action", "AI-driven recommendation for optimal HCP engagement based on profile and behaviour"],
+            ["OEE", "Overall Equipment Effectiveness", "Manufacturing metric: availability × performance × quality. World-class pharma target: 85%"],
+            ["PAT", "Process Analytical Technology", "Real-time measurement of critical quality attributes using inline/atline/online sensors"],
+            ["PDMF", "Pharma Digital Maturity Framework", "Five-level, seven-dimension maturity model introduced in Chapter 2"],
+            ["RWE", "Real-World Evidence", "Evidence from EHRs, claims databases, registries, and wearables — distinct from RCTs"],
+          ],
+        },
+      },
+      {
+        title: "Technology Vendor Landscape",
+        content: [],
+        table: {
+          headers: ["Category", "Leading Vendors", "Pharma Capability"],
+          rows: [
+            ["Enterprise ERP", "SAP S/4HANA, Oracle Cloud ERP, Workday", "Finance, supply chain, procurement, HR backbone"],
+            ["Clinical Technology", "Medidata Rave, Veeva Vault EDC/CTMS, Signant Health", "EDC, eCOA, eConsent, trial management"],
+            ["Quality Management", "Veeva Vault QualityOne, MasterControl, TrackWise", "eQMS, deviation, CAPA, change control"],
+            ["Manufacturing", "Rockwell (FactoryTalk), Siemens (OPCENTER), Werum PAS-X", "MES, PAT, digital twin, EBR"],
+            ["Commercial", "Veeva CRM, IQVIA OCE, Aktana (AI/NBA), Komodo Health", "HCP engagement, real-world data, NBA engine"],
+            ["AI/ML & Data", "Databricks, Snowflake, Schrödinger, Recursion, BenevolentAI", "Lakehouse, computational chemistry, AI drug discovery"],
+            ["Regulatory", "Veeva Vault RIM, IQVIA Regulatory, Lorenz docuBridge", "eCTD, submission management, regulatory intelligence"],
+            ["Digital Health", "Medisafe, Propeller Health, Talkspace, WellDoc", "Adherence, respiratory, mental health, diabetes DTx"],
+          ],
+        },
+      },
+      {
+        title: "Digital Transformation KPI Framework",
+        content: [
+          "This KPI framework provides the measurement foundation for the transformation scorecard. Each KPI should be baselined at programme start with targets per horizon.",
+        ],
+        table: {
+          headers: ["Domain", "KPI", "Baseline (Pre-DT)", "Target (Year 2)", "Target (Year 3+)"],
+          rows: [
+            ["R&D Discovery", "Discovery cycle: hypothesis → preclinical candidate", "4–5 years", "2–3 years", "12–18 months (AI-native)"],
+            ["Clinical Operations", "Patient recruitment cycle time", "8–12 months Phase III", "30% reduction", "50% reduction"],
+            ["Manufacturing", "Overall Equipment Effectiveness (OEE)", "65–72%", "75–80%", "≥85% (world class)"],
+            ["Manufacturing", "Batch right-first-time rate", "85–90%", "93%", "≥97%"],
+            ["Quality", "CAPA closure cycle (critical)", "45–90 days", "<30 days", "<21 days"],
+            ["Regulatory", "eCTD NDA/MAA prep time (data lock → submission)", "18–24 months", "12–15 months", "6–9 months"],
+            ["Regulatory", "ICSR processing cycle", "8–12 days", "<7 days", "<5 days (AI-assisted)"],
+            ["Commercial", "NBA adoption rate (% field team acting on NBA)", "N/A (baseline: 0)", "50%", ">80%"],
+            ["Enterprise", "Monthly financial close cycle time", "8–12 days", "6 days", "≤5 days"],
+            ["Enterprise", "Cybersecurity NIST CSF maturity score", "Level 1–2", "Level 2–3", "Level 3 across all functions"],
+          ],
+        },
+      },
+      {
+        title: "PDMF Self-Assessment: Board Diagnostic (Selected)",
+        content: [
+          "Score 0–12: PDMF Level 1–2 (foundational investment urgently needed). Score 13–16: Level 2–3 (acceleration required). Score 17–20: Level 3+ (optimisation and differentiation focus).",
+        ],
+        bulletPoints: [
+          "Does the organisation have a unified cloud data platform integrating R&D, clinical, manufacturing, and commercial data?",
+          "Are AI/ML models deployed in production — not just piloted — in at least two functional domains?",
+          "Are commercial field teams receiving next-best-action recommendations in CRM in real time?",
+          "Does manufacturing use predictive analytics to identify quality risks before deviations occur?",
+          "Are electronic batch records deployed at all major manufacturing facilities?",
+          "Has the organisation defined and filled a Chief Digital Officer role with enterprise mandate?",
+          "Does the organisation benchmark its digital maturity against peers annually?",
+        ],
+      },
+      {
+        title: "References and Further Reading",
+        content: [],
+        table: {
+          headers: ["Category", "Reference", "Authors / Organisation", "Year", "Why It Matters"],
+          rows: [
+            ["Strategic", "AI in Pharma: From Promise to Pipeline", "Boston Consulting Group", "2023", "CEO-level evidence base for AI value across drug development"],
+            ["R&D", "Highly accurate protein structure prediction with AlphaFold", "Jumper et al., Nature", "2021", "Seminal paper; foundational for structure-based drug design"],
+            ["R&D", "Diagnosing the decline in pharmaceutical R&D efficiency", "Scannell et al., Nature Reviews Drug Discovery", "2012", "Eroom's Law original paper; productivity crisis context"],
+            ["Clinical", "E6(R3) Good Clinical Practice Guideline", "ICH", "2023", "Updated GCP formalising risk-based monitoring and electronic data"],
+            ["Manufacturing", "GAMP 5 Second Edition", "ISPE", "2022", "Gold standard for GxP computer system validation"],
+            ["Regulatory", "Computer Software Assurance", "US FDA", "2022", "Risk-based CSA replacing traditional CSV"],
+            ["India & GCC", "India GCC Report: Life Sciences", "NASSCOM", "2024", "Comprehensive data on India GCC pharma capabilities"],
+            ["Technology", "The Data Lakehouse", "Databricks / Ben Lorica et al.", "2023", "Architectural reference for unified analytics and AI platform"],
+          ],
+        },
+        insightBox: {
+          icon: "📚",
+          label: "Living Document",
+          title: "This handbook is a living document",
+          description: "The frameworks, benchmarks, and case studies reflect the state of practice as of early 2025. Digital transformation is accelerating — treat this as a strategic foundation supplemented by ongoing engagement with primary sources.",
+        },
       },
     ],
   },
@@ -871,6 +1296,7 @@ export const partColors: Record<string, string> = {
   "Part II · Value Chain": "violet",
   "Part III · Commercial": "gold",
   "Part IV · Enterprise Enablers": "indigo",
+  "Appendix": "coral",
 };
 
 export const parts = [
@@ -887,11 +1313,16 @@ export const parts = [
   {
     label: "Part III · Commercial",
     icon: "📊",
-    chapters: ["ch9", "ch10", "ch11"],
+    chapters: ["ch9", "ch10"],
   },
   {
     label: "Part IV · Enterprise Enablers",
     icon: "⚡",
-    chapters: ["ch12", "ch13", "ch14"],
+    chapters: ["ch11", "ch12", "ch13", "ch14"],
+  },
+  {
+    label: "Appendix",
+    icon: "📚",
+    chapters: ["ch15"],
   },
 ];
