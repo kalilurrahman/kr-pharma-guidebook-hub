@@ -17,6 +17,13 @@ const resources: ResourceFile[] = [
     size: "~2 MB",
     description: "Editable Word document version of the handbook for annotations, customisation, and internal distribution.",
   },
+  {
+    name: "Pharma DX Handbook — Online Reader (HTML)",
+    filename: "Pharma_DX_Handbook_Comprehensive_2025.html",
+    type: "pdf" as ResourceFile["type"],
+    size: "~250 KB",
+    description: "Self-contained HTML edition with sidebar navigation, SVG diagrams, embedded search, and reading progress — ideal for offline browsing.",
+  },
 ];
 
 const iconMap = {

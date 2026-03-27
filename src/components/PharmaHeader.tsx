@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Menu, X, BookOpen } from "lucide-react";
+import { Search, Menu, X, BookOpen, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import pharmaLogo from "@/assets/pharma-logo.png";
@@ -53,6 +53,13 @@ export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSec
             >
               <BookOpen className="w-3.5 h-3.5" />
               Reader
+            </Link>
+            <Link
+              to="/gcc-metrics"
+              className="nav-pill flex items-center gap-1.5"
+            >
+              <BarChart3 className="w-3.5 h-3.5" />
+              GCC Metrics
             </Link>
           </nav>
 
@@ -108,6 +115,14 @@ export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSec
             >
               <BookOpen className="w-3.5 h-3.5" />
               Online Reader
+            </Link>
+            <Link
+              to="/gcc-metrics"
+              className="nav-pill w-full text-left flex items-center gap-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <BarChart3 className="w-3.5 h-3.5" />
+              GCC Metrics
             </Link>
           </div>
         )}
