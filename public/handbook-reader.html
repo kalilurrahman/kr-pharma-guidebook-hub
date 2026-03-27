@@ -317,6 +317,11 @@ tr:hover td{background:#eef4ff;transition:background .1s}
 </head>
 <body>
 
+<button id="mob-toggle" aria-label="Open menu">
+  <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div id="sidebar-overlay"></div>
+
 <nav id="sidebar">
 <div class="sidebar-brand"><div class="brand-icon">Rx</div><div class="brand-text">Pharma DX<br>Handbook 2025<br><span style="font-size:9.5px;font-weight:400;color:var(--gold);letter-spacing:.04em">Kalilur Rahman</span></div></div>
 <div id="search-wrap"><input id="search-input" type="text" placeholder="Search handbook..." autocomplete="off"><div id="search-results"></div></div>
@@ -2262,6 +2267,16 @@ window.addEventListener('scroll',function(){document.getElementById('btt').class
     });
     document.addEventListener('click',function(e){if(!inp.contains(e.target))res.innerHTML='';});
   }
+})();
+// Mobile sidebar toggle
+(function(){
+  var tog=document.getElementById('mob-toggle'),sb=document.getElementById('sidebar'),ov=document.getElementById('sidebar-overlay');
+  if(!tog)return;
+  function openSB(){sb.classList.add('open');ov.classList.add('open');}
+  function closeSB(){sb.classList.remove('open');ov.classList.remove('open');}
+  tog.addEventListener('click',function(){sb.classList.contains('open')?closeSB():openSB();});
+  ov.addEventListener('click',closeSB);
+  sb.querySelectorAll('.nav-link').forEach(function(a){a.addEventListener('click',closeSB);});
 })();
 </script>
 <div id="btt" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></div>
