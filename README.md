@@ -20,6 +20,7 @@ The Pharma GCC Transformation Handbook provides deep insights into the pharmaceu
   - **Value Chain:** Insights into the pharmaceutical value chain.
   - **Commercial:** Commercial strategies and models.
   - **Enterprise Enablers:** Key enablers driving enterprise transformation.
+- **Reader Mode:** Distraction-free reading experience for individual chapters.
 - **Search Functionality:** Easily find chapters and resources.
 
 ## Demo & Screenshots
@@ -27,16 +28,31 @@ The Pharma GCC Transformation Handbook provides deep insights into the pharmaceu
 Here is an animated demo of the site highlighting different themes and sections:
 ![Site Demo](./src/assets/screenshots/site-demo.gif)
 
-Here is a visual summary of the application across different themes and sections:
+You can also view a high-quality video demo [here](./src/assets/screenshots/site-demo.mp4).
 
-### Light Theme
-![Light Theme](./src/assets/screenshots/screenshot-light.png)
+Here is a visual summary of the application across different themes, sections, and devices:
 
-### Dark Theme
-![Dark Theme](./src/assets/screenshots/screenshot-dark.png)
+### Desktop View
+- **Light Theme (Overview)**
+  ![Desktop Light Overview](./src/assets/screenshots/desktop-light-overview.png)
+- **Dark Theme (Overview)**
+  ![Desktop Dark Overview](./src/assets/screenshots/desktop-dark-overview.png)
+- **Foundations Section**
+  ![Desktop Dark Foundations](./src/assets/screenshots/desktop-dark-foundations.png)
+- **Reader Mode**
+  ![Desktop Dark Reader](./src/assets/screenshots/desktop-dark-reader.png)
 
-### Foundations Section
-![Foundations Section](./src/assets/screenshots/screenshot-foundations.png)
+### Tablet View
+- **Light Theme (Overview)**
+  ![Tablet Light Overview](./src/assets/screenshots/tablet-light-overview.png)
+- **Reader Mode**
+  ![Tablet Dark Reader](./src/assets/screenshots/tablet-dark-reader.png)
+
+### Mobile View
+- **Light Theme (Overview)**
+  ![Mobile Light Overview](./src/assets/screenshots/mobile-light-overview.png)
+- **Value Chain Section**
+  ![Mobile Dark Value Chain](./src/assets/screenshots/mobile-dark-value-chain.png)
 
 ## Tech Stack
 

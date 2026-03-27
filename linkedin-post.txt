@@ -8,8 +8,10 @@ As the pharmaceutical industry continues to evolve, understanding the intricacie
 Key features of the platform include:
 ✅ Detailed insights into the Value Chain, Commercial strategies, Enterprise Enablers, and Foundations.
 ✅ A modern, fully responsive UI built with React, TypeScript, and Tailwind CSS.
-✅ Dynamic Light/Dark modes for an optimal reading experience.
+✅ Dynamic Light/Dark modes and a distraction-free Reader Mode for an optimal reading experience across Desktop, Tablet, and Mobile devices.
 ✅ Seamless search functionality to quickly find chapters and resources.
+
+Check out the demo below! 👇
 
 I'd love for you to check it out and share your feedback! What aspects of Pharma GCCs do you find most interesting or challenging right now?
 
