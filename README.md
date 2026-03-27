@@ -23,12 +23,12 @@ This application is a comprehensive, modern web platform designed to serve as a 
 - [Demo & Screenshots](#demo--screenshots)
   - [Themes](#themes)
   - [Sections](#sections)
+  - [Online Reader](#online-reader)
+  - [GCC Metrics](#gcc-metrics)
   - [Views & Modals](#views--modals)
 - [Tech Stack](#tech-stack)
 - [Installation & Setup](#installation--setup)
 - [License](#license)
-
----
 
 ## Overview
 
@@ -75,13 +75,34 @@ Detailed sections showcasing foundations, value chain, commercial aspects, enabl
   <img src="src/assets/screenshots/sections/section_resources.png" alt="Resources Section" width="400" />
 </div>
 
-### Views & Modals
+### Online Reader
 
-Views showcasing the Online Reader, GCC Metrics, and detailed Chapter/Modal views.
+The Online Reader provides a seamless, distraction-free environment for consuming the Pharma GCC Transformation Handbook content. It supports fullscreen mode and dynamic chapter navigation.
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <img src="src/assets/screenshots/views/view_reader.png" alt="Online Reader View" width="400" />
-  <img src="src/assets/screenshots/views/view_gcc_metrics.png" alt="GCC Metrics View" width="400" />
+  <img src="src/assets/screenshots/reader/reader_main.png" alt="Reader Main View" width="400" />
+  <img src="src/assets/screenshots/reader/reader_scrolled_1.png" alt="Reader Content Scroll 1" width="400" />
+  <img src="src/assets/screenshots/reader/reader_scrolled_2.png" alt="Reader Content Scroll 2" width="400" />
+  <img src="src/assets/screenshots/reader/reader_scrolled_3.png" alt="Reader Content Scroll 3" width="400" />
+</div>
+
+### GCC Metrics
+
+The GCC Metrics dashboard provides comprehensive benchmarking data, maturity models, and key performance indicators essential for evaluating and scaling pharmaceutical Global Capability Centers.
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="src/assets/screenshots/metrics/metrics_main.png" alt="Metrics Main Dashboard" width="400" />
+  <img src="src/assets/screenshots/metrics/metrics_dimension_1.png" alt="Metrics Dimension View 1" width="400" />
+  <img src="src/assets/screenshots/metrics/metrics_dimension_2.png" alt="Metrics Dimension View 2" width="400" />
+</div>
+
+### Views & Modals
+
+Additional views including isolated chapter modals showcasing specific metrics, insights, and diagram integrations.
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <img src="src/assets/screenshots/views/view_reader.png" alt="Online Reader Portal" width="400" />
+  <img src="src/assets/screenshots/views/view_gcc_metrics.png" alt="GCC Metrics Entry View" width="400" />
   <img src="src/assets/screenshots/modals/modal_chapter_view.png" alt="Detailed Chapter Modal View" width="400" />
 </div>
 
