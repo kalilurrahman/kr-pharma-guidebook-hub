@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import pharmaLogo from "@/assets/pharma-logo.png";
@@ -19,6 +19,8 @@ const navItems = [
   { id: "enablers", label: "Enablers" },
   { id: "resources", label: "📥 Resources" },
 ];
+
+const READER_PATH = "/reader";
 
 export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSectionChange }: PharmaHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,6 +47,13 @@ export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSec
                 {item.label}
               </button>
             ))}
+            <Link
+              to={READER_PATH}
+              className="nav-pill flex items-center gap-1.5"
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              Reader
+            </Link>
           </nav>
 
           <div className="flex items-center gap-3">
@@ -92,6 +101,14 @@ export function PharmaHeader({ searchQuery, onSearchChange, activeSection, onSec
                 {item.label}
               </button>
             ))}
+            <Link
+              to={READER_PATH}
+              className="nav-pill w-full text-left flex items-center gap-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              Online Reader
+            </Link>
           </div>
         )}
       </div>
