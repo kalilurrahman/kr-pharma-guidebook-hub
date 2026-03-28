@@ -2670,6 +2670,14 @@ window.addEventListener('scroll',function(){document.getElementById('btt').class
     document.addEventListener('click',function(e){if(!inp.contains(e.target))res.innerHTML='';});
   }
 })();
+// Close mobile sidebar when a nav link is clicked
+document.querySelectorAll('.nav-link').forEach(function(a){
+  a.addEventListener('click',function(){
+    var sb=document.getElementById('sidebar'),ov=document.getElementById('sidebar-overlay');
+    if(sb)sb.classList.remove('open');
+    if(ov)ov.classList.remove('open');
+  });
+});
 </script>
 <div id="btt" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></div>
 <div style="position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:300;pointer-events:auto;opacity:.55;transition:opacity .2s" onmouseenter="this.style.opacity='1'" onmouseleave="this.style.opacity='.55'">
