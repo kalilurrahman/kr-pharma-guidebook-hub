@@ -39,7 +39,7 @@ const ReaderPage = () => {
               <div className="flex items-center gap-3">
                 <BookOpen className="w-5 h-5 text-primary" />
                 <span className="font-display text-sm font-bold text-foreground hidden sm:inline">
-                  Online Reader — Ultimate Edition 2025
+                  Online Reader — Comprehensive Edition 2025
                 </span>
                 <span className="font-display text-sm font-bold text-foreground sm:hidden">
                   Reader Mode
