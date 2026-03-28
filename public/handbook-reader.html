@@ -317,7 +317,8 @@ tr:hover td{background:#eef4ff;transition:background .1s}
 </style>
 </head>
 <body>
-
+<button id="mob-toggle" onclick="document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-overlay').classList.toggle('open')" style="display:none;position:fixed;top:10px;left:10px;z-index:210;width:40px;height:40px;border-radius:8px;background:var(--navy2);border:1px solid rgba(201,168,76,.4);color:var(--gold);align-items:center;justify-content:center;cursor:pointer;font-size:20px;line-height:1">☰</button>
+<div id="sidebar-overlay" class="sidebar-overlay" onclick="document.getElementById('sidebar').classList.remove('open');this.classList.remove('open')"></div>
 <nav id="sidebar">
 <div class="sidebar-brand"><div class="brand-icon">Rx</div><div class="brand-text">Pharma DX<br>Handbook 2025<br><span style="font-size:9.5px;font-weight:400;color:var(--gold);letter-spacing:.04em">Kalilur Rahman</span></div></div>
 <div id="search-wrap"><input id="search-input" type="text" placeholder="Search handbook..." autocomplete="off"><div id="search-results"></div></div>
