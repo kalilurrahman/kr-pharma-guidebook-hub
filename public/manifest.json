@@ -1,0 +1,21 @@
+{
+  "name": "Pharma GCC Transformation Handbook",
+  "short_name": "Pharma Handbook",
+  "description": "A definitive practitioner's guide to building, scaling, and leading world-class pharmaceutical Global Capability Centres in the AI era.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1628",
+  "theme_color": "#0D9488",
+  "icons": [
+    {
+      "src": "/pharma-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pharma-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
