@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BarChart3, BookOpen, ArrowRight } from "lucide-react";
+import { BarChart3, BookOpen, ArrowRight, TrendingUp } from "lucide-react";
 import { chapters, parts } from "@/data/pharma-data";
 import { ChapterCard } from "@/components/ChapterCard";
 
@@ -69,15 +69,15 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
         </div>
       </div>
 
-      {/* Quick links to Reader & GCC */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {/* Quick links to Reader, GCC & Key Stats */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Link to="/reader" className="card-pharma group flex items-center gap-4 no-underline hover:border-primary/50 transition-colors">
           <div className="p-3 rounded-lg bg-primary/10">
             <BookOpen className="w-6 h-6 text-primary" />
           </div>
           <div className="flex-1">
             <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📖 Online Reader</h3>
-            <p className="font-body text-xs text-muted-foreground">Read the complete handbook with sidebar navigation, SVG diagrams, and search</p>
+            <p className="font-body text-xs text-muted-foreground">Full handbook with sidebar navigation & search</p>
           </div>
           <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </Link>
@@ -86,8 +86,18 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
             <BarChart3 className="w-6 h-6 text-gold" />
           </div>
           <div className="flex-1">
-            <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📊 GCC Maturity Metrics</h3>
-            <p className="font-body text-xs text-muted-foreground">37 benchmarks across 9 dimensions with Novartis case study insights</p>
+            <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📊 GCC Metrics</h3>
+            <p className="font-body text-xs text-muted-foreground">37 benchmarks across 9 dimensions</p>
+          </div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+        </Link>
+        <Link to="/key-stats" className="card-pharma group flex items-center gap-4 no-underline hover:border-primary/50 transition-colors">
+          <div className="p-3 rounded-lg bg-violet/10">
+            <TrendingUp className="w-6 h-6 text-violet" />
+          </div>
+          <div className="flex-1">
+            <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📈 Key Stats</h3>
+            <p className="font-body text-xs text-muted-foreground">CXO-ready stats with chapter links</p>
           </div>
           <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </Link>
