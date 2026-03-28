@@ -17,13 +17,13 @@ html{scroll-behavior:smooth}
 body{font-family:var(--font);background:#f0f2f6;color:var(--body);min-height:100vh}
 
 /* ── SIDEBAR ── */
-#sidebar{width:var(--sidebar);min-height:100vh;background:var(--navy2);position:fixed;
-  top:0;left:0;overflow-y:auto;z-index:200;box-shadow:2px 0 20px rgba(0,0,0,.25);display:flex;flex-direction:column}
-.sidebar-brand{padding:20px 16px 14px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:12px}
+#sidebar{width:var(--sidebar);min-height:100vh;max-height:100vh;background:var(--navy2);position:fixed;
+  top:0;left:0;overflow-x:hidden;overflow-y:auto;z-index:200;box-shadow:2px 0 20px rgba(0,0,0,.25);display:flex;flex-direction:column}
+.sidebar-brand{padding:20px 16px 14px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:12px;flex-shrink:0}
 .brand-icon{width:40px;height:40px;background:var(--gold);color:var(--navy);font-weight:900;font-size:16px;
   border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .brand-text{color:var(--white);font-size:12px;font-weight:700;line-height:1.4;text-transform:uppercase;letter-spacing:.04em}
-.nav-list{list-style:none;padding:8px 0;overflow-y:auto}
+.nav-list{list-style:none;padding:8px 0;flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 .nav-part{color:var(--gold);font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
   padding:14px 16px 4px;opacity:.9}
 .nav-link{display:flex;align-items:flex-start;gap:8px;padding:7px 16px;color:rgba(255,255,255,.72);
@@ -243,7 +243,7 @@ tr:hover td{background:#eef4ff;transition:background .1s}
 }
 @media(max-width:900px){
   :root{--sidebar:0px}
-  #sidebar{transform:translateX(-100%);width:280px;transition:transform .3s ease}
+  #sidebar{transform:translateX(-100%);width:min(280px,85vw);max-height:100vh;transition:transform .3s ease;overflow-x:hidden}
   #sidebar.open{transform:translateX(0)}
   .sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:190}
   .sidebar-overlay.open{display:block}
