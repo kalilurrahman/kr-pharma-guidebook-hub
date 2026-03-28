@@ -242,9 +242,50 @@ tr:hover td{background:#eef4ff;transition:background .1s}
   .cover{min-height:auto;padding:40px 60px}
 }
 @media(max-width:900px){
-  :root{--sidebar:0px}#sidebar{transform:translateX(-100%)}
-  h1,.toc-section,.content-wrap{padding-left:20px;padding-right:20px}
-  h1{margin-left:-20px;margin-right:-20px}.part-divider{padding:24px 20px}
+  :root{--sidebar:0px}
+  #sidebar{transform:translateX(-100%);width:280px;transition:transform .3s ease}
+  #sidebar.open{transform:translateX(0)}
+  .sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:190}
+  .sidebar-overlay.open{display:block}
+  #mob-toggle{display:flex!important}
+  #main{margin-left:0}
+  #site-footer{margin-left:0}
+  .cover{padding:40px 20px;min-height:70vh}
+  .cover h1{font-size:clamp(24px,7vw,38px)}
+  .cover-sub{font-size:14px}
+  .cover-stats{gap:16px}
+  .stat-num{font-size:20px}
+  .cover-author{flex-direction:column;text-align:center;gap:10px}
+  .author-info{text-align:center}
+  h1{padding:20px;margin:0 -20px 24px}
+  .content-wrap{padding:24px 16px}
+  .toc-section{padding:32px 16px 24px}
+  .part-divider{padding:24px 16px}
+  .metric-band{grid-template-columns:repeat(2,1fr)}
+  .stat-row{grid-template-columns:1fr}
+  .img-grid{grid-template-columns:1fr}
+  .diagram-body{padding:12px}
+  .diagram-body svg{min-width:0;height:auto}
+  table{font-size:12px}
+  th,td{padding:8px 10px}
+  .callout{padding:16px 14px;margin:20px 0}
+  .callout-kpi{padding:16px 14px}
+  p{font-size:14.5px;text-align:left}
+  li{font-size:14px}
+  h2{font-size:18px}
+  h3{font-size:15px}
+  .toc-heading{font-size:22px}
+  .toc-row{font-size:13px}
+  .cover-tags{gap:5px}
+  .cover-tag{font-size:10px;padding:3px 9px}
+}
+@media(max-width:480px){
+  .cover{padding:30px 14px;min-height:60vh}
+  .content-wrap{padding:20px 12px}
+  h1{padding:16px 12px;margin:0 -12px 20px;font-size:clamp(18px,5.5vw,26px)}
+  .metric-band{grid-template-columns:1fr 1fr}
+  .metric-num{font-size:18px}
+  .cover-stats{flex-direction:column;gap:12px;align-items:center}
 }
 
 /* ── SEARCH ── */
