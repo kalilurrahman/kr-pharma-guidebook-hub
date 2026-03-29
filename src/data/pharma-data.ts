@@ -1,17 +1,17 @@
 import type { Chapter, HandbookStats } from "@/types/pharma.types";
 
 export const handbookStats: HandbookStats = {
-  chapters: 15,
-  words: "30K+",
-  pillars: 7,
+  chapters: 30,
+  words: "95K+",
+  pillars: 9,
   phases: 3,
 };
 
 export const coverStats = [
-  { value: "15", label: "Chapters + Appendix" },
-  { value: "30K+", label: "Words" },
-  { value: "4", label: "Parts" },
-  { value: "20+", label: "Diagrams & Tables" },
+  { value: "30", label: "Chapters + Appendix" },
+  { value: "95K+", label: "Words" },
+  { value: "9", label: "Parts" },
+  { value: "47+", label: "Diagrams & Tables" },
 ];
 
 // ── SVG Diagram Constants ──
@@ -1297,6 +1297,11 @@ export const partColors: Record<string, string> = {
   "Part III · Commercial": "gold",
   "Part IV · Enterprise Enablers": "indigo",
   "Appendix": "coral",
+  "Part V · GCC India": "primary",
+  "Part VI · Advanced Modalities": "violet",
+  "Part VII · Advanced Technical": "teal",
+  "Part VIII · Frontier Topics": "gold",
+  "Part IX · 2030 Playbook": "indigo",
 };
 
 export const parts = [
@@ -1324,5 +1329,30 @@ export const parts = [
     label: "Appendix",
     icon: "📚",
     chapters: ["ch15"],
+  },
+  {
+    label: "Part V · GCC India",
+    icon: "🇮🇳",
+    chapters: ["ch16"],
+  },
+  {
+    label: "Part VI · Advanced Modalities",
+    icon: "🧬",
+    chapters: ["ch17", "ch18", "ch19", "ch20", "ch21"],
+  },
+  {
+    label: "Part VII · Advanced Technical",
+    icon: "🔧",
+    chapters: ["ch22", "ch23", "ch24", "ch25"],
+  },
+  {
+    label: "Part VIII · Frontier Topics",
+    icon: "🚀",
+    chapters: ["ch26", "ch27", "ch28", "ch29"],
+  },
+  {
+    label: "Part IX · 2030 Playbook",
+    icon: "🎯",
+    chapters: ["ch30"],
   },
 ];
