@@ -1377,7 +1377,7 @@ export const chapters: Chapter[] = [
       { value: "Pfizer", label: "Digital Trials" },
     ],
     tags: ["Case Studies", "Best Practices", "Implementation", "Results"],
-    sections: [{ title: "Executive Summary", content: ["Detailed case studies from Roche, Novartis, Pfizer, AstraZeneca, and emerging players demonstrating measurable outcomes from digital transformation initiatives."] }],
+    sections: [{ title: "Executive Summary", content: ["Detailed case studies from Roche, Pfizer, AstraZeneca, GSK, and emerging players demonstrating measurable outcomes from digital transformation initiatives."] }],
   },
   {
     id: "ch22",
