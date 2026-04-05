@@ -507,8 +507,8 @@ export const chapters: Chapter[] = [
         ],
         callout: {
           type: "case-study",
-          label: "📋 Case Study: Novartis — Becoming a Data-Driven Medicine Company",
-          content: "Novartis's transformation under CEO Vas Narasimhan invested several hundred million dollars annually in digital and data capabilities. Key lessons: CEO ownership, investment at scale, foundational data work before AI deployment, and a culture programme reaching every level. Outcomes include measurable reduction in clinical trial cycle times and $200M annual commercial efficiency gains.",
+          label: "📋 Case Study: Becoming a Data-Driven Medicine Company",
+          content: "Leading pharma companies investing several hundred million dollars annually in digital and data capabilities have demonstrated key lessons: CEO ownership, investment at scale, foundational data work before AI deployment, and a culture programme reaching every level. Outcomes include measurable reduction in clinical trial cycle times and $200M+ annual commercial efficiency gains.",
         },
       },
     ],
