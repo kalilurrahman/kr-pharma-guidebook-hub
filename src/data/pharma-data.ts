@@ -296,7 +296,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "AI-assisted drug discovery is already reducing target identification timelines from years to months. Decentralised clinical trials have cut patient recruitment windows by 30–50%. Smart manufacturing implementations are driving 15–20% OEE improvements. These are outcomes from Pfizer, Novartis, Roche, and emerging players like Insilico Medicine.",
+          content: "AI-assisted drug discovery is already reducing target identification timelines from years to months. Decentralised clinical trials have cut patient recruitment windows by 30–50%. Smart manufacturing implementations are driving 15–20% OEE improvements. These are outcomes from leading pharma companies and emerging players like Insilico Medicine.",
         },
       },
       {
@@ -375,11 +375,11 @@ export const chapters: Chapter[] = [
         table: {
           headers: ["GCC Capability", "Leading Companies", "Value Delivered", "India Advantage"],
           rows: [
-            ["Computational Drug Discovery", "Novartis, AstraZeneca, Sanofi, GSK", "Target ID, CADD, generative AI molecule design", "IISc/IIT pipeline; 60% lower cost vs US/EU"],
+            ["Computational Drug Discovery", "AstraZeneca, Sanofi, GSK, Roche", "Target ID, CADD, generative AI molecule design", "IISc/IIT pipeline; 60% lower cost vs US/EU"],
             ["Clinical Data Science", "Pfizer, Roche, J&J, Merck", "Phase I–IV data management, statistical programming", "World's largest CDM talent pool"],
             ["Regulatory Intelligence", "AbbVie, Eli Lilly, BMS, Takeda", "eCTD compilation, agency responses, PSUR", "24/7 coverage; multilingual team"],
             ["Real-World Evidence & HEOR", "Amgen, Biogen, Boehringer", "RWE studies, HEOR models, market access", "ABDM infrastructure; large patient pop."],
-            ["Pharmacovigilance Analytics", "Novartis, GSK, Roche, Pfizer", "ICSR processing, signal detection, PSUR/PBRER", "30–40% lower cost; AI-augmented 24/7 ops"],
+            ["Pharmacovigilance Analytics", "GSK, Roche, Pfizer, AstraZeneca", "ICSR processing, signal detection, PSUR/PBRER", "30–40% lower cost; AI-augmented 24/7 ops"],
             ["Manufacturing Intelligence", "Sun Pharma, Dr. Reddy's, Cipla", "Digital twin, predictive quality, supply chain analytics", "Proximity to Indian manufacturing base"],
           ],
         },
@@ -507,8 +507,8 @@ export const chapters: Chapter[] = [
         ],
         callout: {
           type: "case-study",
-          label: "📋 Case Study: Novartis — Becoming a Data-Driven Medicine Company",
-          content: "Novartis's transformation under CEO Vas Narasimhan invested several hundred million dollars annually in digital and data capabilities. Key lessons: CEO ownership, investment at scale, foundational data work before AI deployment, and a culture programme reaching every level. Outcomes include measurable reduction in clinical trial cycle times and $200M annual commercial efficiency gains.",
+          label: "📋 Case Study: Becoming a Data-Driven Medicine Company",
+          content: "Leading pharma companies investing several hundred million dollars annually in digital and data capabilities have demonstrated key lessons: CEO ownership, investment at scale, foundational data work before AI deployment, and a culture programme reaching every level. Outcomes include measurable reduction in clinical trial cycle times and $200M+ annual commercial efficiency gains.",
         },
       },
     ],
@@ -639,7 +639,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: R&D by Geography",
-          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion, Insilico, Exscientia). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; Novartis has invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
+          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion, Insilico, Exscientia). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; top European pharma companies have invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
         },
         pullQuote: {
           text: "GCC computational biology teams that master AlphaFold 3, molecular dynamics simulation, and generative chemistry are not supporting drug discovery — they are doing drug discovery.",
@@ -865,7 +865,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. Organisations deploying next-generation customer engagement platforms are generating 2–3× the sales force effectiveness of laggards. Novartis publicly disclosed $200M annual commercial efficiency gains from its AI-driven commercial transformation.",
+          content: "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. Organisations deploying next-generation customer engagement platforms are generating 2–3× the sales force effectiveness of laggards. Leading pharma companies report $200M+ annual commercial efficiency gains from AI-driven commercial transformation.",
         },
       },
       {
@@ -1373,11 +1373,11 @@ export const chapters: Chapter[] = [
     metrics: [
       { value: "12", label: "Detailed Case Studies" },
       { value: "Roche", label: "AI Drug Discovery" },
-      { value: "Novartis", label: "Commercial AI" },
+      { value: "AstraZeneca", label: "Commercial AI" },
       { value: "Pfizer", label: "Digital Trials" },
     ],
     tags: ["Case Studies", "Best Practices", "Implementation", "Results"],
-    sections: [{ title: "Executive Summary", content: ["Detailed case studies from Roche, Novartis, Pfizer, AstraZeneca, and emerging players demonstrating measurable outcomes from digital transformation initiatives."] }],
+    sections: [{ title: "Executive Summary", content: ["Detailed case studies from Roche, Pfizer, AstraZeneca, GSK, and emerging players demonstrating measurable outcomes from digital transformation initiatives."] }],
   },
   {
     id: "ch22",

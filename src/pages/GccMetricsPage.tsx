@@ -50,8 +50,8 @@ function MetricRow({ m, i }: { m: GccMetric; i: number }) {
                 <div className="font-body text-xs text-foreground">{m.largeBenchmark}</div>
               </div>
               <div className="p-3 rounded-lg bg-accent/5 border border-accent/10">
-                <div className="font-mono text-[9px] text-accent-foreground uppercase tracking-wider mb-1">🏢 Novartis Hyderabad</div>
-                <div className="font-body text-xs text-foreground">{m.novartisInsight}</div>
+                <div className="font-mono text-[9px] text-accent-foreground uppercase tracking-wider mb-1">🏢 Industry Insight</div>
+                <div className="font-body text-xs text-foreground">{m.industryInsight}</div>
               </div>
             </div>
           </motion.div>
@@ -103,7 +103,7 @@ const GccMetricsPage = () => {
             Pharma GCC Maturity <span className="gradient-text">Benchmarks</span>
           </h1>
           <p className="font-body text-muted-foreground max-w-xl mx-auto mb-8">
-            Comprehensive metrics framework for evaluating Global Capability Centre maturity — benchmarked against KPMG Wave 4 standards with Novartis Hyderabad insights.
+            Comprehensive metrics framework for evaluating Global Capability Centre maturity — benchmarked against KPMG Wave 4 standards with industry-leading insights.
           </p>
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-px max-w-3xl mx-auto rounded-2xl overflow-hidden glass-card">
             {gccHighlightStats.map((s) => (
@@ -150,7 +150,7 @@ const GccMetricsPage = () => {
         {/* Source attribution */}
         <div className="mt-12 p-4 rounded-xl border border-border bg-muted/30">
           <p className="font-mono text-xs text-muted-foreground">
-            📊 <strong>Sources:</strong> KPMG GCC Maturity Framework, Zinnov GCC Landscape Report, BCG Digital Transformation in Pharma, ANSR GCC Report, Deloitte Life Sciences Outlook, ZS Associates Commercial Excellence, Novartis Annual Reports, Qatalys Talent Analytics. Data reflects 2024–2025 benchmarks.
+            📊 <strong>Sources:</strong> KPMG GCC Maturity Framework, Zinnov GCC Landscape Report, BCG Digital Transformation in Pharma, ANSR GCC Report, Deloitte Life Sciences Outlook, ZS Associates Commercial Excellence, Qatalys Talent Analytics. Data reflects 2024–2025 benchmarks.
           </p>
         </div>
       </main>
