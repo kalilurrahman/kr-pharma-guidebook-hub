@@ -296,7 +296,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "AI-assisted drug discovery is already reducing target identification timelines from years to months. Decentralised clinical trials have cut patient recruitment windows by 30–50%. Smart manufacturing implementations are driving 15–20% OEE improvements. These are outcomes from Pfizer, Novartis, Roche, and emerging players like Insilico Medicine.",
+          content: "AI-assisted drug discovery is already reducing target identification timelines from years to months. Decentralised clinical trials have cut patient recruitment windows by 30–50%. Smart manufacturing implementations are driving 15–20% OEE improvements. These are outcomes from leading pharma companies and emerging players like Insilico Medicine.",
         },
       },
       {
