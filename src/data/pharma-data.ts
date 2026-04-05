@@ -1373,7 +1373,7 @@ export const chapters: Chapter[] = [
     metrics: [
       { value: "12", label: "Detailed Case Studies" },
       { value: "Roche", label: "AI Drug Discovery" },
-      { value: "Novartis", label: "Commercial AI" },
+      { value: "AstraZeneca", label: "Commercial AI" },
       { value: "Pfizer", label: "Digital Trials" },
     ],
     tags: ["Case Studies", "Best Practices", "Implementation", "Results"],
