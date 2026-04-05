@@ -50,8 +50,8 @@ function MetricRow({ m, i }: { m: GccMetric; i: number }) {
                 <div className="font-body text-xs text-foreground">{m.largeBenchmark}</div>
               </div>
               <div className="p-3 rounded-lg bg-accent/5 border border-accent/10">
-                <div className="font-mono text-[9px] text-accent-foreground uppercase tracking-wider mb-1">🏢 Novartis Hyderabad</div>
-                <div className="font-body text-xs text-foreground">{m.novartisInsight}</div>
+                <div className="font-mono text-[9px] text-accent-foreground uppercase tracking-wider mb-1">🏢 Industry Insight</div>
+                <div className="font-body text-xs text-foreground">{m.industryInsight}</div>
               </div>
             </div>
           </motion.div>
