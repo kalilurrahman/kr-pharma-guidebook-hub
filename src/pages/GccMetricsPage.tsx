@@ -103,7 +103,7 @@ const GccMetricsPage = () => {
             Pharma GCC Maturity <span className="gradient-text">Benchmarks</span>
           </h1>
           <p className="font-body text-muted-foreground max-w-xl mx-auto mb-8">
-            Comprehensive metrics framework for evaluating Global Capability Centre maturity — benchmarked against KPMG Wave 4 standards with Novartis Hyderabad insights.
+            Comprehensive metrics framework for evaluating Global Capability Centre maturity — benchmarked against KPMG Wave 4 standards with industry-leading insights.
           </p>
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-px max-w-3xl mx-auto rounded-2xl overflow-hidden glass-card">
             {gccHighlightStats.map((s) => (
