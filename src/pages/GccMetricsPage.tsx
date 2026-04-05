@@ -150,7 +150,7 @@ const GccMetricsPage = () => {
         {/* Source attribution */}
         <div className="mt-12 p-4 rounded-xl border border-border bg-muted/30">
           <p className="font-mono text-xs text-muted-foreground">
-            📊 <strong>Sources:</strong> KPMG GCC Maturity Framework, Zinnov GCC Landscape Report, BCG Digital Transformation in Pharma, ANSR GCC Report, Deloitte Life Sciences Outlook, ZS Associates Commercial Excellence, Novartis Annual Reports, Qatalys Talent Analytics. Data reflects 2024–2025 benchmarks.
+            📊 <strong>Sources:</strong> KPMG GCC Maturity Framework, Zinnov GCC Landscape Report, BCG Digital Transformation in Pharma, ANSR GCC Report, Deloitte Life Sciences Outlook, ZS Associates Commercial Excellence, Qatalys Talent Analytics. Data reflects 2024–2025 benchmarks.
           </p>
         </div>
       </main>
