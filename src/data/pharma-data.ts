@@ -639,7 +639,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: R&D by Geography",
-          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion, Insilico, Exscientia). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; Novartis has invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
+          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion, Insilico, Exscientia). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; top European pharma companies have invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
         },
         pullQuote: {
           text: "GCC computational biology teams that master AlphaFold 3, molecular dynamics simulation, and generative chemistry are not supporting drug discovery — they are doing drug discovery.",
