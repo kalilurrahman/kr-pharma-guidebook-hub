@@ -865,7 +865,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. Organisations deploying next-generation customer engagement platforms are generating 2–3× the sales force effectiveness of laggards. Novartis publicly disclosed $200M annual commercial efficiency gains from its AI-driven commercial transformation.",
+          content: "The commercial function in pharma is undergoing a fundamental transformation — from relationship-driven field sales to data-driven, omnichannel, precision engagement. Organisations deploying next-generation customer engagement platforms are generating 2–3× the sales force effectiveness of laggards. Leading pharma companies report $200M+ annual commercial efficiency gains from AI-driven commercial transformation.",
         },
       },
       {
