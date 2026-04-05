@@ -375,11 +375,11 @@ export const chapters: Chapter[] = [
         table: {
           headers: ["GCC Capability", "Leading Companies", "Value Delivered", "India Advantage"],
           rows: [
-            ["Computational Drug Discovery", "Novartis, AstraZeneca, Sanofi, GSK", "Target ID, CADD, generative AI molecule design", "IISc/IIT pipeline; 60% lower cost vs US/EU"],
+            ["Computational Drug Discovery", "AstraZeneca, Sanofi, GSK, Roche", "Target ID, CADD, generative AI molecule design", "IISc/IIT pipeline; 60% lower cost vs US/EU"],
             ["Clinical Data Science", "Pfizer, Roche, J&J, Merck", "Phase I–IV data management, statistical programming", "World's largest CDM talent pool"],
             ["Regulatory Intelligence", "AbbVie, Eli Lilly, BMS, Takeda", "eCTD compilation, agency responses, PSUR", "24/7 coverage; multilingual team"],
             ["Real-World Evidence & HEOR", "Amgen, Biogen, Boehringer", "RWE studies, HEOR models, market access", "ABDM infrastructure; large patient pop."],
-            ["Pharmacovigilance Analytics", "Novartis, GSK, Roche, Pfizer", "ICSR processing, signal detection, PSUR/PBRER", "30–40% lower cost; AI-augmented 24/7 ops"],
+            ["Pharmacovigilance Analytics", "GSK, Roche, Pfizer, AstraZeneca", "ICSR processing, signal detection, PSUR/PBRER", "30–40% lower cost; AI-augmented 24/7 ops"],
             ["Manufacturing Intelligence", "Sun Pharma, Dr. Reddy's, Cipla", "Digital twin, predictive quality, supply chain analytics", "Proximity to Indian manufacturing base"],
           ],
         },
