@@ -1,0 +1,71 @@
+name: Auto Generate Media
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Run weekly on Sundays
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  generate-media:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build the project
+        run: npm run build
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Generate Media
+        run: |
+          # Start preview server in the background
+          npm run preview &
+          SERVER_PID=$!
+
+          # Wait for server to start
+          sleep 5
+
+          # Run generation script
+          python generate_media.py
+
+          # Kill server
+          kill $SERVER_PID
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/assets/screenshots/
+
+          # Only commit if there are changes
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: auto-update screenshots and media"
+            git push
+          fi
