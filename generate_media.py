@@ -18,9 +18,9 @@ async def main():
         page = await context.new_page()
 
         # Go to the local site
-        print("Navigating to http://localhost:4173")
+        print("Navigating to http://localhost:8080")
         try:
-            await page.goto("http://localhost:4173")
+            await page.goto("http://localhost:8080")
             await page.wait_for_timeout(2000)
 
             # Ensure the page is somewhat loaded
