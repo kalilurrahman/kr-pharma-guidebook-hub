@@ -25,6 +25,7 @@ This application is a highly comprehensive, modern web platform built with React
   - [Sections](#sections)
   - [Views & Modals](#views--modals)
 - [Tech Stack](#tech-stack)
+- [Admin Login Information](#admin-login-information)
 - [Installation & Setup](#installation--setup)
 - [Testing & Build](#testing--build)
 - [License](#license)
@@ -44,6 +45,11 @@ The Pharma GCC Transformation Handbook provides profound insights into the pharm
   - **Value Chain:** Deep dive into the end-to-end pharmaceutical value chain.
   - **Commercial:** Advanced commercial strategies, market models, and operational capabilities.
   - **Enterprise Enablers:** Key technological and operational enablers driving digital transformation in modern GCCs.
+- **Dedicated Application Routes:**
+  - `/reader`: Immersive, full-screen online reader mode for the entire comprehensive handbook content.
+  - `/gcc-metrics`: Interactive dashboards mapping critical success and maturity metrics.
+  - `/key-stats`: Key statistics and data points across the pharmaceutical transformation landscape.
+  - Resources Section: Access and download links to the physical handbook versions (PDF, DOCX) and executive summaries.
 - **Search Functionality:** Easily find chapters, specific resources, and deep documentation across the handbook.
 
 ---
@@ -95,6 +101,7 @@ Key interactions, the dedicated online reader, metrics analysis, and specific ch
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <img src="src/assets/screenshots/views/view_reader.png" alt="Online Reader View" width="400" />
   <img src="src/assets/screenshots/views/view_gcc_metrics.png" alt="GCC Metrics View" width="400" />
+  <img src="src/assets/screenshots/views/view_key_stats.png" alt="Key Stats View" width="400" />
   <img src="src/assets/screenshots/modals/modal_chapter_view.png" alt="Detailed Chapter Modal View" width="400" />
 </div>
 
@@ -107,6 +114,14 @@ Key interactions, the dedicated online reader, metrics analysis, and specific ch
 - **Animations:** Framer Motion
 - **Build Tool:** Vite
 - **Testing:** Vitest
+
+---
+
+## Admin Login Information
+
+Please note that this application operates as a **static educational portal and knowledge hub**. Because it is designed to publicly serve documentation, strategy frameworks, and architectural insights, **there is no admin login, authentication, or user account system implemented in the codebase.**
+
+All functionality—including searching, theme toggling, the online reader, and metrics views—is completely client-side and accessible without requiring authentication or specific roles. References to "administrators" or "users" within the site's content are purely contextual to the pharmaceutical domain knowledge being presented.
 
 ---
 
@@ -128,7 +143,7 @@ Key interactions, the dedicated online reader, metrics analysis, and specific ch
    npm run build
    npm run preview
    \`\`\`
-   *(The application will be served by default on port 4173)*
+   *(The application will be served by default on port 8080 or dynamically assigned)*
 
 ## Testing & Build
 
