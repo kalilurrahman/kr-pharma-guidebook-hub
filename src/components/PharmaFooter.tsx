@@ -47,7 +47,7 @@ export function PharmaFooter() {
             </p>
           </div>
           <p className="text-center font-mono text-xs text-muted-foreground">
-            © 2025 Kalilur Rahman. All rights reserved. Built with Lovable.
+            Curated by <a href="https://kalilurrahman.lovable.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-teal-light transition-colors">Kalilur Rahman</a>. Built with Lovable.
           </p>
         </div>
       </div>
