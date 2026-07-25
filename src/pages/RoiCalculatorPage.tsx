@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calculator, TrendingUp, Gauge, BookOpen } from "lucide-react";
@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { saveToolSlice } from "@/lib/tool-state";
 
 // ── Value levers ──
 // Annual value gap between a digital laggard and a digital leader, benchmarked
@@ -62,6 +63,9 @@ const RoiCalculatorPage = () => {
   const setPosition = (key: string, factor: number) =>
     setPositions((p) => ({ ...p, [key]: factor }));
 
+  const tierLabelFor = (factor: number) =>
+    POSITIONS.find((p) => Math.abs(p.factor - factor) < 0.001)?.label ?? "—";
+
   const { rows, totalLow, totalHigh, maxMid } = useMemo(() => {
     const rs = LEVERS.map((l) => {
       const factor = positions[l.key];
@@ -75,6 +79,22 @@ const RoiCalculatorPage = () => {
     const mMid = Math.max(...rs.map((r) => r.mid), 1);
     return { rows: rs, totalLow: tLow, totalHigh: tHigh, maxMid: mMid };
   }, [positions, scale]);
+
+  // Persist a render-ready summary for the Board Pack.
+  useEffect(() => {
+    saveToolSlice("roi", {
+      revenue,
+      totalLow,
+      totalHigh,
+      levers: rows.map((r) => ({
+        name: r.lever.name,
+        low: r.low,
+        high: r.high,
+        tier: tierLabelFor(r.factor),
+      })),
+      savedAt: new Date().toISOString(),
+    });
+  }, [revenue, totalLow, totalHigh, rows]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

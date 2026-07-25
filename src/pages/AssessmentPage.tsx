@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Gauge, RotateCcw, BarChart3, BookOpen, Target } from "lucide-react";
@@ -6,6 +6,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { saveToolSlice } from "@/lib/tool-state";
 
 // ── PDMF framework (Ch 2 · Pharma Digital Maturity Framework) ──
 // 7 domains × 5 maturity levels: 1 Foundational → 5 Leading.
@@ -208,6 +209,29 @@ const AssessmentPage = () => {
   const setScore = (key: string, level: number) =>
     setScores((prev) => ({ ...prev, [key]: level }));
   const reset = () => setScores({});
+
+  // Persist a render-ready summary so the Board Pack can assemble a deliverable.
+  useEffect(() => {
+    if (!allAnswered) return;
+    saveToolSlice("assessment", {
+      overallLevel,
+      levelName: LEVEL_NAMES[overallLevel - 1],
+      average,
+      domains: DOMAINS.map((d) => ({
+        name: d.name,
+        level: scores[d.key],
+        levelName: LEVEL_NAMES[scores[d.key] - 1],
+      })),
+      priorities: priorities.map((p) => ({
+        name: p.domain.name,
+        level: p.level,
+        gap: p.gap,
+        nextStep: p.domain.levels[p.level],
+        chapter: p.domain.chapter,
+      })),
+      savedAt: new Date().toISOString(),
+    });
+  }, [allAnswered, overallLevel, average, priorities, scores]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

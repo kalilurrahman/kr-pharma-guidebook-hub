@@ -10,6 +10,7 @@ import KeyStatsPage from "./pages/KeyStatsPage.tsx";
 import AssessmentPage from "./pages/AssessmentPage.tsx";
 import RoiCalculatorPage from "./pages/RoiCalculatorPage.tsx";
 import BenchmarkPage from "./pages/BenchmarkPage.tsx";
+import BoardPackPage from "./pages/BoardPackPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/assessment" element={<AssessmentPage />} />
           <Route path="/roi" element={<RoiCalculatorPage />} />
           <Route path="/benchmark" element={<BenchmarkPage />} />
+          <Route path="/board-pack" element={<BoardPackPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

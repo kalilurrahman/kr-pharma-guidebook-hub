@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Building2, RotateCcw, Target, Gauge, Calculator, BarChart3 } from "lucide-react";
@@ -7,6 +7,7 @@ import { PharmaFooter } from "@/components/PharmaFooter";
 import { gccMetrics, gccDimensions, gccDimensionColors } from "@/data/gcc-metrics";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { saveToolSlice } from "@/lib/tool-state";
 
 // ── Self-benchmarking against the 37-metric GCC maturity dataset ──
 // Rated per dimension (9) rather than per metric (37) to stay usable; the
@@ -80,6 +81,29 @@ const BenchmarkPage = () => {
 
   const setTier = (d: string, level: number) => setTiers((p) => ({ ...p, [d]: level }));
   const reset = () => setTiers({});
+
+  // Persist a render-ready summary for the Board Pack.
+  useEffect(() => {
+    if (!complete) return;
+    saveToolSlice("benchmark", {
+      index,
+      wave: waveFor(index).label,
+      dimensions: gccDimensions.map((d) => ({
+        name: d,
+        tier: tiers[d],
+        tierLabel: TIERS[tiers[d] - 1].label,
+      })),
+      gaps: gaps.map((g) => ({
+        name: g.dimension,
+        gap: g.gap,
+        targets: gccMetrics
+          .filter((m) => m.dimension === g.dimension)
+          .slice(0, 3)
+          .map((m) => ({ metric: m.metric, target: m.matureBenchmark })),
+      })),
+      savedAt: new Date().toISOString(),
+    });
+  }, [complete, index, gaps, tiers]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator, Building2 } from "lucide-react";
+import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator, Building2, FileText } from "lucide-react";
 import { chapters, parts } from "@/data/pharma-data";
 import { ChapterCard } from "@/components/ChapterCard";
 
@@ -103,6 +103,16 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
             <div className="flex-1">
               <h3 className="font-display text-sm font-bold text-foreground mb-0.5">🏢 GCC Benchmark</h3>
               <p className="font-body text-xs text-muted-foreground">Rate your centre vs 37 benchmarks</p>
+            </div>
+            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          </Link>
+          <Link to="/board-pack" className="card-pharma group flex items-center gap-4 no-underline border-primary/40 ring-1 ring-primary/20 hover:border-primary/60 transition-colors">
+            <div className="p-3 rounded-lg bg-indigo/10">
+              <FileText className="w-6 h-6 text-indigo" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📄 Board Pack</h3>
+              <p className="font-body text-xs text-muted-foreground">Assemble your results into a PDF pack</p>
             </div>
             <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </Link>
