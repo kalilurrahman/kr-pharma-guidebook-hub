@@ -97,7 +97,7 @@ const GccMetricsPage = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 mb-6">
             <Building2 className="w-3.5 h-3.5 text-primary" />
-            <span className="font-mono text-xs text-primary tracking-wider uppercase">37 Metrics · 9 Dimensions</span>
+            <span className="font-mono text-xs text-primary tracking-wider uppercase">34 Metrics · 9 Dimensions</span>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Pharma GCC Maturity <span className="gradient-text">Benchmarks</span>

@@ -9,9 +9,9 @@ export const handbookStats: HandbookStats = {
 
 export const coverStats = [
   { value: "30", label: "Chapters + Appendix" },
-  { value: "95K+", label: "Words" },
+  { value: "95K+", label: "Words · Full Handbook" },
   { value: "9", label: "Parts" },
-  { value: "47+", label: "Diagrams & Tables" },
+  { value: "47+", label: "Diagrams & Tables · Full Handbook" },
 ];
 
 // ── SVG Diagram Constants ──
@@ -1296,7 +1296,7 @@ export const chapters: Chapter[] = [
     title: "Pharma Global Capability Centres in India",
     lead: "India's GCC ecosystem as the digital transformation engine for global pharma — capabilities, talent, and strategic value.",
     metrics: [
-      { value: "1,600+", label: "GCCs in India" },
+      { value: "1,600+", label: "GCCs in India (All Sectors)" },
       { value: "30+", label: "Pharma MNC GCCs" },
       { value: "60%", label: "Cost Advantage" },
       { value: "40%", label: "Faster AI Recruitment" },
@@ -1362,7 +1362,88 @@ export const chapters: Chapter[] = [
       { value: "200+", label: "Digital FTEs at Leaders" },
     ],
     tags: ["CDO", "Digital Leadership", "Operating Model", "Strategy"],
-    sections: [{ title: "Executive Summary", content: ["The Chief Digital Officer role has become a critical C-suite position in pharma. This chapter provides the strategic playbook for digital leadership, organisation design, and transformation execution."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "The Chief Digital Officer has become one of the most consequential — and most precarious — roles in pharma leadership. The mandate is enterprise-wide, the budget is significant, and the expectations are compressed into tenures that average just three to five years. The CDOs who succeed treat the role not as head of a technology function, but as the architect of a new operating model.",
+          "This playbook distils what separates digital leaders who deliver compounding value from those who stall in pilot purgatory: a clear mandate, a federated operating model, disciplined value realisation, and relentless attention to adoption and change — the human side that technology cannot fix.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "The single strongest predictor of CDO success is not budget size or technology choice — it is the clarity of the mandate and the strength of CEO and board sponsorship. Where the CDO owns a business outcome (cycle time, cost-to-serve, launch effectiveness) rather than a technology portfolio, transformation compounds; where they own 'innovation' in the abstract, it stalls.",
+        },
+      },
+      {
+        title: "The Mandate: What a Pharma CDO Actually Owns",
+        content: [
+          "A CDO without a precise mandate inherits everyone's digital wishlist and no authority to prioritise it. The mandate must be defined as a small set of enterprise outcomes, with the budget, talent, and decision rights to deliver them.",
+        ],
+        bulletPoints: [
+          "<strong>Digital & Data Strategy</strong> — Owning the enterprise digital roadmap and its linkage to corporate strategy and the P&L, not a parallel technology agenda.",
+          "<strong>Data & AI Platform</strong> — The shared, governed foundation (cloud, data platform, MLOps, GenAI) that every function builds on rather than re-inventing.",
+          "<strong>Digital Product & Delivery</strong> — A product-operating model that ships and scales capabilities across R&D, clinical, manufacturing, and commercial.",
+          "<strong>Change, Adoption & Literacy</strong> — Building the digital-native culture and skills without which technology investment does not convert to value.",
+          "<strong>Value Realisation</strong> — Owning a transparent benefits-tracking discipline that ties every initiative to a measurable business outcome.",
+        ],
+      },
+      {
+        title: "The Digital Operating Model",
+        content: [
+          "The CDO's core deliverable is an operating model — the repeatable machine that turns strategy into scaled, adopted capability. Five engines run in parallel.",
+        ],
+        steps: [
+          { num: "01", title: "Strategy & Portfolio", description: "A prioritised, outcome-linked portfolio with clear stage-gates; ruthless about killing low-value pilots and funding what scales." },
+          { num: "02", title: "Platform & Data", description: "Shared cloud, data, and AI foundations with governance built in — so functions consume capability rather than rebuild it." },
+          { num: "03", title: "Product & Delivery", description: "Cross-functional product teams with persistent ownership, agile delivery, and enterprise-architecture guardrails." },
+          { num: "04", title: "Adoption & Change", description: "Embedded change management, digital-literacy programmes, and incentives aligned to new ways of working." },
+          { num: "05", title: "Value & Governance", description: "A benefits-realisation office and steering cadence that make value visible to the board and reallocate capital dynamically." },
+        ],
+        insightBox: {
+          icon: "🎯",
+          label: "Leadership Principle",
+          title: "Own an outcome, not an org chart",
+          description: "CDOs who are measured on business outcomes — time-to-market, cost-to-serve, launch effectiveness — command the cross-functional authority to change how work is done. Those measured on 'delivering digital' are structurally set up to stall.",
+        },
+      },
+      {
+        title: "Organisation Design: Federated by Default",
+        content: [
+          "There is no single right structure — but the centre of gravity for mature pharma is a federated (hub-and-spoke) model: a lean central team owns platforms, standards, and scarce talent, while embedded digital teams sit inside the business functions and the GCC executes at scale.",
+        ],
+        table: {
+          headers: ["Model", "Description", "Best For", "Primary Risk"],
+          rows: [
+            ["Centralised", "One central digital unit owns strategy, platform, and delivery", "Early-stage transformation; setting standards", "Bottlenecks; disconnect from the business"],
+            ["Decentralised", "Each function runs its own digital agenda and teams", "Highly autonomous, mature functions", "Duplication; fragmented data & tooling"],
+            ["Federated (hub & spoke)", "Central platform + standards; embedded teams in functions; GCC scale", "Scaling enterprises with a strong GCC", "Requires clear decision rights to avoid friction"],
+          ],
+        },
+      },
+      {
+        title: "The First 12 Months: A Sequenced Agenda",
+        content: [
+          "Credibility is won early. A disciplined first year secures sponsorship, delivers visible proof, and lays the platform for scale — in that order.",
+        ],
+        steps: [
+          { num: "0–90 days", title: "Listen, Diagnose, Anchor", description: "Run a PDMF maturity baseline, secure an explicit board-endorsed mandate, and align on 3–4 outcome metrics. Identify two high-visibility quick wins." },
+          { num: "3–6 mo", title: "Prove & Platform", description: "Deliver the quick wins, stand up the shared data/AI platform foundation, and establish governance and the value-realisation office." },
+          { num: "6–12 mo", title: "Scale & Institutionalise", description: "Roll out the operating model, launch digital-literacy at scale, and publish a transparent benefits dashboard to the board. Set the Horizon 2 agenda." },
+        ],
+      },
+      {
+        title: "Funding, Value Realisation & Why Leaders Fail",
+        content: [
+          "Digital budgets at leading pharma routinely exceed $50M, yet spend is not the constraint — conversion of spend to value is. Fund transformation as a managed portfolio with stage-gates and dynamic reallocation, not as an annual lump sum, and make benefits visible to the board every quarter.",
+          "The failure modes are consistent and avoidable: <strong>pilot purgatory</strong> (endless proofs-of-concept that never scale), <strong>technology without process redesign</strong> (automating dysfunction), <strong>weak sponsorship</strong> (a mandate that evaporates under budget pressure), <strong>neglected adoption</strong> (tools no one uses), and <strong>vanity metrics</strong> (activity reported instead of outcomes).",
+        ],
+        pullQuote: {
+          text: "The best digital leaders are not the ones with the boldest technology vision — they are the ones who convert vision into adopted capability, and adopted capability into outcomes the board can see.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch21",
@@ -1452,7 +1533,111 @@ export const chapters: Chapter[] = [
       { value: "GxP", label: "Validation Challenge" },
     ],
     tags: ["Generative AI", "LLMs", "Copilots", "Enterprise AI"],
-    sections: [{ title: "Executive Summary", content: ["Generative AI is transforming every function in pharma — from molecular design and literature review to regulatory writing and commercial content generation. This chapter covers enterprise deployment strategy."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "Generative AI is the first technology in a generation that touches every function in pharma simultaneously — molecular design, literature synthesis, clinical and regulatory writing, pharmacovigilance narratives, commercial content, and enterprise knowledge access. Unlike prior analytics waves, its value is unlocked not by data scientists alone but by the domain experts who use it every day.",
+          "The strategic question is no longer whether to adopt generative AI, but how to deploy it at enterprise scale inside a GxP-regulated environment — with the grounding, guardrails, validation, and human oversight that regulators and patients demand. Organisations that treat GenAI as a governed capability, not a collection of pilots, will compound advantage; those that let a thousand ungoverned prompts bloom will accumulate risk without realising value.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "Leading pharma companies are targeting 30–50% automation of document-heavy workflows (medical writing, regulatory responses, MLR-reviewed content) using retrieval-grounded LLMs with human-in-the-loop sign-off. The winners are standing up a shared, validated GenAI platform — foundation models, enterprise retrieval, guardrails, and evaluation — rather than one-off copilots per function.",
+        },
+      },
+      {
+        title: "Where Generative AI Creates Value Across the Value Chain",
+        content: [
+          "Generative AI's impact is broadest where work is language-, document-, or design-intensive and where a knowledgeable human validates the output. The table below maps the highest-signal use cases to their value driver and current deployment maturity in regulated enterprises.",
+        ],
+        table: {
+          headers: ["Function", "Representative Use Case", "Primary Value Driver", "Deployment Maturity"],
+          rows: [
+            ["R&D Discovery", "De novo molecular generation; target dossier synthesis", "Novel chemical space; faster hypothesis generation", "Scaling"],
+            ["Clinical Development", "Protocol drafting, CSR & narrative generation, SDTM mapping", "Cycle-time & first-time-right", "Piloting → Scaling"],
+            ["Regulatory Affairs", "eCTD authoring, health-authority query responses, labelling", "Submission speed; fewer queries", "Piloting"],
+            ["Pharmacovigilance", "ICSR narrative drafting, MedDRA coding, literature triage", "Case-processing cost & throughput", "Scaling"],
+            ["Commercial & Medical", "MLR-compliant content, HCP personalisation, MSL copilots", "Content velocity; channel ROI", "Scaling"],
+            ["Enterprise Knowledge", "Grounded Q&A over SOPs, policies, and scientific corpora", "Decision latency; talent leverage", "Broad adoption"],
+          ],
+        },
+      },
+      {
+        title: "The Enterprise GenAI Capability Stack",
+        content: [
+          "Sustainable value comes from a shared platform, not point solutions. Five layers turn foundation models into governed enterprise capability — each an explicit engineering and governance responsibility.",
+        ],
+        steps: [
+          { num: "01", title: "Foundation & Domain Models", description: "General-purpose LLMs (GPT-4-class, Claude, Gemini) plus domain models for science — protein language models (ESM), molecular generators, and biomedical LLMs. Route each task to the right model on cost, latency, and capability." },
+          { num: "02", title: "Retrieval & Grounding (RAG)", description: "Ground outputs in authoritative enterprise sources — SOPs, submissions, literature, structured data — so answers cite evidence. Retrieval is the single biggest lever for reducing hallucination in regulated use." },
+          { num: "03", title: "Orchestration & Agents", description: "Chain tools, retrieval, and reasoning into multi-step workflows (e.g., draft → check against source → format to template). Agentic patterns automate whole tasks, not just single prompts." },
+          { num: "04", title: "Guardrails & Compliance", description: "PII/PHI redaction, prompt-injection defence, toxicity and off-label filters, MLR/regulatory policy checks, and enforced human-in-the-loop sign-off for any GxP or patient-facing output." },
+          { num: "05", title: "Evaluation & Observability", description: "Golden datasets, factuality and faithfulness scoring, red-teaming, and full prompt/response logging for audit. You cannot validate — or trust — what you cannot measure." },
+        ],
+        insightBox: {
+          icon: "🧩",
+          label: "Platform Principle",
+          title: "Ground first, generate second",
+          description: "In pharma, an ungrounded LLM is a liability. Retrieval-augmented generation over validated sources — with citations surfaced to the reviewer — is the difference between a compliant assistant and an unmanaged risk.",
+        },
+      },
+      {
+        title: "High-Impact Use Cases to Prioritise",
+        content: [
+          "A pragmatic first wave targets workflows that are document-heavy, high-volume, and already have a qualified human reviewer in the loop — maximising value while keeping risk bounded.",
+        ],
+        bulletPoints: [
+          "<strong>Medical & Regulatory Writing</strong> — First-draft CSRs, protocols, investigator brochures, and health-authority responses from structured study data, with authors as validators.",
+          "<strong>Pharmacovigilance Automation</strong> — ICSR narrative generation, automated MedDRA coding suggestions, and literature triage to compress case-processing time.",
+          "<strong>MLR-Aware Commercial Content</strong> — Generate promotional and medical content pre-checked against claims libraries and regulatory guardrails before human MLR review.",
+          "<strong>Enterprise Scientific Copilot</strong> — Grounded Q&A across SOPs, dossiers, and the literature, giving every scientist and reviewer instant institutional memory.",
+          "<strong>Code & Data Engineering</strong> — Accelerate SAS-to-R migration, SDTM/ADaM mapping, and query authoring in clinical data science teams.",
+        ],
+      },
+      {
+        title: "Deploying GenAI in a GxP-Regulated Environment",
+        content: [
+          "The core tension is that large language models are probabilistic and non-deterministic, while GxP validation assumes reproducibility. Bridging this requires a shift from validating the model's every output to validating the <strong>system and process</strong> around it — intended use, data provenance, guardrails, human oversight, and monitoring.",
+          "FDA's January 2025 draft guidance on the use of AI to support regulatory decision-making introduces a risk-based credibility-assessment framework centred on <strong>context of use</strong> — a workable blueprint for enterprise deployment. Practically, this means defining intended use narrowly, applying GAMP 5 and Computer Software Assurance (CSA) risk-based rigour, maintaining 21 CFR Part 11-compliant audit trails, and keeping a qualified human accountable for every regulated decision.",
+        ],
+        insightBox: {
+          icon: "⚖️",
+          label: "Validation Principle",
+          title: "Validate the system, keep the human accountable",
+          description: "Non-determinism does not preclude GxP use. Define a narrow context of use, ground outputs in validated sources, enforce human-in-the-loop sign-off, log everything for audit, and monitor drift — the model assists, the qualified human decides and signs.",
+        },
+      },
+      {
+        title: "Build, Buy, or Fine-Tune?",
+        content: [
+          "Most enterprises will run a portfolio across all three approaches. The decision hinges on differentiation, data sensitivity, speed-to-value, and total cost of ownership.",
+        ],
+        table: {
+          headers: ["Approach", "When to Use", "Advantage", "Watch-outs"],
+          rows: [
+            ["Buy (SaaS copilots)", "Commodity workflows — commercial content, coding, meeting copilots", "Fastest time-to-value; vendor-maintained", "Data residency; limited domain grounding; lock-in"],
+            ["Build on APIs + RAG", "Grounded enterprise Q&A and document generation over proprietary corpora", "Control, grounding, and guardrails without training cost", "Requires platform & MLOps capability"],
+            ["Fine-tune / adapt", "High-volume, narrow tasks (coding, narratives) or domain science", "Task accuracy; smaller, cheaper models at scale", "Data curation cost; revalidation on drift"],
+          ],
+        },
+      },
+      {
+        title: "Responsible GenAI: Risk & Governance",
+        content: [
+          "The failure modes are well understood and manageable with governance: hallucination and fabricated citations, IP and data leakage into third-party models, PHI/PII exposure, bias, over-reliance by users, and regulatory non-acceptance. A GenAI governance council — spanning quality, regulatory, legal, security, and the business — should own an approved-use registry, a model risk taxonomy, and mandatory human-oversight rules for high-risk contexts.",
+        ],
+        callout: {
+          type: "spotlight",
+          label: "🛡️ Governance Spotlight",
+          content: "Treat every GenAI use case like a validated system: classify it by risk, register its intended use, ground it in approved sources, gate high-risk outputs behind human sign-off, and monitor for drift. Governance is not the brake on GenAI value — in regulated pharma, it is the enabler of it.",
+        },
+        pullQuote: {
+          text: "In regulated pharma, the competitive edge is not access to the largest model — it is the discipline to ground it, govern it, and keep a qualified human accountable for what it produces.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch27",
