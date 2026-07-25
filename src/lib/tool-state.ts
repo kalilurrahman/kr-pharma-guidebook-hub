@@ -101,9 +101,15 @@ export function serialiseToolState(state: ToolState, exportedAt: string): string
   return JSON.stringify(envelope, null, 2);
 }
 
+/**
+ * Note the explicit `?: undefined` members on each variant: this project
+ * compiles with `strict: false`, under which TypeScript will not narrow a
+ * boolean-discriminated union from `if (!result.ok)` alone. Declaring the
+ * absent member on both sides keeps `result.error` accessible after a check.
+ */
 export type ImportResult =
-  | { ok: true; state: ToolState }
-  | { ok: false; error: string };
+  | { ok: true; state: ToolState; error?: undefined }
+  | { ok: false; error: string; state?: undefined };
 
 /**
  * Parse and validate an exported file. Deliberately strict about the envelope

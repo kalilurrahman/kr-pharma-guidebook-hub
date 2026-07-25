@@ -7,6 +7,7 @@ import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { saveToolSlice } from "@/lib/tool-state";
+import { BENCHMARK_REVENUE_B, CAPTURE_FACTORS, scaleLever, sumRange } from "@/lib/scoring";
 
 // ── Value levers ──
 // Annual value gap between a digital laggard and a digital leader, benchmarked
@@ -34,14 +35,13 @@ const LEVERS: Lever[] = [
   { key: "commercial", name: "Commercial Effectiveness", note: "Higher call rate & new-to-brand yield", chapter: "Ch 9 · Commercial Excellence", low: 50, high: 120, colorText: "text-coral", colorBar: "bg-coral", colorBg: "bg-coral/10" },
 ];
 
-// How much of the gap remains capturable given current maturity.
+// How much of the gap remains capturable given current maturity. Factors come
+// from the shared scoring module so the maths and the labels cannot drift.
 const POSITIONS = [
-  { key: "laggard", label: "Laggard", factor: 1.0, hint: "Most of the gap is open" },
-  { key: "developing", label: "Developing", factor: 0.5, hint: "About half captured" },
-  { key: "leader", label: "Leader", factor: 0.15, hint: "Largely captured" },
+  { key: "laggard", label: "Laggard", factor: CAPTURE_FACTORS.laggard, hint: "Most of the gap is open" },
+  { key: "developing", label: "Developing", factor: CAPTURE_FACTORS.developing, hint: "About half captured" },
+  { key: "leader", label: "Leader", factor: CAPTURE_FACTORS.leader, hint: "Largely captured" },
 ] as const;
-
-const BENCHMARK_REVENUE = 5; // $B basis for the Ch 1 figures
 
 function fmtM(m: number): string {
   if (m >= 1000) return `$${(m / 1000).toFixed(m >= 10000 ? 1 : 2)}B`;
@@ -59,7 +59,6 @@ const RoiCalculatorPage = () => {
     Object.fromEntries(LEVERS.map((l) => [l.key, 0.5])),
   );
 
-  const scale = revenue / BENCHMARK_REVENUE;
   const setPosition = (key: string, factor: number) =>
     setPositions((p) => ({ ...p, [key]: factor }));
 
@@ -69,16 +68,13 @@ const RoiCalculatorPage = () => {
   const { rows, totalLow, totalHigh, maxMid } = useMemo(() => {
     const rs = LEVERS.map((l) => {
       const factor = positions[l.key];
-      const low = l.low * scale * factor;
-      const high = l.high * scale * factor;
-      const mid = (low + high) / 2;
-      return { lever: l, factor, low, high, mid };
+      const { low, high } = scaleLever(l, revenue, factor);
+      return { lever: l, factor, low, high, mid: (low + high) / 2 };
     });
-    const tLow = rs.reduce((a, r) => a + r.low, 0);
-    const tHigh = rs.reduce((a, r) => a + r.high, 0);
+    const total = sumRange(rs);
     const mMid = Math.max(...rs.map((r) => r.mid), 1);
-    return { rows: rs, totalLow: tLow, totalHigh: tHigh, maxMid: mMid };
-  }, [positions, scale]);
+    return { rows: rs, totalLow: total.low, totalHigh: total.high, maxMid: mMid };
+  }, [positions, revenue]);
 
   // Persist a render-ready summary for the Board Pack.
   useEffect(() => {
