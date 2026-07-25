@@ -132,6 +132,18 @@ const CANONICAL = [
     source: "Rock Health",
   },
   {
+    // The handbook's own word count: measured 87,811 whitespace tokens in the
+    // reader HTML and 87,805 in the rendered PDF — two independent methods
+    // agreeing at ~88K. The long-standing "95K+" overstated it by ~8%.
+    id: "handbook-word-count",
+    // Bidirectional: the figure appears both as "95K+ words" (prose, cover
+    // badge) and as `value: "95K+", label: "Words · Full Handbook"` (stat
+    // card), where the number precedes the word with markup in between.
+    stale: /9[05]\s*[Kk]\+?[^.]{0,25}words|words[^.]{0,25}9[05]\s*[Kk]\+/i,
+    correct: "~88K words (measured in both the reader HTML and the PDF)",
+    source: "measured 2026 refresh",
+  },
+  {
     id: "reskilling-share",
     stale: /70\s*%[^.]{0,55}(?:reskill|retrain)/i,
     correct: "~60% of workers need reskilling by 2027; 77% of employers plan to",

@@ -2,14 +2,14 @@ import type { Chapter, HandbookStats } from "@/types/pharma.types";
 
 export const handbookStats: HandbookStats = {
   chapters: 30,
-  words: "95K+",
+  words: "~88K",
   pillars: 9,
   phases: 3,
 };
 
 export const coverStats = [
   { value: "30", label: "Chapters + Appendix" },
-  { value: "95K+", label: "Words · Full Handbook" },
+  { value: "~88K", label: "Words · Full Handbook" },
   { value: "9", label: "Parts" },
   { value: "47+", label: "Diagrams & Tables · Full Handbook" },
 ];
