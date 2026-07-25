@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Building2, RotateCcw, Target, Gauge, Calculator, BarChart3 } from "lucide-react";
@@ -7,20 +7,36 @@ import { PharmaFooter } from "@/components/PharmaFooter";
 import { gccMetrics, gccDimensions, gccDimensionColors } from "@/data/gcc-metrics";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { saveToolSlice } from "@/lib/tool-state";
+import {
+  GCC_TIER_LABELS,
+  GCC_MAX_TIER,
+  gccMaturityIndex,
+  waveFor,
+  largestGaps,
+} from "@/lib/scoring";
 
 // ── Self-benchmarking against the 37-metric GCC maturity dataset ──
 // Rated per dimension (9) rather than per metric (37) to stay usable; the
 // underlying metrics and their published benchmarks are surfaced as the
 // concrete targets for whichever dimensions lag.
 
-const TIERS = [
-  { level: 1, label: "Baseline", hint: "Below the large-GCC benchmark" },
-  { level: 2, label: "Scaling", hint: "Approaching the benchmark" },
-  { level: 3, label: "Large GCC", hint: "Meets the large-GCC benchmark" },
-  { level: 4, label: "Wave 4", hint: "Meets the mature benchmark" },
-] as const;
+const TIER_HINTS = [
+  "Below the large-GCC benchmark",
+  "Approaching the benchmark",
+  "Meets the large-GCC benchmark",
+  "Meets the mature benchmark",
+];
 
-const MAX = TIERS.length;
+// Labels come from the shared scoring module so the persisted summary and the
+// UI can never drift apart.
+const TIERS = GCC_TIER_LABELS.map((label, i) => ({
+  level: i + 1,
+  label,
+  hint: TIER_HINTS[i],
+}));
+
+const MAX = GCC_MAX_TIER;
 
 // Explicit class maps — Tailwind cannot see interpolated class names.
 const TEXT: Record<string, string> = {
@@ -36,16 +52,6 @@ const FILL: Record<string, string> = {
   gold: "bg-gold", coral: "bg-coral", primary: "bg-primary",
 };
 
-const WAVES = [
-  { min: 0, label: "Wave 1–2 · Cost & Capacity", detail: "The centre is still measured mainly on cost and throughput. Priority is standardising core processes and building the data and governance foundation before reaching for innovation mandates." },
-  { min: 40, label: "Wave 2–3 · Capability & Standardisation", detail: "End-to-end process ownership is taking hold. Priority is deepening domain capability, forming Centres of Excellence, and converting arbitrage savings into platform and AI investment." },
-  { min: 60, label: "Wave 3 · Centre of Excellence", detail: "The centre sets global standards in several domains. Priority is winning genuine global mandates and decision rights — the step that separates a scaled centre from a strategic one." },
-  { min: 80, label: "Wave 4 · Innovation Partner ('HQ Twin')", detail: "The centre co-creates strategy and contributes to the innovation pipeline. Priority is sustaining the edge: IP generation, enterprise-global mandates, and exporting innovation to the parent." },
-];
-
-function waveFor(pct: number) {
-  return [...WAVES].reverse().find((w) => pct >= w.min) ?? WAVES[0];
-}
 
 const BenchmarkPage = () => {
   usePageMeta(
@@ -68,18 +74,40 @@ const BenchmarkPage = () => {
 
   const { index, gaps } = useMemo(() => {
     const vals = gccDimensions.map((d) => tiers[d]).filter((v): v is number => typeof v === "number");
-    const pct = vals.length ? (vals.reduce((a, b) => a + b, 0) / (gccDimensions.length * MAX)) * 100 : 0;
-    const g = gccDimensions
-      .filter((d) => typeof tiers[d] === "number")
-      .map((d) => ({ dimension: d, tier: tiers[d], gap: MAX - tiers[d] }))
-      .filter((x) => x.gap > 0)
-      .sort((a, b) => b.gap - a.gap)
-      .slice(0, 3);
+    const pct = gccMaturityIndex(vals, gccDimensions.length);
+    const g = largestGaps(
+      gccDimensions.filter((d) => typeof tiers[d] === "number"),
+      (d) => tiers[d],
+      MAX,
+    ).map((r) => ({ dimension: r.item, tier: r.score, gap: r.gap }));
     return { index: pct, gaps: g };
   }, [tiers]);
 
   const setTier = (d: string, level: number) => setTiers((p) => ({ ...p, [d]: level }));
   const reset = () => setTiers({});
+
+  // Persist a render-ready summary for the Board Pack.
+  useEffect(() => {
+    if (!complete) return;
+    saveToolSlice("benchmark", {
+      index,
+      wave: waveFor(index).label,
+      dimensions: gccDimensions.map((d) => ({
+        name: d,
+        tier: tiers[d],
+        tierLabel: TIERS[tiers[d] - 1].label,
+      })),
+      gaps: gaps.map((g) => ({
+        name: g.dimension,
+        gap: g.gap,
+        targets: gccMetrics
+          .filter((m) => m.dimension === g.dimension)
+          .slice(0, 3)
+          .map((m) => ({ metric: m.metric, target: m.matureBenchmark })),
+      })),
+      savedAt: new Date().toISOString(),
+    });
+  }, [complete, index, gaps, tiers]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">

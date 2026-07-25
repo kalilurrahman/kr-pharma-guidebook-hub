@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator, Building2 } from "lucide-react";
+import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator, Building2, FileText, Search } from "lucide-react";
 import { chapters, parts } from "@/data/pharma-data";
 import { ChapterCard } from "@/components/ChapterCard";
 
@@ -106,11 +106,31 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
             </div>
             <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </Link>
+          <Link to="/board-pack" className="card-pharma group flex items-center gap-4 no-underline border-primary/40 ring-1 ring-primary/20 hover:border-primary/60 transition-colors">
+            <div className="p-3 rounded-lg bg-indigo/10">
+              <FileText className="w-6 h-6 text-indigo" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📄 Board Pack</h3>
+              <p className="font-body text-xs text-muted-foreground">Assemble your results into a PDF pack</p>
+            </div>
+            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          </Link>
         </div>
       </div>
 
       {/* Explore — reference */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Link to="/search" className="card-pharma group flex items-center gap-4 no-underline hover:border-primary/50 transition-colors">
+          <div className="p-3 rounded-lg bg-teal/10">
+            <Search className="w-6 h-6 text-teal" />
+          </div>
+          <div className="flex-1">
+            <h3 className="font-display text-sm font-bold text-foreground mb-0.5">🔎 Deep Search</h3>
+            <p className="font-body text-xs text-muted-foreground">Full text of all 30 chapters, cited</p>
+          </div>
+          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+        </Link>
         <Link to="/reader" className="card-pharma group flex items-center gap-4 no-underline hover:border-primary/50 transition-colors">
           <div className="p-3 rounded-lg bg-primary/10">
             <BookOpen className="w-6 h-6 text-primary" />

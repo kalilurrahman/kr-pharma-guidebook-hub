@@ -352,3 +352,43 @@
     display: none;
   }
 }
+
+/* ── Print: board pack / any printable page ─────────────────────────────
+   Forces a light, ink-friendly palette by overriding the design tokens,
+   hides chrome marked .no-print, and page-breaks between pack sections. */
+@media print {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 12%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 35%;
+    --border: 220 13% 80%;
+  }
+
+  .no-print { display: none !important; }
+
+  body {
+    background: #fff !important;
+    font-size: 11pt;
+  }
+
+  .pack-page {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .glass-card,
+  .card-pharma {
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    border-color: hsl(var(--border)) !important;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+}

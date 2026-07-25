@@ -13,6 +13,8 @@ const KeyStatsPage = lazy(() => import("./pages/KeyStatsPage.tsx"));
 const AssessmentPage = lazy(() => import("./pages/AssessmentPage.tsx"));
 const RoiCalculatorPage = lazy(() => import("./pages/RoiCalculatorPage.tsx"));
 const BenchmarkPage = lazy(() => import("./pages/BenchmarkPage.tsx"));
+const BoardPackPage = lazy(() => import("./pages/BoardPackPage.tsx"));
+const SearchPage = lazy(() => import("./pages/SearchPage.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -36,6 +38,8 @@ const App = () => (
             <Route path="/assessment" element={<AssessmentPage />} />
             <Route path="/roi" element={<RoiCalculatorPage />} />
             <Route path="/benchmark" element={<BenchmarkPage />} />
+            <Route path="/board-pack" element={<BoardPackPage />} />
+            <Route path="/search" element={<SearchPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Gauge, RotateCcw, BarChart3, BookOpen, Target } from "lucide-react";
@@ -6,6 +6,14 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { saveToolSlice } from "@/lib/tool-state";
+import {
+  PDMF_LEVEL_NAMES as LEVEL_NAMES,
+  PDMF_MAX_LEVEL,
+  bandForAverage,
+  meanScore,
+  largestGaps,
+} from "@/lib/scoring";
 
 // ── PDMF framework (Ch 2 · Pharma Digital Maturity Framework) ──
 // 7 domains × 5 maturity levels: 1 Foundational → 5 Leading.
@@ -22,7 +30,6 @@ interface Domain {
   levels: string[]; // index 0 = Level 1 … index 4 = Level 5
 }
 
-const LEVEL_NAMES = ["Foundational", "Developing", "Defined", "Advanced", "Leading"];
 
 const DOMAINS: Domain[] = [
   {
@@ -174,14 +181,6 @@ const LEVEL_INTERPRETATION: Record<number, { headline: string; detail: string }>
   },
 };
 
-function bandForAverage(avg: number): number {
-  if (avg < 1.5) return 1;
-  if (avg < 2.5) return 2;
-  if (avg < 3.5) return 3;
-  if (avg < 4.5) return 4;
-  return 5;
-}
-
 const AssessmentPage = () => {
   usePageMeta(
     "PDMF Maturity Self-Assessment",
@@ -195,19 +194,42 @@ const AssessmentPage = () => {
 
   const { average, overallLevel, priorities } = useMemo(() => {
     const values = DOMAINS.map((d) => scores[d.key]).filter((v): v is number => typeof v === "number");
-    const avg = values.length ? values.reduce((a, b) => a + b, 0) / values.length : 0;
+    const avg = meanScore(values);
     const level = values.length ? bandForAverage(avg) : 0;
-    const priors = DOMAINS.filter((d) => typeof scores[d.key] === "number")
-      .map((d) => ({ domain: d, level: scores[d.key], gap: 5 - scores[d.key] }))
-      .sort((a, b) => b.gap - a.gap)
-      .filter((p) => p.gap > 0)
-      .slice(0, 3);
+    const priors = largestGaps(
+      DOMAINS.filter((d) => typeof scores[d.key] === "number"),
+      (d) => scores[d.key],
+      PDMF_MAX_LEVEL,
+    ).map((r) => ({ domain: r.item, level: r.score, gap: r.gap }));
     return { average: avg, overallLevel: level, priorities: priors };
   }, [scores]);
 
   const setScore = (key: string, level: number) =>
     setScores((prev) => ({ ...prev, [key]: level }));
   const reset = () => setScores({});
+
+  // Persist a render-ready summary so the Board Pack can assemble a deliverable.
+  useEffect(() => {
+    if (!allAnswered) return;
+    saveToolSlice("assessment", {
+      overallLevel,
+      levelName: LEVEL_NAMES[overallLevel - 1],
+      average,
+      domains: DOMAINS.map((d) => ({
+        name: d.name,
+        level: scores[d.key],
+        levelName: LEVEL_NAMES[scores[d.key] - 1],
+      })),
+      priorities: priorities.map((p) => ({
+        name: p.domain.name,
+        level: p.level,
+        gap: p.gap,
+        nextStep: p.domain.levels[p.level],
+        chapter: p.domain.chapter,
+      })),
+      savedAt: new Date().toISOString(),
+    });
+  }, [allAnswered, overallLevel, average, priorities, scores]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
