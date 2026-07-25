@@ -55,6 +55,8 @@ The Pharma GCC Transformation Handbook provides profound insights into the pharm
   - `/assessment`: PDMF digital-maturity self-assessment.
   - `/roi`: Transformation ROI and value-at-stake calculator.
   - `/benchmark`: GCC self-benchmarking against the 37-metric framework.
+  - `/board-pack`: Board Pack Generator — assembles a print-ready pack from the maturity assessment, GCC benchmark, and value-at-stake analysis, with a sequenced 36-month roadmap.
+  - `/search`: Deep Search across the full text of all 30 chapters — narrative, tables, frameworks, and callouts — with cited results.
   - Resources Section: Access and download links to the physical handbook versions (PDF, DOCX) and executive summaries.
 - **Search Functionality:** Easily find chapters, specific resources, and deep documentation across the handbook.
 
@@ -179,6 +181,10 @@ figures can be reintroduced silently — so the check is automated:
 \`\`\`bash
 npm run audit:facts   # exits non-zero if a superseded figure reappears
 \`\`\`
+
+CI (`.github/workflows/ci.yml`) runs the full gate set on every pull request and
+every push to `main`: typecheck (app + node configs), lint, unit tests,
+production build, and this fact audit.
 
 `scripts/audit-facts.mjs` scans `src/` and `public/` against a table of
 superseded figures, each recorded with its current value **and the source behind
