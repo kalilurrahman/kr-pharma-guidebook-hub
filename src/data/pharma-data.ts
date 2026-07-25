@@ -1317,7 +1317,77 @@ export const chapters: Chapter[] = [
       { value: "vein-to-vein", label: "Digital Chain of Custody" },
     ],
     tags: ["Biologics", "Cell Therapy", "Gene Therapy", "Digital Manufacturing"],
-    sections: [{ title: "Executive Summary", content: ["Biopharmaceuticals represent the fastest-growing segment of the pharmaceutical industry. Digital transformation in this space requires specialised approaches for complex molecules and personalised therapies."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "Biopharmaceuticals — monoclonal antibodies, cell therapies, gene therapies, and RNA-based medicines — are the fastest-growing segment of the industry and the hardest to manufacture. The digital playbook built for small-molecule pharma does not transfer cleanly: these are living, complex products where the process defines the product, batch sizes can be a single patient, and a logistics error can cost a life.",
+          "Advanced modalities therefore demand a purpose-built digital infrastructure — one engineered for biological variability, personalised batches, and end-to-end traceability. The organisations that master this become gatekeepers of the most valuable therapeutic frontier.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "In cell and gene therapy the batch size is often one, and the product is a patient's own living cells. That single fact rewrites manufacturing, quality, and logistics: digital chain-of-identity and chain-of-custody are not features — they are the licence to operate.",
+        },
+      },
+      {
+        title: "Why Advanced Modalities Break the Traditional Playbook",
+        content: [
+          "Small-molecule manufacturing is deterministic and scalable: the same chemical process yields the same product at any volume. Biologics are grown, not synthesised — subject to biological variability where subtle process shifts change the product's structure and function. Cell and gene therapies push this further into personalisation, where each batch may serve a single patient and cannot be remade if it fails.",
+        ],
+        table: {
+          headers: ["Modality", "Examples", "Core Digital Challenge", "Key Capability"],
+          rows: [
+            ["Monoclonal Antibodies", "mAbs, biosimilars, ADCs", "Bioprocess variability; comparability", "PAT, bioprocess digital twin"],
+            ["Cell Therapy (Autologous)", "CAR-T, TCR-T", "Batch-of-one; vein-to-vein logistics", "Chain of identity & custody"],
+            ["Cell Therapy (Allogeneic)", "Off-the-shelf NK/CAR", "Scale-out vs scale-up; potency", "Scalable MES, potency analytics"],
+            ["Gene Therapy", "AAV, lentiviral vectors", "Vector yield; long-term follow-up", "Process analytics, RWE registries"],
+            ["RNA / Nucleic Acid", "mRNA, siRNA, ASO", "Rapid design; cold chain", "Cloud-native design, cold-chain AI"],
+          ],
+        },
+      },
+      {
+        title: "Digital Manufacturing for Biologics & CGT",
+        content: [
+          "The manufacturing stack for advanced modalities is built on real-time process understanding. Because the process defines the product, control shifts from end-of-line inspection to continuous, in-line verification.",
+        ],
+        steps: [
+          { num: "01", title: "Connected Bioprocess", description: "Single-use and continuous bioprocessing instrumented with sensors feeding a real-time data historian." },
+          { num: "02", title: "PAT & Advanced Control", description: "In-line analytics linked to control systems for continuous verification and, ultimately, real-time release." },
+          { num: "03", title: "Electronic Batch Records & MES", description: "Paperless, exception-based batch execution — essential when every autologous batch is unique." },
+          { num: "04", title: "Bioprocess Digital Twin", description: "Model-based prediction of yield, quality, and failure — trained on multivariate process data." },
+          { num: "05", title: "QC & Comparability Analytics", description: "High-dimensional analytics for potency, identity, and comparability across process changes and sites." },
+        ],
+      },
+      {
+        title: "The Autologous Challenge: Vein-to-Vein Orchestration",
+        content: [
+          "For autologous therapies, the supply chain <em>is</em> the product. A patient's cells are collected (apheresis), shipped cryopreserved, engineered, tested, and returned — a vein-to-vein loop where a mislabel or a temperature excursion is catastrophic and irreversible. This demands a digital <strong>chain of identity</strong> (COI) linking every material to one patient, an unbroken <strong>chain of custody</strong> (COC), and orchestration software that schedules manufacturing slots against patient and clinic availability.",
+        ],
+        insightBox: {
+          icon: "🧬",
+          label: "Modality Principle",
+          title: "The batch size is one — design for it",
+          description: "You cannot inspect quality into a single-patient batch or remake it if it fails. Traceability, right-first-time execution, and predictive quality move from best practice to absolute prerequisite.",
+        },
+      },
+      {
+        title: "Data, Analytics & the GCC Role",
+        content: [
+          "Advanced modalities generate uniquely rich data — and uniquely long obligations, with gene therapies requiring years of patient follow-up. A mature GCC is well positioned to own the analytical and data-management backbone: bioprocess data science, comparability analytics, potency-assay modelling, long-term follow-up registries, and the orchestration analytics behind vein-to-vein logistics.",
+        ],
+        bulletPoints: [
+          "<strong>Bioprocess Data Science</strong> — Multivariate analysis and digital twins to reduce batch failure and accelerate scale-up.",
+          "<strong>Chain-of-Custody Analytics</strong> — Real-time monitoring and exception management across the vein-to-vein loop.",
+          "<strong>Long-Term Registries</strong> — Durable RWE infrastructure for the multi-year safety follow-up gene therapies require.",
+          "<strong>Cold-Chain Intelligence</strong> — Predictive monitoring of cryogenic logistics to prevent irreversible excursions.",
+        ],
+        pullQuote: {
+          text: "In advanced therapies the process is the product and the supply chain is the patient. Digital is not an efficiency play here — it is the only way the medicine reaches the person alive.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch18",
@@ -1706,7 +1776,66 @@ export const chapters: Chapter[] = [
       { value: "NGS", label: "Next-Gen Sequencing" },
     ],
     tags: ["Precision Medicine", "Genomics", "Biomarkers", "CDx"],
-    sections: [{ title: "Executive Summary", content: ["Precision medicine requires an entirely new digital infrastructure — from genomic data platforms to companion diagnostic integration and patient stratification engines."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "Precision medicine reframes the therapeutic question from 'what treats this disease?' to 'what treats this patient?'. That shift is powered by molecular data — genomic, transcriptomic, and proteomic — at a scale and complexity that only a purpose-built digital infrastructure can handle. A single sequencing run produces gigabytes; a population programme produces petabytes.",
+          "The strategic capability is not sequencing itself, which is increasingly commoditised, but the interpretation stack: turning raw reads into clinically actionable insight, linking biomarkers to therapies, and stratifying patients for development and care. This is where value — and competitive advantage — concentrates.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "The bottleneck in precision medicine has moved from generating molecular data to interpreting it. The winners build the tertiary-analysis and knowledge layer — variant interpretation, biomarker-to-therapy linkage, and patient stratification — not just the sequencing pipeline.",
+        },
+      },
+      {
+        title: "The Data Foundation of Precision Medicine",
+        content: [
+          "Precision medicine rests on multi-omics: genomics (DNA variants), transcriptomics (gene expression), proteomics, and increasingly the microbiome and metabolome — integrated with clinical and imaging data. Next-generation sequencing has driven the cost of a genome from billions of dollars to the low hundreds, unlocking population-scale programmes but shifting the burden decisively onto storage, compute, and interpretation.",
+        ],
+      },
+      {
+        title: "The Genomics Data Stack",
+        content: [
+          "Genomic data flows through three analytical stages, each a distinct engineering and governance responsibility.",
+        ],
+        steps: [
+          { num: "01", title: "Primary Analysis", description: "Base-calling from the sequencer — converting raw signal into sequence reads with quality scores." },
+          { num: "02", title: "Secondary Analysis", description: "Alignment to a reference genome and variant calling (SNVs, indels, CNVs, structural variants) using pipelines such as GATK or hardware-accelerated equivalents." },
+          { num: "03", title: "Tertiary Analysis & Interpretation", description: "Annotation, ACMG classification, and clinical interpretation against knowledge bases (ClinVar, gnomAD) — where raw variants become actionable insight." },
+          { num: "04", title: "Clinical Decision & Reporting", description: "Structured reports linked to therapy options, delivered to clinicians via FHIR Genomics and decision-support systems." },
+        ],
+      },
+      {
+        title: "Companion Diagnostics & Biomarker-Driven Development",
+        content: [
+          "The tightest expression of precision medicine is the drug–diagnostic pair: a companion diagnostic (CDx) that identifies the patients a therapy will help. Co-developing therapy and diagnostic — as with HER2, EGFR, PD-L1, and BRCA — reshapes clinical development, requiring biomarker strategy from the earliest trials and digital integration between the diagnostic result and the prescribing decision.",
+        ],
+        insightBox: {
+          icon: "🎯",
+          label: "Development Principle",
+          title: "Stratify early, or fail expensively late",
+          description: "Biomarker-driven patient selection concentrates a trial on the population most likely to respond — raising success rates, shrinking trials, and de-risking late-stage programmes. The biomarker strategy belongs in Phase I thinking, not Phase III rescue.",
+        },
+      },
+      {
+        title: "Infrastructure, Stratification & the GCC Role",
+        content: [
+          "Delivering precision medicine at scale requires infrastructure most organisations are still building: elastic HPC/cloud for sequencing pipelines, curated variant knowledge bases, pharmacogenomics rules, and — critically — governance for some of the most sensitive data an enterprise holds. Genomic data is identifying and immutable; privacy and consent are not optional. Mature GCCs are increasingly home to this bioinformatics and data-engineering capability.",
+        ],
+        bulletPoints: [
+          "<strong>Genomic Data Platforms</strong> — Scalable, secure pipelines and lakes for multi-omics at population scale.",
+          "<strong>Variant Interpretation</strong> — Curation against ClinVar/gnomAD with ACMG-aligned classification and pharmacogenomics.",
+          "<strong>Patient Stratification Engines</strong> — Biomarker-based cohorting for trial enrichment and precision prescribing.",
+          "<strong>Privacy & Consent Governance</strong> — Robust controls for identifying, immutable genomic data across jurisdictions.",
+        ],
+        pullQuote: {
+          text: "Sequencing is becoming a commodity; interpretation is the moat. The organisations that own the journey from raw reads to the right therapy for the right patient will define precision medicine.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch24",
@@ -1721,7 +1850,71 @@ export const chapters: Chapter[] = [
       { value: "3 Types", label: "Mfg · Clinical · Patient" },
     ],
     tags: ["Digital Twin", "Simulation", "Process Optimization", "Virtual Trials"],
-    sections: [{ title: "Executive Summary", content: ["Digital twins are moving beyond manufacturing into clinical trial simulation, patient modelling, and commercial scenario planning — creating a new paradigm for pharma decision-making."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "A digital twin is not a simulation you run once — it is a living virtual replica, continuously fed by real-world data, that mirrors a physical asset or process and predicts its behaviour. In pharma, twins began on the factory floor but are now extending across the value chain: into clinical trials, into patient physiology, and into supply and commercial planning.",
+          "The prize is decision-making at the speed of software: test a process change, a trial design, or a supply scenario in the virtual world before committing to the physical one. Done well, twins compress cycle time, reduce risk, and turn expensive real-world experiments into cheap in-silico ones.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "The difference between a model and a digital twin is the live data connection. A twin stays synchronised with its physical counterpart, learns continuously, and predicts forward — enabling 'test in the virtual world first' as an operating default across manufacturing, clinical, and commercial domains.",
+        },
+      },
+      {
+        title: "What a Digital Twin Actually Is",
+        content: [
+          "The term is over-used, so precision matters. A true digital twin has three properties: a virtual representation of a specific physical entity, a live data link that keeps the two synchronised, and predictive/analytical capability that generates decisions or actions. A static model lacks the data link; a dashboard lacks the predictive layer. Most valuable pharma twins are <strong>hybrid</strong> — combining mechanistic (physics/biology-based) models with machine learning trained on operational data.",
+        ],
+      },
+      {
+        title: "Three Domains of Pharma Digital Twins",
+        content: [
+          "Twins deliver value in three distinct domains, each with a different data foundation and payoff.",
+        ],
+        steps: [
+          { num: "01", title: "Manufacturing & Process Twins", description: "Virtual replicas of bioreactors, lines, and whole sites — predicting yield and deviations, enabling real-time release and 'golden batch' optimisation." },
+          { num: "02", title: "Clinical & Patient Twins", description: "Virtual patients and populations for in-silico trials, synthetic/external control arms, and model-informed drug development (MIDD)." },
+          { num: "03", title: "Supply & Commercial Twins", description: "Network-level replicas for supply-chain resilience, scenario planning, launch simulation, and demand sensing." },
+        ],
+      },
+      {
+        title: "Manufacturing & Process Twins",
+        content: [
+          "The most mature application. A process twin ingests real-time sensor and PAT data to predict batch quality and failures before they occur, optimise process parameters against a validated 'golden batch', and support real-time release testing (RTRT) — collapsing quality-control cycles from weeks to hours. In biologics, where the process defines the product, the twin becomes the central nervous system of the plant.",
+        ],
+      },
+      {
+        title: "Clinical & Patient Twins",
+        content: [
+          "The fastest-growing frontier. Physiologically-based and mechanistic models — extended with machine learning — create virtual patients that can be used to simulate trial designs, generate synthetic or external control arms that reduce the number of patients on placebo, and explore dosing in-silico. Regulators are engaging seriously with model-informed drug development, making this a credible, not speculative, capability.",
+        ],
+        insightBox: {
+          icon: "🔬",
+          label: "Twin Principle",
+          title: "Fail in silico, succeed in vivo",
+          description: "Every trial arm, process change, or supply scenario tested virtually before committing physical resources is risk retired at a fraction of the cost. The twin's value is the expensive mistake it lets you avoid.",
+        },
+      },
+      {
+        title: "Building & Scaling Twins — the GCC Role",
+        content: [
+          "Twins are demanding to build and validate: they require integrated real-time data, hybrid mechanistic-plus-ML modelling, rigorous validation (GAMP-aligned for regulated use), and the MLOps to keep models synchronised and trustworthy over time. This blend of data engineering, modelling, and validation discipline maps directly onto a mature GCC's strengths, positioning it to own twin development as a shared enterprise capability.",
+        ],
+        bulletPoints: [
+          "<strong>Real-Time Data Integration</strong> — The live link is the hard part; without connected, clean data there is no twin, only a model.",
+          "<strong>Hybrid Modelling</strong> — Combine mechanistic understanding with ML to get both interpretability and predictive power.",
+          "<strong>Validation & Trust</strong> — Regulated-use twins need GAMP-aligned validation and ongoing performance monitoring.",
+          "<strong>MLOps at the Core</strong> — Continuous retraining and drift detection keep the twin faithful to its physical counterpart.",
+        ],
+        pullQuote: {
+          text: "A digital twin turns the most expensive question in pharma — 'what happens if we change this?' — from a physical experiment into a query. That is the shift from reacting to the world to rehearsing it.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch25",

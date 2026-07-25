@@ -32,7 +32,7 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 ### 2.1 The headline gap: half the book is a stub
 **15 of the 30 chapters (Ch 16–30)** originally contained only a title, one-line lead, four metric chips, and a single "Executive Summary" sentence. The fully-authored content stopped at Ch 14 + Appendix. The most monetisable topics (GenAI, RWE, AI ethics, CDO playbook, case studies, interoperability, precision medicine, digital twins) were scaffolding, not content.
 
-**Progress in this revision:** the five highest-demand stubs are now authored in full — **Ch 26 (GenAI), Ch 20 (CDO Playbook), Ch 21 (Case Studies), Ch 18 (RWE), and Ch 22 (Interoperability)** — taking the book from **15/30 to 20/30 fully authored** (see §4). **Recommended next:** Ch 17 (Biologics/Cell & Gene), Ch 23 (Precision Medicine), Ch 24 (Digital Twins), Ch 19 (AI Ethics), and the remaining Frontier Topics.
+**Progress:** eight of the highest-demand stubs are now authored in full — **Ch 26 (GenAI), Ch 20 (CDO Playbook), Ch 21 (Case Studies), Ch 18 (RWE), Ch 22 (Interoperability), Ch 17 (Biologics/Cell & Gene), Ch 23 (Precision Medicine), and Ch 24 (Digital Twins)** — taking the book from **15/30 to 23/30 fully authored** (see §4). **Recommended next:** the remaining seven stubs — Ch 16 (India GCC), Ch 19 (AI Ethics), Ch 25 (Emerging Markets), Ch 27 (Pandemic Prep), Ch 28 (Talent), Ch 29 (Investment/M&A), Ch 30 (2030 Playbook).
 
 ### 2.2 Verified data/consistency issues (fixed in this change)
 | Issue | Location | Resolution |
@@ -102,12 +102,15 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
 ## 4. What Changed in This Revision
 
 - **Accuracy fixes** (§2.2): added 3 real GCC benchmarks so the metric count genuinely matches the advertised 37, standardised the AlphaFold figure to 200M+, clarified the "full handbook" cover stats, and disambiguated the all-sectors GCC count.
-- **New full chapter content** (took the book from 15/30 to 20/30 authored), replacing stubs:
+- **New full chapter content** (took the book from 15/30 to 23/30 authored), replacing stubs:
   - **Ch 26 — Generative AI in Pharma:** value map across the value chain, the enterprise GenAI capability stack (foundation models → RAG → agents → guardrails → evaluation), prioritised use cases, GxP deployment (GAMP 5 / CSA / 21 CFR Part 11 / FDA Jan-2025 draft guidance), build-vs-buy-vs-fine-tune, and responsible-AI governance.
   - **Ch 20 — The CDO Playbook:** the CDO mandate, the five-engine digital operating model, federated org design, a sequenced first-12-months agenda, and funding/value-realisation with common failure modes.
   - **Ch 18 — Real-World Evidence:** RWD-to-RWE distinction, data-source taxonomy, regulatory-grade evidence (FDA RWE Framework / EMA DARWIN EU), the five-stage RWE stack, value cases, and India's RWE advantage.
   - **Ch 21 — Case Studies:** publicly-reported exemplars (Insilico, AlphaFold, Pfizer, Moderna, AstraZeneca, GSK, Indian generics) with transferable GCC lessons — no fabricated metrics.
   - **Ch 22 — Interoperability & Health Data Standards:** the core standards landscape (FHIR / OMOP / CDISC / IDMP / terminologies / DICOM), the regulatory layer (EHDS, ONC Cures Act), the five-layer data fabric, and value cases.
+  - **Ch 17 — Biopharmaceuticals, Cell & Gene Therapy:** why advanced modalities break the traditional playbook, the modality spectrum, digital bioprocessing, vein-to-vein chain-of-identity/custody, and the GCC analytics role.
+  - **Ch 23 — Precision Medicine & Genomics:** the multi-omics data foundation, the three-stage genomics stack (primary/secondary/tertiary), companion diagnostics and biomarker-driven development, and infrastructure/stratification.
+  - **Ch 24 — Digital Twins:** what a true twin is (live data link + prediction), the three domains (manufacturing / clinical-patient / supply-commercial), in-silico trials and MIDD, and building/validating twins at scale.
 - All changes pass `tsc --noEmit`, `vite build`, and the test suite.
 
 _Curated by Kalilur Rahman · Pharma Digital Transformation Handbook._
