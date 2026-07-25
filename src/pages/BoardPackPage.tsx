@@ -1,11 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Printer, FileText, Gauge, Calculator, Building2, CheckCircle2, Circle } from "lucide-react";
+import {
+  ArrowLeft, Printer, FileText, Gauge, Calculator, Building2, CheckCircle2, Circle,
+  Download, Upload, ClipboardCopy, Check,
+} from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
-import { loadToolState, saveToolSlice, formatUsdMillions, type ToolState } from "@/lib/tool-state";
+import {
+  loadToolState, saveToolSlice, formatUsdMillions, serialiseToolState,
+  parseImportedToolState, replaceToolState, toPlainTextSummary, type ToolState,
+} from "@/lib/tool-state";
 
 // The three waves are the handbook's own execution model (Ch 13 / Ch 30).
 const WAVES = [
@@ -82,9 +88,49 @@ const BoardPackPage = () => {
     setOrg(s.organisation ?? "");
   }, []);
 
+  const fileInput = useRef<HTMLInputElement>(null);
+  const [notice, setNotice] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
+  const [copied, setCopied] = useState(false);
+
   const onOrgChange = (v: string) => {
     setOrg(v);
     saveToolSlice("organisation", v);
+  };
+
+  const slug = (s: string) =>
+    (s.trim() || "board-pack").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48);
+
+  const handleExport = () => {
+    const json = serialiseToolState({ ...state, organisation: org }, new Date().toISOString());
+    const url = URL.createObjectURL(new Blob([json], { type: "application/json" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${slug(org)}-results.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setNotice({ kind: "ok", text: "Results downloaded." });
+  };
+
+  const handleImportFile = async (file: File) => {
+    const result = parseImportedToolState(await file.text());
+    if (!result.ok) {
+      setNotice({ kind: "err", text: result.error });
+      return;
+    }
+    replaceToolState(result.state);
+    setState(result.state);
+    setOrg(result.state.organisation ?? "");
+    setNotice({ kind: "ok", text: "Results loaded from file." });
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(toPlainTextSummary({ ...state, organisation: org }, org));
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setNotice({ kind: "err", text: "Your browser blocked clipboard access." });
+    }
   };
 
   const { assessment, roi, benchmark } = state;
@@ -154,17 +200,63 @@ const BoardPackPage = () => {
             {roi ? <Ready label="Value at stake" /> : <Missing to="/roi" label="ROI calculator" icon={Calculator} />}
           </div>
 
-          <button
-            onClick={() => window.print()}
-            disabled={!anyData}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground font-mono text-xs uppercase tracking-wider disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
-          >
-            <Printer className="w-4 h-4" />
-            Print / Save as PDF
-          </button>
-          {!anyData && (
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={() => window.print()}
+              disabled={!anyData}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground font-mono text-xs uppercase tracking-wider disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
+            >
+              <Printer className="w-4 h-4" />
+              Print / Save as PDF
+            </button>
+            <button
+              onClick={handleCopy}
+              disabled={!anyData}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-border bg-muted/40 font-mono text-xs uppercase tracking-wider text-foreground disabled:opacity-40 disabled:cursor-not-allowed hover:border-primary/50 transition-colors"
+            >
+              {copied ? <Check className="w-3.5 h-3.5 text-primary" /> : <ClipboardCopy className="w-3.5 h-3.5" />}
+              {copied ? "Copied" : "Copy summary"}
+            </button>
+            <button
+              onClick={handleExport}
+              disabled={!anyData}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-border bg-muted/40 font-mono text-xs uppercase tracking-wider text-foreground disabled:opacity-40 disabled:cursor-not-allowed hover:border-primary/50 transition-colors"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Save results
+            </button>
+            <button
+              onClick={() => fileInput.current?.click()}
+              className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-border bg-muted/40 font-mono text-xs uppercase tracking-wider text-foreground hover:border-primary/50 transition-colors"
+            >
+              <Upload className="w-3.5 h-3.5" />
+              Load results
+            </button>
+            <input
+              ref={fileInput}
+              type="file"
+              accept="application/json,.json"
+              aria-label="Load saved results file"
+              className="hidden"
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) void handleImportFile(f);
+                e.target.value = "";
+              }}
+            />
+          </div>
+
+          {notice && (
+            <p
+              role="status"
+              className={`font-mono text-xs mt-3 ${notice.kind === "ok" ? "text-primary" : "text-coral"}`}
+            >
+              {notice.text}
+            </p>
+          )}
+          {!anyData && !notice && (
             <p className="font-body text-xs text-muted-foreground mt-3">
-              Complete at least one tool above and your results will appear here automatically.
+              Complete at least one tool above, or load a previously saved results file.
             </p>
           )}
         </div>
