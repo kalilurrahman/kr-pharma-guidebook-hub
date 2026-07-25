@@ -11,7 +11,8 @@
     "typecheck": "tsc -p tsconfig.app.json --noEmit",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "audit:facts": "node scripts/audit-facts.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
