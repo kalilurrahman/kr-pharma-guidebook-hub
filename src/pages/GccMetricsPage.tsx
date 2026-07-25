@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, BarChart3, Filter, TrendingUp, Building2 } from "lucide-react";
+import { ArrowLeft, Filter, TrendingUp, Building2 } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import { gccMetrics, gccDimensions, gccDimensionColors, gccHighlightStats } from "@/data/gcc-metrics";

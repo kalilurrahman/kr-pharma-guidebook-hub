@@ -7,7 +7,7 @@ import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { saveToolSlice } from "@/lib/tool-state";
-import { BENCHMARK_REVENUE_B, CAPTURE_FACTORS, scaleLever, sumRange } from "@/lib/scoring";
+import { CAPTURE_FACTORS, scaleLever, sumRange } from "@/lib/scoring";
 
 // ── Value levers ──
 // Annual value gap between a digital laggard and a digital leader, benchmarked
