@@ -9,9 +9,9 @@ export const handbookStats: HandbookStats = {
 
 export const coverStats = [
   { value: "30", label: "Chapters + Appendix" },
-  { value: "95K+", label: "Words" },
+  { value: "95K+", label: "Words · Full Handbook" },
   { value: "9", label: "Parts" },
-  { value: "47+", label: "Diagrams & Tables" },
+  { value: "47+", label: "Diagrams & Tables · Full Handbook" },
 ];
 
 // ── SVG Diagram Constants ──
