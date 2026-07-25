@@ -414,7 +414,7 @@ export const chapters: Chapter[] = [
           headers: ["Platform Category", "Leading Platforms", "Pharma Capability", "Strategic Implication"],
           rows: [
             ["Clinical Cloud", "Medidata, Veeva Vault Clinical, Oracle Health Sciences", "End-to-end trial management — EDC, CTMS, eTMF", "Vendor consolidation reduces integration debt"],
-            ["AI Drug Discovery", "Schrödinger, Recursion OS2, Exscientia, Insilico Chemistry42", "Target ID, molecular design, ADMET prediction", "Platform business models emerging"],
+            ["AI Drug Discovery", "Schrödinger, Recursion (incl. Exscientia), Insilico Chemistry42, Isomorphic Labs", "Target ID, molecular design, ADMET prediction", "Platform business models emerging; sector consolidating"],
             ["Manufacturing Intelligence", "Siemens Xcelerator, Rockwell Plex, AspenTech, AVEVA PI", "Digital twin, OEE, PAT integration, predictive quality", "Factory-as-a-service emerging"],
             ["Commercial & Patient", "Veeva CRM/Engage, Salesforce Health Cloud, Aktana NBA", "HCP engagement, patient support, NBA orchestration", "HCP journey platform as primary commercial asset"],
             ["Regulatory Intelligence", "Veeva Vault RIM, Certara D360, Aris Global", "Global submission management, agency intelligence, IDMP", "30–50% reduction in submission cycle time"],
@@ -1665,7 +1665,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: India's RWE Advantage",
-          content: "India pairs a vast, diverse patient population with the ABDM digital-health backbone (600M+ health IDs) and a deep analytics talent pool. Pharma GCCs in India are becoming enterprise RWE engines — running data curation, OMOP mapping, HEOR modelling, and evidence generation 24/7 at a fraction of onshore cost, while population-scale data assets mature.",
+          content: "India pairs a vast, diverse patient population with the ABDM digital-health backbone (900M+ ABHA health IDs, 1B+ records linked) and a deep analytics talent pool. Pharma GCCs in India are becoming enterprise RWE engines — running data curation, OMOP mapping, HEOR modelling, and evidence generation 24/7 at a fraction of onshore cost, while population-scale data assets mature.",
         },
         pullQuote: {
           text: "In the next decade, the constraint on evidence will not be the ability to run a trial — it will be the discipline to turn the data the world already generates into conclusions a regulator will trust.",
@@ -2050,7 +2050,7 @@ export const chapters: Chapter[] = [
           headers: ["Organisation", "Domain", "What Was Done (Publicly Reported)", "Reported Direction"],
           rows: [
             ["Insilico Medicine", "AI Drug Discovery", "Generative-AI target discovery and molecular design (INS018_055 for IPF)", "Reached Phase II in ~18 months vs 4–6 year norm"],
-            ["DeepMind (AlphaFold)", "Structural Biology", "Deep-learning protein-structure prediction database", "200M+ structures; step-change in target work"],
+            ["DeepMind (AlphaFold)", "Structural Biology", "Deep-learning protein-structure prediction database", "214M+ structures; 2024 Chemistry Nobel"],
             ["Pfizer", "Digital Trials", "Digital recruitment for the COVID-19 vaccine programme", "~43,000 enrolled in under four months"],
             ["Moderna", "Cloud-Native mRNA", "Cloud/AWS-based platform for rapid candidate design", "Vaccine sequence designed in ~42 days"],
             ["AstraZeneca", "AI in R&D", "Knowledge-graph and AI partnerships for target identification", "Faster hypothesis generation across pipeline"],
@@ -2061,7 +2061,7 @@ export const chapters: Chapter[] = [
       {
         title: "AI-Native Drug Discovery",
         content: [
-          "<strong>Insilico Medicine</strong> is the most-cited proof point for end-to-end AI discovery: its generative-AI platform nominated a target and designed a novel molecule for idiopathic pulmonary fibrosis (INS018_055) that publicly reached Phase II roughly 18 months from programme start — against an industry norm measured in years. <strong>DeepMind's AlphaFold</strong> reframed the upstream problem entirely, releasing predicted structures for 200M+ proteins and collapsing a bottleneck that structural biologists had faced for decades.",
+          "<strong>Insilico Medicine</strong> is the most-cited proof point for end-to-end AI discovery: its generative-AI platform nominated a target and designed a novel molecule for idiopathic pulmonary fibrosis (INS018_055, rentosertib) that reached a preclinical candidate in roughly 18 months — against an industry norm measured in years — and went on to report positive Phase IIa data in 2025 (Nature Medicine), progressing to Phase III. <strong>DeepMind's AlphaFold</strong> reframed the upstream problem entirely, releasing predicted structures for 214M+ proteins and collapsing a bottleneck that structural biologists had faced for decades.",
           "The transferable lesson is not the specific tool but the operating model: a closed loop between computational design and experimental validation, run by a team that owns the whole cycle — exactly the kind of integrated capability a mature GCC is built to host.",
         ],
       },
@@ -2703,7 +2703,7 @@ export const chapters: Chapter[] = [
           "Sustainable value comes from a shared platform, not point solutions. Five layers turn foundation models into governed enterprise capability — each an explicit engineering and governance responsibility.",
         ],
         steps: [
-          { num: "01", title: "Foundation & Domain Models", description: "General-purpose LLMs (GPT-4-class, Claude, Gemini) plus domain models for science — protein language models (ESM), molecular generators, and biomedical LLMs. Route each task to the right model on cost, latency, and capability." },
+          { num: "01", title: "Foundation & Domain Models", description: "General-purpose frontier LLMs (Claude, GPT-5, Gemini families) plus domain models for science — protein language models (ESM), molecular generators, and biomedical LLMs. Route each task to the right model on cost, latency, and capability." },
           { num: "02", title: "Retrieval & Grounding (RAG)", description: "Ground outputs in authoritative enterprise sources — SOPs, submissions, literature, structured data — so answers cite evidence. Retrieval is the single biggest lever for reducing hallucination in regulated use." },
           { num: "03", title: "Orchestration & Agents", description: "Chain tools, retrieval, and reasoning into multi-step workflows (e.g., draft → check against source → format to template). Agentic patterns automate whole tasks, not just single prompts." },
           { num: "04", title: "Guardrails & Compliance", description: "PII/PHI redaction, prompt-injection defence, toxicity and off-label filters, MLR/regulatory policy checks, and enforced human-in-the-loop sign-off for any GxP or patient-facing output." },
