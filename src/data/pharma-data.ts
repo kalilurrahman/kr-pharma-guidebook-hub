@@ -1266,7 +1266,14 @@ export const chapters: Chapter[] = [
       },
       {
         title: "References and Further Reading",
-        content: [],
+        content: [
+          "This edition was refreshed to mid-2026 by re-verifying every headline figure against the named primary sources below.",
+        ],
+        callout: {
+          type: "spotlight",
+          label: "🔎 2026 Refresh — Sources & Method",
+          content: "Market sizes are stated on a labelled price basis (list/ex-manufacturer vs net of rebates); vendor market forecasts are given as ranges rather than single points; and every figure is dated to its source year. Where authoritative sources conflict — e.g. R&D cost per drug (Deloitte 2024 ~$2.23B/asset vs older capitalised ~$2.6B), clinical success rates (BIO vs Wong et al.), or India market scope (domestic vs total industry) — the handbook states the conservative, best-supported value and notes the basis.",
+        },
         table: {
           headers: ["Category", "Reference", "Authors / Organisation", "Year", "Why It Matters"],
           rows: [
@@ -1278,6 +1285,15 @@ export const chapters: Chapter[] = [
             ["Regulatory", "Computer Software Assurance", "US FDA", "2022", "Risk-based CSA replacing traditional CSV"],
             ["India & GCC", "India GCC / Life-Sciences GCC Landscape", "NASSCOM–Zinnov", "2025", "Comprehensive data on India GCC pharma capabilities"],
             ["Technology", "The Data Lakehouse", "Databricks / Ben Lorica et al.", "2023", "Architectural reference for unified analytics and AI platform"],
+            ["Market", "Global Use of Medicines / Outlook to 2029", "IQVIA Institute", "2025", "Primary basis for global & regional medicine-spend figures"],
+            ["R&D", "Measuring the Return of Pharmaceutical Innovation (15th ed.)", "Deloitte", "2024", "Average cost-per-asset (~$2.23B) methodology"],
+            ["Clinical", "Clinical Development Success Rates", "BIO · Informa · QLS", "2021", "Phase I→approval success (~7.9%) benchmark"],
+            ["India & GCC", "India GCC Landscape (FY2026)", "NASSCOM–Zinnov", "2026", "2,117 GCCs · 2.36M professionals · $98.4B"],
+            ["Cell & Gene", "State of the Industry / Sector Report", "ARM · ASGCT–Citeline", "2025", "~1,905 active cell & gene therapy trials; approvals"],
+            ["Digital Health", "Year-End Funding Report", "Rock Health", "2025", "Digital-health VC (~$80B 2020–24; AI ~54% of 2025)"],
+            ["Talent", "Future of Jobs Report", "World Economic Forum", "2025", "Reskilling need (~60% by 2027; 77% of employers)"],
+            ["Policy", "Medicare Drug Price Negotiation", "CMS · KFF", "2025", "IRA first-10 prices live Jan 2026; next 15 for 2027"],
+            ["Regulatory", "GAMP Guide: Artificial Intelligence", "ISPE", "2025", "GxP validation lifecycle for AI/ML systems"],
           ],
         },
         insightBox: {
