@@ -2,8 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import { PharmaHeader } from "@/components/PharmaHeader";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import { BookOpen, Maximize2, Minimize2, ChevronUp } from "lucide-react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const ReaderPage = () => {
+  usePageMeta(
+    "Online Reader",
+    "Read the full Pharma GCC Transformation Handbook — 30 chapters across 9 parts with sidebar navigation, search, and reading progress.",
+    "/reader",
+  );
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);

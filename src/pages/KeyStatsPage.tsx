@@ -5,6 +5,7 @@ import { ArrowLeft, TrendingUp, Beaker, Factory, ShoppingCart, Heart, Cpu, Exter
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import pharmaLogo from "@/assets/pharma-logo.png";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 interface StatCard {
   value: string;
@@ -95,6 +96,11 @@ const categoryBgColors: Record<string, string> = {
 };
 
 const KeyStatsPage = () => {
+  usePageMeta(
+    "Key Statistics",
+    "CXO-ready pharma digital transformation statistics — market, R&D, manufacturing, commercial, patient, and digital-maturity data points, each linked to its chapter.",
+    "/key-stats",
+  );
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filtered = activeCategory === "all" ? stats : stats.filter((s) => s.category === activeCategory);

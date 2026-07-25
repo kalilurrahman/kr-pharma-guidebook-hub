@@ -111,6 +111,8 @@ export function ChapterViewer({ chapter, onBack, onPrev, onNext, hasPrev, hasNex
                 </div>
                 <div
                   className="p-6 bg-card overflow-x-auto"
+                  role="img"
+                  aria-label={section.diagram.title}
                   dangerouslySetInnerHTML={{ __html: section.diagram.svgContent }}
                 />
               </div>
@@ -166,10 +168,11 @@ export function ChapterViewer({ chapter, onBack, onPrev, onNext, hasPrev, hasNex
             {section.table && (
               <div className="overflow-x-auto my-7 rounded-xl border border-border">
                 <table className="w-full text-sm">
+                  <caption className="sr-only">{section.title || "Data table"}</caption>
                   <thead>
                     <tr className="bg-card">
                       {section.table.headers.map((h) => (
-                        <th key={h} className="font-mono text-[10px] text-primary uppercase tracking-wider text-left px-4 py-3 border-b border-border">
+                        <th key={h} scope="col" className="font-mono text-[10px] text-primary uppercase tracking-wider text-left px-4 py-3 border-b border-border">
                           {h}
                         </th>
                       ))}

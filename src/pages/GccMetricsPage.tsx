@@ -7,6 +7,7 @@ import { PharmaFooter } from "@/components/PharmaFooter";
 import { gccMetrics, gccDimensions, gccDimensionColors, gccHighlightStats } from "@/data/gcc-metrics";
 import type { GccMetric } from "@/data/gcc-metrics";
 import pharmaLogo from "@/assets/pharma-logo.png";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 function MetricRow({ m, i }: { m: GccMetric; i: number }) {
   const [open, setOpen] = useState(false);
@@ -62,6 +63,11 @@ function MetricRow({ m, i }: { m: GccMetric; i: number }) {
 }
 
 const GccMetricsPage = () => {
+  usePageMeta(
+    "GCC Maturity Metrics & Benchmarks",
+    "37 pharmaceutical GCC maturity benchmarks across 9 dimensions — strategic alignment, governance, digital maturity, workforce, risk, value, and more.",
+    "/gcc-metrics",
+  );
   const [activeDimension, setActiveDimension] = useState<string>("all");
 
   const filtered = useMemo(() => {
