@@ -1,0 +1,55 @@
+name: CI
+
+# The repository previously had no pull-request or push CI at all — the only
+# workflow ran on a weekly cron — so regressions could reach main unchecked.
+# This runs the full gate set on every PR and every push to main.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# A newer push to the same ref makes an in-flight run irrelevant.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Typecheck · Lint · Test · Build · Facts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # `npm ci` (not `install`) so package-lock.json is authoritative and the
+      # run fails loudly if it has drifted out of sync with package.json.
+      - name: Install dependencies
+        run: npm ci
+
+      # Note: bare `tsc --noEmit` is a NO-OP in this repo — tsconfig.json is a
+      # solution-style config ("files": [] with only references), so it exits 0
+      # without reading src. `npm run typecheck` targets tsconfig.app.json.
+      - name: Typecheck (app)
+        run: npm run typecheck
+
+      - name: Typecheck (node/config)
+        run: npx tsc -p tsconfig.node.json --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Production build
+        run: npm run build
+
+      - name: Audit content facts
+        run: npm run audit:facts
