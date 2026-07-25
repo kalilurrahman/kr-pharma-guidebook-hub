@@ -59,8 +59,9 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 - ✅ **Made lint gate-able.** Three pre-existing lint errors in vendored/config files (two empty interfaces in shadcn components, a `require()` in `tailwind.config.ts`) were blocking lint from ever being a gate; fixed as behaviour-preserving one-liners.
 - ✅ **Tests: 1 → 55**, covering search ranking, result portability/validation, and the scoring thresholds behind every client-facing number.
 
+- ✅ **`strict: true` enabled.** Measured before committing to it: the codebase was already fully strict-clean, so this cost **zero** type errors rather than the large migration it looked like. Also enabled `noImplicitAny` (it had been explicitly `false`, which silently defeats the `strict` umbrella), `noUnusedLocals`, `noUnusedParameters`, and `noFallthroughCasesInSwitch`; the five unused declarations that surfaced were removed. Verified with a deliberate probe that strictness is genuinely active from the config, not merely declared.
+
 **Still open**
-- **`strict: true`** — the project compiles with `strict: false`, which is why a boolean-discriminated union failed to narrow. Enabling it is worthwhile but a larger, separate piece of work.
 - **Citations apparatus** — figures attribute sources inline but lack dated footnotes/links; add year + link per figure before using as a formal sales asset.
 - **Living-document mechanics** — a visible "last updated", changelog, and version badge (the footer carries a version, but there is no changelog).
 - **Analytics & feedback loop** — no telemetry on which chapters, stats, or tools actually resonate.

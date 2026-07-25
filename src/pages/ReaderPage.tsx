@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { PharmaHeader } from "@/components/PharmaHeader";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import { BookOpen, Maximize2, Minimize2, ChevronUp } from "lucide-react";
 import { usePageMeta } from "@/hooks/use-page-meta";
