@@ -2944,7 +2944,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "executive",
           label: "Executive Summary",
-          content: "Roughly 70% of the pharma workforce will need meaningful reskilling by 2027, and digital-native talent commands a growing premium. The organisations that win will build talent as deliberately as they build platforms — academies, partnerships, and culture, not just hiring.",
+          content: "The World Economic Forum estimates roughly 60% of workers will need reskilling by 2027 — and 77% of employers plan to reskill their workforce across 2025–2030, and digital-native talent commands a growing premium. The organisations that win will build talent as deliberately as they build platforms — academies, partnerships, and culture, not just hiring.",
         },
       },
       {

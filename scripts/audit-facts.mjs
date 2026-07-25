@@ -71,6 +71,72 @@ const CANONICAL = [
     correct: "current frontier families (Claude, GPT-5, Gemini)",
     source: "—",
   },
+  {
+    id: "insilico-phase2-timeline",
+    stale: /Phase II in 18 months/i,
+    correct: "preclinical candidate in ~18 months; Phase IIa positive 2025; now Phase III",
+    source: "Insilico / Nature Medicine 2025",
+  },
+  {
+    id: "dsp-1181-as-success",
+    stale: /DSP-1181(?![^.]{0,90}discontinu)/i,
+    correct: "entered Phase I in 2020 but was later discontinued",
+    source: "Exscientia / Sumitomo",
+  },
+  {
+    id: "rwe-market",
+    stale: /\$2\.3\s*(?:B|billion)[^.]{0,60}(?:RWE|real-world|2028)|RWE[^.]{0,60}\$2\.3\s*(?:B|billion)/i,
+    correct: "~$5.4B (2025) → ~$10.8B (2030)",
+    source: "MarketsandMarkets",
+  },
+  {
+    id: "rwd-approval-share",
+    stale: /75\s*%[^.]{0,70}(?:RWD|real-world|approvals?\b)/i,
+    correct: "~23–28% of label expansions incorporated RWE",
+    source: "FDA label-expansion analyses 2022–24",
+  },
+  {
+    id: "precision-medicine-market",
+    stale: /\$120\s*(?:B|billion)[^.]{0,60}(?:precision|2030)|precision[^.]{0,60}\$120\s*(?:B|billion)/i,
+    correct: "~$249B by 2030",
+    source: "Grand View Research",
+  },
+  {
+    id: "non-adherence-cost",
+    stale: /\$300\s*(?:B|billion)[^.]{0,70}(?:adher)|adher[^.]{0,70}\$300\s*(?:B|billion)/i,
+    correct: "~$100–290B/yr (non-optimised medication therapy ~$528B)",
+    source: "Watanabe et al. 2018 and peer-reviewed estimates",
+  },
+  {
+    id: "digital-twin-market",
+    stale: /\$6\.5\s*(?:B|billion)/i,
+    correct: "~$1.3–1.85B (2025, pharma-specific); treat vendor forecasts as ranges",
+    source: "vendor market estimates",
+  },
+  {
+    id: "biologics-2030",
+    stale: /\$500\s*(?:B|billion)\+?[^.]{0,50}(?:2030|biolog)/i,
+    correct: "already ~$559B (~42% of medicine spend) in 2023",
+    source: "IQVIA / HHS ASPE",
+  },
+  {
+    id: "cgt-trial-count",
+    stale: /2,000\+[^.]{0,50}(?:trial|cell|gene|CGT)/i,
+    correct: "~1,905 ongoing trials (H1 2025); 4,000+ pipeline",
+    source: "ARM / ASGCT–Citeline 2025",
+  },
+  {
+    id: "digital-health-vc",
+    stale: /\$45\s*(?:B|billion)\+?[^.]{0,60}(?:VC|venture|digital health)/i,
+    correct: "~$80B cumulative 2020–24; 2025 rebound $14.2B",
+    source: "Rock Health",
+  },
+  {
+    id: "reskilling-share",
+    stale: /70\s*%[^.]{0,55}(?:reskill|retrain)/i,
+    correct: "~60% of workers need reskilling by 2027; 77% of employers plan to",
+    source: "WEF Future of Jobs",
+  },
 ];
 
 /**
