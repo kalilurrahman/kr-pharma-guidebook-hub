@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator } from "lucide-react";
+import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator, Building2 } from "lucide-react";
 import { chapters, parts } from "@/data/pharma-data";
 import { ChapterCard } from "@/components/ChapterCard";
 
@@ -75,7 +75,7 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
           <span className="font-mono text-[10px] text-primary uppercase tracking-wider">Interactive Tools</span>
           <span className="flex-1 h-px bg-border" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <Link to="/assessment" className="card-pharma group flex items-center gap-4 no-underline border-primary/40 ring-1 ring-primary/20 hover:border-primary/60 transition-colors">
             <div className="p-3 rounded-lg bg-teal/10">
               <Gauge className="w-6 h-6 text-teal" />
@@ -93,6 +93,16 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
             <div className="flex-1">
               <h3 className="font-display text-sm font-bold text-foreground mb-0.5">🧮 ROI Calculator</h3>
               <p className="font-body text-xs text-muted-foreground">Estimate your annual value at stake</p>
+            </div>
+            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          </Link>
+          <Link to="/benchmark" className="card-pharma group flex items-center gap-4 no-underline border-primary/40 ring-1 ring-primary/20 hover:border-primary/60 transition-colors">
+            <div className="p-3 rounded-lg bg-violet/10">
+              <Building2 className="w-6 h-6 text-violet" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-sm font-bold text-foreground mb-0.5">🏢 GCC Benchmark</h3>
+              <p className="font-body text-xs text-muted-foreground">Rate your centre vs 37 benchmarks</p>
             </div>
             <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
           </Link>
