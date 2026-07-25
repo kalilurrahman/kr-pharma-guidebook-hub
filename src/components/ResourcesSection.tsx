@@ -22,8 +22,8 @@ const resources: (ResourceFile & { primary?: boolean })[] = [
     name: "Pharma DX Handbook Ultimate 2026 v1.1 (DOCX)",
     filename: "Pharma_DX_Handbook_Ultimate_2026_v_1_1.docx",
     type: "docx",
-    size: "~2 MB",
-    description: "Editable Word document for annotations, customisation, and internal distribution.",
+    size: "~2.6 MB",
+    description: "Editable Word edition regenerated from the 2026-refreshed content — navigable heading styles (auto-TOC), all 47 diagrams, and callouts preserved. For annotations, customisation, and internal distribution.",
   },
 ];
 
