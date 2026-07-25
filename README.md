@@ -5,7 +5,9 @@ A definitive and extensive guide to pharmaceutical Global Capability Center (GCC
 This application is a highly comprehensive, modern web platform built with React, TypeScript, and Tailwind CSS. It is designed to serve as a centralized hub for understanding the value chain, commercial aspects, enablers, and foundations of pharmaceutical GCCs. This project provides extensive documentation and architectural insights, reflecting how GCCs streamline end-to-end enterprise transformation in the pharmaceutical sector.
 
 ## Live Application
-🌍 **[Explore the Application](https://kr-pharma-guidebook-hub.lovable.app)**
+🌍 **[pharma.kalilurrahman.com](https://pharma.kalilurrahman.com)** · mirror: **[kr-pharma-guidebook-hub.lovable.app](https://kr-pharma-guidebook-hub.lovable.app)**
+
+> **Content currency:** the handbook was comprehensively refreshed to **mid-2026**, with every headline figure re-verified against named primary sources (IQVIA, Deloitte, NASSCOM–Zinnov, BIO/Informa, ARM/ASGCT, Rock Health, WEF, CMS/KFF, ISPE). See [Content accuracy](#content-accuracy).
 
 [![Live App](https://img.shields.io/badge/Live_App-kr--pharma--guidebook--hub.lovable.app-20808D?style=flat-square)](https://kr-pharma-guidebook-hub.lovable.app/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-kalilurrahman%2Fkr--pharma--guidebook--hub-333?style=flat-square&logo=github)](https://github.com/kalilurrahman/kr-pharma-guidebook-hub)
@@ -25,6 +27,7 @@ This application is a highly comprehensive, modern web platform built with React
   - [Sections](#sections)
   - [Views & Modals](#views--modals)
 - [Tech Stack](#tech-stack)
+- [Content Accuracy](#content-accuracy)
 - [Admin Login Information](#admin-login-information)
 - [Installation & Setup](#installation--setup)
 - [Testing & Build](#testing--build)
@@ -49,6 +52,11 @@ The Pharma GCC Transformation Handbook provides profound insights into the pharm
   - `/reader`: Immersive, full-screen online reader mode for the entire comprehensive handbook content.
   - `/gcc-metrics`: Interactive dashboards mapping critical success and maturity metrics.
   - `/key-stats`: Key statistics and data points across the pharmaceutical transformation landscape.
+  - `/assessment`: PDMF digital-maturity self-assessment.
+  - `/roi`: Transformation ROI and value-at-stake calculator.
+  - `/benchmark`: GCC self-benchmarking against the 37-metric framework.
+  - `/board-pack`: Board Pack Generator — assembles a print-ready pack from the maturity assessment, GCC benchmark, and value-at-stake analysis, with a sequenced 36-month roadmap.
+  - `/search`: Deep Search across the full text of all 30 chapters — narrative, tables, frameworks, and callouts — with cited results.
   - Resources Section: Access and download links to the physical handbook versions (PDF, DOCX) and executive summaries.
 - **Search Functionality:** Easily find chapters, specific resources, and deep documentation across the handbook.
 
@@ -157,6 +165,35 @@ To ensure project integrity:
   \`\`\`bash
   npm run build
   \`\`\`
+- **Audit content facts:**
+  \`\`\`bash
+  npm run audit:facts
+  \`\`\`
+
+---
+
+## Content accuracy
+
+The handbook's figures were re-verified against named primary sources during the
+2026 refresh. Because content is often edited on parallel branches, superseded
+figures can be reintroduced silently — so the check is automated:
+
+\`\`\`bash
+npm run audit:facts   # exits non-zero if a superseded figure reappears
+\`\`\`
+
+CI (`.github/workflows/ci.yml`) runs the full gate set on every pull request and
+every push to `main`: typecheck (app + node configs), lint, unit tests,
+production build, and this fact audit.
+
+`scripts/audit-facts.mjs` scans `src/` and `public/` against a table of
+superseded figures, each recorded with its current value **and the source behind
+it** (India GCC counts, ABDM health IDs, AlphaFold structures, market
+projections, RWE/precision-medicine/CGT figures, the Recursion–Exscientia
+merger, ICH E6(R3) dates, and more). It runs in CI after the build.
+
+If a figure legitimately changes, update the `CANONICAL` table in that script in
+the same commit — it doubles as the provenance record.
 
 ---
 
