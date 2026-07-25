@@ -21,7 +21,7 @@ const SVG_FIVE_FORCES = `<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/200
   <rect x="285" y="80" width="190" height="70" rx="10" fill="hsl(222,47%,9%)" stroke="hsl(38,72%,53%)" stroke-width="2"/>
   <text x="380" y="108" text-anchor="middle" fill="hsl(38,72%,53%)" font-size="13" font-weight="700">PHARMA</text>
   <text x="380" y="126" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="11">Enterprise 2025–2030</text>
-  <text x="380" y="142" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">$1.6T → $2.3T by 2030</text>
+  <text x="380" y="142" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">$1.6T (2024) → ~$2.4T by 2029</text>
   <rect x="10" y="10" width="170" height="62" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
   <text x="95" y="34" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">🤖 AI &amp; Generative Tech</text>
   <text x="95" y="51" text-anchor="middle" fill="hsl(215,20%,65%)" font-size="10">AlphaFold · GenAI · LLMs</text>
@@ -44,7 +44,7 @@ const SVG_FIVE_FORCES = `<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/200
   <line x1="580" y1="189" x2="477" y2="132" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
   <rect x="305" y="182" width="150" height="44" rx="8" fill="hsl(222,47%,12%)" stroke="hsl(220,16%,22%)" stroke-width="1"/>
   <text x="380" y="200" text-anchor="middle" fill="hsl(38,72%,60%)" font-size="11" font-weight="700">🎓 GCC Talent &amp; India</text>
-  <text x="380" y="217" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">1,600+ GCCs · Digital-native</text>
+  <text x="380" y="217" text-anchor="middle" fill="hsl(215,20%,50%)" font-size="9">2,100+ GCCs · Digital-native</text>
   <line x1="380" y1="182" x2="380" y2="150" stroke="hsl(38,72%,53%)" stroke-width="1.2" marker-end="url(#ma)" opacity=".75"/>
 </svg>`;
 
@@ -281,7 +281,7 @@ export const chapters: Chapter[] = [
     lead: "Understanding the forces reshaping global pharma — and why digital transformation is a survival imperative.",
     metrics: [
       { value: "$1.6T", label: "Global Pharma Revenue 2024" },
-      { value: "$2.6B", label: "Avg. Cost per NME" },
+      { value: "$2.2B", label: "Avg. R&D Cost / Asset" },
       { value: "<10%", label: "Phase I → Approval Rate" },
       { value: "12–15 yr", label: "Avg. Drug-to-Market" },
     ],
@@ -302,7 +302,7 @@ export const chapters: Chapter[] = [
       {
         title: "The Pharma Industry at a Crossroads",
         content: [
-          "The global pharmaceutical market crossed USD 1.6 trillion in revenues in 2024 and is projected to exceed USD 2.3 trillion by 2030. This growth masks profound structural stress. The cost of bringing a new molecular entity to market now exceeds USD 2.6 billion and takes an average of 12 to 15 years. The probability that a molecule entering Phase I clinical trials will reach approval remains below 10 percent.",
+          "Global medicine spending (list-price basis) reached roughly USD 1.6 trillion in 2024 and is projected to approach USD 2.3 trillion by 2028 and about USD 2.4 trillion by 2029, growing at a 5–8% CAGR (IQVIA, 2025). This growth masks profound structural stress. Deloitte's 2024 analysis puts the average cost to bring an asset to market at about USD 2.23 billion — up from USD 2.12 billion in 2023 — while older capitalised estimates run to USD 2.6 billion; development still takes 10–15 years end to end. The probability that a molecule entering Phase I clinical trials will reach approval remains below 10 percent — roughly 7.9% across 2011–2020 (BIO/Informa), and closer to 3–4% in oncology.",
           "The industry is simultaneously being pulled in two directions. On one side, biological complexity is expanding the frontier of what is scientifically possible — personalised medicines, cell and gene therapies, RNA-based interventions, and AI-designed proteins. On the other, the commercial and economic systems that supported the old blockbuster model are fragmenting under payer pressure, real-world evidence requirements, and accelerating generic competition.",
         ],
         diagram: {
@@ -332,11 +332,11 @@ export const chapters: Chapter[] = [
         table: {
           headers: ["Region", "Market Size 2024", "Key Digital Driver", "Avg. PDMF Level", "Priority Domains"],
           rows: [
-            ["🇺🇸 United States", "$680B", "FDA Digital Health CoE; IRA pricing pressure", "Level 3–4", "AI drug discovery, DCT, RWE, omnichannel"],
-            ["🇪🇺 European Union", "$290B", "EHDS; EMA digital evidence; GDPR governance", "Level 2–3", "Regulatory digital, federated data, manufacturing"],
-            ["🇮🇳 India", "$55B + 20% global generics", "ABDM; SUGAM; PLI scheme; GCC boom", "Level 2–3", "Manufacturing QMS, PV analytics, clinical data"],
-            ["🇨🇳 China", "$170B", "NMPA modernisation; national AI strategy", "Level 2–3", "Clinical trial digital, biotech AI, manufacturing"],
-            ["🇯🇵 Japan", "$90B", "SAKIGAKE; PMDA digital reform", "Level 2–3", "Regulatory submissions, digital biomarkers"],
+            ["🇺🇸 United States", "$798B list / ~$487B net", "FDA Digital Health CoE; IRA price negotiation (first 10 prices live Jan 2026)", "Level 3–4", "AI drug discovery, DCT, RWE, omnichannel"],
+            ["🇪🇺 European Union", "EU-5 ~$241B", "EHDS; EU AI Act; EMA DARWIN EU; EU HTA (Jan 2025)", "Level 2–3", "Regulatory digital, federated data, manufacturing"],
+            ["🇮🇳 India", "~$26B domestic; ~20% of global generics (volume)", "ABDM; SUGAM; PLI scheme; GCC boom", "Level 2–3", "Manufacturing QMS, PV analytics, clinical data"],
+            ["🇨🇳 China", "~$113B (hospital mkt)", "NMPA modernisation; national AI strategy", "Level 2–3", "Clinical trial digital, biotech AI, manufacturing"],
+            ["🇯🇵 Japan", "~$62B", "SAKIGAKE; PMDA digital reform", "Level 2–3", "Regulatory submissions, digital biomarkers"],
           ],
         },
       },
@@ -344,7 +344,7 @@ export const chapters: Chapter[] = [
         title: "The $2 Trillion Opportunity",
         content: [
           "McKinsey Global Institute has estimated that advanced analytics and AI could create $100 billion in value annually for the US healthcare system. Across the global pharmaceutical value chain, the opportunity is larger still.",
-          "If AI could cut average development timelines by 20–30% and improve Phase II success rates by even 10 percentage points, the value creation at a large pharmaceutical company would be measured in tens of billions of dollars. Insilico Medicine's INS018_055 reached Phase II clinical trials in 18 months, compared to an industry average of 4–6 years.",
+          "If AI could cut average development timelines by 20–30% and improve Phase II success rates by even 10 percentage points, the value creation at a large pharmaceutical company would be measured in tens of billions of dollars. Insilico Medicine's INS018_055 (rentosertib) advanced from target to preclinical candidate in about 18 months and, in 2025, reported positive Phase IIa data in idiopathic pulmonary fibrosis (Nature Medicine) — it is now in Phase III, against an industry norm of 4–6 years just to reach the clinic.",
         ],
         diagram: {
           title: "Pharmaceutical Digital Value Chain",
@@ -370,7 +370,7 @@ export const chapters: Chapter[] = [
       {
         title: "India's GCC Ecosystem — The Pharma Digital Nerve Centre",
         content: [
-          "India has emerged as the world's pre-eminent hub for pharmaceutical Global Capability Centres (GCCs), combining an unmatched reservoir of scientific, digital, and regulatory talent with a rapidly maturing innovation ecosystem. Over 30 multinational pharma companies now operate dedicated GCCs in India — in Hyderabad, Bengaluru, Mumbai, and Pune.",
+          "India has emerged as the world's pre-eminent hub for pharmaceutical Global Capability Centres (GCCs), combining an unmatched reservoir of scientific, digital, and regulatory talent with a rapidly maturing innovation ecosystem. More than 130 pharmaceutical and life-sciences GCCs now operate in India (employing 80,000+ specialists) — part of a broader base of roughly 2,117 GCCs and 2.36 million professionals as of FY2026 (NASSCOM–Zinnov) — concentrated in Hyderabad, Bengaluru, Mumbai, and Pune.",
         ],
         table: {
           headers: ["GCC Capability", "Leading Companies", "Value Delivered", "India Advantage"],
@@ -386,7 +386,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: India's Digital Pharma Moment",
-          content: "India accounts for ~20% of global generic medicine exports by volume and over 60% of US FDA-approved manufacturing facilities outside the US. The ABDM has created 600M+ digital health IDs. The PLI scheme is investing $2B+ in manufacturing modernisation. Companies like Sun Pharma and Dr. Reddy's are demonstrating that Indian generics companies can be fast followers — and in some cases leaders — in pharma digital transformation.",
+          content: "India supplies roughly 20% of the world's generic medicines by volume (and ~47% of US generic prescriptions), and hosts the largest number of US FDA-approved manufacturing sites outside the US. The ABDM has created 900M+ ABHA digital health IDs (2026), with 1B+ health records linked. The pharma PLI scheme had drawn ₹41,943 crore of investment by end-2025. Companies like Sun Pharma and Dr. Reddy's are demonstrating that Indian generics companies can be fast followers — and in some cases leaders — in pharma digital transformation.",
         },
       },
       {
@@ -593,7 +593,7 @@ export const chapters: Chapter[] = [
           svgContent: SVG_DRUG_PIPELINE,
         },
         steps: [
-          { num: "01", title: "Target Identification & Validation", description: "Multi-omics analysis, knowledge graph mining, AI-powered literature synthesis. AlphaFold's database covers 200M+ protein structures for structure-based drug design." },
+          { num: "01", title: "Target Identification & Validation", description: "Multi-omics analysis, knowledge graph mining, AI-powered literature synthesis. AlphaFold's database covers 214M+ predicted protein structures for structure-based drug design." },
           { num: "02", title: "Hit Identification & Virtual Screening", description: "Virtual screening of billion-compound libraries using molecular docking, pharmacophore modelling, and generative AI. DNA-encoded chemical libraries (DELs) can screen billions simultaneously." },
           { num: "03", title: "Lead Optimisation", description: "ADMET prediction using ML models. Multi-parameter lead optimisation (MPLO) simultaneously targeting potency, selectivity, and ADMET properties." },
           { num: "04", title: "Preclinical Development & IND Package", description: "Computational toxicology, PBPK modelling, and regulatory-ready preclinical dossier preparation. AI predicts hERG cardiac toxicity and CYP enzyme inhibition." },
@@ -605,12 +605,12 @@ export const chapters: Chapter[] = [
         table: {
           headers: ["AI Platform / Tool", "Primary Application", "Key Technology", "Notable Deployment"],
           rows: [
-            ["AlphaFold 3 (DeepMind)", "Protein structure prediction; structure-based drug design", "Evoformer transformer + diffusion", "200M+ structures; broadly adopted"],
+            ["AlphaFold 3 (DeepMind)", "Protein & complex structure prediction; SBDD", "Pairformer + diffusion (released May 2024)", "214M+ structures; 2024 Chemistry Nobel"],
             ["PandaOmics (Insilico)", "AI-powered target identification using multi-omics", "Graph neural networks; knowledge graphs", "TNIK / IPF — INS018-055 in Phase II"],
             ["Chemistry42 (Insilico)", "Generative molecular design", "GAN + RL + diffusion models", "Multiple clinical candidates generated"],
             ["Schrödinger FEP+", "Free energy perturbation; lead optimisation", "Physics-based + ML", "BMS, Pfizer partnerships"],
-            ["Exscientia Centaur", "AI-designed drug candidates", "Automated design-make-test-analyse", "DSP-1181 — first AI drug in Phase I"],
-            ["Recursion OS2", "Cellular imaging → target discovery", "Computer vision + biological foundation models", "NVIDIA partnership; multi-billion compound library"],
+            ["Isomorphic Labs (Alphabet)", "AI-first drug design built on AlphaFold", "AlphaFold 3 + generative models", "$600M raised 2025; Lilly & Novartis deals up to ~$2.9B"],
+            ["Recursion (incl. Exscientia)", "Phenomics + automated design-make-test-analyse", "Computer vision + biological foundation models", "Exscientia merger closed Nov 2024; NVIDIA-backed"],
             ["BenevolentAI", "Literature-based target hypotheses", "Knowledge graph + LLM traversal", "Baricitinib → COVID-19 EUA in <2 months"],
           ],
         },
@@ -624,7 +624,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "case-study",
           label: "📋 Case Study: Insilico Medicine — First AI-Discovered Clinical Candidate",
-          content: "Insilico Medicine progressed INS018_055, a novel TNIK inhibitor for idiopathic pulmonary fibrosis, into Phase II trials. The drug was identified entirely through AI-driven processes in ~18 months, vs. an industry average of 4–5 years. This demonstrates AI-driven discovery pipelines can produce viable clinical candidates.",
+          content: "Insilico Medicine's INS018_055 (rentosertib) — a TNIK inhibitor for idiopathic pulmonary fibrosis with both an AI-nominated target and an AI-generated molecule — reached a preclinical candidate in about 18 months. In 2025 it reported positive Phase IIa results (Nature Medicine: +98.4 mL FVC at 60 mg vs −20.3 mL for placebo, n=71) and progressed to Phase III — the clearest prospective clinical proof-of-concept to date for end-to-end AI drug discovery.",
         },
       },
       {
@@ -639,7 +639,7 @@ export const chapters: Chapter[] = [
         callout: {
           type: "spotlight",
           label: "🌍 Regional Spotlight: R&D by Geography",
-          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion, Insilico, Exscientia). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; top European pharma companies have invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
+          content: "In the <strong>US</strong>, R&D digital transformation is driven by large multinationals investing hundreds of millions and AI-first biotechs (Recursion — which absorbed Exscientia in 2024 — Insilico, and Alphabet's Isomorphic Labs). In the <strong>EU</strong>, Roche/Genentech has arguably the most mature pharmaceutical AI capability globally; top European pharma companies have invested $2B+ since 2019. In <strong>India</strong>, organisations like Syngene, Lambda Therapeutics, and R&D divisions of Sun Pharma and Dr. Reddy's are investing in computational chemistry platforms.",
         },
         pullQuote: {
           text: "GCC computational biology teams that master AlphaFold 3, molecular dynamics simulation, and generative chemistry are not supporting drug discovery — they are doing drug discovery.",
@@ -674,7 +674,7 @@ export const chapters: Chapter[] = [
       {
         title: "GCC Clinical Operations Capability Map",
         content: [
-          "Over 60% of new US trial starts incorporate at least one decentralised element as of 2024. Clinical trials remain the most expensive component of drug development.",
+          "The large majority of new trials now incorporate at least one decentralised or digital element, and industry surveys expect DCT methods to feature in most trials by 2026. Clinical trials remain the most expensive component of drug development.",
         ],
         pillars: [
           { num: "Domain 01", title: "Clinical Data Management", description: "EDC system design, data cleaning, query management, SAE reconciliation, and database lock.", colorVariant: "teal" },
@@ -711,7 +711,7 @@ export const chapters: Chapter[] = [
       {
         title: "Digital Manufacturing & Industry 4.0",
         content: [
-          "The fourth industrial revolution is reshaping pharmaceutical manufacturing. Companies with mature digital manufacturing platforms demonstrate up to 35% faster batch release cycles and 25% lower deviation rates.",
+          "The fourth industrial revolution is reshaping pharmaceutical manufacturing. Companies with mature digital manufacturing platforms report roughly 25–40% faster batch release/validation cycles and materially lower deviation rates.",
           "Pharmaceutical supply chains are among the most complex in any industry — governed by stringent regulatory requirements, temperature sensitivity, serialisation mandates, and the critical imperative of patient safety.",
         ],
         pillars: [
@@ -1193,7 +1193,7 @@ export const chapters: Chapter[] = [
         table: {
           headers: ["Acronym", "Full Name", "Definition"],
           rows: [
-            ["ABDM", "Ayushman Bharat Digital Mission", "India's national digital health infrastructure — 600M+ health IDs registered by 2024"],
+            ["ABDM", "Ayushman Bharat Digital Mission", "India's national digital health infrastructure — 900M+ ABHA health IDs by 2026, 1B+ records linked"],
             ["ALCOA+", "Data Integrity Principles", "Attributable, Legible, Contemporaneous, Original, Accurate + Complete, Consistent, Enduring, Available"],
             ["CSA", "Computer Software Assurance", "FDA's 2022 risk-based framework replacing traditional CSV — reduces documentation burden"],
             ["CTIS", "Clinical Trials Information System", "EU-wide digital portal for clinical trial applications across all member states"],
@@ -1201,7 +1201,7 @@ export const chapters: Chapter[] = [
             ["DTx", "Digital Therapeutic", "Software-based medical intervention requiring clinical evidence and regulatory oversight"],
             ["eCTD", "Electronic Common Technical Document", "Globally mandated electronic format for regulatory submissions"],
             ["FAIR", "Findable Accessible Interoperable Reusable", "Framework for organising and managing scientific data for both humans and machines"],
-            ["GCC", "Global Capability Centre", "Dedicated offshore facility providing high-value functions — India hosts 1,600+ with 1.9M employees"],
+            ["GCC", "Global Capability Centre", "Dedicated enterprise facility providing high-value functions — India hosts ~2,117 with 2.36M professionals (FY2026)"],
             ["MLOps", "Machine Learning Operations", "Practices and tools for deploying, monitoring, and maintaining ML models in production"],
             ["NBA", "Next Best Action", "AI-driven recommendation for optimal HCP engagement based on profile and behaviour"],
             ["OEE", "Overall Equipment Effectiveness", "Manufacturing metric: availability × performance × quality. World-class pharma target: 85%"],
@@ -1273,10 +1273,10 @@ export const chapters: Chapter[] = [
             ["Strategic", "AI in Pharma: From Promise to Pipeline", "Boston Consulting Group", "2023", "CEO-level evidence base for AI value across drug development"],
             ["R&D", "Highly accurate protein structure prediction with AlphaFold", "Jumper et al., Nature", "2021", "Seminal paper; foundational for structure-based drug design"],
             ["R&D", "Diagnosing the decline in pharmaceutical R&D efficiency", "Scannell et al., Nature Reviews Drug Discovery", "2012", "Eroom's Law original paper; productivity crisis context"],
-            ["Clinical", "E6(R3) Good Clinical Practice Guideline", "ICH", "2023", "Updated GCP formalising risk-based monitoring and electronic data"],
+            ["Clinical", "E6(R3) Good Clinical Practice Guideline", "ICH", "2025", "Reached Step 4 Jan 2025 (EU effective Jul 2025); risk-based, decentralised-ready GCP"],
             ["Manufacturing", "GAMP 5 Second Edition", "ISPE", "2022", "Gold standard for GxP computer system validation"],
             ["Regulatory", "Computer Software Assurance", "US FDA", "2022", "Risk-based CSA replacing traditional CSV"],
-            ["India & GCC", "India GCC Report: Life Sciences", "NASSCOM", "2024", "Comprehensive data on India GCC pharma capabilities"],
+            ["India & GCC", "India GCC / Life-Sciences GCC Landscape", "NASSCOM–Zinnov", "2025", "Comprehensive data on India GCC pharma capabilities"],
             ["Technology", "The Data Lakehouse", "Databricks / Ben Lorica et al.", "2023", "Architectural reference for unified analytics and AI platform"],
           ],
         },
@@ -1284,832 +1284,1377 @@ export const chapters: Chapter[] = [
           icon: "📚",
           label: "Living Document",
           title: "This handbook is a living document",
-          description: "The frameworks, benchmarks, and case studies reflect the state of practice as of early 2025. Digital transformation is accelerating — treat this as a strategic foundation supplemented by ongoing engagement with primary sources.",
+          description: "The frameworks, benchmarks, and case studies reflect the state of practice as of mid-2026. Digital transformation is accelerating — treat this as a strategic foundation supplemented by ongoing engagement with primary sources.",
         },
       },
     ],
   },
   {
-    id: "ch16",
-    num: "16",
-    partLabel: "Part V · GCC India",
-    title: "Pharma Global Capability Centres in India",
-    lead: "India's GCC ecosystem as the digital transformation engine for global pharma — capabilities, talent, and strategic value.",
-    metrics: [
-      { value: "1,600+", label: "GCCs in India (All Sectors)" },
-      { value: "30+", label: "Pharma MNC GCCs" },
-      { value: "60%", label: "Cost Advantage" },
-      { value: "40%", label: "Faster AI Recruitment" },
-    ],
-    tags: ["GCC Strategy", "India", "Talent", "Digital CoE"],
-    sections: [{ title: "Executive Summary", content: ["India has emerged as the world's pre-eminent hub for pharmaceutical Global Capability Centres (GCCs), combining scientific, digital, and regulatory talent with a rapidly maturing innovation ecosystem."] }],
-  },
-  {
-    id: "ch17",
-    num: "17",
-    partLabel: "Part VI · Advanced Modalities",
-    title: "Biopharmaceuticals, Cell & Gene Therapy — Digital Transformation",
-    lead: "Digital infrastructure for next-generation biologics, cell therapies, and gene therapy manufacturing.",
-    metrics: [
-      { value: "$500B+", label: "Biologics Market 2030" },
-      { value: "2,000+", label: "Cell/Gene Trials Active" },
-      { value: "30%", label: "Yield Gain (Digital)" },
-      { value: "vein-to-vein", label: "Digital Chain of Custody" },
-    ],
-    tags: ["Biologics", "Cell Therapy", "Gene Therapy", "Digital Manufacturing"],
-    sections: [
+    "id": "ch16",
+    "num": "16",
+    "partLabel": "Part V · GCC India",
+    "title": "Pharma Global Capability Centres in India",
+    "lead": "India's GCC ecosystem as the digital transformation engine for global pharma — capabilities, talent, and strategic value.",
+    "metrics": [
       {
-        title: "Executive Summary",
-        content: [
-          "Biopharmaceuticals — monoclonal antibodies, cell therapies, gene therapies, and RNA-based medicines — are the fastest-growing segment of the industry and the hardest to manufacture. The digital playbook built for small-molecule pharma does not transfer cleanly: these are living, complex products where the process defines the product, batch sizes can be a single patient, and a logistics error can cost a life.",
-          "Advanced modalities therefore demand a purpose-built digital infrastructure — one engineered for biological variability, personalised batches, and end-to-end traceability. The organisations that master this become gatekeepers of the most valuable therapeutic frontier.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "In cell and gene therapy the batch size is often one, and the product is a patient's own living cells. That single fact rewrites manufacturing, quality, and logistics: digital chain-of-identity and chain-of-custody are not features — they are the licence to operate.",
-        },
+        "value": "2,117",
+        "label": "GCCs in India (FY26)"
       },
       {
-        title: "Why Advanced Modalities Break the Traditional Playbook",
-        content: [
-          "Small-molecule manufacturing is deterministic and scalable: the same chemical process yields the same product at any volume. Biologics are grown, not synthesised — subject to biological variability where subtle process shifts change the product's structure and function. Cell and gene therapies push this further into personalisation, where each batch may serve a single patient and cannot be remade if it fails.",
+        "value": "2.36M",
+        "label": "GCC Professionals"
+      },
+      {
+        "value": "130+",
+        "label": "Pharma & Life-Sci GCCs"
+      },
+      {
+        "value": "$98.4B",
+        "label": "GCC Sector Revenue"
+      }
+    ],
+    "tags": [
+      "GCC Strategy",
+      "India",
+      "Talent",
+      "Digital CoE"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "India has become the operating core of global pharma's digital transformation. As of FY2026, roughly <strong>2,117 GCCs employ 2.36 million professionals</strong> and generate <strong>$98.4B in revenue</strong> (NASSCOM–Zinnov) — a figure that already meets earlier 2030 projections. More than <strong>130 pharmaceutical and life-sciences GCCs</strong> (80,000+ specialists) now run R&D intelligence, clinical data science, regulatory operations, pharmacovigilance, and manufacturing analytics as global mandates, not back-office support."
+        }
+      },
+      {
+        "title": "From Cost Centre to Innovation Engine",
+        "content": [
+          "The Indian pharma GCC has moved through four waves: cost arbitrage, process ownership, capability building, and now innovation leadership. Leading centres co-create enterprise strategy, hold end-to-end global mandates, and contribute to nearly every late-stage molecule in their parent's portfolio.",
+          "<strong>The economics remain compelling.</strong> Indian GCCs deliver roughly 30–60% operational savings and 60–70% lower talent cost versus US/EU baselines — but the durable advantage is now the talent pool itself: the world's deepest reservoir of computational biology, clinical data management, biostatistics, and enterprise-software engineering talent."
         ],
-        table: {
-          headers: ["Modality", "Examples", "Core Digital Challenge", "Key Capability"],
-          rows: [
-            ["Monoclonal Antibodies", "mAbs, biosimilars, ADCs", "Bioprocess variability; comparability", "PAT, bioprocess digital twin"],
-            ["Cell Therapy (Autologous)", "CAR-T, TCR-T", "Batch-of-one; vein-to-vein logistics", "Chain of identity & custody"],
-            ["Cell Therapy (Allogeneic)", "Off-the-shelf NK/CAR", "Scale-out vs scale-up; potency", "Scalable MES, potency analytics"],
-            ["Gene Therapy", "AAV, lentiviral vectors", "Vector yield; long-term follow-up", "Process analytics, RWE registries"],
-            ["RNA / Nucleic Acid", "mRNA, siRNA, ASO", "Rapid design; cold chain", "Cloud-native design, cold-chain AI"],
+        "table": {
+          "headers": [
+            "Capability",
+            "Maturity",
+            "Global Mandate",
+            "India Advantage"
           ],
-        },
+          "rows": [
+            [
+              "Computational Drug Discovery",
+              "Scaling",
+              "Target ID, CADD, generative design",
+              "IISc/IIT pipeline; 60% lower cost"
+            ],
+            [
+              "Clinical Data Science",
+              "Advanced",
+              "Phase I–IV data management, SAS/R programming",
+              "World's largest CDM talent pool"
+            ],
+            [
+              "Regulatory & PV Operations",
+              "Advanced",
+              "eCTD, PSUR/PBRER, ICSR processing",
+              "24/7 multilingual; AI-augmented"
+            ],
+            [
+              "Real-World Evidence & HEOR",
+              "Scaling",
+              "RWE studies, market access models",
+              "ABDM data; large patient base"
+            ],
+            [
+              "Manufacturing Intelligence",
+              "Emerging",
+              "Digital twin, predictive quality",
+              "Proximity to Indian mfg base"
+            ]
+          ]
+        }
       },
       {
-        title: "Digital Manufacturing for Biologics & CGT",
-        content: [
-          "The manufacturing stack for advanced modalities is built on real-time process understanding. Because the process defines the product, control shifts from end-of-line inspection to continuous, in-line verification.",
+        "title": "Policy Tailwinds & the National GCC Framework",
+        "content": [
+          "India's Union Budget 2025-26 announced a <strong>National Framework for GCCs</strong> to guide state policy and extend incentives into tier-2 cities — signalling that GCCs are now treated as strategic national infrastructure. The pharma <strong>Production-Linked Incentive (PLI)</strong> scheme had drawn ₹41,943 crore of investment by end-2025, and the <strong>ABDM</strong> has issued 900M+ ABHA health IDs with 1B+ records linked."
         ],
-        steps: [
-          { num: "01", title: "Connected Bioprocess", description: "Single-use and continuous bioprocessing instrumented with sensors feeding a real-time data historian." },
-          { num: "02", title: "PAT & Advanced Control", description: "In-line analytics linked to control systems for continuous verification and, ultimately, real-time release." },
-          { num: "03", title: "Electronic Batch Records & MES", description: "Paperless, exception-based batch execution — essential when every autologous batch is unique." },
-          { num: "04", title: "Bioprocess Digital Twin", description: "Model-based prediction of yield, quality, and failure — trained on multivariate process data." },
-          { num: "05", title: "QC & Comparability Analytics", description: "High-dimensional analytics for potency, identity, and comparability across process changes and sites." },
-        ],
-      },
-      {
-        title: "The Autologous Challenge: Vein-to-Vein Orchestration",
-        content: [
-          "For autologous therapies, the supply chain <em>is</em> the product. A patient's cells are collected (apheresis), shipped cryopreserved, engineered, tested, and returned — a vein-to-vein loop where a mislabel or a temperature excursion is catastrophic and irreversible. This demands a digital <strong>chain of identity</strong> (COI) linking every material to one patient, an unbroken <strong>chain of custody</strong> (COC), and orchestration software that schedules manufacturing slots against patient and clinic availability.",
-        ],
-        insightBox: {
-          icon: "🧬",
-          label: "Modality Principle",
-          title: "The batch size is one — design for it",
-          description: "You cannot inspect quality into a single-patient batch or remake it if it fails. Traceability, right-first-time execution, and predictive quality move from best practice to absolute prerequisite.",
+        "callout": {
+          "type": "spotlight",
+          "label": "🌍 Regional Spotlight: The Hyderabad–Bengaluru Corridor",
+          "content": "India hosts the largest concentration of US FDA-approved manufacturing sites outside the US and supplies ~20% of the world's generic medicines by volume (~47% of US generic prescriptions). The combination of manufacturing depth, digital-native talent, and national digital-health rails makes the Hyderabad–Bengaluru–Mumbai–Pune corridor the natural nerve centre for pharma's global digital operating model."
         },
-      },
-      {
-        title: "Data, Analytics & the GCC Role",
-        content: [
-          "Advanced modalities generate uniquely rich data — and uniquely long obligations, with gene therapies requiring years of patient follow-up. A mature GCC is well positioned to own the analytical and data-management backbone: bioprocess data science, comparability analytics, potency-assay modelling, long-term follow-up registries, and the orchestration analytics behind vein-to-vein logistics.",
-        ],
-        bulletPoints: [
-          "<strong>Bioprocess Data Science</strong> — Multivariate analysis and digital twins to reduce batch failure and accelerate scale-up.",
-          "<strong>Chain-of-Custody Analytics</strong> — Real-time monitoring and exception management across the vein-to-vein loop.",
-          "<strong>Long-Term Registries</strong> — Durable RWE infrastructure for the multi-year safety follow-up gene therapies require.",
-          "<strong>Cold-Chain Intelligence</strong> — Predictive monitoring of cryogenic logistics to prevent irreversible excursions.",
-        ],
-        pullQuote: {
-          text: "In advanced therapies the process is the product and the supply chain is the patient. Digital is not an efficiency play here — it is the only way the medicine reaches the person alive.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
-      },
-    ],
+        "insightBox": {
+          "icon": "🏆",
+          "label": "GCC Insight",
+          "title": "Own the mandate, not the ticket",
+          "description": "The GCCs that create the most value stop measuring themselves in tickets closed and start measuring in molecules advanced, submissions filed, and cycle-time removed from the enterprise. Governance that grants real decision rights — not just delivery capacity — is the difference between a scaled centre and a strategic one."
+        }
+      }
+    ]
   },
   {
-    id: "ch18",
-    num: "18",
-    partLabel: "Part VI · Advanced Modalities",
-    title: "Real-World Evidence — Strategy, Infrastructure & Execution",
-    lead: "Building enterprise RWE capabilities from data strategy to regulatory-grade evidence generation.",
-    metrics: [
-      { value: "$2.3B", label: "RWE Market 2028" },
-      { value: "75%", label: "FDA Approvals Using RWD" },
-      { value: "50%", label: "Faster Label Expansions" },
-      { value: "600M+", label: "ABDM Health IDs" },
-    ],
-    tags: ["RWE", "Real-World Data", "HEOR", "Regulatory Evidence"],
-    sections: [
+    "id": "ch17",
+    "num": "17",
+    "partLabel": "Part VI · Advanced Modalities",
+    "title": "Biopharmaceuticals, Cell & Gene Therapy — Digital Transformation",
+    "lead": "Digital infrastructure for next-generation biologics, cell therapies, and gene therapy manufacturing — where value has shifted from discovery to scalable, digitised production.",
+    "metrics": [
       {
-        title: "Executive Summary",
-        content: [
-          "Real-world evidence (RWE) has moved from a payer-facing afterthought to a strategic capability that shapes regulatory decisions, label expansions, safety surveillance, and commercial strategy. The passage of the 21st Century Cures Act and the FDA's subsequent RWE Framework signalled a durable shift: regulators will consider fit-for-purpose real-world data (RWD) as part of the evidence base, not merely as supporting colour.",
-          "The winners treat RWE as an enterprise data-and-evidence platform, not a series of one-off studies. That means industrial-grade data acquisition, standardised data models, transparent methodology, and governance robust enough to withstand regulatory scrutiny — capabilities that map naturally onto a mature GCC.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "RWE now informs a large and growing share of regulatory submissions and post-approval commitments. The value is unlocked not by data volume but by fit-for-purpose design: the right data source, a defensible study design, and provenance that a regulator or payer can audit end to end.",
-        },
+        "value": "~42%",
+        "label": "Biologics Share (2023)"
       },
       {
-        title: "From Real-World Data to Real-World Evidence",
-        content: [
-          "The distinction matters. <strong>Real-world data</strong> is the raw material — routinely collected health data from outside conventional trials. <strong>Real-world evidence</strong> is the clinical or economic conclusion derived from analysing that data with a defensible methodology. The gap between the two is bridged by data quality, study design, and statistical rigour — which is precisely where most programmes succeed or fail.",
+        "value": "~1,900",
+        "label": "Active CGT Trials"
+      },
+      {
+        "value": "40+",
+        "label": "Approved CGT Products"
+      },
+      {
+        "value": "$2.2M+",
+        "label": "Casgevy List Price"
+      }
+    ],
+    "tags": [
+      "Biologics",
+      "Cell Therapy",
+      "Gene Therapy",
+      "Digital Manufacturing"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Biologics already accounted for roughly <strong>$559B — about 42% of global medicine spend — in 2023</strong> (IQVIA/HHS), growing about three times faster than small molecules. Cell and gene therapies have moved from science to commerce: <strong>40+ products are approved</strong> and roughly <strong>1,905 trials were ongoing in H1 2025</strong> (ARM/ASGCT), with 4,000+ in the pipeline. The binding constraint is no longer discovery — it is digitised, scalable, compliant manufacturing."
+        }
+      },
+      {
+        "title": "The Manufacturing Constraint",
+        "content": [
+          "Casgevy (approved December 2023 as the first CRISPR/Cas9 medicine, ~$2.2M list) generated only about $10M of revenue in 2024 — a stark illustration that complex <strong>autologous</strong> manufacturing, not efficacy, now gates value. Every dose is a batch of one, with a vein-to-vein journey that must preserve chain-of-identity and chain-of-custody end to end.",
+          "This reframes the digital agenda for advanced modalities around four capabilities: <strong>digital chain-of-identity/custody</strong>, <strong>electronic batch records and batch genealogy</strong>, <strong>decentralised / point-of-care manufacturing</strong>, and <strong>AI-driven process control</strong> for living-cell processes with far higher variability than small molecules."
         ],
-        table: {
-          headers: ["Data Source", "Examples", "Strength", "Typical Use"],
-          rows: [
-            ["Electronic Health Records", "Inpatient/outpatient EHR, clinical notes", "Rich clinical depth; outcomes", "Effectiveness, safety, NLP phenotyping"],
-            ["Administrative Claims", "Payer/insurer claims, pharmacy", "Large, longitudinal, complete capture", "Utilisation, adherence, HEOR"],
-            ["Disease & Product Registries", "Oncology, rare disease, device registries", "Curated, condition-specific", "Natural history, external control arms"],
-            ["Patient-Generated & Wearable", "ePRO, apps, sensors, DTx", "Continuous, patient-centric", "Adherence, digital endpoints, DCT"],
-            ["National Digital Health", "ABDM (India), EHDS (EU) infrastructure", "Population scale; policy-backed", "Population evidence, market access"],
+        "pillars": [
+          {
+            "num": "Modality 01",
+            "title": "Monoclonal Antibodies & ADCs",
+            "description": "Antibody-drug conjugates are now a top oncology pillar (Enhertu ~$5B in 2025); complex conjugation and cold chain raise the digital-manufacturing bar.",
+            "colorVariant": "violet"
+          },
+          {
+            "num": "Modality 02",
+            "title": "Cell Therapy (CAR-T)",
+            "description": "Autologous batch-of-one production; FDA removed REMS for autologous CAR-T in 2025, easing access as manufacturing digitises.",
+            "colorVariant": "violet"
+          },
+          {
+            "num": "Modality 03",
+            "title": "Gene Therapy",
+            "description": "One-time genetic correction (Casgevy, Lyfgenia); value gated by scalable vector production and chain-of-identity.",
+            "colorVariant": "violet"
+          },
+          {
+            "num": "Modality 04",
+            "title": "mRNA Platform",
+            "description": "Beyond COVID: mRESVIA (first mRNA RSV vaccine, 2024) and personalised cancer vaccines (mRNA-4157/V940) in Phase 3.",
+            "colorVariant": "violet"
+          }
+        ]
+      },
+      {
+        "title": "Digital Backbone for Advanced Therapies",
+        "content": [
+          "Biosimilars add a parallel pressure: the Humira biosimilar wave cut its US share from ~96% to ~78% by late 2024, and Stelara ($10.4B in 2024) now faces multiple biosimilars — intensifying the need for cost-efficient, digitally-optimised biologics manufacturing."
+        ],
+        "callout": {
+          "type": "spotlight",
+          "label": "🌍 Geography Shift & Decentralised Manufacturing",
+          "content": "APAC (≈750 CGT trials) is overtaking North America in new-trial initiation, China-driven. In parallel, decentralised / point-of-care CGT manufacturing is maturing (ARPA-H's GIVE programme, launched Sept 2025, targets sub-5-day vein-to-vein) — turning the factory into a distributed, software-orchestrated network rather than a single site."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ch18",
+    "num": "18",
+    "partLabel": "Part VI · Advanced Modalities",
+    "title": "Real-World Evidence — Strategy, Infrastructure & Execution",
+    "lead": "Building enterprise RWE capabilities from data strategy to regulatory-grade evidence generation across the product lifecycle.",
+    "metrics": [
+      {
+        "value": "~$5.4B",
+        "label": "RWE Market (2025)"
+      },
+      {
+        "value": "~25%",
+        "label": "Label Expansions Using RWE"
+      },
+      {
+        "value": "180M+",
+        "label": "DARWIN EU Patients"
+      },
+      {
+        "value": "900M+",
+        "label": "ABDM Health IDs"
+      }
+    ],
+    "tags": [
+      "RWE",
+      "Real-World Data",
+      "HEOR",
+      "Regulatory Evidence"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Real-world evidence has moved from the periphery to the core of development, regulatory, and market-access strategy. The RWE services market is roughly <strong>$5.4B in 2025, growing to ~$10.8B by 2030</strong> (MarketsandMarkets, ~15% CAGR). Regulators are institutionalising it: the FDA's RWE programme, the EMA's <strong>DARWIN EU</strong> network (~180M patients, 30 partners), and the UK MHRA framework are all expanding the contexts in which RWE is accepted."
+        }
+      },
+      {
+        "title": "Calibrating the Regulatory Reality",
+        "content": [
+          "The frequently-cited claim that most FDA approvals rely on RWD overstates the case. In practice, roughly <strong>23–28% of drug and biologic label expansions</strong> incorporated real-world evidence in recent years (23.3% in 2022, 27.7% in 2023, 23.7% in 2024) — with higher penetration in specific subsets (RWE appears in a majority of supplemental applications). RWE augments the evidence base; it has not replaced the randomised controlled trial.",
+          "Where RWE delivers most: <strong>label expansions</strong> without new randomised trials, faster satisfaction of <strong>post-approval commitments</strong>, <strong>comparative-effectiveness</strong> data payers demand, external control arms for rare disease, and continuous <strong>safety signal detection</strong>."
+        ],
+        "table": {
+          "headers": [
+            "RWD Source",
+            "Primary Use",
+            "Strength",
+            "Governance Challenge"
           ],
-        },
+          "rows": [
+            [
+              "EHRs / Claims",
+              "Effectiveness, safety, HEOR",
+              "Scale and longitudinality",
+              "Fragmentation; coding variance"
+            ],
+            [
+              "Registries",
+              "Rare disease, external controls",
+              "Curated, disease-specific",
+              "Cost; completeness"
+            ],
+            [
+              "Wearables / Digital biomarkers",
+              "Continuous physiological signals",
+              "Objective, high-frequency",
+              "Validation; consent"
+            ],
+            [
+              "Genomic / Multi-omic",
+              "Precision stratification",
+              "Mechanistic depth",
+              "Privacy; interpretation"
+            ]
+          ]
+        }
       },
       {
-        title: "Regulatory-Grade RWE",
-        content: [
-          "Not all RWE is created equal. Regulators evaluate RWD on <strong>relevance</strong> (does it capture the right population, exposure, and outcome?) and <strong>reliability</strong> (is it accurate, complete, and traceable?). The most consequential applications — external/synthetic control arms, label expansions, and single-arm trial support — demand prospective protocol registration, pre-specified analyses, and end-to-end provenance.",
-          "The FDA's RWE Framework, the EMA's DARWIN EU initiative, and comparable moves by other agencies converge on the same expectation: transparent, reproducible methods applied to fit-for-purpose data. RWE that cannot be audited is RWE that cannot be used for a regulatory decision.",
+        "title": "The RWE Operating Model",
+        "content": [
+          "Enterprise RWE capability rests on a governed data platform (FAIR data, common data models such as OMOP), regulatory-grade study execution (pre-registered protocols, transparent methods), and a fluent HEOR function. India's <strong>ABDM</strong> — now 900M+ ABHA IDs with 1B+ linked records — is creating one of the world's largest structured real-world data substrates, and GCC-based RWE/HEOR teams are increasingly the ones turning it into evidence."
         ],
-        insightBox: {
-          icon: "🔍",
-          label: "Evidence Principle",
-          title: "Fit-for-purpose beats big data",
-          description: "A modest, well-characterised dataset with a pre-registered protocol and auditable lineage will carry more regulatory weight than a vast dataset assembled and analysed after the question was asked.",
-        },
-      },
-      {
-        title: "The RWE Technology & Data Stack",
-        content: [
-          "Enterprise RWE runs on a repeatable pipeline — the same five stages every credible programme industrialises.",
-        ],
-        steps: [
-          { num: "01", title: "Data Acquisition & Licensing", description: "Source, license, and onboard EHR, claims, registry, and PGHD assets with clear consent and data-use terms." },
-          { num: "02", title: "Curation to a Common Data Model", description: "Map heterogeneous sources to a standard model (e.g., OMOP CDM) with terminology harmonisation to enable reproducible, portable analytics." },
-          { num: "03", title: "Analytics & Methodology", description: "Causal inference, comparative effectiveness, and bias-control methods (propensity scoring, negative controls) applied to pre-specified questions." },
-          { num: "04", title: "Evidence Generation & Dossiers", description: "Regulatory-grade study reports, HEOR models, and value dossiers packaged for agencies and payers." },
-          { num: "05", title: "Governance & Provenance", description: "End-to-end lineage, privacy compliance (HIPAA/GDPR/DPDP), and audit trails that make every conclusion traceable to its source." },
-        ],
-      },
-      {
-        title: "Where RWE Creates Value",
-        content: [
-          "RWE is a cross-functional asset — the same platform serves regulatory, medical, safety, and commercial demand.",
-        ],
-        bulletPoints: [
-          "<strong>Regulatory & Label Expansion</strong> — External control arms and post-approval evidence to broaden indications and satisfy commitments faster.",
-          "<strong>HEOR & Market Access</strong> — Real-world effectiveness and cost-outcome evidence for payer negotiations and value-based contracts.",
-          "<strong>Safety & Pharmacovigilance</strong> — Signal validation and characterisation at population scale, complementing spontaneous reporting.",
-          "<strong>Clinical Development</strong> — Feasibility, site selection, protocol optimisation, and synthetic control arms that shrink trials.",
-        ],
-        callout: {
-          type: "spotlight",
-          label: "🌍 Regional Spotlight: India's RWE Advantage",
-          content: "India pairs a vast, diverse patient population with the ABDM digital-health backbone (600M+ health IDs) and a deep analytics talent pool. Pharma GCCs in India are becoming enterprise RWE engines — running data curation, OMOP mapping, HEOR modelling, and evidence generation 24/7 at a fraction of onshore cost, while population-scale data assets mature.",
-        },
-        pullQuote: {
-          text: "In the next decade, the constraint on evidence will not be the ability to run a trial — it will be the discipline to turn the data the world already generates into conclusions a regulator will trust.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
-      },
-    ],
+        "insightBox": {
+          "icon": "📊",
+          "label": "RWE Insight",
+          "title": "Fit-for-purpose beats big",
+          "description": "Regulators do not reward data volume; they reward relevance, reliability, and transparency. An RWE study designed around a specific decision — with a pre-specified protocol and a defensible data-quality argument — outperforms a larger, exploratory dataset every time."
+        }
+      }
+    ]
   },
   {
-    id: "ch19",
-    num: "19",
-    partLabel: "Part VI · Advanced Modalities",
-    title: "AI Ethics, Bias & Responsible Innovation in Pharma",
-    lead: "Governance frameworks for ethical AI deployment in healthcare and drug development.",
-    metrics: [
-      { value: "87%", label: "Executives Cite AI Ethics Risk" },
-      { value: "30%", label: "AI Models Show Bias" },
-      { value: "EU AI Act", label: "Regulatory Framework" },
-      { value: "GxP", label: "Validation Required" },
+    "id": "ch19",
+    "num": "19",
+    "partLabel": "Part VI · Advanced Modalities",
+    "title": "AI Ethics, Bias & Responsible Innovation in Pharma",
+    "lead": "Governance frameworks for ethical, validated, and regulatory-compliant AI across drug development and commercial operations.",
+    "metrics": [
+      {
+        "value": "EU AI Act",
+        "label": "In Force Aug 2024"
+      },
+      {
+        "value": "Aug 2027",
+        "label": "High-Risk Med-Device AI"
+      },
+      {
+        "value": "GAMP AI",
+        "label": "ISPE Guide (2025)"
+      },
+      {
+        "value": "7-Step",
+        "label": "FDA AI Credibility"
+      }
     ],
-    tags: ["AI Ethics", "Responsible AI", "Governance", "Bias"],
-    sections: [{ title: "Executive Summary", content: ["As AI becomes embedded in drug discovery, clinical trials, and commercial operations, responsible innovation frameworks are essential to maintain trust and regulatory compliance."] }],
-  },
-  {
-    id: "ch20",
-    num: "20",
-    partLabel: "Part VI · Advanced Modalities",
-    title: "The CDO Playbook — Digital Leadership & Strategy",
-    lead: "Building the Chief Digital Officer function and digital transformation organisation.",
-    metrics: [
-      { value: "65%", label: "Top 20 Pharma Have CDOs" },
-      { value: "3–5yr", label: "Avg. CDO Tenure" },
-      { value: "$50M+", label: "Avg. Digital Budget" },
-      { value: "200+", label: "Digital FTEs at Leaders" },
+    "tags": [
+      "AI Ethics",
+      "Responsible AI",
+      "Governance",
+      "Bias"
     ],
-    tags: ["CDO", "Digital Leadership", "Operating Model", "Strategy"],
-    sections: [
+    "sections": [
       {
-        title: "Executive Summary",
-        content: [
-          "The Chief Digital Officer has become one of the most consequential — and most precarious — roles in pharma leadership. The mandate is enterprise-wide, the budget is significant, and the expectations are compressed into tenures that average just three to five years. The CDOs who succeed treat the role not as head of a technology function, but as the architect of a new operating model.",
-          "This playbook distils what separates digital leaders who deliver compounding value from those who stall in pilot purgatory: a clear mandate, a federated operating model, disciplined value realisation, and relentless attention to adoption and change — the human side that technology cannot fix.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "The single strongest predictor of CDO success is not budget size or technology choice — it is the clarity of the mandate and the strength of CEO and board sponsorship. Where the CDO owns a business outcome (cycle time, cost-to-serve, launch effectiveness) rather than a technology portfolio, transformation compounds; where they own 'innovation' in the abstract, it stalls.",
-        },
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "As AI moves into drug discovery, trials, manufacturing, and commercial decisions, responsible-innovation governance has become a licence-to-operate issue. Two regimes now anchor it: the <strong>EU AI Act</strong> (in force 1 Aug 2024; high-risk medical-device AI provisions apply from 2 Aug 2027) and the FDA's January 2025 <strong>draft</strong> risk-based credibility framework for AI in regulatory decision-making. Pharma must build for a dual US/EU compliance surface."
+        }
       },
       {
-        title: "The Mandate: What a Pharma CDO Actually Owns",
-        content: [
-          "A CDO without a precise mandate inherits everyone's digital wishlist and no authority to prioritise it. The mandate must be defined as a small set of enterprise outcomes, with the budget, talent, and decision rights to deliver them.",
+        "title": "The Compliance Timeline",
+        "content": [
+          "The EU AI Act phases in over several years: prohibited practices and AI-literacy obligations from Feb 2025, general-purpose AI governance from Aug 2025, most high-risk Annex III systems from Aug 2026, and <strong>high-risk AI embedded in medical devices (via MDR/IVDR) from 2 Aug 2027</strong>. The FDA's guidance remains draft (issued 7 Jan 2025; not finalised as of mid-2026) and should not be cited as settled law."
         ],
-        bulletPoints: [
-          "<strong>Digital & Data Strategy</strong> — Owning the enterprise digital roadmap and its linkage to corporate strategy and the P&L, not a parallel technology agenda.",
-          "<strong>Data & AI Platform</strong> — The shared, governed foundation (cloud, data platform, MLOps, GenAI) that every function builds on rather than re-inventing.",
-          "<strong>Digital Product & Delivery</strong> — A product-operating model that ships and scales capabilities across R&D, clinical, manufacturing, and commercial.",
-          "<strong>Change, Adoption & Literacy</strong> — Building the digital-native culture and skills without which technology investment does not convert to value.",
-          "<strong>Value Realisation</strong> — Owning a transparent benefits-tracking discipline that ties every initiative to a measurable business outcome.",
-        ],
-      },
-      {
-        title: "The Digital Operating Model",
-        content: [
-          "The CDO's core deliverable is an operating model — the repeatable machine that turns strategy into scaled, adopted capability. Five engines run in parallel.",
-        ],
-        steps: [
-          { num: "01", title: "Strategy & Portfolio", description: "A prioritised, outcome-linked portfolio with clear stage-gates; ruthless about killing low-value pilots and funding what scales." },
-          { num: "02", title: "Platform & Data", description: "Shared cloud, data, and AI foundations with governance built in — so functions consume capability rather than rebuild it." },
-          { num: "03", title: "Product & Delivery", description: "Cross-functional product teams with persistent ownership, agile delivery, and enterprise-architecture guardrails." },
-          { num: "04", title: "Adoption & Change", description: "Embedded change management, digital-literacy programmes, and incentives aligned to new ways of working." },
-          { num: "05", title: "Value & Governance", description: "A benefits-realisation office and steering cadence that make value visible to the board and reallocate capital dynamically." },
-        ],
-        insightBox: {
-          icon: "🎯",
-          label: "Leadership Principle",
-          title: "Own an outcome, not an org chart",
-          description: "CDOs who are measured on business outcomes — time-to-market, cost-to-serve, launch effectiveness — command the cross-functional authority to change how work is done. Those measured on 'delivering digital' are structurally set up to stall.",
-        },
-      },
-      {
-        title: "Organisation Design: Federated by Default",
-        content: [
-          "There is no single right structure — but the centre of gravity for mature pharma is a federated (hub-and-spoke) model: a lean central team owns platforms, standards, and scarce talent, while embedded digital teams sit inside the business functions and the GCC executes at scale.",
-        ],
-        table: {
-          headers: ["Model", "Description", "Best For", "Primary Risk"],
-          rows: [
-            ["Centralised", "One central digital unit owns strategy, platform, and delivery", "Early-stage transformation; setting standards", "Bottlenecks; disconnect from the business"],
-            ["Decentralised", "Each function runs its own digital agenda and teams", "Highly autonomous, mature functions", "Duplication; fragmented data & tooling"],
-            ["Federated (hub & spoke)", "Central platform + standards; embedded teams in functions; GCC scale", "Scaling enterprises with a strong GCC", "Requires clear decision rights to avoid friction"],
+        "table": {
+          "headers": [
+            "Regime",
+            "Status",
+            "Scope for Pharma",
+            "Practical Obligation"
           ],
-        },
+          "rows": [
+            [
+              "EU AI Act",
+              "In force Aug 2024; phased to 2027",
+              "High-risk AI, incl. medical devices",
+              "Risk mgmt, data governance, human oversight, logging"
+            ],
+            [
+              "FDA AI guidance",
+              "Draft (Jan 2025)",
+              "AI supporting regulatory decisions",
+              "7-step, context-of-use credibility assessment"
+            ],
+            [
+              "ISPE GAMP AI Guide",
+              "Published Jul 2025",
+              "GxP AI/ML systems",
+              "Full validation lifecycle; bias & hallucination controls"
+            ],
+            [
+              "21 CFR Part 11 / Annex 11",
+              "In force",
+              "Electronic records for AI outputs",
+              "Audit trails, e-signatures, data integrity (ALCOA+)"
+            ]
+          ]
+        }
       },
       {
-        title: "The First 12 Months: A Sequenced Agenda",
-        content: [
-          "Credibility is won early. A disciplined first year secures sponsorship, delivers visible proof, and lays the platform for scale — in that order.",
+        "title": "From Principles to Validated Practice",
+        "content": [
+          "The <strong>ISPE GAMP Guide: Artificial Intelligence (July 2025)</strong> extends GAMP 5 into a concrete AI/ML validation lifecycle covering data quality, bias, hallucination rate, and prompt sensitivity — the bridge between ethical intent and deployable, audited systems. Bias is not abstract: models trained on non-representative populations can systematically misperform for under-represented groups, a patient-safety and equity risk that demands explicit measurement."
         ],
-        steps: [
-          { num: "0–90 days", title: "Listen, Diagnose, Anchor", description: "Run a PDMF maturity baseline, secure an explicit board-endorsed mandate, and align on 3–4 outcome metrics. Identify two high-visibility quick wins." },
-          { num: "3–6 mo", title: "Prove & Platform", description: "Deliver the quick wins, stand up the shared data/AI platform foundation, and establish governance and the value-realisation office." },
-          { num: "6–12 mo", title: "Scale & Institutionalise", description: "Roll out the operating model, launch digital-literacy at scale, and publish a transparent benefits dashboard to the board. Set the Horizon 2 agenda." },
-        ],
-      },
-      {
-        title: "Funding, Value Realisation & Why Leaders Fail",
-        content: [
-          "Digital budgets at leading pharma routinely exceed $50M, yet spend is not the constraint — conversion of spend to value is. Fund transformation as a managed portfolio with stage-gates and dynamic reallocation, not as an annual lump sum, and make benefits visible to the board every quarter.",
-          "The failure modes are consistent and avoidable: <strong>pilot purgatory</strong> (endless proofs-of-concept that never scale), <strong>technology without process redesign</strong> (automating dysfunction), <strong>weak sponsorship</strong> (a mandate that evaporates under budget pressure), <strong>neglected adoption</strong> (tools no one uses), and <strong>vanity metrics</strong> (activity reported instead of outcomes).",
-        ],
-        pullQuote: {
-          text: "The best digital leaders are not the ones with the boldest technology vision — they are the ones who convert vision into adopted capability, and adopted capability into outcomes the board can see.",
-          cite: "KR · Pharma Digital Transformation Handbook",
+        "callout": {
+          "type": "case-study",
+          "label": "📋 Responsible-AI Operating Pattern",
+          "content": "Leading programmes pair an <strong>AI governance board</strong> (ethics, legal, quality, science) with an <strong>AI/ML CoE</strong> that owns MLOps, model cards, bias testing, and explainability. Every GxP-impacting model carries a documented context-of-use, a validation dossier, and human-in-the-loop checkpoints — so 'responsible AI' is a controlled process, not a slogan."
         },
-      },
-    ],
+        "insightBox": {
+          "icon": "⚖️",
+          "label": "Governance",
+          "title": "Regulate the use, not the algorithm",
+          "description": "Both the FDA and the EU anchor oversight in context-of-use and risk, not in the model architecture. The same model can be low-risk in a research assistant and high-risk in a batch-release decision. Govern where the output touches a patient or a regulated record."
+        }
+      }
+    ]
   },
   {
-    id: "ch21",
-    num: "21",
-    partLabel: "Part VI · Advanced Modalities",
-    title: "Digital Transformation Case Studies",
-    lead: "Real-world implementation stories from pharma digital leaders.",
-    metrics: [
-      { value: "12", label: "Detailed Case Studies" },
-      { value: "Roche", label: "AI Drug Discovery" },
-      { value: "AstraZeneca", label: "Commercial AI" },
-      { value: "Pfizer", label: "Digital Trials" },
-    ],
-    tags: ["Case Studies", "Best Practices", "Implementation", "Results"],
-    sections: [
+    "id": "ch20",
+    "num": "20",
+    "partLabel": "Part VI · Advanced Modalities",
+    "title": "The CDO Playbook — Digital Leadership & Strategy",
+    "lead": "Building the digital and AI leadership function that converts transformation ambition into sustained enterprise performance.",
+    "metrics": [
       {
-        title: "Executive Summary",
-        content: [
-          "Frameworks convince; proof points convert. This chapter distils publicly reported digital-transformation stories from across the industry into transferable lessons — what was done, the direction of the reported outcome, and how a GCC-anchored operating model would replicate it. The figures cited are those disclosed publicly by the organisations or reported in the scientific and trade press; they are directional exemplars, not audited benchmarks.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "The pattern across every credible case is consistent: transformation value comes from redesigning a process around data and AI — not from bolting technology onto an unchanged workflow. The organisations that scaled did so by industrialising a capability, not by running a clever pilot.",
-        },
+        "value": "CDO / CAIO",
+        "label": "C-Suite Mandate"
       },
       {
-        title: "Case Study Landscape",
-        content: [
-          "A cross-section of reported initiatives spanning discovery, trials, commercial, and manufacturing.",
+        "value": "2024",
+        "label": "Pfizer & Lilly CAIOs"
+      },
+      {
+        "value": "1–5%",
+        "label": "Revenue on Digital"
+      },
+      {
+        "value": "3-Horizon",
+        "label": "Operating Model"
+      }
+    ],
+    "tags": [
+      "CDO",
+      "Digital Leadership",
+      "Operating Model",
+      "Strategy"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Digital leadership in pharma is professionalising fast. The Chief Digital Officer role is now joined by a formal <strong>Chief AI Officer</strong> function — Pfizer named a CAIO in August 2024 and Eli Lilly appointed its first CAIO in October 2024. The mandate has shifted from running IT projects to owning an enterprise operating-model change with real budget, decision rights, and board-level accountability."
+        }
+      },
+      {
+        "title": "The Digital Leadership Mandate",
+        "content": [
+          "The single strongest predictor of transformation success is a clearly articulated vision endorsed by the CEO and board, with an empowered leader to execute it. Investment typically runs <strong>1–3% of revenue for companies in scaling mode, rising to 4–5% in accelerated transformation</strong>. Governance must be the lightest model that works — clear decision rights, minimal approval layers."
         ],
-        table: {
-          headers: ["Organisation", "Domain", "What Was Done (Publicly Reported)", "Reported Direction"],
-          rows: [
-            ["Insilico Medicine", "AI Drug Discovery", "Generative-AI target discovery and molecular design (INS018_055 for IPF)", "Reached Phase II in ~18 months vs 4–6 year norm"],
-            ["DeepMind (AlphaFold)", "Structural Biology", "Deep-learning protein-structure prediction database", "200M+ structures; step-change in target work"],
-            ["Pfizer", "Digital Trials", "Digital recruitment for the COVID-19 vaccine programme", "~43,000 enrolled in under four months"],
-            ["Moderna", "Cloud-Native mRNA", "Cloud/AWS-based platform for rapid candidate design", "Vaccine sequence designed in ~42 days"],
-            ["AstraZeneca", "AI in R&D", "Knowledge-graph and AI partnerships for target identification", "Faster hypothesis generation across pipeline"],
-            ["Sun Pharma / Dr. Reddy's", "Manufacturing Intelligence", "Digital quality, analytics, and supply-chain modernisation", "Efficiency and compliance gains at scale"],
+        "pillars": [
+          {
+            "num": "Mandate 01",
+            "title": "Strategy & Portfolio",
+            "description": "Owns the digital/AI portfolio, prioritisation, and the build-vs-buy-vs-partner architecture.",
+            "colorVariant": "indigo"
+          },
+          {
+            "num": "Mandate 02",
+            "title": "Data & AI Platform",
+            "description": "Enterprise data foundation, MLOps, and GxP-validated AI pipelines as shared infrastructure.",
+            "colorVariant": "indigo"
+          },
+          {
+            "num": "Mandate 03",
+            "title": "Talent & Culture",
+            "description": "Digital-native hiring, reskilling at scale, and the change management that makes technology stick.",
+            "colorVariant": "indigo"
+          },
+          {
+            "num": "Mandate 04",
+            "title": "Value Realisation",
+            "description": "A transparent KPI/OKR scorecard tying investment to cycle-time, quality, and revenue outcomes.",
+            "colorVariant": "indigo"
+          }
+        ]
+      },
+      {
+        "title": "Sequencing the Transformation",
+        "content": [],
+        "steps": [
+          {
+            "num": "H1",
+            "title": "Horizon 1 · Stabilise (0–12 mo)",
+            "description": "Establish the role and governance, deploy the cloud data foundation, and land early wins that fund credibility."
+          },
+          {
+            "num": "H2",
+            "title": "Horizon 2 · Differentiate (12–36 mo)",
+            "description": "Scale AI across clinical, regulatory, PV, and commercial; stand up CoEs; embed OKRs and change management."
+          },
+          {
+            "num": "H3",
+            "title": "Horizon 3 · Lead (36+ mo)",
+            "description": "Operate as a co-equal innovation partner — AI-native processes, outcome-based payer contracts, exported capability."
+          }
+        ],
+        "pullQuote": {
+          "text": "The organisations that will lead the next decade are not those with the largest R&D budgets, but those with the most intelligent, interconnected, and adaptive operating models — and a leader empowered to build one.",
+          "cite": "KR · Chapter 20 · The CDO Playbook"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ch21",
+    "num": "21",
+    "partLabel": "Part VI · Advanced Modalities",
+    "title": "Digital Transformation Case Studies",
+    "lead": "Real-world 2024–2026 implementation stories — from AI-discovered drugs and enterprise agents to the GLP-1 manufacturing surge.",
+    "metrics": [
+      {
+        "value": "$36.5B",
+        "label": "Lilly GLP-1 (2025)"
+      },
+      {
+        "value": "~20k",
+        "label": "Sanofi 'plai' Users/day"
+      },
+      {
+        "value": "4,000+",
+        "label": "Moderna Custom GPTs"
+      },
+      {
+        "value": "rentosertib",
+        "label": "AI Drug PoC"
+      }
+    ],
+    "tags": [
+      "Case Studies",
+      "Best Practices",
+      "Implementation",
+      "Results"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "The most instructive evidence for pharma digital transformation is now operational, not theoretical. From the first prospective clinical proof-of-concept for an AI-discovered drug, to enterprise-wide agentic AI deployments, to the manufacturing scale-up behind the GLP-1 boom, 2024–2026 produced a set of outcomes that turn frameworks into proof."
+        }
+      },
+      {
+        "title": "Case Studies in Practice",
+        "content": [],
+        "table": {
+          "headers": [
+            "Company",
+            "Initiative",
+            "Outcome (sourced)"
           ],
-        },
+          "rows": [
+            [
+              "Insilico Medicine",
+              "End-to-end AI discovery (rentosertib)",
+              "Positive Phase IIa in IPF, 2025 (Nature Medicine); now Phase III — first prospective AI-drug PoC"
+            ],
+            [
+              "Isomorphic Labs",
+              "AI-first drug design",
+              "$600M raised 2025; Lilly (up to $1.7B) & Novartis (up to $1.2B) deals; nearing first-in-human"
+            ],
+            [
+              "Eli Lilly",
+              "GLP-1 manufacturing scale-up",
+              "Tirzepatide ~$36.5B in 2025 (~56% of revenue); 2026 guidance $80–83B"
+            ],
+            [
+              "Sanofi",
+              "'plai' enterprise AI assistant",
+              "~20,000 daily users; targeted ~70% reduction in product-quality-review time"
+            ],
+            [
+              "Moderna",
+              "GenAI at scale (with OpenAI)",
+              "4,000+ custom GPTs deployed across the enterprise"
+            ],
+            [
+              "Recursion",
+              "AI-biotech consolidation",
+              "Exscientia merger closed Nov 2024; combined phenomics + DMTA platform"
+            ]
+          ]
+        }
       },
       {
-        title: "AI-Native Drug Discovery",
-        content: [
-          "<strong>Insilico Medicine</strong> is the most-cited proof point for end-to-end AI discovery: its generative-AI platform nominated a target and designed a novel molecule for idiopathic pulmonary fibrosis (INS018_055) that publicly reached Phase II roughly 18 months from programme start — against an industry norm measured in years. <strong>DeepMind's AlphaFold</strong> reframed the upstream problem entirely, releasing predicted structures for 200M+ proteins and collapsing a bottleneck that structural biologists had faced for decades.",
-          "The transferable lesson is not the specific tool but the operating model: a closed loop between computational design and experimental validation, run by a team that owns the whole cycle — exactly the kind of integrated capability a mature GCC is built to host.",
+        "title": "What the Winners Have in Common",
+        "content": [
+          "Across these stories the pattern repeats: <strong>CEO-level ownership</strong>, <strong>investment at scale</strong>, <strong>foundational data work before AI deployment</strong>, and a <strong>culture programme</strong> that reaches every level. The failures share the opposite — technology deployed onto broken processes, which automates dysfunction rather than removing it."
         ],
-      },
-      {
-        title: "Digital & Decentralised Trials",
-        content: [
-          "<strong>Pfizer</strong> enrolled roughly 43,000 participants in its COVID-19 vaccine trial in under four months using digital recruitment and site enablement — a compressed timeline that would have been implausible with analogue processes. <strong>Moderna</strong> demonstrated the value of a cloud-native foundation, publicly reporting that it designed its vaccine sequence in about 42 days by treating its platform as software.",
-          "Both illustrate the same principle: speed is a property of the operating model, not a heroic one-off. The recruitment analytics, ePRO/eConsent operations, and data management that make it repeatable are precisely the workstreams GCC clinical-data-science teams already run at scale.",
-        ],
-        insightBox: {
-          icon: "⚙️",
-          label: "Pattern",
-          title: "Industrialise the capability, don't celebrate the pilot",
-          description: "Every durable outcome here came from making a new way of working repeatable and governed — the difference between a proof-of-concept and a platform is the operating model wrapped around it.",
-        },
-      },
-      {
-        title: "Commercial, Genomics & Manufacturing",
-        content: [
-          "<strong>AstraZeneca</strong> has publicly described using knowledge graphs and AI partnerships to accelerate target identification and reasoning across its pipeline. <strong>GSK</strong> has invested heavily in functional genomics and machine learning to improve the probability of success in early research. On the supply side, Indian leaders such as <strong>Sun Pharma</strong> and <strong>Dr. Reddy's</strong> have modernised quality and manufacturing with digital analytics — demonstrating that digital leadership is not the exclusive preserve of originator big pharma.",
-        ],
-        bulletPoints: [
-          "<strong>Own the whole loop</strong> — Value accrues to teams that own design-to-decision cycles end to end, not to those handed a single step.",
-          "<strong>Data foundation first</strong> — Every scaled outcome sat on a cloud data and platform layer built before the flashy use case.",
-          "<strong>Redesign, don't automate</strong> — Speed and quality came from re-architecting the process, not accelerating the old one.",
-          "<strong>GCC as the engine</strong> — The recruitment analytics, data curation, and quality intelligence behind these stories are exactly what mature GCCs run 24/7.",
-        ],
-        pullQuote: {
-          text: "The lesson of every case study is the same: technology did not transform these organisations — a redesigned, data-native operating model did, and technology made it possible.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
-      },
-    ],
+        "insightBox": {
+          "icon": "🏆",
+          "label": "Lesson",
+          "title": "Proof compounds",
+          "description": "Each credible outcome lowers the internal cost of the next initiative. The strategic value of a first AI-discovery win, or a first agentic-AI deployment, is not the single result — it is the organisational permission it creates to move faster everywhere else."
+        }
+      }
+    ]
   },
   {
-    id: "ch22",
-    num: "22",
-    partLabel: "Part VII · Advanced Technical",
-    title: "Interoperability & Health Data Standards",
-    lead: "HL7 FHIR, OMOP, CDISC, and the foundation of connected pharma ecosystems.",
-    metrics: [
-      { value: "FHIR R4", label: "Standard Adoption" },
-      { value: "OMOP", label: "Observational Data" },
-      { value: "CDISC", label: "Clinical Data" },
-      { value: "EHDS", label: "EU Health Data Space" },
+    "id": "ch22",
+    "num": "22",
+    "partLabel": "Part VII · Advanced Technical",
+    "title": "Interoperability & Health Data Standards",
+    "lead": "HL7 FHIR, OMOP, CDISC, IDMP and the standards foundation that makes a connected pharma ecosystem — and RWE at scale — possible.",
+    "metrics": [
+      {
+        "value": "FHIR R4",
+        "label": "Exchange Standard"
+      },
+      {
+        "value": "OMOP CDM",
+        "label": "Observational Data"
+      },
+      {
+        "value": "IDMP",
+        "label": "Structured Product Data"
+      },
+      {
+        "value": "EHDS",
+        "label": "EU Health Data Space"
+      }
     ],
-    tags: ["Interoperability", "FHIR", "OMOP", "Data Standards"],
-    sections: [
+    "tags": [
+      "Interoperability",
+      "FHIR",
+      "OMOP",
+      "Data Standards"
+    ],
+    "sections": [
       {
-        title: "Executive Summary",
-        content: [
-          "Interoperability is the unglamorous foundation on which every other digital ambition rests. AI models, real-world evidence, connected trials, and seamless submissions all depend on data that can move between systems and organisations without losing meaning. Without shared standards, each initiative rebuilds its own plumbing — and the enterprise accumulates integration debt faster than it creates value.",
-          "The strategic shift is that interoperability is no longer a back-office IT concern; regulators now mandate it. Health authorities and health systems are converging on a common set of standards, and pharma organisations that adopt them early gain a durable data advantage.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "Standards are a strategy, not a compliance chore. Adopting FHIR, OMOP, and CDISC as an enterprise data fabric turns every downstream capability — RWE, submissions, connected trials, IDMP — from a bespoke integration project into a repeatable, governed workflow.",
-        },
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Interoperability is the unglamorous foundation on which every other capability — RWE, AI, digital trials, patient engagement — depends. Without shared standards, data is trapped in silos and AI is trained on fragments. The maturing stack (HL7 FHIR for exchange, OMOP for observational analytics, CDISC for clinical submissions, IDMP for product identification) is what turns fragmented health data into a usable substrate."
+        }
       },
       {
-        title: "Why Interoperability Is Now Strategic",
-        content: [
-          "Two forces have moved interoperability up the agenda. First, the value cases that matter most — RWE at population scale, AI trained on connected data, and automated submissions — are impossible without semantic consistency across sources. Second, regulation is now prescriptive: the US ONC Cures Act rules mandate standardised APIs, the EU's European Health Data Space (EHDS) creates a governed framework for health-data exchange, and submission standards are enforced by agencies worldwide.",
-        ],
-      },
-      {
-        title: "The Core Standards Landscape",
-        content: [
-          "A small set of standards covers most of the pharma data estate. Fluency in how they interlock is the practical foundation of a connected enterprise.",
-        ],
-        table: {
-          headers: ["Standard", "Domain", "Purpose", "Where It Applies"],
-          rows: [
-            ["HL7 FHIR (R4)", "Clinical exchange", "Modern API-based exchange of health data", "EHR integration, DCT, patient apps"],
-            ["OMOP CDM (OHDSI)", "Observational data", "Common model for reproducible RWD analytics", "RWE, federated network studies"],
-            ["CDISC (SDTM/ADaM/CDASH/SEND)", "Clinical trials", "Standardised trial data capture and submission", "Regulatory submissions (FDA/PMDA)"],
-            ["ISO IDMP", "Product identification", "Global identification of medicinal products", "Regulatory (RIM), pharmacovigilance"],
-            ["Terminologies", "SNOMED CT · LOINC · MedDRA · ICD", "Shared clinical & safety vocabularies", "Coding, PV, phenotyping"],
-            ["DICOM", "Medical imaging", "Imaging data and metadata standard", "Imaging biomarkers, digital pathology"],
+        "title": "The Standards Stack",
+        "content": [],
+        "table": {
+          "headers": [
+            "Standard",
+            "Domain",
+            "Purpose",
+            "Why It Matters"
           ],
-        },
+          "rows": [
+            [
+              "HL7 FHIR (R4)",
+              "Health data exchange",
+              "API-based clinical data interoperability",
+              "The lingua franca for EHR and app integration"
+            ],
+            [
+              "OMOP CDM",
+              "Observational research",
+              "Common data model for RWE at scale",
+              "Enables federated, reproducible RWE (DARWIN EU, OHDSI)"
+            ],
+            [
+              "CDISC (SDTM/ADaM)",
+              "Clinical trials",
+              "Standardised trial datasets",
+              "Mandated for FDA/PMDA submissions"
+            ],
+            [
+              "IDMP",
+              "Regulatory",
+              "Identification of Medicinal Products",
+              "Structured, machine-readable product data across agencies"
+            ],
+            [
+              "SNOMED CT / MedDRA",
+              "Terminology",
+              "Clinical & safety coding",
+              "Consistent meaning across systems and borders"
+            ]
+          ]
+        }
       },
       {
-        title: "The Regulatory & Policy Layer",
-        content: [
-          "Standards adoption is increasingly non-negotiable. FDA and PMDA require CDISC-conformant datasets for submissions; the EU's EHDS establishes rights and infrastructure for both primary (care) and secondary (research) use of health data; and the US ONC framework, built on FHIR and USCDI, mandates standardised, API-accessible data with explicit anti-information-blocking provisions.",
+        "title": "The European Health Data Space",
+        "content": [
+          "The <strong>EU Health Data Space (EHDS)</strong> is the most ambitious interoperability programme in the sector — a legal and technical framework for both primary use (care) and secondary use (research, innovation, policy) of health data across member states, built on federated infrastructure such as DARWIN EU. For pharma it promises pan-European RWE at unprecedented scale, under a demanding governance regime."
         ],
-        insightBox: {
-          icon: "🔗",
-          label: "Architecture Principle",
-          title: "Map once, use everywhere",
-          description: "Harmonising data to a common model and shared terminologies at ingestion — rather than per project — is the single highest-leverage decision in enterprise data architecture. It converts every future use case from an integration project into a query.",
-        },
-      },
-      {
-        title: "Building the Interoperable Data Fabric",
-        content: [
-          "An interoperable enterprise is engineered in five layers — the pattern behind FAIR (Findable, Accessible, Interoperable, Reusable) data at scale.",
-        ],
-        steps: [
-          { num: "01", title: "Ingestion & Connectivity", description: "FHIR-based APIs and connectors to acquire clinical, claims, and operational data from internal and external systems." },
-          { num: "02", title: "Terminology & Semantic Mapping", description: "Map incoming data to shared vocabularies (SNOMED CT, LOINC, MedDRA) so meaning is preserved across sources." },
-          { num: "03", title: "Common Data Model", description: "Land harmonised data in a standard model (OMOP for observational, CDISC for trials) to make analytics portable and reproducible." },
-          { num: "04", title: "Governance & FAIR Metadata", description: "Catalogue, lineage, access control, and privacy compliance so data is discoverable and trustworthy." },
-          { num: "05", title: "Exchange & Federation", description: "Secure APIs and federated analytics that let evidence be generated across organisations without moving raw patient data." },
-        ],
-      },
-      {
-        title: "Value & Use Cases",
-        content: [
-          "Interoperability is a force multiplier — it makes every other capability faster, cheaper, and more scalable.",
-        ],
-        bulletPoints: [
-          "<strong>RWE at Scale</strong> — OMOP-standardised data enables federated, reproducible studies across networks and geographies.",
-          "<strong>Faster Submissions</strong> — CDISC automation compresses dataset preparation and reduces agency queries.",
-          "<strong>Connected & Decentralised Trials</strong> — FHIR integration streams EHR and device data directly into trial systems.",
-          "<strong>Regulatory Intelligence</strong> — IDMP and structured product data underpin global RIM, labelling, and pharmacovigilance.",
-        ],
-        pullQuote: {
-          text: "Every AI ambition in pharma is downstream of a data-interoperability decision. Get the standards right, and the rest becomes engineering; get them wrong, and every initiative pays an integration tax forever.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
-      },
-    ],
+        "insightBox": {
+          "icon": "🔗",
+          "label": "Architecture Insight",
+          "title": "Standards are a strategy, not a chore",
+          "description": "Organisations that treat FHIR, OMOP, and IDMP adoption as a compliance checkbox stay trapped in point-to-point integration debt. Those that adopt them as an architectural principle — data that is Findable, Accessible, Interoperable, and Reusable by design — unlock every downstream AI and evidence capability far more cheaply."
+        }
+      }
+    ]
   },
   {
-    id: "ch23",
-    num: "23",
-    partLabel: "Part VII · Advanced Technical",
-    title: "Precision Medicine & Genomics Digital Infrastructure",
-    lead: "Building the digital backbone for personalised medicine and genomics-driven development.",
-    metrics: [
-      { value: "$120B", label: "Precision Med Market 2030" },
-      { value: "100M+", label: "Genomes Sequenced" },
-      { value: "CDx", label: "Companion Diagnostics" },
-      { value: "NGS", label: "Next-Gen Sequencing" },
+    "id": "ch23",
+    "num": "23",
+    "partLabel": "Part VII · Advanced Technical",
+    "title": "Precision Medicine & Genomics Digital Infrastructure",
+    "lead": "Building the digital backbone for personalised medicine — from genomic data platforms to companion diagnostics and patient stratification.",
+    "metrics": [
+      {
+        "value": "~$249B",
+        "label": "Market by 2030"
+      },
+      {
+        "value": "500K",
+        "label": "UK Biobank WGS"
+      },
+      {
+        "value": "CDx",
+        "label": "Companion Dx ~$9B"
+      },
+      {
+        "value": "NGS",
+        "label": "Next-Gen Sequencing"
+      }
     ],
-    tags: ["Precision Medicine", "Genomics", "Biomarkers", "CDx"],
-    sections: [
-      {
-        title: "Executive Summary",
-        content: [
-          "Precision medicine reframes the therapeutic question from 'what treats this disease?' to 'what treats this patient?'. That shift is powered by molecular data — genomic, transcriptomic, and proteomic — at a scale and complexity that only a purpose-built digital infrastructure can handle. A single sequencing run produces gigabytes; a population programme produces petabytes.",
-          "The strategic capability is not sequencing itself, which is increasingly commoditised, but the interpretation stack: turning raw reads into clinically actionable insight, linking biomarkers to therapies, and stratifying patients for development and care. This is where value — and competitive advantage — concentrates.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "The bottleneck in precision medicine has moved from generating molecular data to interpreting it. The winners build the tertiary-analysis and knowledge layer — variant interpretation, biomarker-to-therapy linkage, and patient stratification — not just the sequencing pipeline.",
-        },
-      },
-      {
-        title: "The Data Foundation of Precision Medicine",
-        content: [
-          "Precision medicine rests on multi-omics: genomics (DNA variants), transcriptomics (gene expression), proteomics, and increasingly the microbiome and metabolome — integrated with clinical and imaging data. Next-generation sequencing has driven the cost of a genome from billions of dollars to the low hundreds, unlocking population-scale programmes but shifting the burden decisively onto storage, compute, and interpretation.",
-        ],
-      },
-      {
-        title: "The Genomics Data Stack",
-        content: [
-          "Genomic data flows through three analytical stages, each a distinct engineering and governance responsibility.",
-        ],
-        steps: [
-          { num: "01", title: "Primary Analysis", description: "Base-calling from the sequencer — converting raw signal into sequence reads with quality scores." },
-          { num: "02", title: "Secondary Analysis", description: "Alignment to a reference genome and variant calling (SNVs, indels, CNVs, structural variants) using pipelines such as GATK or hardware-accelerated equivalents." },
-          { num: "03", title: "Tertiary Analysis & Interpretation", description: "Annotation, ACMG classification, and clinical interpretation against knowledge bases (ClinVar, gnomAD) — where raw variants become actionable insight." },
-          { num: "04", title: "Clinical Decision & Reporting", description: "Structured reports linked to therapy options, delivered to clinicians via FHIR Genomics and decision-support systems." },
-        ],
-      },
-      {
-        title: "Companion Diagnostics & Biomarker-Driven Development",
-        content: [
-          "The tightest expression of precision medicine is the drug–diagnostic pair: a companion diagnostic (CDx) that identifies the patients a therapy will help. Co-developing therapy and diagnostic — as with HER2, EGFR, PD-L1, and BRCA — reshapes clinical development, requiring biomarker strategy from the earliest trials and digital integration between the diagnostic result and the prescribing decision.",
-        ],
-        insightBox: {
-          icon: "🎯",
-          label: "Development Principle",
-          title: "Stratify early, or fail expensively late",
-          description: "Biomarker-driven patient selection concentrates a trial on the population most likely to respond — raising success rates, shrinking trials, and de-risking late-stage programmes. The biomarker strategy belongs in Phase I thinking, not Phase III rescue.",
-        },
-      },
-      {
-        title: "Infrastructure, Stratification & the GCC Role",
-        content: [
-          "Delivering precision medicine at scale requires infrastructure most organisations are still building: elastic HPC/cloud for sequencing pipelines, curated variant knowledge bases, pharmacogenomics rules, and — critically — governance for some of the most sensitive data an enterprise holds. Genomic data is identifying and immutable; privacy and consent are not optional. Mature GCCs are increasingly home to this bioinformatics and data-engineering capability.",
-        ],
-        bulletPoints: [
-          "<strong>Genomic Data Platforms</strong> — Scalable, secure pipelines and lakes for multi-omics at population scale.",
-          "<strong>Variant Interpretation</strong> — Curation against ClinVar/gnomAD with ACMG-aligned classification and pharmacogenomics.",
-          "<strong>Patient Stratification Engines</strong> — Biomarker-based cohorting for trial enrichment and precision prescribing.",
-          "<strong>Privacy & Consent Governance</strong> — Robust controls for identifying, immutable genomic data across jurisdictions.",
-        ],
-        pullQuote: {
-          text: "Sequencing is becoming a commodity; interpretation is the moat. The organisations that own the journey from raw reads to the right therapy for the right patient will define precision medicine.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
-      },
+    "tags": [
+      "Precision Medicine",
+      "Genomics",
+      "Biomarkers",
+      "CDx"
     ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Precision medicine is reshaping how drugs are developed, targeted, and reimbursed. The market is projected to reach roughly <strong>$249B by 2030</strong> (from ~$87.5B in 2023, ~16% CAGR; Grand View). Realising it requires an entirely new digital infrastructure: genomic data platforms, companion-diagnostic integration, and patient-stratification engines that connect a molecular signature to the right therapy."
+        }
+      },
+      {
+        "title": "The Genomics Data Foundation",
+        "content": [
+          "Population-scale genomics is now real: the <strong>UK Biobank completed whole-genome sequencing of its ~500,000-participant cohort</strong> (491,554 through end-2024), and an estimated 2M+ human genomes have been sequenced globally. This data is only useful atop a governed infrastructure — NGS pipelines (alignment, variant calling), multi-omic integration, and the interpretation layer that turns variants into clinical decisions."
+        ],
+        "pillars": [
+          {
+            "num": "Layer 01",
+            "title": "Genomic Data Platform",
+            "description": "Cloud-scale storage and NGS pipelines (variant calling, annotation) with strict privacy governance.",
+            "colorVariant": "teal"
+          },
+          {
+            "num": "Layer 02",
+            "title": "Biomarker & Multi-omics",
+            "description": "Integrating genomic, transcriptomic, and proteomic signals for target validation and stratification.",
+            "colorVariant": "teal"
+          },
+          {
+            "num": "Layer 03",
+            "title": "Companion Diagnostics",
+            "description": "CDx co-development linking an approved test to therapy eligibility — a ~$9B market growing to ~$16B by 2030.",
+            "colorVariant": "teal"
+          },
+          {
+            "num": "Layer 04",
+            "title": "Stratification Engine",
+            "description": "Matching molecular profiles to therapy, trial eligibility, and real-world outcomes at the point of care.",
+            "colorVariant": "teal"
+          }
+        ]
+      },
+      {
+        "title": "From Population to N-of-1",
+        "content": [
+          "Precision medicine bends the industry toward smaller, better-defined patient populations and, ultimately, N-of-1 therapies (bespoke gene therapies for ultra-rare mutations). That shift multiplies the digital demand: richer data per patient, tighter diagnostic-therapeutic coupling, and manufacturing that can economically produce a batch of one — connecting this chapter directly to advanced-modality manufacturing."
+        ],
+        "callout": {
+          "type": "spotlight",
+          "label": "🌍 Regional Spotlight: Genomics at National Scale",
+          "content": "National genomic programmes (UK Biobank, Genomics England, and large US and Asian cohorts) are becoming strategic RWE and discovery assets. India's ABDM data rails and large, genetically diverse population position its GCCs to lead the analytics layer — variant interpretation, biomarker discovery, and stratification modelling — for global sponsors."
+        }
+      }
+    ]
   },
   {
-    id: "ch24",
-    num: "24",
-    partLabel: "Part VII · Advanced Technical",
-    title: "Digital Twins — Manufacturing to Clinical & Commercial",
-    lead: "Extending digital twin technology across the entire pharmaceutical value chain.",
-    metrics: [
-      { value: "$6.5B", label: "Pharma Digital Twin Market" },
-      { value: "25%", label: "Time-to-Market Reduction" },
-      { value: "15–20%", label: "Manufacturing Yield Gain" },
-      { value: "3 Types", label: "Mfg · Clinical · Patient" },
+    "id": "ch24",
+    "num": "24",
+    "partLabel": "Part VII · Advanced Technical",
+    "title": "Digital Twins — Manufacturing to Clinical & Commercial",
+    "lead": "Extending digital-twin technology across the pharmaceutical value chain — from the plant floor to trial simulation and patient modelling.",
+    "metrics": [
+      {
+        "value": "~$1.5B",
+        "label": "Pharma DT Market (2025)"
+      },
+      {
+        "value": "~$8.5B",
+        "label": "Forecast (2032)"
+      },
+      {
+        "value": "PAT+DT",
+        "label": "Real-Time Release"
+      },
+      {
+        "value": "3 Types",
+        "label": "Mfg · Clinical · Patient"
+      }
     ],
-    tags: ["Digital Twin", "Simulation", "Process Optimization", "Virtual Trials"],
-    sections: [
-      {
-        title: "Executive Summary",
-        content: [
-          "A digital twin is not a simulation you run once — it is a living virtual replica, continuously fed by real-world data, that mirrors a physical asset or process and predicts its behaviour. In pharma, twins began on the factory floor but are now extending across the value chain: into clinical trials, into patient physiology, and into supply and commercial planning.",
-          "The prize is decision-making at the speed of software: test a process change, a trial design, or a supply scenario in the virtual world before committing to the physical one. Done well, twins compress cycle time, reduce risk, and turn expensive real-world experiments into cheap in-silico ones.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "The difference between a model and a digital twin is the live data connection. A twin stays synchronised with its physical counterpart, learns continuously, and predicts forward — enabling 'test in the virtual world first' as an operating default across manufacturing, clinical, and commercial domains.",
-        },
-      },
-      {
-        title: "What a Digital Twin Actually Is",
-        content: [
-          "The term is over-used, so precision matters. A true digital twin has three properties: a virtual representation of a specific physical entity, a live data link that keeps the two synchronised, and predictive/analytical capability that generates decisions or actions. A static model lacks the data link; a dashboard lacks the predictive layer. Most valuable pharma twins are <strong>hybrid</strong> — combining mechanistic (physics/biology-based) models with machine learning trained on operational data.",
-        ],
-      },
-      {
-        title: "Three Domains of Pharma Digital Twins",
-        content: [
-          "Twins deliver value in three distinct domains, each with a different data foundation and payoff.",
-        ],
-        steps: [
-          { num: "01", title: "Manufacturing & Process Twins", description: "Virtual replicas of bioreactors, lines, and whole sites — predicting yield and deviations, enabling real-time release and 'golden batch' optimisation." },
-          { num: "02", title: "Clinical & Patient Twins", description: "Virtual patients and populations for in-silico trials, synthetic/external control arms, and model-informed drug development (MIDD)." },
-          { num: "03", title: "Supply & Commercial Twins", description: "Network-level replicas for supply-chain resilience, scenario planning, launch simulation, and demand sensing." },
-        ],
-      },
-      {
-        title: "Manufacturing & Process Twins",
-        content: [
-          "The most mature application. A process twin ingests real-time sensor and PAT data to predict batch quality and failures before they occur, optimise process parameters against a validated 'golden batch', and support real-time release testing (RTRT) — collapsing quality-control cycles from weeks to hours. In biologics, where the process defines the product, the twin becomes the central nervous system of the plant.",
-        ],
-      },
-      {
-        title: "Clinical & Patient Twins",
-        content: [
-          "The fastest-growing frontier. Physiologically-based and mechanistic models — extended with machine learning — create virtual patients that can be used to simulate trial designs, generate synthetic or external control arms that reduce the number of patients on placebo, and explore dosing in-silico. Regulators are engaging seriously with model-informed drug development, making this a credible, not speculative, capability.",
-        ],
-        insightBox: {
-          icon: "🔬",
-          label: "Twin Principle",
-          title: "Fail in silico, succeed in vivo",
-          description: "Every trial arm, process change, or supply scenario tested virtually before committing physical resources is risk retired at a fraction of the cost. The twin's value is the expensive mistake it lets you avoid.",
-        },
-      },
-      {
-        title: "Building & Scaling Twins — the GCC Role",
-        content: [
-          "Twins are demanding to build and validate: they require integrated real-time data, hybrid mechanistic-plus-ML modelling, rigorous validation (GAMP-aligned for regulated use), and the MLOps to keep models synchronised and trustworthy over time. This blend of data engineering, modelling, and validation discipline maps directly onto a mature GCC's strengths, positioning it to own twin development as a shared enterprise capability.",
-        ],
-        bulletPoints: [
-          "<strong>Real-Time Data Integration</strong> — The live link is the hard part; without connected, clean data there is no twin, only a model.",
-          "<strong>Hybrid Modelling</strong> — Combine mechanistic understanding with ML to get both interpretability and predictive power.",
-          "<strong>Validation & Trust</strong> — Regulated-use twins need GAMP-aligned validation and ongoing performance monitoring.",
-          "<strong>MLOps at the Core</strong> — Continuous retraining and drift detection keep the twin faithful to its physical counterpart.",
-        ],
-        pullQuote: {
-          text: "A digital twin turns the most expensive question in pharma — 'what happens if we change this?' — from a physical experiment into a query. That is the shift from reacting to the world to rehearsing it.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
-      },
+    "tags": [
+      "Digital Twin",
+      "Simulation",
+      "Process Optimization",
+      "Virtual Trials"
     ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Digital twins — live virtual replicas fed by real-world data — are moving beyond the plant floor into clinical and commercial decision-making. Vendor estimates for the pharma-specific digital-twin market cluster around <strong>$1.3–1.85B in 2025, forecast toward ~$8.5B by 2032</strong> (broader healthcare digital twins are smaller but growing fast). Treat all such forecasts as proprietary vendor estimates and use ranges, not point values."
+        }
+      },
+      {
+        "title": "Three Classes of Twin",
+        "content": [],
+        "pillars": [
+          {
+            "num": "Twin 01",
+            "title": "Manufacturing Twin",
+            "description": "Real-time process replica enabling optimisation, batch-failure prediction, and — with PAT — real-time release testing.",
+            "colorVariant": "gold"
+          },
+          {
+            "num": "Twin 02",
+            "title": "Clinical Twin",
+            "description": "In-silico trial simulation and synthetic/external control arms that reduce sample size and de-risk protocol design.",
+            "colorVariant": "gold"
+          },
+          {
+            "num": "Twin 03",
+            "title": "Patient Twin",
+            "description": "Computational models of an individual predicting treatment response before therapy begins — precision medicine's simulation layer.",
+            "colorVariant": "gold"
+          }
+        ]
+      },
+      {
+        "title": "Where the Value Is Real Today",
+        "content": [
+          "The most mature and defensible value is in <strong>manufacturing</strong>: a process twin coupled to Process Analytical Technology supports real-time release and materially faster validation cycles (report roughly 25–40% faster qualification, using ranges rather than a single figure). Clinical and patient twins are earlier-stage but advancing quickly as data and compute mature."
+        ],
+        "insightBox": {
+          "icon": "🏭",
+          "label": "Digital-Twin Insight",
+          "title": "A twin is only as good as its data feed",
+          "description": "A digital twin is not a one-time model — it is a living system that must be continuously fed validated, high-frequency data. Organisations that stand up a twin without the sensor, PAT, and data-integrity foundation get an expensive simulation that quietly drifts from reality."
+        }
+      }
+    ]
   },
   {
-    id: "ch25",
-    num: "25",
-    partLabel: "Part VII · Advanced Technical",
-    title: "Digital Transformation in Emerging Markets",
-    lead: "India, China, Brazil & Africa — market-specific digital strategies and leapfrog opportunities.",
-    metrics: [
-      { value: "$55B", label: "India Pharma Market" },
-      { value: "$170B", label: "China Pharma Market" },
-      { value: "20%", label: "Global Generics from India" },
-      { value: "Leapfrog", label: "Mobile-First Opportunity" },
-    ],
-    tags: ["Emerging Markets", "India", "China", "Africa"],
-    sections: [{ title: "Executive Summary", content: ["Emerging markets present unique opportunities for digital leapfrogging — mobile-first healthcare, regulatory modernisation, and manufacturing digitalisation at unprecedented scale."] }],
-  },
-  {
-    id: "ch26",
-    num: "26",
-    partLabel: "Part VIII · Frontier Topics",
-    title: "Generative AI in Pharma — LLMs, Copilots & Enterprise Deployment",
-    lead: "Enterprise-scale GenAI strategy from molecule design to commercial content generation.",
-    metrics: [
-      { value: "GPT-4/Claude", label: "Foundation Models" },
-      { value: "50%", label: "Content Automation" },
-      { value: "$10B+", label: "Pharma GenAI Investment" },
-      { value: "GxP", label: "Validation Challenge" },
-    ],
-    tags: ["Generative AI", "LLMs", "Copilots", "Enterprise AI"],
-    sections: [
+    "id": "ch25",
+    "num": "25",
+    "partLabel": "Part VII · Advanced Technical",
+    "title": "Digital Transformation in Emerging Markets",
+    "lead": "India, China, Brazil and Africa — market-specific digital strategies, supply-chain realities, and leapfrog opportunities.",
+    "metrics": [
       {
-        title: "Executive Summary",
-        content: [
-          "Generative AI is the first technology in a generation that touches every function in pharma simultaneously — molecular design, literature synthesis, clinical and regulatory writing, pharmacovigilance narratives, commercial content, and enterprise knowledge access. Unlike prior analytics waves, its value is unlocked not by data scientists alone but by the domain experts who use it every day.",
-          "The strategic question is no longer whether to adopt generative AI, but how to deploy it at enterprise scale inside a GxP-regulated environment — with the grounding, guardrails, validation, and human oversight that regulators and patients demand. Organisations that treat GenAI as a governed capability, not a collection of pilots, will compound advantage; those that let a thousand ungoverned prompts bloom will accumulate risk without realising value.",
-        ],
-        callout: {
-          type: "executive",
-          label: "Executive Summary",
-          content: "Leading pharma companies are targeting 30–50% automation of document-heavy workflows (medical writing, regulatory responses, MLR-reviewed content) using retrieval-grounded LLMs with human-in-the-loop sign-off. The winners are standing up a shared, validated GenAI platform — foundation models, enterprise retrieval, guardrails, and evaluation — rather than one-off copilots per function.",
-        },
+        "value": "~$26B",
+        "label": "India Domestic Rx"
       },
       {
-        title: "Where Generative AI Creates Value Across the Value Chain",
-        content: [
-          "Generative AI's impact is broadest where work is language-, document-, or design-intensive and where a knowledgeable human validates the output. The table below maps the highest-signal use cases to their value driver and current deployment maturity in regulated enterprises.",
+        "value": "~$113B",
+        "label": "China Hospital Mkt"
+      },
+      {
+        "value": ">65%",
+        "label": "China+India of Global API"
+      },
+      {
+        "value": "Leapfrog",
+        "label": "Mobile-First Health"
+      }
+    ],
+    "tags": [
+      "Emerging Markets",
+      "India",
+      "China",
+      "Africa"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Emerging markets are simultaneously pharma's fastest-growing demand centres, its manufacturing backbone, and a proving ground for mobile-first digital health. India's domestic market is roughly <strong>$26B</strong> (with a much larger export industry); China's hospital market is about <strong>$113B</strong> (IQVIA). Together India and China account for <strong>more than 65% of global API manufacturing</strong> — a concentration now under acute geopolitical scrutiny."
+        }
+      },
+      {
+        "title": "Supply-Chain Concentration & De-Risking",
+        "content": [
+          "The 2025–2026 policy shift reframed emerging-market strategy around resilience. The US <strong>BIOSECURE Act</strong> (enacted 18 Dec 2025) creates a dynamic 'biotechnology company of concern' mechanism — it names no companies directly, attaching restrictions via a Department of Defense list — raising ongoing CDMO due-diligence needs. In parallel, US <strong>Section 232 tariff actions on pharmaceuticals</strong> (2025–2026) have driven roughly <strong>$283B of US reshoring pledges</strong>, even as generics and biosimilars carry exemptions."
         ],
-        table: {
-          headers: ["Function", "Representative Use Case", "Primary Value Driver", "Deployment Maturity"],
-          rows: [
-            ["R&D Discovery", "De novo molecular generation; target dossier synthesis", "Novel chemical space; faster hypothesis generation", "Scaling"],
-            ["Clinical Development", "Protocol drafting, CSR & narrative generation, SDTM mapping", "Cycle-time & first-time-right", "Piloting → Scaling"],
-            ["Regulatory Affairs", "eCTD authoring, health-authority query responses, labelling", "Submission speed; fewer queries", "Piloting"],
-            ["Pharmacovigilance", "ICSR narrative drafting, MedDRA coding, literature triage", "Case-processing cost & throughput", "Scaling"],
-            ["Commercial & Medical", "MLR-compliant content, HCP personalisation, MSL copilots", "Content velocity; channel ROI", "Scaling"],
-            ["Enterprise Knowledge", "Grounded Q&A over SOPs, policies, and scientific corpora", "Decision latency; talent leverage", "Broad adoption"],
+        "table": {
+          "headers": [
+            "Market",
+            "Scale (2024, sourced)",
+            "Digital Driver",
+            "Leapfrog Opportunity"
           ],
-        },
+          "rows": [
+            [
+              "India",
+              "~$26B domestic; ~20% of global generics (volume)",
+              "ABDM; PLI; GCC ecosystem",
+              "Digital-health rails + world-class GCC talent"
+            ],
+            [
+              "China",
+              "~$113B hospital market (IQVIA)",
+              "NMPA modernisation; national AI strategy",
+              "AI-biotech and clinical-trial digitalisation"
+            ],
+            [
+              "Brazil",
+              "~$32.9B (top-10 market, 2024)",
+              "ANVISA modernisation",
+              "Mobile access; regional manufacturing"
+            ],
+            [
+              "Africa",
+              "Fast-growing, fragmented",
+              "Mobile penetration; AU pooled procurement",
+              "Mobile-first care; local vaccine manufacturing"
+            ]
+          ]
+        }
       },
       {
-        title: "The Enterprise GenAI Capability Stack",
-        content: [
-          "Sustainable value comes from a shared platform, not point solutions. Five layers turn foundation models into governed enterprise capability — each an explicit engineering and governance responsibility.",
+        "title": "The Leapfrog Thesis",
+        "content": [
+          "Without legacy infrastructure to unwind, emerging markets can adopt mobile-first, cloud-native, AI-enabled models directly. India's ABDM (900M+ health IDs) is the clearest example — national-scale digital-health infrastructure built in years, not decades — and a template other markets are studying closely."
         ],
-        steps: [
-          { num: "01", title: "Foundation & Domain Models", description: "General-purpose LLMs (GPT-4-class, Claude, Gemini) plus domain models for science — protein language models (ESM), molecular generators, and biomedical LLMs. Route each task to the right model on cost, latency, and capability." },
-          { num: "02", title: "Retrieval & Grounding (RAG)", description: "Ground outputs in authoritative enterprise sources — SOPs, submissions, literature, structured data — so answers cite evidence. Retrieval is the single biggest lever for reducing hallucination in regulated use." },
-          { num: "03", title: "Orchestration & Agents", description: "Chain tools, retrieval, and reasoning into multi-step workflows (e.g., draft → check against source → format to template). Agentic patterns automate whole tasks, not just single prompts." },
-          { num: "04", title: "Guardrails & Compliance", description: "PII/PHI redaction, prompt-injection defence, toxicity and off-label filters, MLR/regulatory policy checks, and enforced human-in-the-loop sign-off for any GxP or patient-facing output." },
-          { num: "05", title: "Evaluation & Observability", description: "Golden datasets, factuality and faithfulness scoring, red-teaming, and full prompt/response logging for audit. You cannot validate — or trust — what you cannot measure." },
-        ],
-        insightBox: {
-          icon: "🧩",
-          label: "Platform Principle",
-          title: "Ground first, generate second",
-          description: "In pharma, an ungrounded LLM is a liability. Retrieval-augmented generation over validated sources — with citations surfaced to the reviewer — is the difference between a compliant assistant and an unmanaged risk.",
-        },
+        "callout": {
+          "type": "spotlight",
+          "label": "🌍 Regional Spotlight: Tariffs Meet Talent",
+          "content": "For India specifically, the same period brings both risk and opportunity: the US is its largest pharma export market ($9.7B, ~38% of exports), so tariff policy is a genuine exposure — while its GCC and manufacturing base make it a primary beneficiary of global supply-chain diversification. Digital capability is the hedge that lets Indian firms move up the value curve as trade winds shift."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ch26",
+    "num": "26",
+    "partLabel": "Part VIII · Frontier Topics",
+    "title": "Generative & Agentic AI in Pharma — LLMs, Copilots & Enterprise Deployment",
+    "lead": "Enterprise-scale GenAI and agentic AI strategy — from molecule design and regulatory writing to a validated, GxP-compliant deployment path.",
+    "metrics": [
+      {
+        "value": "Agentic AI",
+        "label": "2025–26 Frontier"
       },
       {
-        title: "High-Impact Use Cases to Prioritise",
-        content: [
-          "A pragmatic first wave targets workflows that are document-heavy, high-volume, and already have a qualified human reviewer in the loop — maximising value while keeping risk bounded.",
-        ],
-        bulletPoints: [
-          "<strong>Medical & Regulatory Writing</strong> — First-draft CSRs, protocols, investigator brochures, and health-authority responses from structured study data, with authors as validators.",
-          "<strong>Pharmacovigilance Automation</strong> — ICSR narrative generation, automated MedDRA coding suggestions, and literature triage to compress case-processing time.",
-          "<strong>MLR-Aware Commercial Content</strong> — Generate promotional and medical content pre-checked against claims libraries and regulatory guardrails before human MLR review.",
-          "<strong>Enterprise Scientific Copilot</strong> — Grounded Q&A across SOPs, dossiers, and the literature, giving every scientist and reviewer instant institutional memory.",
-          "<strong>Code & Data Engineering</strong> — Accelerate SAS-to-R migration, SDTM/ADaM mapping, and query authoring in clinical data science teams.",
-        ],
+        "value": "~40%",
+        "label": "PV Capacity Reclaimed"
       },
       {
-        title: "Deploying GenAI in a GxP-Regulated Environment",
-        content: [
-          "The core tension is that large language models are probabilistic and non-deterministic, while GxP validation assumes reproducibility. Bridging this requires a shift from validating the model's every output to validating the <strong>system and process</strong> around it — intended use, data provenance, guardrails, human oversight, and monitoring.",
-          "FDA's January 2025 draft guidance on the use of AI to support regulatory decision-making introduces a risk-based credibility-assessment framework centred on <strong>context of use</strong> — a workable blueprint for enterprise deployment. Practically, this means defining intended use narrowly, applying GAMP 5 and Computer Software Assurance (CSA) risk-based rigour, maintaining 21 CFR Part 11-compliant audit trails, and keeping a qualified human accountable for every regulated decision.",
-        ],
-        insightBox: {
-          icon: "⚖️",
-          label: "Validation Principle",
-          title: "Validate the system, keep the human accountable",
-          description: "Non-determinism does not preclude GxP use. Define a narrow context of use, ground outputs in validated sources, enforce human-in-the-loop sign-off, log everything for audit, and monitor drift — the model assists, the qualified human decides and signs.",
-        },
+        "value": "GAMP AI",
+        "label": "Validation Path (2025)"
       },
       {
-        title: "Build, Buy, or Fine-Tune?",
-        content: [
-          "Most enterprises will run a portfolio across all three approaches. The decision hinges on differentiation, data sensitivity, speed-to-value, and total cost of ownership.",
+        "value": "Multi-Model",
+        "label": "Claude · GPT-5 · Gemini"
+      }
+    ],
+    "tags": [
+      "Generative AI",
+      "Agentic AI",
+      "LLMs",
+      "Enterprise AI"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Generative AI has moved from pilots to production, and the 2025–2026 frontier is <strong>agentic AI</strong> — autonomous, multi-step systems that plan and execute work with light human supervision. Early adopters report reclaiming up to <strong>~40% of pharmacovigilance capacity</strong> (agents assembling E2B(R3)-compatible ICSRs) and cutting regulatory-writing cycles from weeks to hours. Enterprises typically route across two or three frontier model families rather than betting on one."
+        }
+      },
+      {
+        "title": "The Enterprise Model Landscape",
+        "content": [
+          "The foundation-model layer evolves quarterly. By 2025–2026 the leading enterprise families include <strong>Anthropic's Claude (Opus and Sonnet)</strong>, <strong>OpenAI's GPT-5</strong> series, and <strong>Google's Gemini</strong> — and most pharma enterprises deploy a multi-model strategy, matching model to task and avoiding single-vendor lock-in. The strategic question is no longer <em>whether</em> to use LLMs, but how to deploy them under GxP."
         ],
-        table: {
-          headers: ["Approach", "When to Use", "Advantage", "Watch-outs"],
-          rows: [
-            ["Buy (SaaS copilots)", "Commodity workflows — commercial content, coding, meeting copilots", "Fastest time-to-value; vendor-maintained", "Data residency; limited domain grounding; lock-in"],
-            ["Build on APIs + RAG", "Grounded enterprise Q&A and document generation over proprietary corpora", "Control, grounding, and guardrails without training cost", "Requires platform & MLOps capability"],
-            ["Fine-tune / adapt", "High-volume, narrow tasks (coding, narratives) or domain science", "Task accuracy; smaller, cheaper models at scale", "Data curation cost; revalidation on drift"],
+        "pillars": [
+          {
+            "num": "Use 01",
+            "title": "Scientific & Discovery",
+            "description": "Literature synthesis, target hypotheses, and generative molecular design that explores chemical space at scale.",
+            "colorVariant": "gold"
+          },
+          {
+            "num": "Use 02",
+            "title": "Regulatory & Medical Writing",
+            "description": "First-draft CTD modules, protocols, and responses — verified by experts in hours rather than weeks.",
+            "colorVariant": "gold"
+          },
+          {
+            "num": "Use 03",
+            "title": "Pharmacovigilance",
+            "description": "Agentic case intake, MedDRA coding, narrative generation, and signal triage across sources.",
+            "colorVariant": "gold"
+          },
+          {
+            "num": "Use 04",
+            "title": "Commercial & Content",
+            "description": "MLR-ready content generation and personalised, compliant HCP/patient engagement at scale.",
+            "colorVariant": "gold"
+          }
+        ]
+      },
+      {
+        "title": "The GxP Deployment Path",
+        "content": [
+          "The barrier to scaling GenAI in regulated pharma is validation, not capability — and 2025 gave the industry a concrete answer. The <strong>ISPE GAMP Guide: Artificial Intelligence (July 2025)</strong> extends GAMP 5 into a full AI/ML lifecycle (data quality, bias, hallucination rate, prompt sensitivity), and the FDA's draft credibility framework provides a context-of-use assessment. Together they turn 'can we deploy an agent in a GxP process?' into a documented, auditable yes."
+        ],
+        "insightBox": {
+          "icon": "🤖",
+          "label": "Agentic Insight",
+          "title": "Agents change the unit of automation",
+          "description": "RPA automated tasks; agents automate workflows. That is why the productivity numbers step-change — but it is also why governance must step up: an autonomous system that drafts a submission or processes a safety case needs the same validated, human-in-the-loop controls as any other GxP process, plus explainability and full audit trails."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ch27",
+    "num": "27",
+    "partLabel": "Part VIII · Frontier Topics",
+    "title": "Pandemic Preparedness & Digital Health Security",
+    "lead": "Building the digital infrastructure for rapid response to future pandemic and biosecurity threats — from surveillance to 100-day vaccines.",
+    "metrics": [
+      {
+        "value": "100 Days",
+        "label": "Vaccine Mission (CEPI)"
+      },
+      {
+        "value": "mRNA",
+        "label": "Rapid Platform"
+      },
+      {
+        "value": "mRESVIA",
+        "label": "1st mRNA RSV (2024)"
+      },
+      {
+        "value": "Digital",
+        "label": "Genomic Surveillance"
+      }
+    ],
+    "tags": [
+      "Pandemic Preparedness",
+      "Biosecurity",
+      "Rapid Response",
+      "Surveillance"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "COVID-19 proved both the power and the gaps in digital health infrastructure — a decade of digital adoption compressed into eighteen months. The strategic goal is now durable readiness: CEPI's <strong>100 Days Mission</strong> (a safe, effective vaccine within 100 days of a recognised threat) as the organising target, underpinned by rapid platforms, digital surveillance, and resilient supply chains."
+        }
+      },
+      {
+        "title": "The Preparedness Stack",
+        "content": [],
+        "pillars": [
+          {
+            "num": "Layer 01",
+            "title": "Genomic Surveillance",
+            "description": "Real-time pathogen sequencing and shared bioinformatics to detect and characterise threats early.",
+            "colorVariant": "coral"
+          },
+          {
+            "num": "Layer 02",
+            "title": "Rapid Platforms",
+            "description": "mRNA and other plug-and-play platforms that swap the antigen while keeping the process — the core 100-day enabler.",
+            "colorVariant": "coral"
+          },
+          {
+            "num": "Layer 03",
+            "title": "Adaptive Trials",
+            "description": "Pre-positioned master protocols and digital/decentralised trial capacity for compressed timelines.",
+            "colorVariant": "coral"
+          },
+          {
+            "num": "Layer 04",
+            "title": "Resilient Supply",
+            "description": "Digitally-orchestrated, geographically-diversified manufacturing and cold chain that can surge on demand.",
+            "colorVariant": "coral"
+          }
+        ]
+      },
+      {
+        "title": "mRNA's Second Act",
+        "content": [
+          "The mRNA platform has moved well beyond COVID: <strong>mRESVIA</strong> became the first mRNA RSV vaccine (May 2024), and personalised cancer vaccines (mRNA-4157/V940, BNT111) are in Phase 3 with readouts expected 2025–2027. The same rapid-reprogramming property that makes mRNA a pandemic tool makes it a durable platform — and a strategic manufacturing asset worth digitising deeply."
+        ],
+        "callout": {
+          "type": "spotlight",
+          "label": "🌍 Biosecurity & Supply Resilience",
+          "content": "Preparedness is now inseparable from geopolitics. The US BIOSECURE Act (enacted Dec 2025) and Section 232 tariff actions are pushing supply-chain diversification and reshoring, while global surveillance networks and pooled procurement (e.g. the African Union) aim to close the equity gaps COVID exposed. Digital orchestration is what makes a diversified, multi-site response coherent rather than chaotic."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ch28",
+    "num": "28",
+    "partLabel": "Part VIII · Frontier Topics",
+    "title": "Pharma Talent — Digital Reskilling & the Future Workforce",
+    "lead": "Building the digital-native, AI-fluent workforce pharma needs for 2026–2030 — the true rate-limiter of transformation.",
+    "metrics": [
+      {
+        "value": "~60%",
+        "label": "Reskill Need by 2027"
+      },
+      {
+        "value": "77%",
+        "label": "Employers Reskilling 25–30"
+      },
+      {
+        "value": "2.36M",
+        "label": "India GCC Talent Pool"
+      },
+      {
+        "value": "CAIO",
+        "label": "New C-Suite Role"
+      }
+    ],
+    "tags": [
+      "Talent",
+      "Reskilling",
+      "Culture",
+      "Future Workforce"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "The single biggest barrier to pharma digital transformation is talent, not technology. The World Economic Forum estimates <strong>~60% of workers will need reskilling by 2027</strong>, and <strong>77% of employers plan to reskill their workforce across 2025–2030</strong> (Future of Jobs). Winning organisations treat workforce strategy as a first-class transformation workstream, not an afterthought."
+        }
+      },
+      {
+        "title": "The Skills Shift",
+        "content": [
+          "Demand is moving decisively toward AI/ML engineering, data science, MLOps, computational biology, cloud, and — increasingly — the ability to <strong>supervise and govern AI agents</strong> rather than perform the task directly. The digital-native cohort entering pharma expects AI-assisted workflows and real-time, data-driven decisions; organisations running on legacy ERP and paper-based quality systems struggle to attract and keep them."
+        ],
+        "table": {
+          "headers": [
+            "Workforce Lever",
+            "2026 Reality",
+            "Action"
           ],
-        },
+          "rows": [
+            [
+              "Reskilling at scale",
+              "~60% need reskilling by 2027 (WEF)",
+              "Structured academies; role-based AI-fluency paths"
+            ],
+            [
+              "AI-agent supervision",
+              "New skill category emerging",
+              "Train reviewers/validators, not just users"
+            ],
+            [
+              "Leadership",
+              "CAIO role formalising (Pfizer, Lilly 2024)",
+              "Fund digital/AI leadership with real mandate"
+            ],
+            [
+              "Global talent",
+              "India GCCs: 2.36M professionals (FY26)",
+              "Locate capability where the talent is deepest"
+            ]
+          ]
+        }
       },
       {
-        title: "Responsible GenAI: Risk & Governance",
-        content: [
-          "The failure modes are well understood and manageable with governance: hallucination and fabricated citations, IP and data leakage into third-party models, PHI/PII exposure, bias, over-reliance by users, and regulatory non-acceptance. A GenAI governance council — spanning quality, regulatory, legal, security, and the business — should own an approved-use registry, a model risk taxonomy, and mandatory human-oversight rules for high-risk contexts.",
+        "title": "Culture Is the Multiplier",
+        "content": [
+          "Technology deployment is visible; culture change is invisible — and it decides whether technology is actually used. The evidence from successful transformations points to CEO-owned change programmes, protected capacity to absorb change, early wins, and adoption metrics tracked as rigorously as delivery metrics (target ≥80% user adoption within 90 days of go-live)."
         ],
-        callout: {
-          type: "spotlight",
-          label: "🛡️ Governance Spotlight",
-          content: "Treat every GenAI use case like a validated system: classify it by risk, register its intended use, ground it in approved sources, gate high-risk outputs behind human sign-off, and monitor for drift. Governance is not the brake on GenAI value — in regulated pharma, it is the enabler of it.",
-        },
-        pullQuote: {
-          text: "In regulated pharma, the competitive edge is not access to the largest model — it is the discipline to ground it, govern it, and keep a qualified human accountable for what it produces.",
-          cite: "KR · Pharma Digital Transformation Handbook",
-        },
+        "insightBox": {
+          "icon": "🎓",
+          "label": "Talent Insight",
+          "title": "Reskill for judgment, not just tools",
+          "description": "As agents absorb execution, the scarce human skills become judgment, domain expertise, and governance — knowing what to ask, how to validate an AI output, and when a result must not be trusted. Reskilling programmes that teach only tool operation miss the capability that actually compounds."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ch29",
+    "num": "29",
+    "partLabel": "Part VIII · Frontier Topics",
+    "title": "Digital Pharma Investment, Valuation & M&A Strategy",
+    "lead": "Investment frameworks, valuation, and M&A strategy for digital-pharma and AI assets — set against the 2025–2030 patent cliff.",
+    "metrics": [
+      {
+        "value": "~$180B",
+        "label": "2025 M&A Rebound"
       },
+      {
+        "value": "~$236B",
+        "label": "Patent Cliff at Risk"
+      },
+      {
+        "value": "~$80B",
+        "label": "Digital Health VC 20–24"
+      },
+      {
+        "value": "$600M",
+        "label": "Isomorphic Raise 2025"
+      }
     ],
+    "tags": [
+      "Investment",
+      "M&A",
+      "Valuation",
+      "VC"
+    ],
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "Capital allocation in pharma is being driven by a single structural fact: a <strong>~$236B patent cliff across 2025–2030</strong> (~70 products, including Keytruda, Eliquis, and Opdivo). That gap is powering a dealmaking rebound — biopharma M&A recovered to roughly <strong>$180B in 2025</strong> after a ~$48B trough in 2024 — and sustaining investment in AI, pipelines, and digital capability as growth insurance."
+        }
+      },
+      {
+        "title": "The Deal & Funding Landscape",
+        "content": [
+          "Digital-health venture funding totalled roughly <strong>$80B across 2020–24</strong> (Rock Health), peaking at $29.1B in 2021; 2025 rebounded ~35% to $14.2B, with AI now about <strong>54% of all funding</strong>. AI-drug-discovery is monetising through structured partnerships rather than outright M&A — Isomorphic Labs' $600M raise and its Lilly/Novartis milestone deals are the template, alongside AI-biotech consolidation such as Recursion's absorption of Exscientia."
+        ],
+        "table": {
+          "headers": [
+            "Deal / Trend",
+            "Value",
+            "Signal"
+          ],
+          "rows": [
+            [
+              "Pfizer–Seagen (ADCs, closed 2023)",
+              "$43B",
+              "Bolt-on of a high-growth modality"
+            ],
+            [
+              "J&J–Intra-Cellular (2025)",
+              "$14.6B",
+              "Patent-cliff-driven pipeline buying"
+            ],
+            [
+              "Novartis–Avidity (2025)",
+              "$12B",
+              "RNA / oligonucleotide platform bet"
+            ],
+            [
+              "Isomorphic Labs raise (2025)",
+              "$600M",
+              "AI-first discovery via partnership model"
+            ],
+            [
+              "Digital-health VC 2025",
+              "$14.2B (+35%)",
+              "AI now ~54% of funding"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Valuing Digital & AI Assets",
+        "content": [
+          "Platform assets (reusable across many programmes) command a premium over point solutions, and AI-native biotechs trade on optionality more than current revenue. The discipline is to separate durable platform value from hype: the field is maturing into distinct models — some AI-biotechs (e.g. Schrödinger) are pulling back from proprietary trials to focus on software, while others push deeper into the clinic."
+        ],
+        "insightBox": {
+          "icon": "💰",
+          "label": "Investment Insight",
+          "title": "The cliff funds the future",
+          "description": "The patent cliff is not only a threat — it is the forcing function. The same revenue pressure that alarms investors is what unlocks the M&A and AI/digital investment budgets. Organisations that frame digital capability as growth insurance, not cost, win the internal capital allocation fight."
+        }
+      }
+    ]
   },
   {
-    id: "ch27",
-    num: "27",
-    partLabel: "Part VIII · Frontier Topics",
-    title: "Pandemic Preparedness & Digital Health Security",
-    lead: "Building digital infrastructure for rapid response to future pandemic and biosecurity threats.",
-    metrics: [
-      { value: "100 Days", label: "Vaccine Target (CEPI)" },
-      { value: "mRNA", label: "Platform Technology" },
-      { value: "Digital", label: "Surveillance Systems" },
-      { value: "Global", label: "Supply Chain Resilience" },
+    "id": "ch30",
+    "num": "30",
+    "partLabel": "Part IX · 2030 Playbook",
+    "title": "The 2030 Integrated Implementation Playbook",
+    "lead": "A comprehensive, sequenced 36-month roadmap for enterprise-wide pharma digital transformation — synthesising every prior chapter into execution.",
+    "metrics": [
+      {
+        "value": "36 Months",
+        "label": "Execution Horizon"
+      },
+      {
+        "value": "3 Waves",
+        "label": "Implementation"
+      },
+      {
+        "value": "PDMF 5",
+        "label": "Target Maturity"
+      },
+      {
+        "value": "$500M+",
+        "label": "Value Creation Target"
+      }
     ],
-    tags: ["Pandemic Preparedness", "Biosecurity", "Rapid Response", "Surveillance"],
-    sections: [{ title: "Executive Summary", content: ["COVID-19 demonstrated both the power and gaps in digital health infrastructure. This chapter covers building resilient, digitally-enabled systems for future pandemic preparedness."] }],
-  },
-  {
-    id: "ch28",
-    num: "28",
-    partLabel: "Part VIII · Frontier Topics",
-    title: "Pharma Talent — Digital Reskilling & Future Workforce",
-    lead: "Building the digital-native workforce pharma needs for 2025–2030 and beyond.",
-    metrics: [
-      { value: "70%", label: "Reskilling Need by 2027" },
-      { value: "2.5x", label: "Digital Talent Premium" },
-      { value: "40%", label: "Faster AI Recruitment" },
-      { value: "Hybrid", label: "Future Work Model" },
+    "tags": [
+      "Implementation",
+      "Roadmap",
+      "Execution",
+      "2030 Vision"
     ],
-    tags: ["Talent", "Reskilling", "Culture", "Future Workforce"],
-    sections: [{ title: "Executive Summary", content: ["The single biggest barrier to pharma digital transformation is talent — not technology. This chapter addresses workforce strategy, digital reskilling, and cultural transformation."] }],
-  },
-  {
-    id: "ch29",
-    num: "29",
-    partLabel: "Part VIII · Frontier Topics",
-    title: "Digital Pharma Investment, Valuation & M&A Strategy",
-    lead: "Investment frameworks, valuation methodologies, and M&A strategy for digital pharma assets.",
-    metrics: [
-      { value: "$45B+", label: "Digital Health VC 2020–24" },
-      { value: "15–25x", label: "Revenue Multiples (AI)" },
-      { value: "60+", label: "Pharma-AI M&A Deals" },
-      { value: "Platform", label: "vs Point Solution Value" },
-    ],
-    tags: ["Investment", "M&A", "Valuation", "VC"],
-    sections: [{ title: "Executive Summary", content: ["Digital health and AI-pharma assets command premium valuations. This chapter covers investment frameworks, deal structures, and strategic M&A in the digital pharma ecosystem."] }],
-  },
-  {
-    id: "ch30",
-    num: "30",
-    partLabel: "Part IX · 2030 Playbook",
-    title: "The 2030 Integrated Implementation Playbook",
-    lead: "A comprehensive 36-month roadmap for enterprise-wide digital transformation execution.",
-    metrics: [
-      { value: "36 Months", label: "Execution Horizon" },
-      { value: "3 Waves", label: "Implementation Phases" },
-      { value: "PDMF 5", label: "Target Maturity" },
-      { value: "$500M+", label: "Value Creation Target" },
-    ],
-    tags: ["Implementation", "Roadmap", "Execution", "2030 Vision"],
-    sections: [{ title: "Executive Summary", content: ["This chapter provides a detailed 36-month implementation playbook covering all functional domains — from Wave 1 (Stabilise & Connect) through Wave 3 (Lead & Innovate) — targeting PDMF Level 5 maturity."] }],
-  },
+    "sections": [
+      {
+        "title": "Executive Summary",
+        "content": [],
+        "callout": {
+          "type": "executive",
+          "label": "Executive Summary",
+          "content": "This capstone converts the handbook's frameworks into a single sequenced programme: a 36-month, three-wave roadmap targeting <strong>PDMF Level 5</strong> maturity and <strong>$500M+ of value creation</strong> for a large enterprise. It integrates the 2026 reality — GLP-1-scale demand, the patent cliff, agentic AI, IRA pricing pressure, and supply-chain de-risking — into one executable plan."
+        }
+      },
+      {
+        "title": "The Three-Wave Roadmap",
+        "content": [],
+        "steps": [
+          {
+            "num": "W1",
+            "title": "Wave 1 · Stabilise & Connect (Months 1–12)",
+            "description": "Establish CDO/CAIO leadership and light governance; deploy the cloud data foundation; pilot eQMS/EBR, eCTD automation, and PV NLP intake; complete a PDMF baseline. Target: Level 2→3."
+          },
+          {
+            "num": "W2",
+            "title": "Wave 2 · Differentiate & Scale (Months 13–24)",
+            "description": "Operationalise AI discovery; run DCT-enabled trials; deploy agentic AI in PV and regulatory writing; roll out PAT + digital twins; scale RWE. Target: Level 3→4."
+          },
+          {
+            "num": "W3",
+            "title": "Wave 3 · Lead & Innovate (Months 25–36)",
+            "description": "Advance an AI-discovered candidate; enable real-time release; run autonomous PV signal monitoring; sign outcome-based payer contracts; establish the GCC as a global digital CoE. Target: Level 4→5."
+          }
+        ]
+      },
+      {
+        "title": "Sequencing Against the 2026 Reality",
+        "content": [
+          "A credible 2026 plan explicitly hedges the forces reshaping the industry: the <strong>patent cliff</strong> (invest in AI/pipeline as growth insurance), <strong>IRA and MFN pricing</strong> (build the RWE and value-evidence muscle payers now demand), <strong>agentic AI</strong> (redesign PV, regulatory, and commercial workflows around agents under GAMP-AI validation), and <strong>supply-chain de-risking</strong> (digitally-orchestrated, diversified manufacturing in light of BIOSECURE and tariffs)."
+        ],
+        "callout": {
+          "type": "case-study",
+          "label": "📋 Governing the Programme",
+          "content": "The execution disciplines that separate success from the ~70% of transformations that fail: CEO/board ownership with C-suite digital KPIs; a CDO/CAIO hired in Month 1; change sequencing that protects team capacity; a GxP validation team from Day 1 (risk-based CSA); and a data-quality sprint before any AI is built on the data."
+        },
+        "pullQuote": {
+          "text": "The enterprise that executes this roadmap with discipline will not just have transformed itself — it will have transformed the competitive position of its global parent organisation.",
+          "cite": "KR · Chapter 30 · The 2030 Playbook"
+        }
+      }
+    ]
+  }
 ];
 
 export const partColors: Record<string, string> = {

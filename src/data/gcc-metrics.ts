@@ -75,7 +75,7 @@ export const gccMetrics: GccMetric[] = [
 export const gccHighlightStats = [
   { value: "37", label: "Metrics Tracked" },
   { value: "9", label: "Dimensions" },
-  { value: "1,600+", label: "GCCs in India (All Sectors)" },
+  { value: "2,117", label: "GCCs in India (FY26)" },
   { value: "10,000+", label: "Avg FTEs (Top GCCs)" },
   { value: "30–45%", label: "Cost Advantage" },
   { value: "40%", label: "Faster Trial Recruitment" },

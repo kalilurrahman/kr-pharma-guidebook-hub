@@ -21,7 +21,7 @@ export function CoverSection() {
       >
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 mb-8">
           <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-dot" />
-          <span className="font-mono text-xs text-primary tracking-wider uppercase">Second Edition · 2025</span>
+          <span className="font-mono text-xs text-primary tracking-wider uppercase">Third Edition · 2026 Refresh</span>
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4">
