@@ -18,7 +18,7 @@ An interactive **digital handbook + reference platform** on pharmaceutical digit
 ### Content architecture
 - **30 chapters + 1 appendix**, grouped into **9 Parts** (Foundations → Value Chain → Commercial → Enterprise Enablers → Appendix → GCC India → Advanced Modalities → Advanced Technical → Frontier Topics → 2030 Playbook).
 - **Signature IP / frameworks:** **PDMF** (Pharma Digital Maturity Framework, 5 levels × 7 domains); **ACUITAS** (7-pillar GxP quality-engineering framework); **Three-Horizon GCC framework**; **36-month / 3-Wave transformation roadmap**; **4-Layer governance architecture**.
-- **GCC benchmarking dataset:** maturity benchmarks across **9 dimensions** (34 metrics), each with mature-vs-large benchmarks, an industry insight, and a cited source (Zinnov / BCG / KPMG / ANSR / ZS).
+- **GCC benchmarking dataset:** maturity benchmarks across **9 dimensions** (37 metrics), each with mature-vs-large benchmarks, an industry insight, and a cited source (Zinnov / BCG / KPMG / ANSR / ZS / NASSCOM).
 - **CXO stat library:** 28 curated, chapter-linked statistics across Market, R&D, Manufacturing, Commercial, Patient, and Digital Maturity.
 - **Visual assets:** 8 bespoke SVG diagrams (Eroom's Law, Five Forces, Value Chain, AI drug-discovery pipeline, eCTD modules, PV signal-detection flow, 36-month roadmap, India ecosystem) + 17 tables + 18 callout/spotlight boxes in the fully-authored chapters.
 
@@ -32,12 +32,12 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 ### 2.1 The headline gap: half the book is a stub
 **15 of the 30 chapters (Ch 16–30)** originally contained only a title, one-line lead, four metric chips, and a single "Executive Summary" sentence. The fully-authored content stopped at Ch 14 + Appendix. The most monetisable topics (GenAI, RWE, AI ethics, CDO playbook, case studies, interoperability, precision medicine, digital twins) were scaffolding, not content.
 
-**Recommended authoring priority:** Ch 26 (GenAI) · Ch 20 (CDO Playbook) · Ch 21 (Case Studies) · Ch 18 (RWE) · Ch 22 (Interoperability). _(Ch 26 and Ch 20 are authored in full as part of this change — see §4.)_
+**Progress in this revision:** the five highest-demand stubs are now authored in full — **Ch 26 (GenAI), Ch 20 (CDO Playbook), Ch 21 (Case Studies), Ch 18 (RWE), and Ch 22 (Interoperability)** — taking the book from **15/30 to 20/30 fully authored** (see §4). **Recommended next:** Ch 17 (Biologics/Cell & Gene), Ch 23 (Precision Medicine), Ch 24 (Digital Twins), Ch 19 (AI Ethics), and the remaining Frontier Topics.
 
 ### 2.2 Verified data/consistency issues (fixed in this change)
 | Issue | Location | Resolution |
 |---|---|---|
-| "37 Metrics Tracked" advertised, but dataset has exactly **34** entries | `gcc-metrics.ts`, `GccMetricsPage`, `OverviewSection` | Reconciled all references to **34** (honest count; no fabricated benchmarks) |
+| "37 Metrics Tracked" advertised, but dataset held only **34** entries | `gcc-metrics.ts`, `GccMetricsPage`, `OverviewSection` | Added **3 real GCC benchmarks** (Gender Diversity, Cyber Resilience Maturity, Innovation Reinvestment Rate) so the dataset genuinely holds **37** |
 | AlphaFold count inconsistent: "200M+" in chapters vs **"350M+"** on Key Stats | `KeyStatsPage` | Standardised to **200M+** (AlphaFold DB actual) |
 | Cover claims "95K+ words" / "47+ diagrams & tables" describe the **full downloadable handbook**, not the ~15 fully-rendered on-site chapters | `pharma-data.ts` cover stats | Labels clarified as **"· Full Handbook"** |
 | "1,600+ GCCs in India" is **all-industry**, shown beside pharma-specific stats | `gcc-metrics.ts`, `OverviewSection`, `KeyStatsPage`, Ch 16 | Labels clarified as **"(All Sectors)"**; noted 30+ are dedicated pharma GCCs |
@@ -101,10 +101,13 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
 
 ## 4. What Changed in This Revision
 
-- **Accuracy fixes** (§2.2): reconciled the 34-metric count, standardised the AlphaFold figure to 200M+, clarified the "full handbook" cover stats, and disambiguated the all-sectors GCC count.
-- **New full chapter content**, replacing stubs:
+- **Accuracy fixes** (§2.2): added 3 real GCC benchmarks so the metric count genuinely matches the advertised 37, standardised the AlphaFold figure to 200M+, clarified the "full handbook" cover stats, and disambiguated the all-sectors GCC count.
+- **New full chapter content** (took the book from 15/30 to 20/30 authored), replacing stubs:
   - **Ch 26 — Generative AI in Pharma:** value map across the value chain, the enterprise GenAI capability stack (foundation models → RAG → agents → guardrails → evaluation), prioritised use cases, GxP deployment (GAMP 5 / CSA / 21 CFR Part 11 / FDA Jan-2025 draft guidance), build-vs-buy-vs-fine-tune, and responsible-AI governance.
   - **Ch 20 — The CDO Playbook:** the CDO mandate, the five-engine digital operating model, federated org design, a sequenced first-12-months agenda, and funding/value-realisation with common failure modes.
+  - **Ch 18 — Real-World Evidence:** RWD-to-RWE distinction, data-source taxonomy, regulatory-grade evidence (FDA RWE Framework / EMA DARWIN EU), the five-stage RWE stack, value cases, and India's RWE advantage.
+  - **Ch 21 — Case Studies:** publicly-reported exemplars (Insilico, AlphaFold, Pfizer, Moderna, AstraZeneca, GSK, Indian generics) with transferable GCC lessons — no fabricated metrics.
+  - **Ch 22 — Interoperability & Health Data Standards:** the core standards landscape (FHIR / OMOP / CDISC / IDMP / terminologies / DICOM), the regulatory layer (EHDS, ONC Cures Act), the five-layer data fabric, and value cases.
 - All changes pass `tsc --noEmit`, `vite build`, and the test suite.
 
 _Curated by Kalilur Rahman · Pharma Digital Transformation Handbook._

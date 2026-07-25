@@ -1332,7 +1332,83 @@ export const chapters: Chapter[] = [
       { value: "600M+", label: "ABDM Health IDs" },
     ],
     tags: ["RWE", "Real-World Data", "HEOR", "Regulatory Evidence"],
-    sections: [{ title: "Executive Summary", content: ["Real-world evidence is transforming regulatory decision-making, payer negotiations, and clinical development strategy across global pharma."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "Real-world evidence (RWE) has moved from a payer-facing afterthought to a strategic capability that shapes regulatory decisions, label expansions, safety surveillance, and commercial strategy. The passage of the 21st Century Cures Act and the FDA's subsequent RWE Framework signalled a durable shift: regulators will consider fit-for-purpose real-world data (RWD) as part of the evidence base, not merely as supporting colour.",
+          "The winners treat RWE as an enterprise data-and-evidence platform, not a series of one-off studies. That means industrial-grade data acquisition, standardised data models, transparent methodology, and governance robust enough to withstand regulatory scrutiny — capabilities that map naturally onto a mature GCC.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "RWE now informs a large and growing share of regulatory submissions and post-approval commitments. The value is unlocked not by data volume but by fit-for-purpose design: the right data source, a defensible study design, and provenance that a regulator or payer can audit end to end.",
+        },
+      },
+      {
+        title: "From Real-World Data to Real-World Evidence",
+        content: [
+          "The distinction matters. <strong>Real-world data</strong> is the raw material — routinely collected health data from outside conventional trials. <strong>Real-world evidence</strong> is the clinical or economic conclusion derived from analysing that data with a defensible methodology. The gap between the two is bridged by data quality, study design, and statistical rigour — which is precisely where most programmes succeed or fail.",
+        ],
+        table: {
+          headers: ["Data Source", "Examples", "Strength", "Typical Use"],
+          rows: [
+            ["Electronic Health Records", "Inpatient/outpatient EHR, clinical notes", "Rich clinical depth; outcomes", "Effectiveness, safety, NLP phenotyping"],
+            ["Administrative Claims", "Payer/insurer claims, pharmacy", "Large, longitudinal, complete capture", "Utilisation, adherence, HEOR"],
+            ["Disease & Product Registries", "Oncology, rare disease, device registries", "Curated, condition-specific", "Natural history, external control arms"],
+            ["Patient-Generated & Wearable", "ePRO, apps, sensors, DTx", "Continuous, patient-centric", "Adherence, digital endpoints, DCT"],
+            ["National Digital Health", "ABDM (India), EHDS (EU) infrastructure", "Population scale; policy-backed", "Population evidence, market access"],
+          ],
+        },
+      },
+      {
+        title: "Regulatory-Grade RWE",
+        content: [
+          "Not all RWE is created equal. Regulators evaluate RWD on <strong>relevance</strong> (does it capture the right population, exposure, and outcome?) and <strong>reliability</strong> (is it accurate, complete, and traceable?). The most consequential applications — external/synthetic control arms, label expansions, and single-arm trial support — demand prospective protocol registration, pre-specified analyses, and end-to-end provenance.",
+          "The FDA's RWE Framework, the EMA's DARWIN EU initiative, and comparable moves by other agencies converge on the same expectation: transparent, reproducible methods applied to fit-for-purpose data. RWE that cannot be audited is RWE that cannot be used for a regulatory decision.",
+        ],
+        insightBox: {
+          icon: "🔍",
+          label: "Evidence Principle",
+          title: "Fit-for-purpose beats big data",
+          description: "A modest, well-characterised dataset with a pre-registered protocol and auditable lineage will carry more regulatory weight than a vast dataset assembled and analysed after the question was asked.",
+        },
+      },
+      {
+        title: "The RWE Technology & Data Stack",
+        content: [
+          "Enterprise RWE runs on a repeatable pipeline — the same five stages every credible programme industrialises.",
+        ],
+        steps: [
+          { num: "01", title: "Data Acquisition & Licensing", description: "Source, license, and onboard EHR, claims, registry, and PGHD assets with clear consent and data-use terms." },
+          { num: "02", title: "Curation to a Common Data Model", description: "Map heterogeneous sources to a standard model (e.g., OMOP CDM) with terminology harmonisation to enable reproducible, portable analytics." },
+          { num: "03", title: "Analytics & Methodology", description: "Causal inference, comparative effectiveness, and bias-control methods (propensity scoring, negative controls) applied to pre-specified questions." },
+          { num: "04", title: "Evidence Generation & Dossiers", description: "Regulatory-grade study reports, HEOR models, and value dossiers packaged for agencies and payers." },
+          { num: "05", title: "Governance & Provenance", description: "End-to-end lineage, privacy compliance (HIPAA/GDPR/DPDP), and audit trails that make every conclusion traceable to its source." },
+        ],
+      },
+      {
+        title: "Where RWE Creates Value",
+        content: [
+          "RWE is a cross-functional asset — the same platform serves regulatory, medical, safety, and commercial demand.",
+        ],
+        bulletPoints: [
+          "<strong>Regulatory & Label Expansion</strong> — External control arms and post-approval evidence to broaden indications and satisfy commitments faster.",
+          "<strong>HEOR & Market Access</strong> — Real-world effectiveness and cost-outcome evidence for payer negotiations and value-based contracts.",
+          "<strong>Safety & Pharmacovigilance</strong> — Signal validation and characterisation at population scale, complementing spontaneous reporting.",
+          "<strong>Clinical Development</strong> — Feasibility, site selection, protocol optimisation, and synthetic control arms that shrink trials.",
+        ],
+        callout: {
+          type: "spotlight",
+          label: "🌍 Regional Spotlight: India's RWE Advantage",
+          content: "India pairs a vast, diverse patient population with the ABDM digital-health backbone (600M+ health IDs) and a deep analytics talent pool. Pharma GCCs in India are becoming enterprise RWE engines — running data curation, OMOP mapping, HEOR modelling, and evidence generation 24/7 at a fraction of onshore cost, while population-scale data assets mature.",
+        },
+        pullQuote: {
+          text: "In the next decade, the constraint on evidence will not be the ability to run a trial — it will be the discipline to turn the data the world already generates into conclusions a regulator will trust.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch19",
@@ -1458,7 +1534,72 @@ export const chapters: Chapter[] = [
       { value: "Pfizer", label: "Digital Trials" },
     ],
     tags: ["Case Studies", "Best Practices", "Implementation", "Results"],
-    sections: [{ title: "Executive Summary", content: ["Detailed case studies from Roche, Pfizer, AstraZeneca, GSK, and emerging players demonstrating measurable outcomes from digital transformation initiatives."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "Frameworks convince; proof points convert. This chapter distils publicly reported digital-transformation stories from across the industry into transferable lessons — what was done, the direction of the reported outcome, and how a GCC-anchored operating model would replicate it. The figures cited are those disclosed publicly by the organisations or reported in the scientific and trade press; they are directional exemplars, not audited benchmarks.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "The pattern across every credible case is consistent: transformation value comes from redesigning a process around data and AI — not from bolting technology onto an unchanged workflow. The organisations that scaled did so by industrialising a capability, not by running a clever pilot.",
+        },
+      },
+      {
+        title: "Case Study Landscape",
+        content: [
+          "A cross-section of reported initiatives spanning discovery, trials, commercial, and manufacturing.",
+        ],
+        table: {
+          headers: ["Organisation", "Domain", "What Was Done (Publicly Reported)", "Reported Direction"],
+          rows: [
+            ["Insilico Medicine", "AI Drug Discovery", "Generative-AI target discovery and molecular design (INS018_055 for IPF)", "Reached Phase II in ~18 months vs 4–6 year norm"],
+            ["DeepMind (AlphaFold)", "Structural Biology", "Deep-learning protein-structure prediction database", "200M+ structures; step-change in target work"],
+            ["Pfizer", "Digital Trials", "Digital recruitment for the COVID-19 vaccine programme", "~43,000 enrolled in under four months"],
+            ["Moderna", "Cloud-Native mRNA", "Cloud/AWS-based platform for rapid candidate design", "Vaccine sequence designed in ~42 days"],
+            ["AstraZeneca", "AI in R&D", "Knowledge-graph and AI partnerships for target identification", "Faster hypothesis generation across pipeline"],
+            ["Sun Pharma / Dr. Reddy's", "Manufacturing Intelligence", "Digital quality, analytics, and supply-chain modernisation", "Efficiency and compliance gains at scale"],
+          ],
+        },
+      },
+      {
+        title: "AI-Native Drug Discovery",
+        content: [
+          "<strong>Insilico Medicine</strong> is the most-cited proof point for end-to-end AI discovery: its generative-AI platform nominated a target and designed a novel molecule for idiopathic pulmonary fibrosis (INS018_055) that publicly reached Phase II roughly 18 months from programme start — against an industry norm measured in years. <strong>DeepMind's AlphaFold</strong> reframed the upstream problem entirely, releasing predicted structures for 200M+ proteins and collapsing a bottleneck that structural biologists had faced for decades.",
+          "The transferable lesson is not the specific tool but the operating model: a closed loop between computational design and experimental validation, run by a team that owns the whole cycle — exactly the kind of integrated capability a mature GCC is built to host.",
+        ],
+      },
+      {
+        title: "Digital & Decentralised Trials",
+        content: [
+          "<strong>Pfizer</strong> enrolled roughly 43,000 participants in its COVID-19 vaccine trial in under four months using digital recruitment and site enablement — a compressed timeline that would have been implausible with analogue processes. <strong>Moderna</strong> demonstrated the value of a cloud-native foundation, publicly reporting that it designed its vaccine sequence in about 42 days by treating its platform as software.",
+          "Both illustrate the same principle: speed is a property of the operating model, not a heroic one-off. The recruitment analytics, ePRO/eConsent operations, and data management that make it repeatable are precisely the workstreams GCC clinical-data-science teams already run at scale.",
+        ],
+        insightBox: {
+          icon: "⚙️",
+          label: "Pattern",
+          title: "Industrialise the capability, don't celebrate the pilot",
+          description: "Every durable outcome here came from making a new way of working repeatable and governed — the difference between a proof-of-concept and a platform is the operating model wrapped around it.",
+        },
+      },
+      {
+        title: "Commercial, Genomics & Manufacturing",
+        content: [
+          "<strong>AstraZeneca</strong> has publicly described using knowledge graphs and AI partnerships to accelerate target identification and reasoning across its pipeline. <strong>GSK</strong> has invested heavily in functional genomics and machine learning to improve the probability of success in early research. On the supply side, Indian leaders such as <strong>Sun Pharma</strong> and <strong>Dr. Reddy's</strong> have modernised quality and manufacturing with digital analytics — demonstrating that digital leadership is not the exclusive preserve of originator big pharma.",
+        ],
+        bulletPoints: [
+          "<strong>Own the whole loop</strong> — Value accrues to teams that own design-to-decision cycles end to end, not to those handed a single step.",
+          "<strong>Data foundation first</strong> — Every scaled outcome sat on a cloud data and platform layer built before the flashy use case.",
+          "<strong>Redesign, don't automate</strong> — Speed and quality came from re-architecting the process, not accelerating the old one.",
+          "<strong>GCC as the engine</strong> — The recruitment analytics, data curation, and quality intelligence behind these stories are exactly what mature GCCs run 24/7.",
+        ],
+        pullQuote: {
+          text: "The lesson of every case study is the same: technology did not transform these organisations — a redesigned, data-native operating model did, and technology made it possible.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch22",
@@ -1473,7 +1614,84 @@ export const chapters: Chapter[] = [
       { value: "EHDS", label: "EU Health Data Space" },
     ],
     tags: ["Interoperability", "FHIR", "OMOP", "Data Standards"],
-    sections: [{ title: "Executive Summary", content: ["Interoperability is the foundation of connected pharma. This chapter covers HL7 FHIR, OMOP CDM, CDISC standards, and the emerging European Health Data Space."] }],
+    sections: [
+      {
+        title: "Executive Summary",
+        content: [
+          "Interoperability is the unglamorous foundation on which every other digital ambition rests. AI models, real-world evidence, connected trials, and seamless submissions all depend on data that can move between systems and organisations without losing meaning. Without shared standards, each initiative rebuilds its own plumbing — and the enterprise accumulates integration debt faster than it creates value.",
+          "The strategic shift is that interoperability is no longer a back-office IT concern; regulators now mandate it. Health authorities and health systems are converging on a common set of standards, and pharma organisations that adopt them early gain a durable data advantage.",
+        ],
+        callout: {
+          type: "executive",
+          label: "Executive Summary",
+          content: "Standards are a strategy, not a compliance chore. Adopting FHIR, OMOP, and CDISC as an enterprise data fabric turns every downstream capability — RWE, submissions, connected trials, IDMP — from a bespoke integration project into a repeatable, governed workflow.",
+        },
+      },
+      {
+        title: "Why Interoperability Is Now Strategic",
+        content: [
+          "Two forces have moved interoperability up the agenda. First, the value cases that matter most — RWE at population scale, AI trained on connected data, and automated submissions — are impossible without semantic consistency across sources. Second, regulation is now prescriptive: the US ONC Cures Act rules mandate standardised APIs, the EU's European Health Data Space (EHDS) creates a governed framework for health-data exchange, and submission standards are enforced by agencies worldwide.",
+        ],
+      },
+      {
+        title: "The Core Standards Landscape",
+        content: [
+          "A small set of standards covers most of the pharma data estate. Fluency in how they interlock is the practical foundation of a connected enterprise.",
+        ],
+        table: {
+          headers: ["Standard", "Domain", "Purpose", "Where It Applies"],
+          rows: [
+            ["HL7 FHIR (R4)", "Clinical exchange", "Modern API-based exchange of health data", "EHR integration, DCT, patient apps"],
+            ["OMOP CDM (OHDSI)", "Observational data", "Common model for reproducible RWD analytics", "RWE, federated network studies"],
+            ["CDISC (SDTM/ADaM/CDASH/SEND)", "Clinical trials", "Standardised trial data capture and submission", "Regulatory submissions (FDA/PMDA)"],
+            ["ISO IDMP", "Product identification", "Global identification of medicinal products", "Regulatory (RIM), pharmacovigilance"],
+            ["Terminologies", "SNOMED CT · LOINC · MedDRA · ICD", "Shared clinical & safety vocabularies", "Coding, PV, phenotyping"],
+            ["DICOM", "Medical imaging", "Imaging data and metadata standard", "Imaging biomarkers, digital pathology"],
+          ],
+        },
+      },
+      {
+        title: "The Regulatory & Policy Layer",
+        content: [
+          "Standards adoption is increasingly non-negotiable. FDA and PMDA require CDISC-conformant datasets for submissions; the EU's EHDS establishes rights and infrastructure for both primary (care) and secondary (research) use of health data; and the US ONC framework, built on FHIR and USCDI, mandates standardised, API-accessible data with explicit anti-information-blocking provisions.",
+        ],
+        insightBox: {
+          icon: "🔗",
+          label: "Architecture Principle",
+          title: "Map once, use everywhere",
+          description: "Harmonising data to a common model and shared terminologies at ingestion — rather than per project — is the single highest-leverage decision in enterprise data architecture. It converts every future use case from an integration project into a query.",
+        },
+      },
+      {
+        title: "Building the Interoperable Data Fabric",
+        content: [
+          "An interoperable enterprise is engineered in five layers — the pattern behind FAIR (Findable, Accessible, Interoperable, Reusable) data at scale.",
+        ],
+        steps: [
+          { num: "01", title: "Ingestion & Connectivity", description: "FHIR-based APIs and connectors to acquire clinical, claims, and operational data from internal and external systems." },
+          { num: "02", title: "Terminology & Semantic Mapping", description: "Map incoming data to shared vocabularies (SNOMED CT, LOINC, MedDRA) so meaning is preserved across sources." },
+          { num: "03", title: "Common Data Model", description: "Land harmonised data in a standard model (OMOP for observational, CDISC for trials) to make analytics portable and reproducible." },
+          { num: "04", title: "Governance & FAIR Metadata", description: "Catalogue, lineage, access control, and privacy compliance so data is discoverable and trustworthy." },
+          { num: "05", title: "Exchange & Federation", description: "Secure APIs and federated analytics that let evidence be generated across organisations without moving raw patient data." },
+        ],
+      },
+      {
+        title: "Value & Use Cases",
+        content: [
+          "Interoperability is a force multiplier — it makes every other capability faster, cheaper, and more scalable.",
+        ],
+        bulletPoints: [
+          "<strong>RWE at Scale</strong> — OMOP-standardised data enables federated, reproducible studies across networks and geographies.",
+          "<strong>Faster Submissions</strong> — CDISC automation compresses dataset preparation and reduces agency queries.",
+          "<strong>Connected & Decentralised Trials</strong> — FHIR integration streams EHR and device data directly into trial systems.",
+          "<strong>Regulatory Intelligence</strong> — IDMP and structured product data underpin global RIM, labelling, and pharmacovigilance.",
+        ],
+        pullQuote: {
+          text: "Every AI ambition in pharma is downstream of a data-interoperability decision. Get the standards right, and the rest becomes engineering; get them wrong, and every initiative pays an integration tax forever.",
+          cite: "KR · Pharma Digital Transformation Handbook",
+        },
+      },
+    ],
   },
   {
     id: "ch23",

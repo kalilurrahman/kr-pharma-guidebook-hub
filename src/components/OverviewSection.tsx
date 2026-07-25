@@ -87,7 +87,7 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
           </div>
           <div className="flex-1">
             <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📊 GCC Metrics</h3>
-            <p className="font-body text-xs text-muted-foreground">34 benchmarks across 9 dimensions</p>
+            <p className="font-body text-xs text-muted-foreground">37 benchmarks across 9 dimensions</p>
           </div>
           <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </Link>
