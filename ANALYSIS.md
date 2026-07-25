@@ -32,7 +32,9 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 ### 2.1 The headline gap: half the book is a stub
 **15 of the 30 chapters (Ch 16–30)** originally contained only a title, one-line lead, four metric chips, and a single "Executive Summary" sentence. The fully-authored content stopped at Ch 14 + Appendix. The most monetisable topics (GenAI, RWE, AI ethics, CDO playbook, case studies, interoperability, precision medicine, digital twins) were scaffolding, not content.
 
-**Progress:** eight of the highest-demand stubs are now authored in full — **Ch 26 (GenAI), Ch 20 (CDO Playbook), Ch 21 (Case Studies), Ch 18 (RWE), Ch 22 (Interoperability), Ch 17 (Biologics/Cell & Gene), Ch 23 (Precision Medicine), and Ch 24 (Digital Twins)** — taking the book from **15/30 to 23/30 fully authored** (see §4). **Recommended next:** the remaining seven stubs — Ch 16 (India GCC), Ch 19 (AI Ethics), Ch 25 (Emerging Markets), Ch 27 (Pandemic Prep), Ch 28 (Talent), Ch 29 (Investment/M&A), Ch 30 (2030 Playbook).
+**Status — RESOLVED: the handbook is now complete. All 30 chapters + the appendix are fully authored (30/30).** The originally-stubbed Ch 16–30 have all been written out to match the established content model — the final seven (Ch 16 India GCC, Ch 19 AI Ethics, Ch 25 Emerging Markets, Ch 27 Pandemic Preparedness, Ch 28 Talent, Ch 29 Investment/M&A, Ch 30 2030 Playbook) joining the earlier eight (see §4).
+
+> **Reconciliation note:** a parallel refresh (merged separately) also authored Ch 16–30 with *verified mid-2026* stats. These two efforts were merged **best-of-both per chapter**: the deeper multi-section structure from this branch is the base, PR #30's **verified 2026 metric chips** (e.g. 2,117 GCCs FY26, rentosertib, Casgevy $2.2M, EU AI Act dates, $236B patent cliff) replace the earlier figures, and PR #30's distinct 2026-specific sections (patent cliff, IRA/MFN pricing, agentic AI, supply-chain de-risking, mRNA's second act, national GCC framework) are folded in — so each chapter carries both the depth and the verified currency.
 
 ### 2.2 Verified data/consistency issues (fixed in this change)
 | Issue | Location | Resolution |
@@ -56,15 +58,15 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 
 ## 3. AI-Native Products, Accelerators & Tools
 
-The handbook is already a structured knowledge base plus a set of proprietary frameworks (PDMF, ACUITAS, the 34-metric GCC benchmark, the 28 CXO stats, the 36-month roadmap). That substrate makes it unusually fast to wrap existing IP in interaction and intelligence.
+The handbook is already a structured knowledge base plus a set of proprietary frameworks (PDMF, ACUITAS, the 37-metric GCC benchmark, the 28 CXO stats, the 36-month roadmap). That substrate makes it unusually fast to wrap existing IP in interaction and intelligence.
 
 ### 3.1 Quick-win shortlist (days–weeks; highest value-to-effort)
 | # | Product | Built from | Why it's a quick win |
 |---|---|---|---|
 | 1 | **"Ask the Handbook" RAG copilot** | Full chapter corpus | Content is already clean, structured data → embed & serve; also a chat entry point that offsets the SPA/SEO discoverability gap |
-| 2 | **PDMF Maturity Self-Assessment** | PDMF 5×7 model + 34 GCC benchmarks | Turns a static framework into a scored diagnostic + auto-report — a lead-gen + qualification engine |
-| 3 | **GCC Benchmark-as-a-Service** | 34-metric, 9-dimension dataset | Client inputs its own numbers → percentile vs benchmarks → gap heatmap; recurring & sticky |
-| 4 | **ROI / Cost-of-Inaction Calculator** | Ch 1 cost-of-inaction table + Ch 14 ROI | Monetises an existing table; executives respond to a number |
+| 2 | **PDMF Maturity Self-Assessment** ✅ _shipped at `/assessment`_ | PDMF 5×7 model + 37 GCC benchmarks | Turns a static framework into a scored diagnostic with domain breakdown + prioritised next steps — a lead-gen + qualification engine |
+| 3 | **GCC Benchmark-as-a-Service** | 37-metric, 9-dimension dataset | Client inputs its own numbers → percentile vs benchmarks → gap heatmap; recurring & sticky |
+| 4 | **ROI / Cost-of-Inaction Calculator** ✅ _shipped at `/roi`_ | Ch 1 cost-of-inaction table + Ch 14 ROI | Monetises an existing table; executives respond to a number |
 | 5 | **Board Diagnostic + 36-Month Roadmap Generator** | "Questions for the Board" + 3-Wave roadmap | Converts assessment output into a tailored SOW-shaped plan |
 
 ### 3.2 Service offerings (billable engagements the content justifies)
@@ -75,7 +77,7 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
 5. **RWE & Interoperability Fast-Start** — FHIR/OMOP/CDISC (Ch 18/22).
 
 ### 3.3 Accelerators (reusable assets that speed every engagement)
-- The **34-metric GCC benchmark dataset** → a maintained benchmarking accelerator.
+- The **37-metric GCC benchmark dataset** → a maintained benchmarking accelerator.
 - The **28-stat CXO library + 8-diagram system** → an auto-assembled, client-branded board-pack generator.
 - The **reference diagrams** (eCTD, PV flow, value chain, roadmap) → a solution-design pattern library.
 - The **chapter corpus** → a governed RAG knowledge base every tool plugs into.
@@ -85,7 +87,7 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
 | Tool | AI capability | Content it wraps |
 |---|---|---|
 | Handbook Copilot | RAG Q&A with citations; "explain to my board" mode | Full corpus |
-| Maturity Diagnostic | Adaptive questionnaire → LLM narrative report → peer comparison | PDMF + 34 metrics |
+| Maturity Diagnostic | Adaptive questionnaire → LLM narrative report → peer comparison | PDMF + 37 metrics |
 | ROI Simulator | Scenario modelling (timeline cut %, Phase II uplift → $) | Ch 1/14 economics |
 | Regulatory/PV Copilot | eCTD checklist assist, PV narrative drafting, MedDRA-coding assist | Ch 8 eCTD + PV flow |
 | GenAI Content Studio (MLR-aware) | Compliant commercial/medical content with guardrails | Ch 9/26 |
@@ -102,7 +104,7 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
 ## 4. What Changed in This Revision
 
 - **Accuracy fixes** (§2.2): added 3 real GCC benchmarks so the metric count genuinely matches the advertised 37, standardised the AlphaFold figure to 200M+, clarified the "full handbook" cover stats, and disambiguated the all-sectors GCC count.
-- **New full chapter content** (took the book from 15/30 to 23/30 authored), replacing stubs:
+- **New full chapter content** (took the book from 15/30 to **30/30 — complete**), replacing stubs:
   - **Ch 26 — Generative AI in Pharma:** value map across the value chain, the enterprise GenAI capability stack (foundation models → RAG → agents → guardrails → evaluation), prioritised use cases, GxP deployment (GAMP 5 / CSA / 21 CFR Part 11 / FDA Jan-2025 draft guidance), build-vs-buy-vs-fine-tune, and responsible-AI governance.
   - **Ch 20 — The CDO Playbook:** the CDO mandate, the five-engine digital operating model, federated org design, a sequenced first-12-months agenda, and funding/value-realisation with common failure modes.
   - **Ch 18 — Real-World Evidence:** RWD-to-RWE distinction, data-source taxonomy, regulatory-grade evidence (FDA RWE Framework / EMA DARWIN EU), the five-stage RWE stack, value cases, and India's RWE advantage.
@@ -111,6 +113,11 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
   - **Ch 17 — Biopharmaceuticals, Cell & Gene Therapy:** why advanced modalities break the traditional playbook, the modality spectrum, digital bioprocessing, vein-to-vein chain-of-identity/custody, and the GCC analytics role.
   - **Ch 23 — Precision Medicine & Genomics:** the multi-omics data foundation, the three-stage genomics stack (primary/secondary/tertiary), companion diagnostics and biomarker-driven development, and infrastructure/stratification.
   - **Ch 24 — Digital Twins:** what a true twin is (live data link + prediction), the three domains (manufacturing / clinical-patient / supply-commercial), in-silico trials and MIDD, and building/validating twins at scale.
-- All changes pass `tsc --noEmit`, `vite build`, and the test suite.
+  - **Ch 16 · 19 · 25 · 27 · 28 · 29 · 30** — the final seven stubs, authored in full: India GCC ecosystem & capability ladder, AI Ethics & Responsible Innovation (EU AI Act / GMLP), Emerging Markets & the leapfrog thesis, Pandemic Preparedness (100-Days Mission), Talent & Digital Reskilling, Digital Pharma Investment/Valuation/M&A, and the capstone 2030 Integrated Implementation Playbook.
+- **New interactive tools** (both client-side, linked from the overview quick-links):
+  - **PDMF Maturity Self-Assessment** (`/assessment`): rate the organisation across the 7 PDMF domains (5 levels each) for an instant maturity level, a domain-by-domain breakdown, and prioritised focus areas with chapter links.
+  - **ROI / Cost-of-Inaction Calculator** (`/roi`): estimate annual value-at-stake across five value levers, scaled from the Ch 1 benchmark by revenue and per-lever maturity.
+- **Footer accuracy fix:** the stale "30,075 words · 14 chapters" footer stat corrected to "30 chapters · 9 parts".
+- All changes pass `tsc --noEmit`, `vite build`, `vitest`, and `eslint`.
 
 _Curated by Kalilur Rahman · Pharma Digital Transformation Handbook._

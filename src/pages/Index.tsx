@@ -8,6 +8,7 @@ import { ResourcesSection } from "@/components/ResourcesSection";
 import { PharmaFooter } from "@/components/PharmaFooter";
 import { InstallPrompt } from "@/components/InstallPrompt";
 import { chapters } from "@/data/pharma-data";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const sectionToPartFilter: Record<string, string> = {
   foundations: "Part I · Foundations",
@@ -17,6 +18,11 @@ const sectionToPartFilter: Record<string, string> = {
 };
 
 const Index = () => {
+  usePageMeta(
+    "",
+    "A definitive practitioner's guide to building, scaling, and leading world-class pharmaceutical Global Capability Centres in the AI era — 30 chapters, a PDMF maturity self-assessment, and an ROI calculator.",
+    "/",
+  );
   const [activeSection, setActiveSection] = useState("overview");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedChapter, setSelectedChapter] = useState<string | null>(null);

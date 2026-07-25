@@ -7,6 +7,8 @@ import Index from "./pages/Index.tsx";
 import ReaderPage from "./pages/ReaderPage.tsx";
 import GccMetricsPage from "./pages/GccMetricsPage.tsx";
 import KeyStatsPage from "./pages/KeyStatsPage.tsx";
+import AssessmentPage from "./pages/AssessmentPage.tsx";
+import RoiCalculatorPage from "./pages/RoiCalculatorPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
           <Route path="/reader" element={<ReaderPage />} />
           <Route path="/gcc-metrics" element={<GccMetricsPage />} />
           <Route path="/key-stats" element={<KeyStatsPage />} />
+          <Route path="/assessment" element={<AssessmentPage />} />
+          <Route path="/roi" element={<RoiCalculatorPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

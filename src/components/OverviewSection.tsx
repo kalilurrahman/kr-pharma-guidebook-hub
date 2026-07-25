@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { BarChart3, BookOpen, ArrowRight, TrendingUp } from "lucide-react";
+import { BarChart3, BookOpen, ArrowRight, TrendingUp, Gauge, Calculator } from "lucide-react";
 import { chapters, parts } from "@/data/pharma-data";
 import { ChapterCard } from "@/components/ChapterCard";
 
@@ -69,7 +69,37 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
         </div>
       </div>
 
-      {/* Quick links to Reader, GCC & Key Stats */}
+      {/* Interactive tools — featured */}
+      <div>
+        <div className="flex items-center gap-2 mb-4">
+          <span className="font-mono text-[10px] text-primary uppercase tracking-wider">Interactive Tools</span>
+          <span className="flex-1 h-px bg-border" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link to="/assessment" className="card-pharma group flex items-center gap-4 no-underline border-primary/40 ring-1 ring-primary/20 hover:border-primary/60 transition-colors">
+            <div className="p-3 rounded-lg bg-teal/10">
+              <Gauge className="w-6 h-6 text-teal" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-sm font-bold text-foreground mb-0.5">📐 Maturity Assessment</h3>
+              <p className="font-body text-xs text-muted-foreground">Score your PDMF level across 7 domains</p>
+            </div>
+            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          </Link>
+          <Link to="/roi" className="card-pharma group flex items-center gap-4 no-underline border-primary/40 ring-1 ring-primary/20 hover:border-primary/60 transition-colors">
+            <div className="p-3 rounded-lg bg-gold/10">
+              <Calculator className="w-6 h-6 text-gold" />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-sm font-bold text-foreground mb-0.5">🧮 ROI Calculator</h3>
+              <p className="font-body text-xs text-muted-foreground">Estimate your annual value at stake</p>
+            </div>
+            <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Explore — reference */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Link to="/reader" className="card-pharma group flex items-center gap-4 no-underline hover:border-primary/50 transition-colors">
           <div className="p-3 rounded-lg bg-primary/10">
@@ -132,7 +162,7 @@ export function OverviewSection({ onChapterSelect }: OverviewSectionProps) {
         className="glass-card p-6 rounded-2xl overflow-x-auto"
       >
         <h2 className="font-display text-lg font-bold text-foreground mb-4 text-center">Pharmaceutical Digital Value Chain</h2>
-        <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-2xl mx-auto" style={{ minWidth: 400 }}>
+        <svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pharmaceutical digital value chain — from R&D discovery through clinical, regulatory, manufacturing, quality, commercial, to patient engagement, unified by a digital thread" className="w-full max-w-2xl mx-auto" style={{ minWidth: 400 }}>
           {[
             { x: 10, label: "R&D\nDiscovery", fill: "hsl(var(--primary))" },
             { x: 93, label: "Clinical\nTrials", fill: "hsl(172,83%,32%)" },
