@@ -58,7 +58,9 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 - **Living-document mechanics** — a visible "last updated", changelog, and version badge (the footer carries a version, but there is no changelog).
 - **Analytics & feedback loop** — no telemetry on which chapters, stats, or tools actually resonate.
 - **Chapter numbering** — the appendix sits as the 15th item (`num: "A"`) and numbering resumes at 16, leaving no "Chapter 15"; reconcile the display sequence.
-- **Dependency vulnerabilities** — GitHub reports 40 advisories on the default branch (1 critical, 19 high). Untouched here deliberately: dependency bumps on a working build need their own scoped change and verification.
+- **Dependency vulnerabilities — partially fixed.** A non-breaking `npm audit fix` (lockfile-only, `package.json` untouched) took the tree from **26 → 14** advisories and eliminated the **critical** one. Notably it patched `react-router-dom` 6.30.1 → 6.30.4 — the only *browser-shipped* runtime package in the set; the rest are build/dev toolchain.
+  **Still open, deliberately:** the remaining 14 require **breaking majors** — `vite` 5 → **8** and `eslint` 9 → 10. Those are migrations (Vite 8 would likely affect the PWA plugin and build config), not patches, and should be their own scoped change with its own verification. `npm audit fix --force` would also pull 128 new packages.
+  **Also worth fixing:** the repo carries **three lockfiles** (`package-lock.json`, `bun.lock`, `bun.lockb`). CI uses `npm ci`, so `package-lock.json` governs what actually ships — but a developer running `bun install` still resolves the *old, vulnerable* versions. The project should standardise on one package manager.
 - **Prerender/SSR** — metadata is now correct per route, but content is still client-rendered. Prerendering (or SSG per chapter) remains the step that would let crawlers see the prose itself.
 
 ---
