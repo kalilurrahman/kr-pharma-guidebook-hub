@@ -25,6 +25,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Audit content facts
+        run: npm run audit:facts
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
