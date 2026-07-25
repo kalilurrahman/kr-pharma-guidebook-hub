@@ -44,15 +44,22 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 | Cover claims "95K+ words" / "47+ diagrams & tables" describe the **full downloadable handbook**, not the ~15 fully-rendered on-site chapters | `pharma-data.ts` cover stats | Labels clarified as **"· Full Handbook"** |
 | "1,600+ GCCs in India" is **all-industry**, shown beside pharma-specific stats | `gcc-metrics.ts`, `OverviewSection`, `KeyStatsPage`, Ch 16 | Labels clarified as **"(All Sectors)"**; noted 30+ are dedicated pharma GCCs |
 
-### 2.3 Further rigor & platform recommendations (not yet done)
-- **Citations apparatus** — stats attribute sources inline but lack dated footnotes/links; add year + link per figure before using as a sales asset.
-- **Real case studies (Ch 21)** — companies are named but the chapter is empty; sourced mini-cases would materially raise authority.
-- **Living-document mechanics** — add a visible "last updated," changelog, and version badge.
-- **SEO / shareability** — client-rendered SPA means crawlers and social unfurls see little; add SSR/prerender + per-chapter OpenGraph meta and indexable per-chapter URLs. **Biggest reach limiter for a thought-leadership asset.**
-- **Accessibility** — SVGs are decorative-only (add `<title>/<desc>`/ARIA); tables need scope/caption.
-- **Analytics & feedback loop** — no telemetry on which chapters/stats resonate.
-- **Interactivity** — the PDMF is described but there's no interactive self-assessment, ROI calculator, or lead capture (see §3).
+### 2.3 Further rigor & platform recommendations
+
+**Done since the original review**
+- ✅ **SEO / shareability** — canonical + `og:url`, JSON-LD (WebSite/Book/Person), `sitemap.xml` + robots directive, per-route metadata via `usePageMeta`, and a **stable self-hosted OG card** replacing an *expiring* Google-signed URL that would have silently broken every social preview.
+- ✅ **Accessibility** — `role="img"` + `aria-label` on chapter diagrams and the value-chain SVG; `scope="col"` and `sr-only` `<caption>` on data tables.
+- ✅ **Interactivity** — the PDMF is no longer description-only: four diagnostics ship (`/assessment`, `/benchmark`, `/roi`, `/board-pack`).
+- ✅ **Real case studies (Ch 21)** — authored with publicly-reported exemplars only (Insilico/rentosertib, AlphaFold, Pfizer, Moderna, AstraZeneca, GSK, Indian generics); no fabricated metrics.
+- ✅ **Discoverability within the content** — the original search matched only titles/leads/tags, so the entire chapter body was unfindable. **Deep Search** (`/search`) now indexes every passage — narrative, key points, callouts, framework steps, table rows, pull quotes — and returns cited results.
+
+**Still open**
+- **Citations apparatus** — figures attribute sources inline but lack dated footnotes/links; add year + link per figure before using as a formal sales asset.
+- **Living-document mechanics** — a visible "last updated", changelog, and version badge (the footer carries a version, but there is no changelog).
+- **Analytics & feedback loop** — no telemetry on which chapters, stats, or tools actually resonate.
 - **Chapter numbering** — the appendix sits as the 15th item (`num: "A"`) and numbering resumes at 16, leaving no "Chapter 15"; reconcile the display sequence.
+- **Dependency vulnerabilities** — GitHub reports 40 advisories on the default branch (1 critical, 19 high). Untouched here deliberately: dependency bumps on a working build need their own scoped change and verification.
+- **Prerender/SSR** — metadata is now correct per route, but content is still client-rendered. Prerendering (or SSG per chapter) remains the step that would let crawlers see the prose itself.
 
 ---
 
@@ -63,11 +70,11 @@ The handbook is already a structured knowledge base plus a set of proprietary fr
 ### 3.1 Quick-win shortlist (days–weeks; highest value-to-effort)
 | # | Product | Built from | Why it's a quick win |
 |---|---|---|---|
-| 1 | **"Ask the Handbook" RAG copilot** | Full chapter corpus | Content is already clean, structured data → embed & serve; also a chat entry point that offsets the SPA/SEO discoverability gap |
+| 1 | **"Ask the Handbook" copilot** — retrieval layer ✅ _shipped at `/search`_; generation layer still open | Full chapter corpus | Deterministic full-text retrieval over every passage with chapter/section citations ships today and needs no backend. The LLM answer layer is the remaining half and **requires a host that can hold an API key** — a static SPA cannot do it safely. Retrieve first, generate second. |
 | 2 | **PDMF Maturity Self-Assessment** ✅ _shipped at `/assessment`_ | PDMF 5×7 model + 37 GCC benchmarks | Turns a static framework into a scored diagnostic with domain breakdown + prioritised next steps — a lead-gen + qualification engine |
-| 3 | **GCC Benchmark-as-a-Service** | 37-metric, 9-dimension dataset | Client inputs its own numbers → percentile vs benchmarks → gap heatmap; recurring & sticky |
+| 3 | **GCC Benchmark-as-a-Service** ✅ _shipped at `/benchmark`_ | 37-metric, 9-dimension dataset | Self-rate 9 dimensions vs published benchmarks → maturity index, gap heatmap, and the real benchmarks to target |
 | 4 | **ROI / Cost-of-Inaction Calculator** ✅ _shipped at `/roi`_ | Ch 1 cost-of-inaction table + Ch 14 ROI | Monetises an existing table; executives respond to a number |
-| 5 | **Board Diagnostic + 36-Month Roadmap Generator** | "Questions for the Board" + 3-Wave roadmap | Converts assessment output into a tailored SOW-shaped plan |
+| 5 | **Board Diagnostic + 36-Month Roadmap Generator** ✅ _shipped at `/board-pack`_ | "Questions for the Board" + 3-Wave roadmap | Assembles all three diagnostics into a print-ready board pack with a sequenced 36-month roadmap |
 
 ### 3.2 Service offerings (billable engagements the content justifies)
 1. **PDMF Maturity Assessment & Roadmap** — fixed-scope diagnostic delivered via the assessment tool.
