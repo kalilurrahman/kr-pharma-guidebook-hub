@@ -47,4 +47,16 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"],
   },
+  build: {
+    // Route chunks (lazy-loaded in App.tsx) plus one shared vendor chunk.
+    // A single vendor chunk keeps React and everything that consumes it in the
+    // same module so there is no cross-chunk init-order hazard.
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) return "vendor";
+        },
+      },
+    },
+  },
 }));
