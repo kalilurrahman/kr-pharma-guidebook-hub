@@ -10,7 +10,7 @@ export function PharmaFooter() {
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
               A definitive practitioner's guide to building, scaling, and leading world-class pharmaceutical Global Capability Centres in the AI era.
             </p>
-            <p className="font-mono text-xs text-muted-foreground mt-3">v2.0 · 30,075 words · 14 chapters · 2025</p>
+            <p className="font-mono text-xs text-muted-foreground mt-3">v3.0 · 30 chapters · 9 parts · refreshed 2026</p>
           </div>
           <div>
             <h4 className="font-mono text-xs text-primary tracking-wider uppercase mb-3">Frameworks</h4>
