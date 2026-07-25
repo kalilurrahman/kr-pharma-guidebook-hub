@@ -53,7 +53,14 @@ Chapters **1–14 + the Appendix** are genuinely executive-grade: multi-section 
 - ✅ **Real case studies (Ch 21)** — authored with publicly-reported exemplars only (Insilico/rentosertib, AlphaFold, Pfizer, Moderna, AstraZeneca, GSK, Indian generics); no fabricated metrics.
 - ✅ **Discoverability within the content** — the original search matched only titles/leads/tags, so the entire chapter body was unfindable. **Deep Search** (`/search`) now indexes every passage — narrative, key points, callouts, framework steps, table rows, pull quotes — and returns cited results.
 
+**Also done: the repository had no verification gate at all.**
+- ✅ **A real typecheck.** `tsconfig.json` is solution-style (`"files": []` with only `references`), so **bare `tsc --noEmit` exits 0 without reading `src`** — and neither `vitest` nor the esbuild-based `vite build` typechecks. Added `npm run typecheck` (`tsc -p tsconfig.app.json --noEmit`), which immediately surfaced two genuine type errors.
+- ✅ **PR/push CI.** The only workflow ran on a weekly cron, so nothing was checked on pull requests — every PR showed zero check runs. Added `.github/workflows/ci.yml` running the full gate set (typecheck app + node, lint, tests, build, fact audit) on every PR and every push to `main`, with `npm ci` so lockfile drift fails loudly.
+- ✅ **Made lint gate-able.** Three pre-existing lint errors in vendored/config files (two empty interfaces in shadcn components, a `require()` in `tailwind.config.ts`) were blocking lint from ever being a gate; fixed as behaviour-preserving one-liners.
+- ✅ **Tests: 1 → 55**, covering search ranking, result portability/validation, and the scoring thresholds behind every client-facing number.
+
 **Still open**
+- **`strict: true`** — the project compiles with `strict: false`, which is why a boolean-discriminated union failed to narrow. Enabling it is worthwhile but a larger, separate piece of work.
 - **Citations apparatus** — figures attribute sources inline but lack dated footnotes/links; add year + link per figure before using as a formal sales asset.
 - **Living-document mechanics** — a visible "last updated", changelog, and version badge (the footer carries a version, but there is no changelog).
 - **Analytics & feedback loop** — no telemetry on which chapters, stats, or tools actually resonate.
